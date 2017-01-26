@@ -1,2 +1,2 @@
 # bio-hacks
-Collection of hacks / tools / scripts for computational biologists
+My collection of hacks / tools / scripts for computational biologists
