@@ -41,13 +41,13 @@ Built for use with 'bioKate color theme'
 
 	<context id="3_bedName" style-ref="bedName">
 	  <match extended="true">
-	    (?&lt;=\t)[A-Za-z][^\s\t]+(?=\t)
+	    (?&lt;=\t)[A-Za-z()][^\s\t]+(?=\t)
 	  </match>
         </context>
 
 	<context id="end_bedName" style-ref="bedName">
 	  <match extended="true">
-	    (?&lt;=\t)[A-Za-z][^\s\t]+$
+	    (?&lt;=\t)[A-Za-z()][^\s\t]+$
 	  </match>
         </context>
 
