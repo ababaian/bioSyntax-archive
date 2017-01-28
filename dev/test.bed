@@ -1,0 +1,23 @@
+chr1	11873	14409	uc001aaa.3	0	+	11873	11873	0	3	354,109,1189,	0,739,1347,
+chr21	1000000	1230000	peakValue	200	-
+chrX	11873	14409	selection
+
+^.+?\t
+^.+?\t.+?\t
+^.+?\t.+?\t.+?\t
+
+# Numeric Word
+(?<=^\w\t)[0-9]+(?=\t)
+
+# Numeric Doublets
+(?<=\t)[0-9]+\t[0-9]+(?=\t)
+
+(?&lt;=\t)[0-9]+\t[0-9]+(?=\t)
+
+# First Column
+^\w+
+
+
+(?&lt;=...)
+
+The regex flavour is PCRE. 

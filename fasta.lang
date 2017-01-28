@@ -12,22 +12,22 @@ T\U - Red
 G   - Brown
 C   - Blue
 -->
-<language id="dna" _name="DNA" version="2.0" _section="Markup">
+<language id="fa" _name="Fasta" version="2.0" _section="Scientific">
   <metadata>
-    <property name="mimetypes">text/plain</property>
+    <property name="mimetypes">text/fasta</property>
     <property name="globs">*.fa;*.fasta</property>
   </metadata>
 
   <styles>
     <style id="header" _name="Header_"  map-to="def:statement" />
-    <style id="A"      _name="A_"       map-to="c:preprocessor" />
-    <style id="T"      _name="T_"       map-to="def:string" />
-    <style id="G"      _name="G_"       map-to="def:decimal" />
-    <style id="C"      _name="C_"       map-to="def:constant" />
+    <style id="A"      _name="A_"       map-to="fa:A" />
+    <style id="T"      _name="T_"       map-to="fa:T" />
+    <style id="G"      _name="G_"       map-to="fa:G" />
+    <style id="C"      _name="C_"       map-to="fa:C" />
   </styles>
 
   <definitions>
-    <context id="dna">
+    <context id="fa">
       <include>
 
 	<context id="Header" style-ref="header">
