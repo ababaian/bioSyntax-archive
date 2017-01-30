@@ -16,14 +16,16 @@ Syntax highlighting for computational biology file formats in gtksourceview / ge
 
 Restart `gedit` and you should have pretty formats 
 
-## Bed (.bed) [alpha]
-View bed files with colors based on columns.
-
-![Bed Example](dev/bioSyntax_bed.png)
-
 ## Fasta (.fa; .fasta)
 Highlights nucleotide sequence by base. Colors match IGV representations using the Jalview palette.
 
 ![Fasta Example](dev/bioSyntax_fasta.png)
 
+## Bed (.bed) [alpha]
+View bed files with colors based on columns.
 
+![Bed Example](dev/bioSyntax_bed.png)
+
+
+## Fastq (.fq; .fastq) [alpha]
+Colors headers and nucleotides. Still abit buggy but can be worked out.
