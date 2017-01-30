@@ -19,6 +19,8 @@ Restart `gedit` and you should have pretty formats
 ## Bed (.bed) [alpha]
 View bed files with colors based on columns.
 
+![Bed Example](dev/bioSyntax_bed.png)
+
 ## Fasta (.fa; .fasta)
 Highlights nucleotide sequence by base. Colors match IGV representations using the Jalview palette.
 

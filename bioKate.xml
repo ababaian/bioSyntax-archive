@@ -176,6 +176,12 @@
   <style name="fa:G"                       foreground="#000000" background="#ffb340"/>
   <style name="fa:C"                       foreground="#000000" background="#3c88ee"/>
 
+  <style name="fq:A"                       foreground="#64f73f"/>
+  <style name="fq:T"                       foreground="#eb413c"/>
+  <style name="fq:G"                       foreground="#ffb340"/>
+  <style name="fq:C"                       foreground="#3c88ee"/>
+
+
   <style name="bed:chr"                    foreground="dark-green" bold="true"/>
   <style name="bed:coords"                 foreground="dark-green"/>
 </style-scheme>
