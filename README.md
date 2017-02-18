@@ -29,3 +29,5 @@ View bed files with colors based on columns.
 
 ## Fastq (.fq; .fastq) [alpha]
 Colors headers and nucleotides. Still abit buggy but can be worked out.
+
+![Fq Example](dev/bioSyntax_fq.png)
