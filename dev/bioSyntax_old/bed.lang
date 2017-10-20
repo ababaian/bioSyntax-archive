@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ababaian - 2017 01 27
+
+Syntax highlighting for Bed Files
+Compatible with BED3,4,5,6,12 (.bed)
+
+Built for use with 'bioKate color theme'
+
+-->
+<language id="bed" _name="Bed" version="2.0" _section="Scientific">
+  <metadata>
+    <property name="mimetypes">text/bed</property>
+    <property name="globs">*.bed</property>
+  </metadata>
+
+  <styles>
+
+    <style id="chrom"        _name="Chrom"    map-to="bed:chr" />
+    <style id="coords"       _name="Chrom"    map-to="bed:coords" />
+    <style id="strand"       _name="Coords"   map-to="bed:strand" />
+    <style id="bedName"       _name="BedName" map-to="def:string" />
+
+  </styles>
+
+  <definitions>
+    <context id="bed">
+      <include>
+
+	<context id="1_chr" style-ref="chrom">
+	  <match extended="true">
+            ^\w+
+	  </match>
+        </context>
+
+	<context id="2_coords" style-ref="coords">
+	  <match extended="true">
+            (?&lt;=\t)[0-9]+\t[0-9]+(?=\t)
+	  </match>
+        </context>
+
+	<context id="3_bedName" style-ref="bedName">
+	  <match extended="true">
+	    (?&lt;=\t)[A-Za-z][^\s\t]+(?=\t)
+	  </match>
+        </context>
+
+	<context id="end_bedName" style-ref="bedName">
+	  <match extended="true">
+	    (?&lt;=\t)[A-Za-z][^\s\t]+$
+	  </match>
+        </context>
+
+	<context id="6_strand" style-ref="strand">
+	  <match extended="true">
+            \t[+\-\.]\t
+	  </match>
+        </context>
+
+	<context id="end_strand" style-ref="strand">
+	  <match extended="true">
+            \t[+\-\.]$
+	  </match>
+        </context>
+
+      </include>
+    </context>
+  </definitions>
+</language>

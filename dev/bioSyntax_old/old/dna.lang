@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ababaian - 2017 01 26
+
+Color Scheme for DNA/RNA Sequences
+Associates with fasta files (.fa; .fasta)
+
+Using 'Kate color theme'
+
+A   - Dark Green
+T\U - Red
+G   - Brown
+C   - Blue
+-->
+<language id="dna" _name="DNA" version="2.0" _section="Markup">
+  <metadata>
+    <property name="mimetypes">text/plain</property>
+    <property name="globs">*.fa;*.fasta</property>
+  </metadata>
+
+  <styles>
+    <style id="header" _name="Header_"  map-to="def:statement" />
+    <style id="A"      _name="A_"       map-to="c:preprocessor" />
+    <style id="T"      _name="T_"       map-to="def:string" />
+    <style id="G"      _name="G_"       map-to="def:decimal" />
+    <style id="C"      _name="C_"       map-to="def:constant" />
+  </styles>
+
+  <definitions>
+    <context id="dna">
+      <include>
+
+	<context id="Header" style-ref="header">
+          <start>^\></start>
+	  <end>$</end>
+        </context>
+
+        <context id="a" style-ref="A">
+          <match>[Aa]*</match>
+        </context>
+
+        <context id="t" style-ref="T">
+          <match>[TtUu]*</match>
+        </context>
+
+        <context id="g" style-ref="G">
+          <match>[Gg]*</match>
+        </context>
+
+        <context id="c" style-ref="C">
+          <match>[Cc]*</match>          
+        </context>
+
+      </include>
+    </context>
+  </definitions>
+</language>
