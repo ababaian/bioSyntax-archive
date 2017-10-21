@@ -1,0 +1,66 @@
+%YAML 1.2
+---
+name: wig
+file_extensions: [wig]
+scope: source.wig
+
+contexts:
+  main:
+    # Information lines begin with fixedStep or variableStep
+    - match: fixedStep
+      scope: string.wig
+
+    - match: variableStep
+      scope: string.wig
+    #
+    # Header Lines
+    #
+    # Header line: variable name
+    - match: \w*=
+      scope: keyword.control.wig
+    # Header Line: chromosome name
+    - match: (?<=chrom=)\w*
+      scope: comment.wig
+    # Header Line: coordinate start
+    - match: (?<=start=)\w*
+      scope: comment.wig
+    # Header Line: step size
+    - match: (?<=step=)\w*
+      scope: constant.numeric.wig
+    # Header Line: span size
+    - match: (?<=span=)\w*
+      scope: constant.numeric.wig
+    #
+    # Data Lines
+    #
+    # Numeric only lines (data)
+    - match: ^[0-9]*$
+      scope: constant.numeric.wig
+    # Gradient coloring for scale 0 - 1000
+    - match: ^[0]$ # zero value
+      scope: grad0.wig
+
+    - match: ^[1-9]$ # grad 1 value
+      scope: grad1.wig
+    - match: ^[1-9].$ # grad 1 value
+      scope: grad1.wig
+    - match: ^1[0-9].$ # grad 2 value
+      scope: grad2.wig
+    - match: ^2[0-9].$ # grad 3 value
+      scope: grad3.wig
+    - match: ^3[0-9].$ # grad 4 value
+      scope: grad4.wig
+    - match: ^4[0-9].$ # grad 5 value
+      scope: grad5.wig
+    - match: ^5[0-9].$ # grad 6 value
+      scope: grad6.wig
+    - match: ^6[0-9].$ # grad 7 value
+      scope: grad7.wig
+    - match: ^7[0-9].$ # grad 8 value
+      scope: grad8.wig
+    - match: ^8[0-9].$ # grad 9 value
+      scope: grad9.wig
+    - match: ^9[0-9].$ # grad 10 value
+      scope: grad10.wig
+    - match: ^[0-9]*$ # grad 10 value
+      scope: grad10.wig
