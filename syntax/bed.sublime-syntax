@@ -1,0 +1,64 @@
+%YAML 1.2
+---
+name: bed
+# YAML for bed files
+file_extensions: [bed]
+scope: source.bed
+variables:
+  ident: '\w+'
+contexts:
+  main:
+    #Handle track line
+    - match: '^track.*'
+      scope: comment.bed
+    
+    #Chromosome name
+    - match: ^{{ident}}
+      scope: string.bed
+
+    #Genome coordinates
+    - match: '[\s\t][0-9]+[\s\t][0-9]+\b'
+      scope: constant.language.bed
+    - match: '[\s\t][0-9]+[\s\t][0-9]+$'
+      scope: constant.language.bed
+
+    #Additional column for bed names
+    - match: '[A-Za-z()]+'
+      scope: variable.language.bed
+    - match: '[A-Za-z()]+$'
+      scope: variable.language.bed
+
+    #Additional column for score
+    - match: '[\s\t][0-9]+[\s\t]'
+      scope: support.constant.bed
+    - match: '[\s\t][0-9]+$'
+      scope: support.constant.bed
+
+#Handling the strand column
+    #Plus strand
+    - match: '\+'
+      scope: variable.language.bed
+    - match: '\+$'
+      scope: variable.language.bed
+
+    #Minus strand
+    - match: '-'
+      scope: constant.character.bed
+    - match: '-$'
+      scope: constant.character.bed
+
+    #Dot strand
+    - match: '\.'
+      scope: string.bed
+    - match: '\.$'
+      scope: string.bed
+    
+    #Additional column for RGB
+    - match: '[\s\t][0-9]+,[0-9]+,[0-9]+[\s\t]'
+      scope: markup.deleted.bed
+    - match: '[\s\t][0-9]+,[0-9]+,[0-9]+$'
+      scope: markup.deleted.bed
+
+    #Handle track line
+    - match: '^track.*'
+      scope: comment.bed

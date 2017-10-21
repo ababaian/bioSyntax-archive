@@ -20,10 +20,10 @@ contexts:
       scope: keyword.control.wig
     # Header Line: chromosome name
     - match: (?<=chrom=)\w*
-      scope: comment.wig
+      scope: coord.Chr.wig
     # Header Line: coordinate start
     - match: (?<=start=)\w*
-      scope: comment.wig
+      scope: coord.Start.wig
     # Header Line: step size
     - match: (?<=step=)\w*
       scope: constant.numeric.wig
@@ -34,15 +34,15 @@ contexts:
     # Data Lines
     #
     # Numeric only lines (data)
-    - match: ^[0-9]*$
-      scope: constant.numeric.wig
+    #- match: ^[0-9]*$
+    #  scope: constant.numeric.wig
     # Gradient coloring for scale 0 - 1000
     - match: ^[0]$ # zero value
       scope: grad0.wig
 
     - match: ^[1-9]$ # grad 1 value
       scope: grad1.wig
-    - match: ^[1-9].$ # grad 1 value
+    - match: ^[1-9]$ # grad 1 value
       scope: grad1.wig
     - match: ^1[0-9].$ # grad 2 value
       scope: grad2.wig
@@ -62,5 +62,5 @@ contexts:
       scope: grad9.wig
     - match: ^9[0-9].$ # grad 10 value
       scope: grad10.wig
-    - match: ^[0-9]*$ # grad 10 value
+    - match: ^[0-9][0-9][0-9][0-9]*$ # grad 10 value
       scope: grad10.wig
