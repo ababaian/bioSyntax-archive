@@ -23,9 +23,9 @@ contexts:
       scope: constant.language.bed
 
     #Additional column for bed names
-    - match: '\b[A-Za-z()]+\b'
+    - match: '[A-Za-z()]+'
       scope: variable.language.bed
-    - match: '\b[A-Za-z()]+$'
+    - match: '[A-Za-z()]+$'
       scope: variable.language.bed
 
     #Additional column for score
