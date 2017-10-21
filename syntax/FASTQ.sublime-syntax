@@ -1,0 +1,66 @@
+%YAML 1.2
+---
+name: fastq
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions:
+  - [fastq, fq]
+scope: source.fastq
+
+
+contexts:
+  main:
+    # - match: "^@"
+    #   scope: keyword.operator
+    #   #set: [header_string, header]
+    #   push: header
+
+    #this doesn't work if there is text after the + sign
+    - match: "^\\+$"
+      scope: comment.line
+
+    - match: \A@
+      scope: entity.name
+
+    - match: "\\W.*"
+      scope: comment.line
+
+
+
+
+
+    # - match: "^@*"
+    #   scope: keyword.operator
+
+    - match: "A"
+      scope: entity.name
+    - match: "G"
+      scope: keyword.operator
+    - match: "C"
+      scope: string
+    - match: "T"
+      scope: constant.character
+
+    # - match: "[^ACGT]"
+    #   scope: comment.line
+    #   push: 
+    #   - meta_scope: comment.line
+    #   - match: $
+    #     captures:
+    #       0: punctuation.definition.string.end.tex
+    #     pop: TRUE
+
+
+  # header:
+  #   - meta_scope: keyword.operator
+  #   - match: '(?<!\\)$'
+  #     scope: keyword.operator
+  #     pop: true
+
+  # optional:
+  #   - meta_scope: constant.character
+  #   - match: "\\+"      
+  #     scope: comment.line
+  #     pop: true
+
+
+
