@@ -9,10 +9,10 @@
 #
 
 # Input TSV File
-INPUT='input.tsv'
+INPUT='input_day2_1515.tsv'
 
 # Template XML File to modify
-TEMPLATE='template.syntax'
+TEMPLATE='template2.syntax'
 
 # Output XML File
 OUTPUT='autoSyntax_output.xml'
@@ -28,19 +28,29 @@ do
 
 	SCOPE=$(echo $LINE | cut -f2 -d' ' -)
 
-	FOREGROUND=$(echo $LINE | cut -f3 -d' ' -)
+	FONTSTYLE=$(echo $LINE | cut -f3 -d' ' -)
+
+	BACKGROUND=$(echo $LINE | cut -f4 -d' ' -)
+
+	FOREGROUND=$(echo $LINE | cut -f5 -d' ' -)
 
 	#echo $LINE
 	#echo $NAME
 	#echo $SCOPE
+	#echo $BACKGROUND
 	#echo $FOREGROUND
 
 	sed "s/NAME/$NAME/g" $TEMPLATE \
 	| sed "s/SCOPE/$SCOPE/g" - \
-	| sed "s/FOREGROUND/$FOREGROUND/g" > out.tmp
+	| sed "s/FONTSTYLE/$FONTSTYLE/g" - \
+	| sed "s/BACKGROUND/$BACKGROUND/g" - \
+	| sed "s/FOREGROUND/$FOREGROUND/g" - \
+	| sed "s/>na</></g" - > out.tmp # remove empty
 
 	cat out.tmp >> $OUTPUT
 
 done < $INPUT
+
+
 
 rm out.tmp

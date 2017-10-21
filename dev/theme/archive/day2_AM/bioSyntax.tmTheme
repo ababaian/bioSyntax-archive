@@ -5,47 +5,10 @@
 			<string>variable.number</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0099ff</string>
 			</dict>
 		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Header</string>
-			<key>scope</key>
-			<string>header.id</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>background</key>
-				<string>#3E3D32</string>
-				<key>foreground</key>
-				<string>#E6DB74</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Name</string>
-			<key>scope</key>
-			<string>name.id</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#ff0000</string>
-			</dict>
-		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Nucleotide</string>
@@ -53,15 +16,12 @@
 			<string>nt.A</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 				<key>background</key>
 				<string>#64f73f</string>
 				<key>foreground</key>
 				<string>#000000</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Nucleotide</string>
@@ -69,15 +29,12 @@
 			<string>nt.T</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 				<key>background</key>
 				<string>#eb413c</string>
 				<key>foreground</key>
 				<string>#000000</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Nucleotide</string>
@@ -85,15 +42,12 @@
 			<string>nt.G</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 				<key>background</key>
 				<string>#ffb340</string>
 				<key>foreground</key>
 				<string>#000000</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Nucleotide</string>
@@ -101,63 +55,12 @@
 			<string>nt.C</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 				<key>background</key>
 				<string>#3c88ee</string>
 				<key>foreground</key>
 				<string>#000000</string>
 			</dict>
 		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.N</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F8F8F0</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.X</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F8F8F0</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.INDEL</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#75715E</string>
-			</dict>
-		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Coordinate</string>
@@ -167,13 +70,10 @@
 			<dict>
 				<key>fontStyle</key>
 				<string>bold</string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#1e8449</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Coordinate</string>
@@ -181,15 +81,10 @@
 			<string>coord.Start</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#1e8449</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Coordinate</string>
@@ -197,15 +92,10 @@
 			<string>coord.End</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#1e8449</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Strand</string>
@@ -213,15 +103,10 @@
 			<string>strand.plus</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
-				<string>#F92672</string>
+				<string>#ff0000</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Strand</string>
@@ -229,15 +114,10 @@
 			<string>strand.minus</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
-				<string>#A6E22E</string>
+				<string>#009900</string>
 			</dict>
 		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Strand</string>
@@ -245,367 +125,10 @@
 			<string>strand.none</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
-				<string>#66D9EF</string>
+				<string>#404040</string>
 			</dict>
 		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient0</string>
-			<key>scope</key>
-			<string>grad0</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FFFFFF</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient1</string>
-			<key>scope</key>
-			<string>grad1</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FFE7FD</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient2</string>
-			<key>scope</key>
-			<string>grad2</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FFCFFB</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient3</string>
-			<key>scope</key>
-			<string>grad3</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FFB7F9</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient4</string>
-			<key>scope</key>
-			<string>grad4</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FF9FF7</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient5</string>
-			<key>scope</key>
-			<string>grad5</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FF88F6</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient6</string>
-			<key>scope</key>
-			<string>grad6</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FF70F4</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient7</string>
-			<key>scope</key>
-			<string>grad7</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FF58F2</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient8</string>
-			<key>scope</key>
-			<string>grad8</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FF40F0</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient9</string>
-			<key>scope</key>
-			<string>grad9</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FF29EF</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient10</string>
-			<key>scope</key>
-			<string>grad10</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#ff00eb</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw0</string>
-			<key>scope</key>
-			<string>grad.bw0</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#3c3d38</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw1</string>
-			<key>scope</key>
-			<string>grad.bw1</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#4f504b</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw2</string>
-			<key>scope</key>
-			<string>grad.bw2</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#63635F</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw3</string>
-			<key>scope</key>
-			<string>grad.bw3</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#767773</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw4</string>
-			<key>scope</key>
-			<string>grad.bw4</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#8A8A87</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw5</string>
-			<key>scope</key>
-			<string>grad.bw5</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#9D9E9B</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw6</string>
-			<key>scope</key>
-			<string>grad.bw6</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#B1B1AF</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw7</string>
-			<key>scope</key>
-			<string>grad.bw7</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#C4C4C3</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw8</string>
-			<key>scope</key>
-			<string>grad.bw8</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#D8D8D7</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw9</string>
-			<key>scope</key>
-			<string>grad.bw9</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#EbEbEb</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>gradient.bw10</string>
-			<key>scope</key>
-			<string>grad.bw10</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#FFFFFF</string>
-			</dict>
-		</dict>
-
 		<dict>
 			<key>name</key>
 			<string>Aminoacid</string>
@@ -613,10 +136,6 @@
 			<string>aa.clustal.A</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#80a0f0</string>
 			</dict>
@@ -629,10 +148,6 @@
 			<string>aa.clustal.R</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#f01505</string>
 			</dict>
@@ -645,10 +160,6 @@
 			<string>aa.clustal.N</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -661,10 +172,6 @@
 			<string>aa.clustal.D</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#c048c0</string>
 			</dict>
@@ -677,10 +184,6 @@
 			<string>aa.clustal.C</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#f08080</string>
 			</dict>
@@ -693,10 +196,6 @@
 			<string>aa.clustal.Q</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -709,10 +208,6 @@
 			<string>aa.clustal.E</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#c048c0</string>
 			</dict>
@@ -725,10 +220,6 @@
 			<string>aa.clustal.G</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#f09048</string>
 			</dict>
@@ -741,10 +232,6 @@
 			<string>aa.clustal.H</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#15a4a4</string>
 			</dict>
@@ -757,10 +244,6 @@
 			<string>aa.clustal.I</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#80a0f0</string>
 			</dict>
@@ -773,10 +256,6 @@
 			<string>aa.clustal.L</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#80a0f0</string>
 			</dict>
@@ -789,10 +268,6 @@
 			<string>aa.clustal.K</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#f01505</string>
 			</dict>
@@ -805,10 +280,6 @@
 			<string>aa.clustal.M</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#80a0f0</string>
 			</dict>
@@ -821,10 +292,6 @@
 			<string>aa.clustal.F</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#80a0f0</string>
 			</dict>
@@ -837,10 +304,6 @@
 			<string>aa.clustal.P</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffff00</string>
 			</dict>
@@ -853,10 +316,6 @@
 			<string>aa.clustal.S</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -869,10 +328,6 @@
 			<string>aa.clustal.T</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -885,10 +340,6 @@
 			<string>aa.clustal.W</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#80a0f0</string>
 			</dict>
@@ -901,10 +352,6 @@
 			<string>aa.clustal.Y</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#15a4a4</string>
 			</dict>
@@ -917,10 +364,6 @@
 			<string>aa.clustal.V</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#80a0f0</string>
 			</dict>
@@ -933,10 +376,6 @@
 			<string>aa.clustal.B</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -949,10 +388,6 @@
 			<string>aa.clustal.X</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -965,10 +400,6 @@
 			<string>aa.clustal.Z</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -981,10 +412,6 @@
 			<string>aa.zappo.A</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffafaf</string>
 			</dict>
@@ -997,10 +424,6 @@
 			<string>aa.zappo.R</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#6464ff</string>
 			</dict>
@@ -1013,10 +436,6 @@
 			<string>aa.zappo.N</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -1029,10 +448,6 @@
 			<string>aa.zappo.D</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff0000</string>
 			</dict>
@@ -1045,10 +460,6 @@
 			<string>aa.zappo.C</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffff00</string>
 			</dict>
@@ -1061,10 +472,6 @@
 			<string>aa.zappo.Q</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -1077,10 +484,6 @@
 			<string>aa.zappo.E</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff0000</string>
 			</dict>
@@ -1093,10 +496,6 @@
 			<string>aa.zappo.G</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff00ff</string>
 			</dict>
@@ -1109,10 +508,6 @@
 			<string>aa.zappo.H</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#6464ff</string>
 			</dict>
@@ -1125,10 +520,6 @@
 			<string>aa.zappo.I</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffafaf</string>
 			</dict>
@@ -1141,10 +532,6 @@
 			<string>aa.zappo.L</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffafaf</string>
 			</dict>
@@ -1157,10 +544,6 @@
 			<string>aa.zappo.K</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#6464ff</string>
 			</dict>
@@ -1173,10 +556,6 @@
 			<string>aa.zappo.M</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffafaf</string>
 			</dict>
@@ -1189,10 +568,6 @@
 			<string>aa.zappo.F</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffc800</string>
 			</dict>
@@ -1205,10 +580,6 @@
 			<string>aa.zappo.P</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff00ff</string>
 			</dict>
@@ -1221,10 +592,6 @@
 			<string>aa.zappo.S</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -1237,10 +604,6 @@
 			<string>aa.zappo.T</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -1253,10 +616,6 @@
 			<string>aa.zappo.W</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffc800</string>
 			</dict>
@@ -1269,10 +628,6 @@
 			<string>aa.zappo.Y</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffc800</string>
 			</dict>
@@ -1285,10 +640,6 @@
 			<string>aa.zappo.V</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffafaf</string>
 			</dict>
@@ -1301,10 +652,6 @@
 			<string>aa.zappo.B</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -1317,10 +664,6 @@
 			<string>aa.zaapo.X</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -1333,10 +676,6 @@
 			<string>aa.zappo.Z</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -1349,10 +688,6 @@
 			<string>aa.taylor.A</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ccff00</string>
 			</dict>
@@ -1365,10 +700,6 @@
 			<string>aa.taylor.R</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0000ff</string>
 			</dict>
@@ -1381,10 +712,6 @@
 			<string>aa.taylor.N</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#cc00ff</string>
 			</dict>
@@ -1397,10 +724,6 @@
 			<string>aa.taylor.D</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff0000</string>
 			</dict>
@@ -1413,10 +736,6 @@
 			<string>aa.taylor.C</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffff00</string>
 			</dict>
@@ -1429,10 +748,6 @@
 			<string>aa.taylor.Q</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff00cc</string>
 			</dict>
@@ -1445,10 +760,6 @@
 			<string>aa.taylor.E</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff0066</string>
 			</dict>
@@ -1461,10 +772,6 @@
 			<string>aa.taylor.G</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff9900</string>
 			</dict>
@@ -1477,10 +784,6 @@
 			<string>aa.taylor.H</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0066ff</string>
 			</dict>
@@ -1493,10 +796,6 @@
 			<string>aa.taylor.I</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#66ff00</string>
 			</dict>
@@ -1509,10 +808,6 @@
 			<string>aa.taylor.L</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#33ff00</string>
 			</dict>
@@ -1525,10 +820,6 @@
 			<string>aa.taylor.K</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#6600ff</string>
 			</dict>
@@ -1541,10 +832,6 @@
 			<string>aa.taylor.M</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff00</string>
 			</dict>
@@ -1557,10 +844,6 @@
 			<string>aa.taylor.F</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ff66</string>
 			</dict>
@@ -1573,10 +856,6 @@
 			<string>aa.taylor.P</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffcc00</string>
 			</dict>
@@ -1589,10 +868,6 @@
 			<string>aa.taylor.S</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff3300</string>
 			</dict>
@@ -1605,10 +880,6 @@
 			<string>aa.taylor.T</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff6600</string>
 			</dict>
@@ -1621,10 +892,6 @@
 			<string>aa.taylor.W</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ccff</string>
 			</dict>
@@ -1637,10 +904,6 @@
 			<string>aa.taylor.Y</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#00ffcc</string>
 			</dict>
@@ -1653,10 +916,6 @@
 			<string>aa.taylor.V</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#99ff00</string>
 			</dict>
@@ -1669,10 +928,6 @@
 			<string>aa.taylor.B</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -1685,10 +940,6 @@
 			<string>aa.taylor.X</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -1701,10 +952,6 @@
 			<string>aa.taylor.Z</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ffffff</string>
 			</dict>
@@ -1717,10 +964,6 @@
 			<string>aa.hydrophobicity.A</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ad0052</string>
 			</dict>
@@ -1733,10 +976,6 @@
 			<string>aa.hydrophobicity.R</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0000ff</string>
 			</dict>
@@ -1749,10 +988,6 @@
 			<string>aa.hydrophobicity.N</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0c00f3</string>
 			</dict>
@@ -1765,10 +1000,6 @@
 			<string>aa.hydrophobicity.D</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0c00f3</string>
 			</dict>
@@ -1781,10 +1012,6 @@
 			<string>aa.hydrophobicity.C</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#c2003d</string>
 			</dict>
@@ -1797,10 +1024,6 @@
 			<string>aa.hydrophobicity.Q</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0c00f3</string>
 			</dict>
@@ -1813,10 +1036,6 @@
 			<string>aa.hydrophobicity.E</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0c00f3</string>
 			</dict>
@@ -1829,10 +1048,6 @@
 			<string>aa.hydrophobicity.G</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#6a0095</string>
 			</dict>
@@ -1845,10 +1060,6 @@
 			<string>aa.hydrophobicity.H</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#1500ea</string>
 			</dict>
@@ -1861,10 +1072,6 @@
 			<string>aa.hydrophobicity.I</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ff0000</string>
 			</dict>
@@ -1877,10 +1084,6 @@
 			<string>aa.hydrophobicity.L</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#ea0015</string>
 			</dict>
@@ -1893,10 +1096,6 @@
 			<string>aa.hydrophobicity.K</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0000ff</string>
 			</dict>
@@ -1909,10 +1108,6 @@
 			<string>aa.hydrophobicity.M</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#b0004f</string>
 			</dict>
@@ -1925,10 +1120,6 @@
 			<string>aa.hydrophobicity.F</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#cb0034</string>
 			</dict>
@@ -1941,10 +1132,6 @@
 			<string>aa.hydrophobicity.P</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#4600b9</string>
 			</dict>
@@ -1957,10 +1144,6 @@
 			<string>aa.hydrophobicity.S</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#5e00a1</string>
 			</dict>
@@ -1973,10 +1156,6 @@
 			<string>aa.hydrophobicity.T</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#61009e</string>
 			</dict>
@@ -1989,10 +1168,6 @@
 			<string>aa.hydrophobicity.W</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#5b00a4</string>
 			</dict>
@@ -2005,10 +1180,6 @@
 			<string>aa.hydrophobicity.Y</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#4f00b0</string>
 			</dict>
@@ -2021,10 +1192,6 @@
 			<string>aa.hydrophobicity.V</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#f60009</string>
 			</dict>
@@ -2037,10 +1204,6 @@
 			<string>aa.hydrophobicity.B</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0c00f3</string>
 			</dict>
@@ -2053,10 +1216,6 @@
 			<string>aa.hydrophobicity.X</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#680097</string>
 			</dict>
@@ -2069,28 +1228,138 @@
 			<string>aa.hydrophobicity.Z</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
 				<string>#0c00f3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>gradient0</string>
+			<key>scope</key>
+			<string>grad0</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFFFFF</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string></string>
+			<string>gradient1</string>
 			<key>scope</key>
-			<string></string>
+			<string>grad1</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
 				<key>foreground</key>
-				<string></string>
+				<string>#FFE7FD</string>
 			</dict>
 		</dict>
 
+		<dict>
+			<key>name</key>
+			<string>gradient2</string>
+			<key>scope</key>
+			<string>grad2</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFCFFB</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient3</string>
+			<key>scope</key>
+			<string>grad3</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFB7F9</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient4</string>
+			<key>scope</key>
+			<string>grad4</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF9FF7</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient5</string>
+			<key>scope</key>
+			<string>grad5</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF88F6</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient6</string>
+			<key>scope</key>
+			<string>grad6</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF70F4</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient7</string>
+			<key>scope</key>
+			<string>grad7</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF58F2</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient8</string>
+			<key>scope</key>
+			<string>grad8</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF40F0</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient9</string>
+			<key>scope</key>
+			<string>grad9</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF29EF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>gradient10</string>
+			<key>scope</key>
+			<string>grad10</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ff00eb</string>
+			</dict>
+		</dict>

@@ -12,7 +12,7 @@ contexts:
     #positive lookbehind to match a + and a new line to any characters right after it
     #pushes it to quality
     - match: "^>.*"
-      scope: string
+      scope: header.id
 
     # Match basic Nucleotides
     - match: "[Aa]"
@@ -29,8 +29,8 @@ contexts:
 
     # aNy or unknown (X)
     - match: "[NnXx]"
-      scope: variable
+      scope: nt.N
 
     # indel
     - match: "[-]"
-      scope: comment.line
+      scope: nt.INDEL
