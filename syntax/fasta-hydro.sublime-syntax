@@ -1,0 +1,116 @@
+%YAML 1.2
+---
+name: fasta-hydro
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions: [fasta, fa]
+scope: text.fasta
+
+
+contexts:
+  main:
+
+    #positive lookbehind to match a + and a new line to any characters right after it
+    #pushes it to quality
+    - match: "^>.*"
+      scope: string
+
+    # match amino acids
+    # Alanine (ALA)
+    - match: "[Aa]"
+      scope: aa.hydrophobicity.A
+
+    # Aspartate/Asparagine (ASX)
+    - match: "[Bb]"
+      scope: aa.hydrophobicity.B
+
+    # Cysteine (CYS)
+    - match: "[Cc]"
+      scope: aa.hydrophobicity.C
+
+    # Aspartate (ASP)
+    - match: "[Dd]"
+      scope: aa.hydrophobicity.D
+
+    # Glutamate (GLU)
+    - match: "[Ee]"
+      scope: aa.hydrophobicity.E
+
+    # Phenylalanine (PHE)
+    - match: "[Ff]"
+      scope: aa.hydrophobicity.F
+
+    # Glycine (GLY)
+    - match: "[Gg]"
+      scope: aa.hydrophobicity.G
+
+    # Histidine (HIS)
+    - match: "[Hh]"
+      scope: aa.hydrophobicity.H
+
+    # Isoleucine (ILE)
+    - match: "[Ii]"
+      scope: aa.hydrophobicity.I
+
+    # Lysine (LYS)
+    - match: "[Kk]"
+      scope: aa.hydrophobicity.K
+
+    # Leucine (LEU)
+    - match: "[Ll]"
+      scope: aa.hydrophobicity.L
+
+    # Methionine (MET)
+    - match: "[Mm]"
+      scope: aa.hydrophobicity.M
+
+    # Asparagine (ASN)
+    - match: "[Nn]"
+      scope: aa.hydrophobicity.N
+
+    # Proline (PRO)
+    - match: "[Pp]"
+      scope: aa.hydrophobicity.P
+
+    # Glutamine (GLN)
+    - match: "[Qq]"
+      scope: aa.hydrophobicity.Q
+
+    # Arginine (ARG)
+    - match: "[Rr]"
+      scope: aa.hydrophobicity.R
+
+    # Serine (SER)
+    - match: "[Ss]"
+      scope: aa.hydrophobicity.S
+
+    # Threonine (THE)
+    - match: "[Tt]"
+      scope: aa.hydrophobicity.T
+
+    # Valine (VAL)
+    - match: "[Vv]"
+      scope: aa.hydrophobicity.V
+
+    # Tryptophan (TRP)
+    - match: "[Ww]"
+      scope: aa.hydrophobicity.W
+
+    # Tyrosine (TYR)
+    - match: "[Yy]"
+      scope: aa.hydrophobicity.Y
+
+    # Glutamate or Glutamine (GLX)
+    - match: "[Zz]"
+      scope: aa.hydrophobicity.Z
+
+    # any/unknown (X)
+    - match: "[Xx]"
+      scope: aa.hydrophobicity.X
+
+    # translation stop
+    - match: "\\*"
+      scope: comment.line
+
+    # indel
+    - match: "[-]"
+      scope: comment.line

@@ -1,0 +1,116 @@
+%YAML 1.2
+---
+name: fasta-zappo
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions: [fasta, fa]
+scope: text.fasta
+
+
+contexts:
+  main:
+
+    #positive lookbehind to match a + and a new line to any characters right after it
+    #pushes it to quality
+    - match: "^>.*"
+      scope: string
+
+    # match amino acids
+    # Alanine (ALA)
+    - match: "[Aa]"
+      scope: aa.zappo.A
+
+    # Aspartate/Asparagine (ASX)
+    - match: "[Bb]"
+      scope: aa.zappo.B
+
+    # Cysteine (CYS)
+    - match: "[Cc]"
+      scope: aa.zappo.C
+
+    # Aspartate (ASP)
+    - match: "[Dd]"
+      scope: aa.zappo.D
+
+    # Glutamate (GLU)
+    - match: "[Ee]"
+      scope: aa.zappo.E
+
+    # Phenylalanine (PHE)
+    - match: "[Ff]"
+      scope: aa.zappo.F
+
+    # Glycine (GLY)
+    - match: "[Gg]"
+      scope: aa.zappo.G
+
+    # Histidine (HIS)
+    - match: "[Hh]"
+      scope: aa.zappo.H
+
+    # Isoleucine (ILE)
+    - match: "[Ii]"
+      scope: aa.zappo.I
+
+    # Lysine (LYS)
+    - match: "[Kk]"
+      scope: aa.zappo.K
+
+    # Leucine (LEU)
+    - match: "[Ll]"
+      scope: aa.zappo.L
+
+    # Methionine (MET)
+    - match: "[Mm]"
+      scope: aa.zappo.M
+
+    # Asparagine (ASN)
+    - match: "[Nn]"
+      scope: aa.zappo.N
+
+    # Proline (PRO)
+    - match: "[Pp]"
+      scope: aa.zappo.P
+
+    # Glutamine (GLN)
+    - match: "[Qq]"
+      scope: aa.zappo.Q
+
+    # Arginine (ARG)
+    - match: "[Rr]"
+      scope: aa.zappo.R
+
+    # Serine (SER)
+    - match: "[Ss]"
+      scope: aa.zappo.S
+
+    # Threonine (THE)
+    - match: "[Tt]"
+      scope: aa.zappo.T
+
+    # Valine (VAL)
+    - match: "[Vv]"
+      scope: aa.zappo.V
+
+    # Tryptophan (TRP)
+    - match: "[Ww]"
+      scope: aa.zappo.W
+
+    # Tyrosine (TYR)
+    - match: "[Yy]"
+      scope: aa.zappo.Y
+
+    # Glutamate or Glutamine (GLX)
+    - match: "[Zz]"
+      scope: aa.zappo.Z
+
+    # any/unknown (X)
+    - match: "[Xx]"
+      scope: aa.zappo.X
+
+    # translation stop
+    - match: "\\*"
+      scope: comment.line
+
+    # indel
+    - match: "[-]"
+      scope: comment.line

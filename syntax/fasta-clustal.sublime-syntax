@@ -1,0 +1,116 @@
+%YAML 1.2
+---
+name: fasta-clustal
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions: [fasta, fa]
+scope: text.fasta
+
+
+contexts:
+  main:
+
+    #positive lookbehind to match a + and a new line to any characters right after it
+    #pushes it to quality
+    - match: "^>.*"
+      scope: string
+
+    # match amino acids
+    # Alanine (ALA)
+    - match: "[Aa]"
+      scope: aa.clustal.A
+
+    # Aspartate/Asparagine (ASX)
+    - match: "[Bb]"
+      scope: aa.clustal.B
+
+    # Cysteine (CYS)
+    - match: "[Cc]"
+      scope: aa.clustal.C
+
+    # Aspartate (ASP)
+    - match: "[Dd]"
+      scope: aa.clustal.D
+
+    # Glutamate (GLU)
+    - match: "[Ee]"
+      scope: aa.clustal.E
+
+    # Phenylalanine (PHE)
+    - match: "[Ff]"
+      scope: aa.clustal.F
+
+    # Glycine (GLY)
+    - match: "[Gg]"
+      scope: aa.clustal.G
+
+    # Histidine (HIS)
+    - match: "[Hh]"
+      scope: aa.clustal.H
+
+    # Isoleucine (ILE)
+    - match: "[Ii]"
+      scope: aa.clustal.I
+
+    # Lysine (LYS)
+    - match: "[Kk]"
+      scope: aa.clustal.K
+
+    # Leucine (LEU)
+    - match: "[Ll]"
+      scope: aa.clustal.L
+
+    # Methionine (MET)
+    - match: "[Mm]"
+      scope: aa.clustal.M
+
+    # Asparagine (ASN)
+    - match: "[Nn]"
+      scope: aa.clustal.N
+
+    # Proline (PRO)
+    - match: "[Pp]"
+      scope: aa.clustal.P
+
+    # Glutamine (GLN)
+    - match: "[Qq]"
+      scope: aa.clustal.Q
+
+    # Arginine (ARG)
+    - match: "[Rr]"
+      scope: aa.clustal.R
+
+    # Serine (SER)
+    - match: "[Ss]"
+      scope: aa.clustal.S
+
+    # Threonine (THE)
+    - match: "[Tt]"
+      scope: aa.clustal.T
+
+    # Valine (VAL)
+    - match: "[Vv]"
+      scope: aa.clustal.V
+
+    # Tryptophan (TRP)
+    - match: "[Ww]"
+      scope: aa.clustal.W
+
+    # Tyrosine (TYR)
+    - match: "[Yy]"
+      scope: aa.clustal.Y
+
+    # Glutamate or Glutamine (GLX)
+    - match: "[Zz]"
+      scope: aa.clustal.Z
+
+    # any/unknown (X)
+    - match: "[Xx]"
+      scope: aa.clustal.X
+
+    # translation stop
+    - match: "\\*"
+      scope: comment.line
+
+    # indel
+    - match: "[-]"
+      scope: comment.line

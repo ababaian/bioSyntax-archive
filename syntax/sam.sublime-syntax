@@ -1,0 +1,131 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: sam
+file_extensions:
+  - sam
+scope: source.sam
+contexts:
+  main:
+    # header entries start with '@'
+    - match: '^@HD'
+      scope: keyword.sam
+      push: header_entry_hd
+    - match: '^@SQ'
+      scope: keyword.sam
+      push: header_entry_sq
+    - match: '^@RG'
+      scope: keyword.sam
+      push: header_entry_rg
+    - match: '^@PG'
+      scope: keyword.sam
+      push: header_entry_pg
+    - match: '^@CO'
+      scope: keyword.sam
+      push: header_entry_co
+
+  header_entry_hd:
+    - meta_scope: string.sam
+    - match: '(?<=[A-Z]{2}:)"'
+      scope: invalid.sam
+      push: header_entry_quote
+    - match: '(?<=VN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=SO:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=GO:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '$'
+      pop: true
+
+  header_entry_sq:
+    - meta_scope: string.sam
+    - match: '(?<=[A-Z]{2}:)"'
+      scope: invalid.sam
+      push: header_entry_quote
+    - match: '(?<=SN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=LN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=AH:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=AN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=AS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=M5:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=SP:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=UR:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: $
+      pop: true
+
+  header_entry_rg:
+    - meta_scope: string.sam
+    - match: '(?<=[A-Z]{2}:)"'
+      scope: invalid.sam
+      push: header_entry_quote
+    - match: '(?<=ID:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=CN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=DS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=DT:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=FO:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=KS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=LB:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=PG:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=PI:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=PL:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=PM:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=PU:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=SM:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: $
+      pop: true
+
+  header_entry_pg:
+    - meta_scope: string.sam
+    - match: '(?<=[A-Z]{2}:)"'
+      scope: invalid.sam
+      push: header_entry_quote
+    - match: '(?<=ID:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=PN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=CL:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=PP:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=DS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: '(?<=VN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
+      scope: invalid.sam
+    - match: $
+      pop: true
+
+  header_entry_co:
+    - meta_scope: string.sam
+    - match: '(?<=[A-Z]{2}:)"'
+      scope: invalid.sam
+      push: header_entry_quote
+    - match: $
+      pop: true
+
+  header_entry_quote:
+    - meta_scope: invalid.sam
+    - match: '"'
+      pop: true
+
