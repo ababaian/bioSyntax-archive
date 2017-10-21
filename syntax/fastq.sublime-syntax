@@ -2,8 +2,7 @@
 ---
 name: fastq
 # See http://www.sublimetext.com/docs/3/syntax.html
-file_extensions:
-  - [fastq, fq]
+file_extensions: [fastq, fq]
 scope: source.fastq
 
 

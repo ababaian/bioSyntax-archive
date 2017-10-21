@@ -14,25 +14,25 @@ contexts:
     
     #Chromosome name
     - match: ^{{ident}}
-      scope: string.bed
+      scope: coord.Chr.bed
 
     #Genome coordinates
     - match: '[\s\t][0-9]+[\s\t][0-9]+\b'
-      scope: constant.language.bed
+      scope: coord.Start.bed
     - match: '[\s\t][0-9]+[\s\t][0-9]+$'
-      scope: constant.language.bed
+      scope: coord.End.bed
 
     #Additional column for bed names
-    - match: '[A-Za-z()]+'
-      scope: variable.language.bed
-    - match: '[A-Za-z()]+$'
-      scope: variable.language.bed
+    - match: '[A-Za-z()0-9]+'
+      scope: string.bed
+    - match: '[A-Za-z()0-9]+$'
+      scope: string.bed
 
     #Additional column for score
     - match: '[\s\t][0-9]+[\s\t]'
-      scope: support.constant.bed
+      scope: grad10.bed
     - match: '[\s\t][0-9]+$'
-      scope: support.constant.bed
+      scope: grad10.bed
 
 #Handling the strand column
     #Plus strand
@@ -43,15 +43,15 @@ contexts:
 
     #Minus strand
     - match: '-'
-      scope: constant.character.bed
+      scope: strand.minus.bed
     - match: '-$'
-      scope: constant.character.bed
+      scope: strand.plus.bed
 
     #Dot strand
     - match: '\.'
-      scope: string.bed
+      scope: strand.none.bed
     - match: '\.$'
-      scope: string.bed
+      scope: strand.none.bed
     
     #Additional column for RGB
     - match: '[\s\t][0-9]+,[0-9]+,[0-9]+[\s\t]'
@@ -62,3 +62,4 @@ contexts:
     #Handle track line
     - match: '^track.*'
       scope: comment.bed
+
