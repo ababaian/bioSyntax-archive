@@ -9,58 +9,105 @@ scope: source.fastq
 
 contexts:
   main:
-    # - match: "^@"
-    #   scope: keyword.operator
-    #   #set: [header_string, header]
-    #   push: header
-
     #this doesn't work if there is text after the + sign
+    #turns the 3rd line of FASTQ into a commment shade
     - match: "^\\+$"
       scope: comment.line
 
-    - match: \A@
+    #positive lookbehind to match a + and a new line to any characters right after it
+    #pushes it to quality
+    - match: "(?<=\\+\n).*"
       scope: entity.name
+      push: quality
 
-    - match: "\\W.*"
+
+    - match: "^A"
+      scope: nt.A
+      push: nt
+
+    - match: "^C"
+      scope: nt.C
+      push: nt
+
+    - match: "^G"
+      scope: nt.G
+      push: nt
+
+    - match: "^T"
+      scope: nt.T
+      push: nt
+
+    #takes any lines with only ACGT and pushes it to nt
+    - match: "[ACGT]"
+      scope: entity.name
+      push: nt
+
+    #takes any lines that start with @ and pushes it to id
+    #- match: ^@.*\s\b
+    - match: "^@{1,2}.*"
       scope: comment.line
+      push: id
 
 
+  # prototype:
+  #   - include: nt
 
 
+  #takes anything that starts with @ and until the end of the line, turns it green
+  id:
+    - meta_scope: name.id
+    - match: "@"
+      scope: invalid
+    - match: "[@]"
+      scope: invalid
+    - match: $
+      scope: constant.character.escape
+      pop: true
 
-    # - match: "^@*"
-    #   scope: keyword.operator
 
+  #anything that is pushed here will all be turned one colour
+  #!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+  quality:
+    # - clear_scopes: true
+    #- meta_include_prototype: false
+    - meta_scope: comment.line
+    - match: "[\\!\\#\\$\\%\\&\\'\\(\\)\\*]"
+      scope: grad0
+    - match: '"'
+      scope: grad0
+    - match: "[\\+\\,\\-\\.\\/0-4]"
+      scope: grad1
+    - match: "[5-9\\:\\;\\<\\=\\>]"
+      scope: grad2
+    - match: "[\\?\\@A-H]"
+      scope: grad3
+    - match: "[I-R]"
+      scope: grad4
+    - match: "[S-Z\\[\\\\]"
+      scope: grad5
+    - match: "[\\]\\^\\_\\`a-f]"
+      scope: grad6
+    - match: "[g-p]"
+      scope: grad7
+    - match: "[q-z]"
+      scope: grad8
+    - match: "[\\{\\|\\}\\~]"
+      scope: grad9
+    - match: $
+      scope: constant.character.escape
+      pop: true
+
+  #nt takes the lines from only ACGT and then assigns a colour to each letter #the last match is to see if it ends at the line, if so, then pop.
+  nt:
+    #- meta_content_scope: entity.name
     - match: "A"
-      scope: entity.name
+      scope: nt.A
     - match: "G"
-      scope: keyword.operator
+      scope: nt.G
     - match: "C"
-      scope: string
+      scope: nt.C
     - match: "T"
-      scope: constant.character
-
-    # - match: "[^ACGT]"
-    #   scope: comment.line
-    #   push: 
-    #   - meta_scope: comment.line
-    #   - match: $
-    #     captures:
-    #       0: punctuation.definition.string.end.tex
-    #     pop: TRUE
-
-
-  # header:
-  #   - meta_scope: keyword.operator
-  #   - match: '(?<!\\)$'
-  #     scope: keyword.operator
-  #     pop: true
-
-  # optional:
-  #   - meta_scope: constant.character
-  #   - match: "\\+"      
-  #     scope: comment.line
-  #     pop: true
-
-
-
+      scope: nt.T
+    - match: $
+      scope: constant.character.escape
+      pop: true
