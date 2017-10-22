@@ -11,7 +11,7 @@ fixedStep chrom=chr3 start=400601 step=100
 800
 900
 1000
-1024
+975
 700
 652
 410
@@ -21,8 +21,7 @@ fixedStep chrom=chr3 start=400601 step=100
 fixedStep chrom=chrX start=9001 step=1 span=2000
 353
 53
-354
+754
 4333
-0
 0
 0
