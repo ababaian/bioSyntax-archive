@@ -2,8 +2,8 @@
 ---
 name: fasta-nt
 # See http://www.sublimetext.com/docs/3/syntax.html
-file_extensions: [fasta, fa]
-scope: text.fasta
+file_extensions: []
+scope: text.fasta-nt
 
 
 contexts:
