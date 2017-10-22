@@ -1,3 +1,4 @@
+![bioSyntax Logo](dev/img/bioSyntax_logo.png)
 # bioSyntax
 Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in future).
 
@@ -8,6 +9,7 @@ Syntax highlighting for computational biology file formats in Sublime Text 3, gt
 - [SAM](#sam-sam)
 - [Wig](#wig-wig)
 - [Bed](#bed-bed)
+- [PDB](#pdb-pdb)
 - [GTF](#gtf-gtf)
 - [VCF](#vcf-vcf)
 - [Installation Instructions](#installation-instructions)
@@ -16,6 +18,7 @@ Syntax highlighting for computational biology file formats in Sublime Text 3, gt
 - [fasta](#fasta-fa-fasta)
 - [fastq](#fastq-fq-fastq-alpha)
 - [bed](#bed-bed-alpha)
+- [Installation Instructions](#installation-instructions-linux)
 
 ## Sublime Text 3 Installation
 
@@ -46,21 +49,39 @@ A total of 6 formats available:
 ![Fasta Example Sublime](dev/img/fasta_hydro.png)
 
 ## Fastq (.fq; .fastq)
+[fastq.sublime-syntax](syntax/sublime/fastq.sublime-syntax):
 
+![FastQ Example Sublime](dev/img/FastQ_Quality.png)
 
 ## SAM (.sam)
+[sam.sublime-syntax](syntax/sublime/sam.sublime-syntax):
 
+![SAM Example Sublime](dev/img/SAM_header.png)
 
 ## Wig (.wig)
+[wig.sublime-syntax](syntax/sublime/wig.sublime-syntax):
 
+![Wig Example Sublime](dev/img/Wig_Gradient.png)
 
 ## Bed (.bed)
+[bed.sublime-syntax](syntax/sublime/bed.sublime-syntax):
 
+![Bed Example Sublime](dev/img/Bed_readability.png)
+
+## PDB (.pdb)
+[pdb.sublime-syntax](syntax/sublime/pdb.sublime-syntax):
+
+![Pdb Example Sublime](dev/img/PDB_header1.png)
 
 ## GTF (.gtf)
+[bed.sublime-syntax](syntax/sublime/bed.sublime-syntax):
 
+![Gtf Example Sublime](dev/img)
 
 ## VCF (.vcf)
+[vcf.sublime-syntax](syntax/sublime/vcf.sublime-syntax):
+
+![Vcf Example Sublime](dev/img/VCF_header.png)
 
 ## Installation Instructions
 
