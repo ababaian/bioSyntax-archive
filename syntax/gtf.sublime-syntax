@@ -31,4 +31,4 @@ contexts:
       scope: variable.number.frame.gtf
 
     - match: \s[\w|_]*\s".*";
-      scope: grad8.attribute.gtf
+      scope: grad4.gtf
