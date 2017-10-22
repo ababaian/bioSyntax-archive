@@ -2,8 +2,8 @@
 ---
 name: fasta-hydro
 # See http://www.sublimetext.com/docs/3/syntax.html
-file_extensions: [fasta, fa, faa]
-scope: text.fasta
+file_extensions: [fastahydro]
+scope: text.fastahydro
 
 
 contexts:
