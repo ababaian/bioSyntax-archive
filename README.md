@@ -11,7 +11,7 @@ A hackseq 2017 (October 20 - 22) project by:
 - [Anicet Ebou](https://github.com/ebedthan)
 - [Jeffrey Kam](https://github.com/lazypanda10117)
 
-[Presentation]
+[Presentation](bioSyntax_talk.pptm)
 
 ## Contents
 [**Sublime Text 3**](#sublime-text-3-installation)
