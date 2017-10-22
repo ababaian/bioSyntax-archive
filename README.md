@@ -3,19 +3,30 @@ Syntax highlighting for computational biology file formats in Sublime Text 3, gt
 
 ## Sublime Text 3 Installation
 
-## Fasta (.fa; .faa; .fasta;)
+## Fasta (.fa; .faa; .fasta)
 A total of 6 formats available:
 - [fasta.sublime-syntax](syntax/sublime/fasta.sublime-syntax): Context-dependent; able to detect if fasta file contains nucleotides or amino acids (Recommended).
+
 ![Fasta Example Sublime](dev/img/fasta_context.png)
+
 - [fasta-nt.sublime-syntax](syntax/sublime/fasta-nt.sublime-syntax): for .fa & .fasta files only, specifically for highlighting RNA bases. High-contrast colour scheme with background highlighting.
+
 ![Fasta Example Sublime](dev/img/fasta_clustal.png)
+
 - [fasta-clustal.sublime-syntax](syntax/sublime/fasta-clustal.sublime-syntax): High-contrast amino acid highlighting.
+
 ![Fasta Example Sublime](dev/img/fasta_clustal.png)
+
 - [fasta-zappo.sublime-syntax](syntax/sublime/fasta-zappo.sublime-syntax):
+
 ![Fasta Example Sublime](dev/img/fasta_zappo.png)
+
 - [fasta-taylor.sublime-syntax](syntax/sublime/fasta-taylor.sublime-syntax):
+
 ![Fasta Example Sublime](dev/img/fasta_taylor.png)
+
 - [fasta-hydro.sublime-syntax](syntax/sublime/fasta-hydro.sublime-syntax): Amino acid highlighting based on hydrophobicity.
+
 ![Fasta Example Sublime](dev/img/fasta_hydro.png)
 
 ## Fastq (.fq; .fastq)
@@ -37,7 +48,7 @@ A total of 6 formats available:
 
 ## Installation Instructions
 
-1. Download the [bioMonokai Color Scheme].
+1. Download the [bioMonokai Color Scheme](theme/sublime/Color\ Scheme\ -\ bioSyntax.sublime-package).
 2. Copy it to your Sublime Text application packages folder:
 - **Linux**: `../sublime_text_3/Packages/`
 - **Windows**: `C:/Program Files/Sublime Text 3/Packages/`
