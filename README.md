@@ -10,7 +10,8 @@ Syntax highlighting for computational biology file formats in Sublime Text 3, gt
 - [Bed](#bed-bed)
 - [GTF](#gtf-gtf)
 - [VCF](#vcf-vcf)
-- Installation Instructions(#installation-instructions)
+- [Installation Instructions](#installation-instructions)
+
 [**Gedit**](#gedit-installation)
 - [fasta](#fasta-fa-fasta)
 - [fastq](#fastq-fq-fastq-alpha)
@@ -26,21 +27,21 @@ A total of 6 formats available:
 
 - [fasta-nt.sublime-syntax](syntax/sublime/fasta-nt.sublime-syntax): for .fa & .fasta files only, specifically for highlighting RNA bases. High-contrast colour scheme with background highlighting.
 
-![Fasta Example Sublime](dev/img/fasta_clustal.png)
+![Fasta Example Sublime](dev/img/fasta_nt.png)
 
 - [fasta-clustal.sublime-syntax](syntax/sublime/fasta-clustal.sublime-syntax): High-contrast amino acid highlighting.
 
 ![Fasta Example Sublime](dev/img/fasta_clustal.png)
 
-- [fasta-zappo.sublime-syntax](syntax/sublime/fasta-zappo.sublime-syntax):
+- [fasta-zappo.sublime-syntax](syntax/sublime/fasta-zappo.sublime-syntax): Residues are coloured according to their physico-chemical properties. Details can be found at [Jalview](http://www.jalview.org/version118/documentation.html#zappo).
 
 ![Fasta Example Sublime](dev/img/fasta_zappo.png)
 
-- [fasta-taylor.sublime-syntax](syntax/sublime/fasta-taylor.sublime-syntax):
+- [fasta-taylor.sublime-syntax](syntax/sublime/fasta-taylor.sublime-syntax): Details can be found on [Jalview](http://www.jalview.org/version118/documentation.html#taylor).
 
 ![Fasta Example Sublime](dev/img/fasta_taylor.png)
 
-- [fasta-hydro.sublime-syntax](syntax/sublime/fasta-hydro.sublime-syntax): Amino acid highlighting based on hydrophobicity.
+- [fasta-hydro.sublime-syntax](syntax/sublime/fasta-hydro.sublime-syntax): Residue highlighting according to a [hydrophobicity table]()http://www.jalview.org/version118/documentation.html#hydrophobicity, ranging between red and blue, where red is the most hydrophobic residue and blue is the most hydrophilic residue.
 
 ![Fasta Example Sublime](dev/img/fasta_hydro.png)
 
