@@ -131,16 +131,16 @@ contexts:
       pop: true
 
   nt:
-  # match Adenine
+  # match Adenosine
     - match: "[Aa]"
       scope: nt.A
-  # match Cytosine
+  # match Cytidine
     - match: "[Cc]"
       scope: nt.C
   # match Guanine
     - match: "[Gg]"
       scope: nt.G
-  # match Thymine/Uracil
+  # match Thymidine/Uridine
     - match: "[TtUu]"
       scope: nt.T
   # aNy or unknown (X)

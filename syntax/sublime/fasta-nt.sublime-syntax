@@ -15,22 +15,23 @@ contexts:
       scope: string
 
     # Match basic Nucleotides
+    # match Adenosine
     - match: "[Aa]"
       scope: nt.A
 
+    # match Cytidine
     - match: "[Cc]"
       scope: nt.C
 
+    # match Guanine
     - match: "[Gg]"
       scope: nt.G
 
-    - match: "[Tt]"
+    # match Thymidine/Uridine
+    - match: "[TtUu]"
       scope: nt.T
 
-    - match: "[Uu]"
-      scope: nt.T
-
-    # aNy or unknown (X)
+    # match aNy or unknown (X)
     - match: "[NnXx]"
       scope: variable
 
