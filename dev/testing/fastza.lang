@@ -18,31 +18,31 @@ C   - Blue
 
   <styles>
     <style id="header" _name="Header_"  map-to="def:statement" />
-    <style id="A"      _name="A_"       map-to="za:A" />
-    <style id="B"      _name="B_"       map-to="za:B" />
-    <style id="C"      _name="C_"       map-to="za:C" />
-    <style id="D"      _name="D_"       map-to="za:D" />
-    <style id="E"      _name="E_"       map-to="za:E" />
-    <style id="F"      _name="F_"       map-to="za:F" />
-    <style id="G"      _name="G_"       map-to="za:G" />
-    <style id="H"      _name="H_"       map-to="za:H" />
-    <style id="I"      _name="I_"       map-to="za:I" />
-    <style id="K"      _name="K_"       map-to="za:K" />
-    <style id="L"      _name="L_"       map-to="za:L" />
-    <style id="M"      _name="M_"       map-to="za:M" />
-    <style id="N"      _name="N_"       map-to="za:N" />
-    <style id="P"      _name="P_"       map-to="za:P" />
-    <style id="Q"      _name="Q_"       map-to="za:Q" />
-    <style id="R"      _name="R_"       map-to="za:R" />
-    <style id="S"      _name="S_"       map-to="za:S" />
-    <style id="T"      _name="T_"       map-to="za:T" />
-    <style id="V"      _name="V_"       map-to="za:V" />
-    <style id="W"      _name="W_"       map-to="za:W" />
-    <style id="Y"      _name="Y_"       map-to="za:Y" />
-    <style id="Z"      _name="Z_"       map-to="za:Z" />
-    <style id="X"      _name="X_"       map-to="za:X" />
-    <style id="Stop"      _name="stop_"       map-to="za:STOP" />
-    <style id="Indel"      _name="indel_"       map-to="za:DASH" />
+    <style id="A"      _name="A_"       map-to="fa:T" />
+    <style id="B"      _name="B_"       map-to="fa:T" />
+    <style id="C"      _name="C_"       map-to="fa:T" />
+    <style id="D"      _name="D_"       map-to="fa:T" />
+    <style id="E"      _name="E_"       map-to="fa:T" />
+    <style id="F"      _name="F_"       map-to="fa:T" />
+    <style id="G"      _name="G_"       map-to="fa:T" />
+    <style id="H"      _name="H_"       map-to="fa:T" />
+    <style id="I"      _name="I_"       map-to="fa:T" />
+    <style id="K"      _name="K_"       map-to="fa:T" />
+    <style id="L"      _name="L_"       map-to="fa:T" />
+    <style id="M"      _name="M_"       map-to="fa:T" />
+    <style id="N"      _name="N_"       map-to="fa:T" />
+    <style id="P"      _name="P_"       map-to="fa:T" />
+    <style id="Q"      _name="Q_"       map-to="fa:T" />
+    <style id="R"      _name="R_"       map-to="fa:T" />
+    <style id="S"      _name="S_"       map-to="fa:T" />
+    <style id="T"      _name="T_"       map-to="fa:T" />
+    <style id="V"      _name="V_"       map-to="fa:T" />
+    <style id="W"      _name="W_"       map-to="fa:T" />
+    <style id="Y"      _name="Y_"       map-to="fa:T" />
+    <style id="Z"      _name="Z_"       map-to="fa:T" />
+    <style id="X"      _name="X_"       map-to="fa:T" />
+    <style id="Stop"      _name="stop_"       map-to="fa:T" />
+    <style id="Indel"      _name="indel_"       map-to="fa:T" />
   </styles>
 
   <definitions>
@@ -55,103 +55,103 @@ C   - Blue
        </context>
        
        <context id="a" style-ref="A">
-         <match>[Aa]</match>
+         <match>[Aa]*</match>
        </context>
        
        <context id="b" style-ref="B">
-         <match>[Bb]</match>
+         <match>[Bb]*</match>
        </context>
        
        <context id="c" style-ref="C">
-         <match>[Cc]</match>
+         <match>[Cc]*</match>
        </context>
        
        <context id="d" style-ref="D">
-         <match>[Dd]</match>
+         <match>[Dd]*</match>
        </context>
        
        <context id="e" style-ref="E">
-         <match>[Ee]</match>
+         <match>[Ee]*</match>
        </context>
        
        <context id="f" style-ref="F">
-         <match>[Ff]</match>
+         <match>[Ff]*</match>
        </context>
        
        <context id="g" style-ref="G">
-         <match>[Gg]</match>
+         <match>[Gg]*</match>
        </context>
        
        <context id="h" style-ref="H">
-         <match>[Hh]</match>
+         <match>[Hh]*</match>
        </context>
        
        <context id="i" style-ref="I">
-         <match>[Ii]</match>
+         <match>[Ii]*</match>
        </context>
        
        <context id="k" style-ref="K">
-         <match>[Kk]</match>
+         <match>[Kk]*</match>
        </context>
        
        <context id="l" style-ref="L">
-         <match>[Ll]</match>
+         <match>[Ll]*</match>
        </context>
        
        <context id="m" style-ref="M">
-         <match>[Mm]</match>
+         <match>[Mm]*</match>
        </context>
        
        <context id="n" style-ref="N">
-         <match>[Nn]</match>
+         <match>[Nn]*</match>
        </context>
        
        <context id="p" style-ref="P">
-         <match>[Pp]</match>
+         <match>[Pp]*</match>
        </context>
        
        <context id="q" style-ref="Q">
-         <match>[Qq]</match>
+         <match>[Qq]*</match>
        </context>
        
        <context id="r" style-ref="R">
-         <match>[Rr]</match>
+         <match>[Rr]*</match>
        </context>
        
        <context id="s" style-ref="S">
-         <match>[Ss]</match>
+         <match>[Ss]*</match>
        </context>
        
        <context id="t" style-ref="T">
-         <match>[Tt]</match>
+         <match>[Tt]*</match>
        </context>
        
        <context id="v" style-ref="V">
-         <match>[Vv]</match>
+         <match>[Vv]*</match>
        </context>
        
        <context id="w" style-ref="W">
-         <match>[Ww]</match>
+         <match>[Ww]*</match>
        </context>
        
        <context id="y" style-ref="Y">
-         <match>[Yy]</match>
+         <match>[Yy]*</match>
        </context>
        
        <context id="z" style-ref="Z">
-         <match>[Zz]</match>
+         <match>[Zz]*</match>
        </context>
        
        <context id="x" style-ref="X">
-         <match>[Xx]</match>
+         <match>[Xx]*</match>
        </context>
        
        <context id="stop" style-ref="Stop">
-         <match>\\*</match>
+         <match>\*</match>
        </context>
        
        <context id="indel" style-ref="Indel">
-         <match>[-]</match>
+         <match>\-</match>
        </context>
        
       </include>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ebethan - 2017 10 21
+Color Scheme for DNA/RNA Sequences
+Associates with fasta files (.fa; .fasta)
+Using 'Kate color theme'
+A   - Dark Green
+T\U - Red
+G   - Brown
+C   - Blue
+-->
+<language id="fastza" _name="Fastza" version="2.0" _section="Scientific">
+
+  <metadata>
+    <property name="mimetypes">text/fastza</property>
+    <property name="globs">*.faa</property>
+  </metadata>
+
+  <styles>
+    <style id="header" _name="Header_"  map-to="def:statement" />
+    <style id="A"      _name="A_"       map-to="fa:A" />
+    <style id="B"      _name="B_"       map-to="fa:T" />
+    <style id="C"      _name="C_"       map-to="fa:C" />
+  </styles>
+
+  <definitions>
+    <context id="fastza">
+      <include>
+
+       <context id="a" style-ref="A">
+         <match>[Aa]*</match>
+       </context>
+       
+       <context id="b" style-ref="B">
+         <match>[Bb]*</match>
+       </context>
+       
+       <context id="c" style-ref="C">
+         <match>[Cc]*</match>
+       </context>
+       
+      </include>
+    </context>
+  </definitions>
+</language>
