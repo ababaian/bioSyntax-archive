@@ -14,9 +14,6 @@ contexts:
 
     - match: \b([0-9|\.]+)\b
       scope: variable.number.score.gtf
-
-    - match: \b[\w|\_|\-|\.]+\b
-      scope: name.gtf
     
     - match: \s[\+|\+$]\s
       scope: strand.plus.gtf
@@ -30,5 +27,12 @@ contexts:
     - match: (\s[0-2]\s)
       scope: variable.number.frame.gtf
 
-    - match: \s[\w|_]*\s".*";
-      scope: grad4.gtf
+    - match: (?=;\s);
+      scope: name.semicolon.gtf
+    
+    - match: \b[^\s;]+(?=\s"[\w|\W|\_|\.]*")
+      scope: grad8.attributeValue.gtf
+
+    - match: (?="[\w|\d|\.]+";)"[\w|\d|\.]+"
+      scope: grad2.attributeName.gtf
+
