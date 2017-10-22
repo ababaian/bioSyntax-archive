@@ -4,7 +4,7 @@ Syntax highlighting for computational biology file formats in Sublime Text 3, gt
 
 A hackseq 2017 (October 20 - 22) project by:
 - [Artem Babaian](https://github.com/ababaian)
-- [Gherman ](https://github.com/fransilvion)
+- [Gherman Novakovskiy](https://github.com/fransilvion)
 - [Eric Chu](https://github.com/echu113)
 - [Alyssa Fegen](https://github.com/alyeffy)
 - [Jasper Wong](https://github.com/Jwong684)
