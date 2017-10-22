@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
- This file is part of GtkSourceView
- Copyright (C) 2006-2007 GtkSourceView team
- Author: Yevgen Muntyan <muntyan@tamu.edu>
- GtkSourceView is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
- GtkSourceView is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- You should have received a copy of the GNU Lesser General Public
- License along with this library; if not, write to the Free Software
- Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
--->
-<style-scheme id="kate" _name="Kate" version="1.0">
-  <author>GtkSourceView team</author>
-  <_description>Color scheme used in the Kate text editor</_description>
+
+<style-scheme id="biokate" _name="bioKate" version="1.0">
+  <author>bioSyntax Team</author>
+  <_description>Color scheme used in the bioKate text editor</_description>
 
   <color name="red"                         value="#FF0000"/>
   <color name="blue"                        value="#0000FF"/>
@@ -165,42 +150,37 @@
   <style name="t2t:option"                  foreground="dark-green"/>
 
   <!-- Bio specific styles -->
-  <style name="fa:A"                       foreground="#000000" background="#64f73f"/>
-  <style name="fa:T"                       foreground="#000000" background="#eb413c"/>
-  <style name="fa:G"                       foreground="#000000" background="#ffb340"/>
-  <style name="fa:C"                       foreground="#000000" background="#3c88ee"/>
-  
-  <style name="za:A"                       foreground="#000000" background="#FFAFAF"/>
-  <style name="za:I"                       foreground="#000000" background="#FFAFAF"/>
-  <style name="za:V"                       foreground="#000000" background="#FFAFAF"/>
-  <style name="za:L"                       foreground="#000000" background="#FFAFAF"/>
-  <style name="za:M"                       foreground="#000000" background="#FFAFAF"/>
-  <style name="za:F"                       foreground="#000000" background="#FFC800"/>
-  <style name="za:W"                       foreground="#000000" background="#FFC800"/>
-  <style name="za:Y"                       foreground="#000000" background="#FFC800"/>
-  <style name="za:K"                       foreground="#000000" background="#6464FF"/>
-  <style name="za:R"                       foreground="#000000" background="#6464FF"/>
-  <style name="za:H"                       foreground="#000000" background="#6464FF"/>
-  <style name="za:D"                       foreground="#000000" background="#FF0000"/>
-  <style name="za:E"                       foreground="#000000" background="#FF0000"/>
-  <style name="za:S"                       foreground="#000000" background="#00FF00"/>
-  <style name="za:T"                       foreground="#000000" background="#00FF00"/>
-  <style name="za:N"                       foreground="#000000" background="#00FF00"/>
-  <style name="za:Q"                       foreground="#000000" background="#00FF00"/>
-  <style name="za:P"                       foreground="#000000" background="#FF00FF"/>
-  <style name="za:G"                       foreground="#000000" background="#FF00FF"/>
-  <style name="za:C"                       foreground="#000000" background="#FFFF00"/>
-  <style name="za:X"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="za:Z"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="za:B"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="za:STOP"                    foreground="#000000" background="#FFFFFF"/>
-  <style name="za:DASH"                    foreground="#000000" background="#FFFFFF"/>
 
+  <style name="fastza:header"                  foreground="dark-green" background="#FFFFFF"/>
+  <style name="fastza:A"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:I"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:V"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:L"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:M"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:F"                       foreground="#000000" background="#FFC800"/>
+  <style name="fastza:W"                       foreground="#000000" background="#FFC800"/>
+  <style name="fastza:Y"                       foreground="#000000" background="#FFC800"/>
+  <style name="fastza:K"                       foreground="#000000" background="#6464FF"/>
+  <style name="fastza:R"                       foreground="#000000" background="#6464FF"/>
+  <style name="fastza:H"                       foreground="#000000" background="#6464FF"/>
+  <style name="fastza:D"                       foreground="#000000" background="#FF0000"/>
+  <style name="fastza:E"                       foreground="#000000" background="#FF0000"/>
+  <style name="fastza:S"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:T"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:N"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:Q"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:P"                       foreground="#000000" background="#FF00FF"/>
+  <style name="fastza:G"                       foreground="#000000" background="#FF00FF"/>
+  <style name="fastza:C"                       foreground="#000000" background="#FFFF00"/>
+  <style name="fastza:X"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:Z"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:B"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:Stop"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:Indel"                    foreground="#000000" background="#FFFFFF"/>
   <style name="fq:A"                       foreground="#64f73f"/>
   <style name="fq:T"                       foreground="#eb413c"/>
   <style name="fq:G"                       foreground="#ffb340"/>
   <style name="fq:C"                       foreground="#3c88ee"/>
-
   <style name="bed:chr"                    foreground="dark-green" bold="true"/>
   <style name="bed:coords"                 foreground="dark-green"/>
 </style-scheme>
