@@ -1,0 +1,39 @@
+%YAML 1.2
+---
+name: fasta-aa
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions: [fasta, fa, faa]
+scope: text.fasta
+
+
+contexts:
+  main:
+
+    #positive lookbehind to match a + and a new line to any characters right after it
+    #pushes it to quality
+    - match: "^>.*"
+      scope: string
+
+    # Match basic Nucleotides
+    - match: "[Aa]"
+      scope: nt.A
+
+    - match: "[Cc]"
+      scope: nt.C
+
+    - match: "[Gg]"
+      scope: nt.G
+
+    - match: "[Tt]"
+      scope: nt.T
+
+    - match: "[Uu]"
+      scope: nt.T
+
+    # aNy or unknown (X)
+    - match: "[NnXx]"
+      scope: variable
+
+    # indel
+    - match: "[-]"
+      scope: comment.line
