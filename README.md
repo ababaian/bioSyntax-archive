@@ -85,9 +85,9 @@ A total of 6 formats available:
 ![Pdb Example Sublime](dev/img/PDB_header1.png)
 
 ## GTF (.gtf)
-[bed.sublime-syntax](syntax/sublime/bed.sublime-syntax):
+[gtf.sublime-syntax](syntax/sublime/gtf.sublime-syntax)
 
-![Gtf Example Sublime](dev/img/GTF_highlight.png)
+![Gtf Example Sublime](dev/img/GTF_Alpha.png)
 
 ## VCF (.vcf)
 [vcf.sublime-syntax](syntax/sublime/vcf.sublime-syntax):
