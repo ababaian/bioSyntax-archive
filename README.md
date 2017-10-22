@@ -2,6 +2,17 @@
 # bioSyntax
 Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in future).
 
+A hackseq 2017 (October 20 - 22) project by:
+- [Artem Babaian](https://github.com/ababaian)
+- [Gherman ](https://github.com/fransilvion)
+- [Eric Chu](https://github.com/echu113)
+- [Alyssa Fegen](https://github.com/alyeffy)
+- [Jasper Wong](https://github.com/Jwong684)
+- [Anicet Ebou](https://github.com/ebedthan)
+- [Jeffrey Kam](https://github.com/lazypanda10117)
+
+[Presentation]
+
 ## Contents
 [**Sublime Text 3**](#sublime-text-3-installation)
 - [fasta](#fasta-fa-faa-fasta)
@@ -44,7 +55,7 @@ A total of 6 formats available:
 
 ![Fasta Example Sublime](dev/img/fasta_taylor.png)
 
-- [fasta-hydro.sublime-syntax](syntax/sublime/fasta-hydro.sublime-syntax): Residue highlighting according to a [hydrophobicity table]()http://www.jalview.org/version118/documentation.html#hydrophobicity, ranging between red and blue, where red is the most hydrophobic residue and blue is the most hydrophilic residue.
+- [fasta-hydro.sublime-syntax](syntax/sublime/fasta-hydro.sublime-syntax): Residue highlighting according to a [hydrophobicity table](http://www.jalview.org/version118/documentation.html#hydrophobicity), ranging between red and blue, where red is the most hydrophobic residue and blue is the most hydrophilic residue.
 
 ![Fasta Example Sublime](dev/img/fasta_hydro.png)
 
@@ -76,7 +87,7 @@ A total of 6 formats available:
 ## GTF (.gtf)
 [bed.sublime-syntax](syntax/sublime/bed.sublime-syntax):
 
-![Gtf Example Sublime](dev/img)
+![Gtf Example Sublime](dev/img/GTF_highlight.png)
 
 ## VCF (.vcf)
 [vcf.sublime-syntax](syntax/sublime/vcf.sublime-syntax):
@@ -94,7 +105,7 @@ A total of 6 formats available:
 4. Copy them into the Sublime Text Packages folder:
 - **Linux**: `~/.config/sublime-text-3/Packages/User`
 - **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
-- **Mac**: `/Users/[username]/Library/Application Support/Sublime Text 3/Packages/`
+- **Mac**: `/Users/your_username/Library/Application Support/Sublime Text 3/Packages/`
 5. Open Sublime Text and go to Preferences > Color Scheme > bioMonokai
 6. At the bottom-right corner of the Sublime Text window, click the file type (e.g. Plain Text) to open the drop down menu. Scroll to and select the file format you are using.
 
