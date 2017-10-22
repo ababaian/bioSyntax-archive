@@ -1,6 +1,21 @@
 # bioSyntax
 Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in future).
 
+## Contents
+[**Sublime Text 3**](#sublime-text-3-installation)
+- [fasta](#fasta-fa-faa-fasta)
+- [fastq](#fastq-fq-fastq)
+- [SAM](#sam-sam)
+- [Wig](#wig-wig)
+- [Bed](#bed-bed)
+- [GTF](#gtf-gtf)
+- [VCF](#vcf-vcf)
+- Installation Instructions(#installation-instructions)
+[**Gedit**](#gedit-installation)
+- [fasta](#fasta-fa-fasta)
+- [fastq](#fastq-fq-fastq-alpha)
+- [bed](#bed-bed-alpha)
+
 ## Sublime Text 3 Installation
 
 ## Fasta (.fa; .faa; .fasta)
@@ -81,19 +96,19 @@ View bed files with colors based on columns.
 ![Bed Example](dev/bioSyntax_bed.png)
 
 ## Installation Instructions (Linux)
-- Download the respective `*.lang` files you're interested in
-- Download the `bioKate.xml` style scheme
+1. Download the respective `*.lang` files you're interested in
+2. Download the `bioKate.xml` style scheme
  
-- Change permissions to all readonly
+3. Change permissions to all readonly
 	`chmod 0644 *.lang`
 
-- Copy the `bioKate.xml` style scheme to gtksoureview style folder
+4. Copy the `bioKate.xml` style scheme to gtksoureview style folder
 	`sudo cp bioKate.xml /usr/share/gtksourceview-3.0/styles/bioKate.xml`
 
-- Copy the `*.lang` file(s) to gtksourceview language spec folder
+5. Copy the `*.lang` file(s) to gtksourceview language spec folder
 	`sudo cp fasta.lang /usr/share/gtksourceview-3.0/language-specs/fasta.lang`
 
-Restart `gedit` and you should have pretty formats 
+6. Restart `gedit` and you should have pretty formats 
 
 
 
