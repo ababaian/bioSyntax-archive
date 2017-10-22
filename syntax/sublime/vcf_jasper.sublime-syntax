@@ -1,0 +1,153 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions:
+  - vcf
+scope: text.vcf
+contexts:
+  main:
+    # Comments begin with a '##' and finish at the end of the line
+    - match: '\#\#'
+      scope: comment
+      push: line_comment
+
+    # Header for the 8 columns begins with a '#' and finishes at the end of the line
+    - match: '(\#CHROM)(\s+\w*)+$'
+      scope: entity.name
+
+
+    - match: "\t"
+      scope: invalid
+
+    # - match: '(?<=\s).+?(?==)'
+    #   scope: nt.C
+
+
+
+    # Numbers
+    # - match: \b(-)?[0-9.]+\b
+    # - match: \b/(?:\D+\s+){1}(\D+)/\b
+    #   scope: invalid
+
+    # CHROM
+    - match: '^[\w]+'
+      scope: constant.language
+
+    # POS
+    - match: '(?<=\s)(-)?[0-9.]+(?=\s)'
+      scope: storage.type
+  
+    #ref and alt
+    - match: "A"
+      scope: nt.A
+      push: nt
+
+    - match: "C"
+      scope: nt.C
+      push: nt
+
+    - match: "G"
+      scope: nt.G
+      push: nt
+
+    - match: "(T|U)"
+      scope: nt.T
+      push: nt
+
+    #info
+    # - match: .
+    #   scope: invalid
+      #push: info
+
+    # # Nucleotides
+    # # A
+    # - match: (?<=\s)[A](?=\s)
+    #   scope: nt.A
+
+    # # T
+    # - match: (?<=\s)[T](?=\s)
+    #   scope: nt.T
+
+    # # G
+    # - match: (?<=\s)[G](?=\s)
+    #   scope: nt.G
+
+    # # C
+    # - match: (?<=\s)[C](?=\s)
+    #   scope: nt.C
+
+    # # U
+    # - match: (?<=\s)[U](?=\s)
+    #   scope: nt.T
+
+    # # ACGTU
+    # - match: "[AGCTU\\,]++"
+    #   push: nt
+
+
+    # CHROM ID
+
+
+    # ID
+    # - match: (?<=\s)[0-9]*(?=\s)
+    #   scope: invalid
+    #   push: ID
+
+    # REF
+    #- match:
+    #  scope: 
+
+    # ALT
+    #- match:
+    #  scope: 
+
+    # QUAL
+    #- match:
+    #  scope:
+
+    # FILTER
+    #- match:
+    #  scope: 
+
+    # INFO
+    # - match: '[\s][\S]+$'
+    #   scope: entity.name
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double.example-c
+    - match: '\\.'
+      scope: constant.character.escape.example-c
+    - match: '"'
+      scope: punctuation.definition.string.end.example-c
+      pop: true
+
+  line_comment:
+    - meta_scope: comment.line.example-c
+    - match: "<.*>"
+      scope: nt.G
+    - match: $
+      pop: true
+
+  ID:
+    - match: \b[0-9]\b
+      scope: invalid
+      pop: true
+
+  nt:
+    #- meta_content_scope: entity.name
+    - match: "A"
+      scope: nt.A
+    - match: "G"
+      scope: nt.G
+    - match: "C"
+      scope: nt.C
+    - match: "T"
+      scope: nt.T
+    - match: $
+      scope: constant.character
+      pop: true
+
+  info:
+    - match: \s.\;
+      scope: invalid
+      pop: true
