@@ -94,7 +94,7 @@ A total of 6 formats available:
 4. Copy them into the Sublime Text Packages folder:
 - **Linux**: `~/.config/sublime-text-3/Packages/User`
 - **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
-- **Mac**: `/Users/alyssafegen/Library/Application Support/Sublime Text 3/Packages/`
+- **Mac**: `/Users/[username]/Library/Application Support/Sublime Text 3/Packages/`
 5. Open Sublime Text and go to Preferences > Color Scheme > bioMonokai
 6. At the bottom-right corner of the Sublime Text window, click the file type (e.g. Plain Text) to open the drop down menu. Scroll to and select the file format you are using.
 

@@ -2,8 +2,8 @@
 ---
 name: fasta-clustal
 # See http://www.sublimetext.com/docs/3/syntax.html
-file_extensions: [fasta, fa, faa]
-scope: text.fasta
+file_extensions: [fastaa]
+scope: text.fastaa
 
 
 contexts:
