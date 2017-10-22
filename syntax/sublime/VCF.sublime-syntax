@@ -73,6 +73,9 @@ contexts:
     - match: '(?<=[\s\t])(U|T)(?=[\s\t])'
       scope: nt.T
 
+    - match: '(?<=[\s\t;])[A-Za-z0-9]+='
+      push: tags
+
     #info
     # - match: .
     #   scope: invalid
@@ -131,6 +134,13 @@ contexts:
     # INFO
     # - match: '[\s][\S]+$'
     #   scope: entity.name
+
+  tags:
+    - meta_scope: string.vcf
+    - match: (?<=)[A-Za-z0-9\-\.,]+(?=[;\t\s])
+      scope: storage.type.vcf
+    - match: '[\t\s;]'
+      pop: true
 
   double_quoted_string:
     - meta_scope: string.quoted.double.example-c
