@@ -118,57 +118,57 @@ contexts:
     #don't care about colours for now, but they should be different
     - meta_scope: constant.character.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+A.*'
-      scope: entity.name.pdb
+      scope: nt.A.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+B.*'
-      scope: string.pdb
+      scope: nt.T.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+C.*'
-      scope: markup.deleted.pdb
+      scope: nt.G.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+D.*'
-      scope: storage.type.pdb
+      scope: nt.C.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+E.*'
-      scope: entity.name.tag.pdb
+      scope: nt.A.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+F.*'
-      scope: variable.language.pdb
+      scope: nt.T.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+G.*'
-      scope: string.unquoted.yaml.pdb
+      scope: nt.G.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+H.*'
-      scope: comment.name.pdb
+      scope: nt.C.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+I.*'
-      scope: entity.name.pdb
+      scope: nt.A.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+J.*'
-      scope: string.pdb
+      scope: nt.T.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+K.*'
-      scope: markup.deleted.pdb
+      scope: nt.G.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+L.*'
-      scope: storage.type.pdb
+      scope: nt.C.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+M.*'
-      scope: entity.name.tag.pdb
+      scope: nt.A.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+N.*'
-      scope: variable.language.pdb
+      scope: nt.T.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+O.*'
-      scope: string.unquoted.yaml.pdb
+      scope: nt.G.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+P.*'
-      scope: comment.name.pdb
+      scope: nt.C.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+Q.*'
-      scope: entity.name.pdb
+      scope: nt.A.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+R.*'
-      scope: string.pdb
+      scope: nt.T.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+S.*'
-      scope: markup.deleted.pdb
+      scope: nt.G.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+T.*'
-      scope: storage.type.pdb
+      scope: nt.C.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+U.*'
-      scope: entity.name.tag.pdb
+      scope: nt.A.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+V.*'
-      scope: variable.language.pdb
+      scope: nt.T.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+W.*'
-      scope: string.unquoted.yaml.pdb
+      scope: nt.G.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+X.*'
-      scope: comment.name.pdb
+      scope: nt.C.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+Y.*'
-      scope: string.unquoted.yaml.pdb
+      scope: nt.A.pdb
     - match: '[\s\t]+[0-9]+[\s\t]+Z.*'
-      scope: comment.name.pdb                
+      scope: nt.T.pdb                
     - match: '$'
       pop: true
 
@@ -178,62 +178,99 @@ contexts:
     - match: '(?<=[A-Z])[\s\t]+[0-9]+'
       scope: storage.type.pdb
     #amino acids
-    - match: '[\s\t]+[A-Z]{3}'
-      #define colour scheme for aminoacids
-      scope: markup.deleted.pdb
+    - match: '[\s\t]+ALA'
+      scope: aa.clustal.A
+    - match: '[\s\t]+ARG'
+      scope: aa.clustal.R
+    - match: '[\s\t]+ASN'
+      scope: aa.clustal.N
+    - match: '[\s\t]+ASP'
+      scope: aa.clustal.D
+    - match: '[\s\t]+CYS'
+      scope: aa.clustal.C
+    - match: '[\s\t]+GLN'
+      scope: aa.clustal.Q
+    - match: '[\s\t]+GLU'
+      scope: aa.clustal.E
+    - match: '[\s\t]+GLY'
+      scope: aa.clustal.G
+    - match: '[\s\t]+HIS'
+      scope: aa.clustal.H
+    - match: '[\s\t]+ILE'
+      scope: aa.clustal.I
+    - match: '[\s\t]+LEU'
+      scope: aa.clustal.L
+    - match: '[\s\t]+LYS'
+      scope: aa.clustal.K
+    - match: '[\s\t]+MET'
+      scope: aa.clustal.M
+    - match: '[\s\t]+PHE'
+      scope: aa.clustal.F
+    - match: '[\s\t]+PRO'
+      scope: aa.clustal.P
+    - match: '[\s\t]+SER'
+      scope: aa.clustal.S
+    - match: '[\s\t]+THR'
+      scope: aa.clustal.T
+    - match: '[\s\t]+TRP'
+      scope: aa.clustal.W
+    - match: '[\s\t]+TYR'
+      scope: aa.clustal.Y
+    - match: '[\s\t]+VAL'
+      scope: aa.clustal.Vs                                          
     #define chains (different colours for different chains from A-H)
-    - match: '[\s\t]+A(?=[\s\t]+[0-9])'
-      scope: entity.name.pdb
-    - match: '[\s\t]+B(?=[\s\t]+[0-9])'
-      scope: string.pdb
-    - match: '[\s\t]+C(?=[\s\t]+[0-9])'
-      scope: markup.deleted.pdb
-    - match: '[\s\t]+D(?=[\s\t]+[0-9])'
-      scope: storage.type.pdb
-    - match: '[\s\t]+E(?=[\s\t]+[0-9])'
-      scope: entity.name.tag.pdb
-    - match: '[\s\t]+F(?=[\s\t]+[0-9])'
-      scope: variable.language.pdb
-    - match: '[\s\t]+G(?=[\s\t]+[0-9])'
-      scope: string.unquoted.yaml.pdb
-    - match: '[\s\t]+H(?=[\s\t]+[0-9])'
-      scope: comment.name.pdb
-    - match: '[\s\t]+I(?=[\s\t]+[0-9])'
-      scope: entity.name.pdb
-    - match: '[\s\t]+J(?=[\s\t]+[0-9])'
-      scope: string.pdb
-    - match: '[\s\t]+K(?=[\s\t]+[0-9])'
-      scope: markup.deleted.pdb
-    - match: '[\s\t]+L(?=[\s\t]+[0-9])'
-      scope: storage.type.pdb
-    - match: '[\s\t]+M(?=[\s\t]+[0-9])'
-      scope: entity.name.tag.pdb
-    - match: '[\s\t]+N(?=[\s\t]+[0-9])'
-      scope: variable.language.pdb
-    - match: '[\s\t]+O(?=[\s\t]+[0-9])'
-      scope: string.unquoted.yaml.pdb
-    - match: '[\s\t]+P(?=[\s\t]+[0-9])'
-      scope: comment.name.pdb
-    - match: '[\s\t]+Q(?=[\s\t]+[0-9])'
-      scope: entity.name.pdb
-    - match: '[\s\t]+R(?=[\s\t]+[0-9])'
-      scope: string.pdb
-    - match: '[\s\t]+S(?=[\s\t]+[0-9])'
-      scope: markup.deleted.pdb
-    - match: '[\s\t]+T(?=[\s\t]+[0-9])'
-      scope: storage.type.pdb
-    - match: '[\s\t]+U(?=[\s\t]+[0-9])'
-      scope: entity.name.tag.pdb
-    - match: '[\s\t]+V(?=[\s\t]+[0-9])'
-      scope: variable.language.pdb
-    - match: '[\s\t]+W(?=[\s\t]+[0-9])'
-      scope: string.unquoted.yaml.pdb
-    - match: '[\s\t]+X(?=[\s\t]+[0-9])'
-      scope: comment.name.pdb
-    - match: '[\s\t]+Y(?=[\s\t]+[0-9])'
-      scope: string.unquoted.yaml.pdb
-    - match: '[\s\t]+Z(?=[\s\t]+[0-9])'
-      scope: comment.name.pdb
+    - match: '(?<=[\s\t])A(?=[\s\t]+[0-9])'
+      scope: nt.A.pdb
+    - match: '(?<=[\s\t])B(?=[\s\t]+[0-9])'
+      scope: nt.T.pdb
+    - match: '(?<=[\s\t])C(?=[\s\t]+[0-9])'
+      scope: nt.G.pdb
+    - match: '(?<=[\s\t])D(?=[\s\t]+[0-9])'
+      scope: nt.C.pdb
+    - match: '(?<=[\s\t])E(?=[\s\t]+[0-9])'
+      scope: nt.A.pdb
+    - match: '(?<=[\s\t])F(?=[\s\t]+[0-9])'
+      scope: nt.T.pdb
+    - match: '(?<=[\s\t])G(?=[\s\t]+[0-9])'
+      scope: nt.G.pdb
+    - match: '(?<=[\s\t])H(?=[\s\t]+[0-9])'
+      scope: nt.C.pdb
+    - match: '(?<=[\s\t])I(?=[\s\t]+[0-9])'
+      scope: nt.A.pdb
+    - match: '(?<=[\s\t])J(?=[\s\t]+[0-9])'
+      scope: nt.T.pdb
+    - match: '(?<=[\s\t])K(?=[\s\t]+[0-9])'
+      scope: nt.G.pdb
+    - match: '(?<=[\s\t])L(?=[\s\t]+[0-9])'
+      scope: nt.C.pdb
+    - match: '(?<=[\s\t])M(?=[\s\t]+[0-9])'
+      scope: nt.A.pdb
+    - match: '(?<=[\s\t])N(?=[\s\t]+[0-9])'
+      scope: nt.T.pdb
+    - match: '(?<=[\s\t])O(?=[\s\t]+[0-9])'
+      scope: nt.G.pdb
+    - match: '(?<=[\s\t])P(?=[\s\t]+[0-9])'
+      scope: nt.C.pdb
+    - match: '(?<=[\s\t])Q(?=[\s\t]+[0-9])'
+      scope: nt.A.pdb
+    - match: '(?<=[\s\t])R(?=[\s\t]+[0-9])'
+      scope: nt.T.pdb
+    - match: '(?<=[\s\t])S(?=[\s\t]+[0-9])'
+      scope: nt.G.pdb
+    - match: '(?<=[\s\t])T(?=[\s\t]+[0-9])'
+      scope: nt.C.pdb
+    - match: '(?<=[\s\t])U(?=[\s\t]+[0-9])'
+      scope: nt.A.pdb
+    - match: '(?<=[\s\t])V(?=[\s\t]+[0-9])'
+      scope: nt.T.pdb
+    - match: '(?<=[\s\t])W(?=[\s\t]+[0-9])'
+      scope: nt.G.pdb
+    - match: '(?<=[\s\t])X(?=[\s\t]+[0-9])'
+      scope: nt.C.pdb
+    - match: '(?<=[\s\t])Y(?=[\s\t]+[0-9])'
+      scope: nt.A.pdb
+    - match: '(?<=[\s\t])Z(?=[\s\t]+[0-9])'
+      scope: nt.T.pdb
     - match: '$'
       pop: true
 
