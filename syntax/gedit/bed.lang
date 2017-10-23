@@ -16,10 +16,10 @@ Built for use with 'bioKate color theme'
 
   <styles>
 
-    <style id="chrom"        _name="Chrom"    map-to="bed:chr" />
-    <style id="coords"       _name="Chrom"    map-to="bed:coords" />
-    <style id="strand"       _name="Coords"   map-to="bed:strand" />
-    <style id="bedName"       _name="BedName" map-to="def:string" />
+    <style id="chrom"        _name="Chrom"    />
+    <style id="coords"       _name="Chrom"    />
+    <style id="strand"       _name="Coords"   />
+    <style id="bedName"       _name="BedName" />
 
   </styles>
 
@@ -51,15 +51,39 @@ Built for use with 'bioKate color theme'
 	  </match>
         </context>
 
-	<context id="6_strand" style-ref="strand">
+	<context id="6_strand" style-ref="strandplus">
 	  <match extended="true">
-            \t[+\-\.]\t
+            \t[+]\t
 	  </match>
         </context>
 
-	<context id="end_strand" style-ref="strand">
+	<context id="6_end_strand" style-ref="strandplus">
 	  <match extended="true">
-            \t[+\-\.]$
+            \t[+]$
+	  </match>
+        </context>
+        
+        <context id="7_strand" style-ref="strandminus">
+	  <match extended="true">
+            \t[-]\t
+	  </match>
+        </context>
+
+	<context id="7_end_strand" style-ref="strandminus">
+	  <match extended="true">
+            \t[-]$
+	  </match>
+        </context>
+        
+        <context id="8_strand" style-ref="strandnone">
+	  <match extended="true">
+            \t[.]\t
+	  </match>
+        </context>
+
+	<context id="8_end_strand" style-ref="strandnone">
+	  <match extended="true">
+            \t[.]$
 	  </match>
         </context>
 

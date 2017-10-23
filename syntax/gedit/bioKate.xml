@@ -151,13 +151,17 @@
 
   <!-- Bio specific styles -->
 
-  <style name="fa:A"                       foreground="#000000" background="dark-green"/>
-  <style name="fa:T"                       foreground="#000000" background="red"/>
-  <style name="fa:G"                       foreground="#000000" background="brown"/>
-  <style name="fa:C"                       foreground="#000000" background="blue"/>
+  <!-- Fasta styles -->
+
+  <style name="fa:A"                       foreground="#000000" background="#55E60F"/>
+  <style name="fa:T"                       foreground="#000000" background="#FB2313"/>
+  <style name="fa:G"                       foreground="#000000" background="#E6C70F"/>
+  <style name="fa:C"                       foreground="#000000" background="#10539D"/>
   
   
-  <style name="fastza:header"                  foreground="dark-green" background="#FFFFFF"/>
+  <!-- Fasta-Zappo styles -->
+  
+  <style name="fastza:header"                  foreground="black" background="#FFFFFF"/>
   <style name="fastza:A"                       foreground="#000000" background="#FFAFAF"/>
   <style name="fastza:I"                       foreground="#000000" background="#FFAFAF"/>
   <style name="fastza:V"                       foreground="#000000" background="#FFAFAF"/>
@@ -185,7 +189,9 @@
   <style name="fastza:Indel"                    foreground="#000000" background="#FFFFFF"/>
   
   
-  <style name="fastcl:header"                  foreground="dark-green" background="#FFFFFF"/>
+  <!-- Bio fasta-Clustal styles -->
+  
+  <style name="fastcl:header"                  foreground="black" background="#FFFFFF"/>
   <style name="fastcl:A"                       foreground="#000000" background="#80A0F0"/>
   <style name="fastcl:I"                       foreground="#000000" background="#80A0F0"/>
   <style name="fastcl:V"                       foreground="#000000" background="#80A0F0"/>
@@ -213,7 +219,9 @@
   <style name="fastcl:Indel"                    foreground="#000000" background="#FFFFFF"/>
  
  
-  <style name="fastay:header"                  foreground="dark-green" background="#FFFFFF"/>
+  <!-- fasta-Taylor styles -->
+ 
+  <style name="fastay:header"                  foreground="black" background="#FFFFFF"/>
   <style name="fastay:A"                       foreground="#000000" background="#CCFF00"/>
   <style name="fastay:I"                       foreground="#000000" background="#66FF00"/>
   <style name="fastay:V"                       foreground="#000000" background="#99FF00"/>
@@ -241,7 +249,9 @@
   <style name="fastay:Indel"                   foreground="#000000" background="#FFFFFF"/>
   
   
-  <style name="fasthy:header"                  foreground="dark-green" background="#FFFFFF"/>
+  <!-- fasta-hydrophocity styles -->
+  
+  <style name="fasthy:header"                  foreground="black" background="#FFFFFF"/>
   <style name="fasthy:A"                       foreground="#000000" background="#AD0052"/>
   <style name="fasthy:I"                       foreground="#000000" background="#FF0000"/>
   <style name="fasthy:V"                       foreground="#000000" background="#F60009"/>
@@ -269,12 +279,52 @@
   <style name="fasthy:Indel"                   foreground="#000000" background="#FFFFFF"/>
   
   
+  <!-- fasta-cysteine styles -->
+  
+  <style name="fastcy:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fastcy:A"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:I"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:V"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:L"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:M"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:F"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:W"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:Y"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:K"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:R"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:H"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:D"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:E"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:S"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:T"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:N"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:Q"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:P"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:G"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:C"                       foreground="#000000" background="yellow"/>
+  <style name="fastcy:X"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:Z"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:B"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:Stop"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fastcy:Indel"                   foreground="#000000" background="#FFFFFF"/>
+  
+  
+  
+  <!-- Fastq styles -->
+  
   <style name="fq:A"                       foreground="#64f73f"/>
   <style name="fq:T"                       foreground="#eb413c"/>
   <style name="fq:G"                       foreground="#ffb340"/>
   <style name="fq:C"                       foreground="#3c88ee"/>
   
   
-  <style name="bed:chr"                    foreground="dark-green" bold="true"/>
+  <!-- bed styles -->
+  
+  <style name="bed:chrom"                  foreground="dark-green" bold="true"/>
   <style name="bed:coords"                 foreground="dark-green"/>
+  <style name="bed:bedName"                foreground="brown"/>
+  <style name="bed:strandplus"             foreground="#F92672" background="white" bold="true"/>
+  <style name="bed:strandminus"            foreground="#A6E22E" background="white" bold="true"/>
+  <style name="bed:strandnone"             foreground="#66D9EF" background="white" bold="true"/>
+  
 </style-scheme>

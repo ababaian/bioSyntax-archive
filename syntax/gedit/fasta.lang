@@ -20,10 +20,10 @@ C   - Blue
 
   <styles>
     <style id="header" _name="Header_"  map-to="def:statement" />
-    <style id="A"      _name="A_"       map-to="fa:A" />
-    <style id="T"      _name="T_"       map-to="fa:T" />
-    <style id="G"      _name="G_"       map-to="fa:G" />
-    <style id="C"      _name="C_"       map-to="fa:C" />
+    <style id="A"      _name="A_"       />
+    <style id="T"      _name="T_"       />
+    <style id="G"      _name="G_"       />
+    <style id="C"      _name="C_"       />
   </styles>
 
   <definitions>
