@@ -122,16 +122,14 @@ A total of 6 formats available:
 ## Fasta (.fa; .fasta)
 Highlights nucleotide sequence by base. Colors match IGV representations using the Jalview palette.
 
-![Fasta Example](dev/bioSyntax_fasta.png)
+![Fasta Example](dev/img/bioSyntax_fasta.png)
 
 ## Fastq (.fq; .fastq) [alpha]
 Colors headers and nucleotides. Still abit buggy but can be worked out.
 
-![Fq Example](dev/bioSyntax_fq.png)
+![Fq Example](dev/img/bioSyntax_fq.png)
 
 ## Bed (.bed) [alpha]
 View bed files with colors based on columns.
 
-![Bed Example](dev/bioSyntax_bed.png)
-
-
+![Bed Example](dev/img/bioSyntax_bed.png)
