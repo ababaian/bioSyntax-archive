@@ -3,12 +3,14 @@
 Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in progress).
 
 A hackseq 2017 (October 20 - 22) project by:
-- [Artem Babaian](https://github.com/ababaian), [Eric Chu](https://github.com/echu113), [Anicet Ebou](https://github.com/ebedthan), [Alyssa Fegen](https://github.com/alyeffy), [Jeffrey Kam](https://github.com/lazypanda10117), [Gherman Novakovskiy](https://github.com/fransilvion) and [Jasper Wong](https://github.com/Jwong684)
 
-[hackseq17 Presentation](bioSyntax_talk.pptm)
+[Artem Babaian](https://github.com/ababaian) | [Eric Chu](https://github.com/echu113) | [Anicet Ebou](https://github.com/ebedthan) | [Alyssa Fegen](https://github.com/alyeffy) | [Jeffrey Kam](https://github.com/lazypanda10117) | [Gherman Novakovskiy](https://github.com/fransilvion) | [Jasper Wong](https://github.com/Jwong684)
+
+View the [hackseq17 Presentation](bioSyntax_talk.pptm)
 
 ## Contents
 [**Sublime Text 3**](#sublime-text-3-installation)
+- [Install](#sublime-text-3-installation)
 - [fasta](#fasta-fa-faa-fasta)
 - [fastq](#fastq-fq-fastq)
 - [SAM](#sam-sam)
@@ -17,24 +19,23 @@ A hackseq 2017 (October 20 - 22) project by:
 - [PDB](#pdb-pdb)
 - [GTF](#gtf-gtf)
 - [VCF](#vcf-vcf)
-- [Installation Instructions](#installation-instructions)
 
 [**Gedit**](#gedit-installation)
+- [Install](#gedit-installation)
 - [fasta](#fasta-fa-fasta)
 - [fastq](#fastq-fq-fastq-alpha)
 - [bed](#bed-bed-alpha)
-- [Installation Instructions](#installation-instructions-linux)
 
 ## Sublime Text 3 Installation
 
-1. Download the [bioMonokai Color Scheme](theme/sublime/Color\ Scheme\ -\ bioSyntax.sublime-package).
+1. Download the [bioMonokai Color Scheme](https://github.com/ababaian/bioSyntax/blob/master/dev/theme/sublime/Color%20Scheme%20-%20bioSyntax.sublime-package).
 2. Copy it to your Sublime Text application packages folder:
 - **Linux**: `../sublime_text_3/Packages/`
 - **Windows**: `C:/Program Files/Sublime Text 3/Packages/`
 - **Mac**: `/Applications/Sublime Text.app/Contents/MacOS/Packages/`
 3. Download the [bioSyntax sublime package](syntax/bioSyntax_sublime_RELEASE.zip).
-4. Unzip the files into the Sublime Text Packages folder:
-- **Linux**: `~/.config/sublime-text-3/Packages/User`
+4. Unzip the `*.sublime-syntax` files into the Sublime Text Packages folder:
+- **Linux**: `~/.config/sublime-text-3/Packages/User/`
 - **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
 - **Mac**: `/Users/your_username/Library/Application Support/Sublime Text 3/Packages/`
 5. Open Sublime Text and go to Preferences > Color Scheme > bioMonokai
