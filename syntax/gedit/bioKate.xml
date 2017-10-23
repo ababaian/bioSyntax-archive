@@ -153,10 +153,10 @@
 
   <!-- Fasta styles -->
 
-  <style name="fa:A"                       foreground="#000000" background="#55E60F"/>
-  <style name="fa:T"                       foreground="#000000" background="#FB2313"/>
-  <style name="fa:G"                       foreground="#000000" background="#E6C70F"/>
-  <style name="fa:C"                       foreground="#000000" background="#10539D"/>
+  <style name="fa:A"                       foreground="#000000" background="dark-green"/>
+  <style name="fa:T"                       foreground="#000000" background="red"/>
+  <style name="fa:G"                       foreground="#000000" background="green"/>
+  <style name="fa:C"                       foreground="#000000" background="blue"/>
   
   
   <!-- Fasta-Zappo styles -->
