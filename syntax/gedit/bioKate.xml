@@ -151,6 +151,12 @@
 
   <!-- Bio specific styles -->
 
+  <style name="fa:A"                       foreground="#000000" background="dark-green"/>
+  <style name="fa:T"                       foreground="#000000" background="red"/>
+  <style name="fa:G"                       foreground="#000000" background="brown"/>
+  <style name="fa:C"                       foreground="#000000" background="blue"/>
+  
+  
   <style name="fastza:header"                  foreground="dark-green" background="#FFFFFF"/>
   <style name="fastza:A"                       foreground="#000000" background="#FFAFAF"/>
   <style name="fastza:I"                       foreground="#000000" background="#FFAFAF"/>
@@ -267,6 +273,8 @@
   <style name="fq:T"                       foreground="#eb413c"/>
   <style name="fq:G"                       foreground="#ffb340"/>
   <style name="fq:C"                       foreground="#3c88ee"/>
+  
+  
   <style name="bed:chr"                    foreground="dark-green" bold="true"/>
   <style name="bed:coords"                 foreground="dark-green"/>
 </style-scheme>
