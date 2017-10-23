@@ -1,17 +1,11 @@
 ![bioSyntax Logo](dev/img/bioSyntax_logo.png)
-# bioSyntax
-Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in future).
+![Fasta Banner](dev/img/FastaBanner.png)
+Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in progress).
 
 A hackseq 2017 (October 20 - 22) project by:
-- [Artem Babaian](https://github.com/ababaian)
-- [Gherman Novakovskiy](https://github.com/fransilvion)
-- [Eric Chu](https://github.com/echu113)
-- [Alyssa Fegen](https://github.com/alyeffy)
-- [Jasper Wong](https://github.com/Jwong684)
-- [Anicet Ebou](https://github.com/ebedthan)
-- [Jeffrey Kam](https://github.com/lazypanda10117)
+- [Artem Babaian](https://github.com/ababaian), [Eric Chu](https://github.com/echu113), [Anicet Ebou](https://github.com/ebedthan), [Alyssa Fegen](https://github.com/alyeffy), [Jeffrey Kam](https://github.com/lazypanda10117), [Gherman Novakovskiy](https://github.com/fransilvion) and [Jasper Wong](https://github.com/Jwong684)
 
-[Presentation](bioSyntax_talk.pptm)
+[hackseq17 Presentation](bioSyntax_talk.pptm)
 
 ## Contents
 [**Sublime Text 3**](#sublime-text-3-installation)
