@@ -6,7 +6,7 @@ A [hackseq17 (October 20 - 22)](https://www.hackseq.com) project by:
 
 [Artem Babaian](https://github.com/ababaian) | [Eric Chu](https://github.com/echu113) | [Anicet Ebou](https://github.com/ebedthan) | [Alyssa Fegen](https://github.com/alyeffy) | [Jeffrey Kam](https://github.com/lazypanda10117) | [Gherman Novakovskiy](https://github.com/fransilvion) | [Jasper Wong](https://github.com/Jwong684)
 
-### [Watch the hackseq17 presentation](https://youtu.be/dHYN3E7edhY?t=6m28s)
+### [Watch the hackseq17 presentation (~5 min)](https://youtu.be/dHYN3E7edhY?t=6m28s)
 
 ## Contents
 [**Sublime Text 3**](#sublime-text-3-installation)
