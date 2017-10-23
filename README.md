@@ -2,11 +2,11 @@
 ![Fasta Banner](dev/img/FastaBanner.png)
 Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in progress).
 
-A hackseq 2017 (October 20 - 22) project by:
+A [hackseq17 (October 20 - 22)](https://www.hackseq.com) project by:
 
 [Artem Babaian](https://github.com/ababaian) | [Eric Chu](https://github.com/echu113) | [Anicet Ebou](https://github.com/ebedthan) | [Alyssa Fegen](https://github.com/alyeffy) | [Jeffrey Kam](https://github.com/lazypanda10117) | [Gherman Novakovskiy](https://github.com/fransilvion) | [Jasper Wong](https://github.com/Jwong684)
 
-View the [hackseq17 Presentation](bioSyntax_talk.pptm)
+### [Watch the hackseq17 presentation](https://youtu.be/dHYN3E7edhY?t=6m28s)
 
 ## Contents
 [**Sublime Text 3**](#sublime-text-3-installation)
