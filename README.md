@@ -38,7 +38,8 @@ A [hackseq17 (October 20 - 22)](https://www.hackseq.com) project by:
 - **Linux**: `~/.config/sublime-text-3/Packages/User/`
 - **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
 - **Mac**: `/Users/your_username/Library/Application Support/Sublime Text 3/Packages/`
-5. Open Sublime Text and go to Preferences > Color Scheme > bioMonokai
+5. Open Sublime Text and go select the bioSyntax (bioMonokai) theme
+`Preferences > Color Scheme > bioMonokai`
 6. Formats should auto-detect; you can select a specific syntax at the drop-menu at the bottom-right corner of the window (e.g. Plain Text)
 
 You now have pretty formats!
@@ -117,7 +118,9 @@ A total of 6 formats available:
 5. Copy the `*.lang` file(s) to gtksourceview language spec folder
 	`sudo cp fasta.lang /usr/share/gtksourceview-3.0/language-specs/fasta.lang`
 
-6. Restart `gedit` and you should have pretty formats 
+6. Restart `gedit` and select the bioSyntax theme
+	`Edit > Preferences > Font & Color > bioKate'`
+7.  You now have pretty formats 
 
 
 ## Fasta (.fa; .fasta)
