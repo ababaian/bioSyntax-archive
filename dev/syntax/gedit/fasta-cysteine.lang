@@ -3,7 +3,7 @@
 <!--
 ebedthan - 2017 10 22
 
-Color Scheme for DNA/RNA Sequences-Taylor colors
+Color Scheme for DNA/RNA Sequences-ONLY Cysteines are colored to appreciate the sites where proteines will fold
 Associates with fasta files (.fa; .fasta)
 
 Using 'bioKate color theme'
@@ -14,7 +14,8 @@ G   - Brown
 C   - Blue
 -->
 
-<language id="fastay" _name="Fasta-taylor" version="2.0" _section="Scientific">
+
+<language id="fastcy" _name="Fasta-cysteine" version="2.0" _section="Scientific">
 
   <metadata>
     <property name="mimetypes">text/fastza</property>
@@ -51,7 +52,7 @@ C   - Blue
   </styles>
 
   <definitions>
-    <context id="fastay">
+    <context id="fastcy">
       <include>
 
        <context id="Header" style-ref="header">

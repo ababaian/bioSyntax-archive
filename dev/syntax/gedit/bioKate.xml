@@ -153,11 +153,37 @@
 
   <!-- Fasta styles -->
 
-  <style name="fa:A"                       foreground="#000000" background="#64f73f"/>
-  <style name="fa:T"                       foreground="#000000" background="#eb413c"/>
-  <style name="fa:G"                       foreground="#000000" background="#ffb340"/>
-  <style name="fa:C"                       foreground="#000000" background="#3c88ee"/>
-  
+  <style name="fasta:ntA"                       foreground="#000000" background="dark-green"/>
+  <style name="fasta:ntT"                       foreground="#000000" background="red"/>
+  <style name="fasta:ntG"                       foreground="#000000" background="brown"/>
+  <style name="fasta:ntC"                       foreground="#000000" background="blue"/>
+  <style name="fasta:ntXN"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fasta:clA"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clI"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clV"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clL"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clM"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clF"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clW"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clY"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fasta:clK"                       foreground="#000000" background="#F01505"/>
+  <style name="fasta:clR"                       foreground="#000000" background="#F01505"/>
+  <style name="fasta:clH"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fasta:clD"                       foreground="#000000" background="#C048C0"/>
+  <style name="fasta:clE"                       foreground="#000000" background="#C048C0"/>
+  <style name="fasta:clS"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clT"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clN"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clQ"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clP"                       foreground="#000000" background="#C0C000"/>
+  <style name="fasta:clG"                       foreground="#000000" background="#F09048"/>
+  <style name="fasta:clC"                       foreground="#000000" background="#F08080"/>
+  <style name="fasta:clX"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:clZ"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:clB"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:Stop"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:Indel"                    foreground="#000000" background="#FFFFFF"/>
   
   <!-- Fasta-Zappo styles -->
   
@@ -191,32 +217,32 @@
   
   <!-- Bio fasta-Clustal styles -->
   
-  <style name="fastcl:header"                  foreground="black" background="#FFFFFF"/>
-  <style name="fastcl:A"                       foreground="#000000" background="#80A0F0"/>
-  <style name="fastcl:I"                       foreground="#000000" background="#80A0F0"/>
-  <style name="fastcl:V"                       foreground="#000000" background="#80A0F0"/>
-  <style name="fastcl:L"                       foreground="#000000" background="#80A0F0"/>
-  <style name="fastcl:M"                       foreground="#000000" background="#80A0F0"/>
-  <style name="fastcl:F"                       foreground="#000000" background="#80A0F0"/>
-  <style name="fastcl:W"                       foreground="#000000" background="#80A0F0"/>
-  <style name="fastcl:Y"                       foreground="#000000" background="#15A4A4"/>
-  <style name="fastcl:K"                       foreground="#000000" background="#F01505"/>
-  <style name="fastcl:R"                       foreground="#000000" background="#F01505"/>
-  <style name="fastcl:H"                       foreground="#000000" background="#15A4A4"/>
-  <style name="fastcl:D"                       foreground="#000000" background="#C048C0"/>
-  <style name="fastcl:E"                       foreground="#000000" background="#C048C0"/>
-  <style name="fastcl:S"                       foreground="#000000" background="#15C015"/>
-  <style name="fastcl:T"                       foreground="#000000" background="#15C015"/>
-  <style name="fastcl:N"                       foreground="#000000" background="#15C015"/>
-  <style name="fastcl:Q"                       foreground="#000000" background="#15C015"/>
-  <style name="fastcl:P"                       foreground="#000000" background="#C0C000"/>
-  <style name="fastcl:G"                       foreground="#000000" background="#F09048"/>
-  <style name="fastcl:C"                       foreground="#000000" background="#F08080"/>
-  <style name="fastcl:X"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="fastcl:Z"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="fastcl:B"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="fastcl:Stop"                    foreground="#000000" background="#FFFFFF"/>
-  <style name="fastcl:Indel"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fast:clA"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clI"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clV"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clL"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clM"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clF"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clW"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clY"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fast:clK"                       foreground="#000000" background="#F01505"/>
+  <style name="fast:clR"                       foreground="#000000" background="#F01505"/>
+  <style name="fast:clH"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fast:clD"                       foreground="#000000" background="#C048C0"/>
+  <style name="fast:clE"                       foreground="#000000" background="#C048C0"/>
+  <style name="fast:clS"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clT"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clN"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clQ"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clP"                       foreground="#000000" background="#C0C000"/>
+  <style name="fast:clG"                       foreground="#000000" background="#F09048"/>
+  <style name="fast:clC"                       foreground="#000000" background="#F08080"/>
+  <style name="fast:clX"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:clZ"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:clB"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:Stop"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:Indel"                    foreground="#000000" background="#FFFFFF"/>
  
  
   <!-- fasta-Taylor styles -->

@@ -14,7 +14,7 @@ G   - Brown
 C   - Blue
 -->
 
-<language id="fasthy" _name="Hydrophobicity" version="2.0" _section="Scientific">
+<language id="fasthy" _name="Fasta-hydrophobicity" version="2.0" _section="Scientific">
 
   <metadata>
     <property name="mimetypes">text/fastza</property>

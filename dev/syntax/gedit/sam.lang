@@ -3,26 +3,26 @@
 <!--
 ebedthan - 2017 10 22
 
-Color Scheme for DNA/RNA Sequences-Taylor colors
-Associates with fasta files (.fa; .fasta)
+Color Scheme for SAM Files
+Associates with fasta files (.sam)
 
 Using 'bioKate color theme'
-
-A   - Dark Green
-T\U - Red
-G   - Brown
-C   - Blue
 -->
 
-<language id="fastay" _name="Fasta-taylor" version="2.0" _section="Scientific">
+<language id="sam" _name="SAM" version="2.0" _section="Scientific">
 
   <metadata>
-    <property name="mimetypes">text/fastza</property>
-    <property name="globs">*.faa</property>
+    <property name="mimetypes">text/sam</property>
+    <property name="globs">*.sam</property>
   </metadata>
 
   <styles>
-    <style id="header" _name="Header_" />
+    <style id="header_HD" _name="Header_HD" />
+    <style id="header_SQ" _name="Header_SQ" />
+    <style id="header_RG" _name="Header_RG" />
+    <style id="header_PG" _name="Header_PG" />
+    <style id="header_CO" _name="Header_CO" />
+    <style id="header_s" _name="Header_s" />
     <style id="A"      _name="A_"      />
     <style id="B"      _name="B_"      />
     <style id="C"      _name="C_"      />
@@ -51,20 +51,57 @@ C   - Blue
   </styles>
 
   <definitions>
-    <context id="fastay">
+    <context id="sam">
       <include>
 
-       <context id="Header" style-ref="header">
-         <start>^\></start>
+       <context id="Header_1" style-ref="header_HD">
+         <start>^@HD</start>
          <end>$</end>
        </context>
        
-       <context id="a" style-ref="A">
-         <match>[Aa]*</match>
+       <context id="Header_2" style-ref="header_SQ">
+         <start>^@SQ</start>
        </context>
        
-       <context id="b" style-ref="B">
-         <match>[Bb]*</match>
+       <context id="Header_3" style-ref="header_RG">
+         <match>^@RG</match>
+       </context>
+       
+       <context id="Header_4" style-ref="header_PG">
+         <match>^@PG</match>
+       </context>
+       
+       <context id="Header_5" style-ref="header_CO">
+         <match>^@CO</match>
+       </context>
+       
+       <context id="Header_6" style-ref="header_s">
+         <match>^</match>
+       </context>
+       
+       <context id="keywords" style-ref="keywords">
+         <keyword>VN</keyword>
+         <keyword>SN</keyword>
+         <keyword>ID</keyword>
+         <keyword>LN</keyword>
+         <keyword>SM</keyword>
+         <keyword>PL</keyword>
+         <keyword>PU</keyword>
+         <keyword>CL</keyword>
+         <keyword>SO</keyword>
+         <keyword>SB</keyword>
+       </context>
+       
+       <context id="invalid" style-ref="invalid">
+         <match>(?<=[A-Z]{2}:)</match>
+       </context>
+       
+       <context id="constant_numeric" style-ref="header_eq">
+         <match>(?<=VN:)(.+?(?=\s+[A-Z]{2}:)|.+$)</match>
+       </context>
+       
+       <context id="" style-ref="constant_numeric">
+         <match>(?<=SO:)(.+?(?=\s+[A-Z]{2}:)|.+$)</match>
        </context>
        
        <context id="c" style-ref="C">
