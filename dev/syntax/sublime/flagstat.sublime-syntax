@@ -1,0 +1,31 @@
+%YAML 1.2
+---
+name: flagstat
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions: [flagstat]
+scope: text.flagstat
+
+contexts:
+  main:
+    # Match Keywords
+    - match: 'mapQ'
+      scope: keyword
+
+    - match: '[\\+\\>\\=\\%\\:]'
+      scope: storage.type
+
+    # Match numbers
+    - match: '-nan'
+      scope: constant.numeric
+    - match: '^[0-9]*\b'
+      scope: constant.numeric
+    - match: '[0-9]*'
+      scope: constant.numeric
+
+    # Match Descriptor
+    - match: '\b[A-Za-z]+[12]*\b'
+      scope: string
+
+    # Match Brackets
+    - match: '[()]'
+      scope: variable
