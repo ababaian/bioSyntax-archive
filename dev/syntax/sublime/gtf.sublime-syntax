@@ -1,0 +1,38 @@
+%YAML 1.2
+---
+name: gtf
+file_extensions: [gtf]
+scope: source.gtf
+
+contexts:
+  main:
+    - match: ^\w*
+      scope: coord.Chr.gtf
+
+    - match: \b([0-9]+\s)\b
+      scope: coord.Start.gtf
+
+    - match: \b([0-9|\.]+)\b
+      scope: variable.number.score.gtf
+    
+    - match: \s[\+|\+$]\s
+      scope: strand.plus.gtf
+
+    - match: \s[\-|\-$]\s
+      scope: strand.minus.gtf
+    
+    - match: \s[\.|\.$]\s
+      scope: strand.none.gtf
+
+    - match: (\s[0-2]\s)
+      scope: variable.number.frame.gtf
+
+    - match: (?=;\s);
+      scope: name.semicolon.gtf
+    
+    - match: \b[^\s;]+(?=\s"[\w|\W|\_|\.]*")
+      scope: grad8.attributeValue.gtf
+
+    - match: (?="[\w|\d|\.]+";)"[\w|\d|\.]+"
+      scope: grad2.attributeName.gtf
+

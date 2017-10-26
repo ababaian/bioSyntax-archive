@@ -1,0 +1,10 @@
+// Fasta Stylesheet
+// bioSyntax
+faheader black b ;
+
+ntA darkgreen ;
+ntT darkred ;
+ntG brown ;
+ntC darkblue ;
+
+ntN gray ;

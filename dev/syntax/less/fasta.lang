@@ -1,0 +1,11 @@
+# Fasta language definition file for less pipe
+# bioSyntax
+
+faheader start ">"
+
+ntA = '[Aa]+'
+ntT = '[TtUu]+'
+ntG = '[Gg]+'
+ntC = '[Cc]+'
+
+ntN = '[NnXx]+'
