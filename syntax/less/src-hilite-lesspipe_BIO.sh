@@ -10,6 +10,8 @@ for source in "$@"; do
         lesspipe "$source" ;;
 	*.fasta|*.fa|*.mfa)
 	source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=bioSyntax.style -i "$source" ;;
+	*.sam)
+	source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=bioSyntax.style -i "$source" ;;
         *)
 	source-highlight --failsafe --infer-lang -f esc --style-file=esc.style -i "$source" ;;
     esac

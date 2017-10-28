@@ -1,0 +1,19 @@
+## Append this to your ~/.zshrc & ~/.bashrc
+##
+## Syntax Highlighting for less
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+
+alias less='less -NSi -# 10'
+# -N: add line numbers
+# -S: don't wrap lines (force to single line)
+# -# 20: Horizontal scroll
+
+alias more='less'
+
+# Explicit fasta / sam less for piping
+# i.e:  samtools view -h aligned_hits.bam | sam-less
+#
+alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=bioSyntax.style | less'
+alias sam-less='source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=bioSyntax.style | less'
+
