@@ -153,12 +153,12 @@
 
   <!-- Fasta styles -->
 
-  <style name="fasta:ntA"                       foreground="#000000" background="dark-green"/>
-  <style name="fasta:ntT"                       foreground="#000000" background="red"/>
-  <style name="fasta:ntG"                       foreground="#000000" background="brown"/>
-  <style name="fasta:ntC"                       foreground="#000000" background="blue"/>
-  <style name="fasta:ntXN"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="fasta:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fasta:ntA"                       foreground="#000000" background="#64F73F"/>
+  <style name="fasta:ntT"                       foreground="#000000" background="#EB413C"/>
+  <style name="fasta:ntG"                       foreground="#000000" background="#FFB340"/>
+  <style name="fasta:ntC"                       foreground="#000000" background="#3C88EE"/>
+  <style name="fasta:ntXN"                       foreground="#000000" background="#F8F8F0"/>
+  <style name="fasta:header"                  foreground="black" background="#FFFFFF" bold="true"/>
   <style name="fasta:clA"                       foreground="#000000" background="#80A0F0"/>
   <style name="fasta:clI"                       foreground="#000000" background="#80A0F0"/>
   <style name="fasta:clV"                       foreground="#000000" background="#80A0F0"/>
@@ -183,11 +183,11 @@
   <style name="fasta:clZ"                       foreground="#000000" background="#FFFFFF"/>
   <style name="fasta:clB"                       foreground="#000000" background="#FFFFFF"/>
   <style name="fasta:Stop"                    foreground="#000000" background="#FFFFFF"/>
-  <style name="fasta:Indel"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:Indel"                    foreground="#000000" background="#75715E"/>
   
   <!-- Fasta-Zappo styles -->
   
-  <style name="fastza:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fastza:header"                  foreground="black" background="#FFFFFF" bold="true"/>
   <style name="fastza:A"                       foreground="#000000" background="#FFAFAF"/>
   <style name="fastza:I"                       foreground="#000000" background="#FFAFAF"/>
   <style name="fastza:V"                       foreground="#000000" background="#FFAFAF"/>
@@ -217,7 +217,7 @@
   
   <!-- Bio fasta-Clustal styles -->
   
-  <style name="fast:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fast:header"                  foreground="black" background="#FFFFFF" bold="true"/>
   <style name="fast:clA"                       foreground="#000000" background="#80A0F0"/>
   <style name="fast:clI"                       foreground="#000000" background="#80A0F0"/>
   <style name="fast:clV"                       foreground="#000000" background="#80A0F0"/>
@@ -247,7 +247,7 @@
  
   <!-- fasta-Taylor styles -->
  
-  <style name="fastay:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fastay:header"                  foreground="black" background="#FFFFFF" bold="true"/>
   <style name="fastay:A"                       foreground="#000000" background="#CCFF00"/>
   <style name="fastay:I"                       foreground="#000000" background="#66FF00"/>
   <style name="fastay:V"                       foreground="#000000" background="#99FF00"/>
@@ -277,7 +277,7 @@
   
   <!-- fasta-hydrophocity styles -->
   
-  <style name="fasthy:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fasthy:header"                  foreground="black" background="#FFFFFF" bold="true"/>
   <style name="fasthy:A"                       foreground="#000000" background="#AD0052"/>
   <style name="fasthy:I"                       foreground="#000000" background="#FF0000"/>
   <style name="fasthy:V"                       foreground="#000000" background="#F60009"/>
@@ -307,7 +307,7 @@
   
   <!-- fasta-cysteine styles -->
   
-  <style name="fastcy:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fastcy:header"                  foreground="black" background="#FFFFFF" bold="true"/>
   <style name="fastcy:A"                       foreground="#000000" background="#FFFFFF"/>
   <style name="fastcy:I"                       foreground="#000000" background="#FFFFFF"/>
   <style name="fastcy:V"                       foreground="#000000" background="#FFFFFF"/>

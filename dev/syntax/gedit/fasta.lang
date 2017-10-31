@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-ababaian - 2017 01 26
+ebedthan - 2017 01 26
 
 Color Scheme for DNA/RNA Sequences
 Associates with fasta files (.fa; .fasta)
@@ -61,8 +61,28 @@ C   - Blue
 	  <end>$</end>
         </context>
         
+        <context id="nta" style-ref="ntA">
+         <match>[Aa]*((?&lt;=[CcTtUuGg]) | (?=[CcTtUuGg]))</match>
+       </context>
+
+       <context id="ntt" style-ref="ntT">
+         <match>[TtUu]*((?&lt;=[CcTtUuGg]) | (?=[CcTtUuGg]))</match>
+       </context>
+
+       <context id="ntg" style-ref="ntG">
+         <match>[Gg]*((?&lt;=[CcTtUuGg]) | (?=[CcTtUuGg]))</match>
+       </context>
+       
+       <context id="ntc" style-ref="ntC">
+         <match>[Cc]*((?&lt;=[CcTtUuGg]) | (?=[CcTtUuGg]))</match>          
+       </context>
+        
+       <context id="ntxn" style-ref="ntXN">
+         <match>[XxNn]*((?&lt;=[CcTtUuGg]) | (?=[CcTtUuGg]))</match>          
+       </context>
+        
         <context id="a" style-ref="clA">
-         <match>^[Aa](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
+         <match>[Aa]*</match>
        </context>
        
        <context id="b" style-ref="clB">
@@ -70,7 +90,7 @@ C   - Blue
        </context>
        
        <context id="c" style-ref="clC">
-         <match>^[Cc](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
+         <match>[Cc]*</match>
        </context>
        
        <context id="d" style-ref="clD">
@@ -86,11 +106,11 @@ C   - Blue
        </context>
        
        <context id="g" style-ref="clG">
-         <match>^[Gg](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
+         <match>[Gg]*</match>
        </context>
        
        <context id="h" style-ref="clH">
-         <match>[Hh]*</match>
+         <match>[Hh]</match>
        </context>
        
        <context id="i" style-ref="clI">
@@ -110,7 +130,7 @@ C   - Blue
        </context>
        
        <context id="n" style-ref="clN">
-         <match>^[Nn](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
+         <match>[Nn]*</match>
        </context>
        
        <context id="p" style-ref="clP">
@@ -130,7 +150,7 @@ C   - Blue
        </context>
        
        <context id="t" style-ref="clT">
-         <match>^[Tt](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
+         <match>[Tt]*</match>
        </context>
        
        <context id="v" style-ref="clV">
@@ -150,7 +170,7 @@ C   - Blue
        </context>
        
        <context id="x" style-ref="clX">
-         <match>^[Xx](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
+         <match>[Xx]*</match>
        </context>
        
        <context id="stop" style-ref="Stop">
@@ -158,28 +178,10 @@ C   - Blue
        </context>
        
        <context id="indel" style-ref="Indel">
-         <match>\-</match>
+         <match>[\-\.]</match>
        </context>
        
-       <context id="nta" style-ref="ntA">
-         <match>[Aa](?=[AaGgCcTtUuNnXx-]*)</match>
-       </context>
-
-       <context id="ntt" style-ref="ntT">
-         <match>[TtUu](?=[AaGgCcTtUuNnXx-]*)</match>
-       </context>
-
-       <context id="ntg" style-ref="ntG">
-         <match>[Gg](?=[AaGgCcTtUuNnXx-]*)</match>
-       </context>
        
-       <context id="ntc" style-ref="ntC">
-         <match>[Cc](?=[AaGgCcTtUuNnXx-]*)</match>          
-       </context>
-        
-       <context id="ntxn" style-ref="ntXN">
-         <match>[XxNn](?=[AaGgCcTtUuNnXx-]*)</match>          
-       </context>
 
       </include>
     </context>
