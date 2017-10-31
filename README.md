@@ -98,7 +98,7 @@ A total of 6 formats available:
 ## GTF (.gtf)
 [gtf.sublime-syntax](syntax/sublime/gtf.sublime-syntax)
 
-![Gtf Example Sublime](dev/img/GTF_New.png)
+![Gtf Example Sublime](dev/img/GTF_New.PNG)
 
 ## VCF (.vcf)
 [vcf.sublime-syntax](syntax/sublime/vcf.sublime-syntax):
