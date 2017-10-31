@@ -6,33 +6,91 @@ scope: source.gtf
 
 contexts:
   main:
-    - match: ^\w*
+    - match: '^[\S]*\t'
       scope: coord.Chr.gtf
+      push: source
 
-    - match: \b([0-9]+\s)\b
-      scope: coord.Start.gtf
+  source:
+    - match: '[\S]*'
+      scope: coord.header.bw.gtf
+    - match: \t
+      push: feature
+    - match: $
+      pop: true
 
-    - match: \b([0-9|\.]+)\b
-      scope: variable.number.score.gtf
-    
-    - match: \s[\+|\+$]\s
+  feature:
+    - match: 'exon'
+      scope: grad2.gtf
+    - match: 'transcript'
+      scope: grad4.gtf
+    - match: 'CDS'
+      scope: grad6.gtf
+    - match: 'start_codon'
+      scope: grad8.gtf
+    - match: 'stop_codon'
+      scope: grad10.gtf
+    - match: \t
+      push: start
+    - match: $
+      pop: true
+
+  start:
+    - match: ([0-9|\.]+)\b
+      scope: variable.number.gtf
+    - match: \t
+      push: end
+    - match: $
+      pop: true
+
+  end:
+    - match: ([0-9|\.]+)\b
+      scope: variable.number.gtf
+    - match: \t
+      push: score
+    - match: $
+      pop: true
+
+  score:
+    - match: .\b
+      scope: comment.line.gtf
+    - match: ([0-9|\.]+)\b
+      scope: variable.number.gtf
+    - match: \t
+      push: strand
+    - match: $
+      pop: true
+
+  strand:
+    - match: \+
       scope: strand.plus.gtf
-
-    - match: \s[\-|\-$]\s
+    - match: \-
       scope: strand.minus.gtf
-    
-    - match: \s[\.|\.$]\s
+    - match: \.
       scope: strand.none.gtf
+    - match: \t
+      push: frame
+    - match: $
+      pop: true
 
-    - match: (\s[0-2]\s)
-      scope: variable.number.frame.gtf
+  frame:
+    - match: ([0-2])\b
+      scope: variable.number.gtf
+    - match: \.
+      scope: comment.line.gtf
+    - match: \t
+      push: attribute
+    - match: $
+      pop: true
 
-    - match: (?=;\s);
-      scope: name.semicolon.gtf
-    
+  attribute:
     - match: \b[^\s;]+(?=\s"[\w|\W|\_|\.]*")
-      scope: grad8.attributeValue.gtf
-
+      scope: grad.bw5.attributeName.gtf
+    - match: (?="[\w|\d|\.]+";)"[\d|\.]+"
+      scope: variable.number.attributeString.gtf
     - match: (?="[\w|\d|\.]+";)"[\w|\d|\.]+"
-      scope: grad2.attributeName.gtf
+      scope: grad4.attributeString.gtf
+    - match: \t
+      push: attribute
+    - match: $
+      pop: true
 
