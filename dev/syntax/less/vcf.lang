@@ -1,0 +1,38 @@
+# Fasta language definition file for less pipe
+# bioSyntax
+
+# Variables ----------------------------------
+vardef NUCLEOTIDE = '[ATCGNXatcgnxRYSWKM]'
+vardef PHRED = '[!-K]' #PHRED 1.8
+
+
+# Header Area -------------------------------
+
+state comment start '^##' begin
+  endline = '$' exit
+  
+  # fileformat
+  state comment = 'fileformat=' begin
+    numeric = '\S*' exit
+  end
+
+  # ALT
+  # FILTER
+  # FORMAT
+  # INFO
+  # contig
+  # reference
+  # assembly
+  # SAMPLE
+  # PEDIGREE
+
+  string = '(?<=fileformat=)\S*'
+
+  comment = 'FILTER='
+  grad5 = 'FORMAT='
+  comment = 'INFO='
+  comment = 'contig='
+  comment = '\S*?[=]'
+
+  #comment = '##'
+end
