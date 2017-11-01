@@ -1,1 +1,6 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
+title: bioSyntax
+description: Human Readable Biology
+
+gems:
+  - jekyll-redirect-from
