@@ -1,9 +1,8 @@
-![Fasta Banner](img/FastaBanner.png)
 Syntax highlighting for computational biology in `vim`, `less`, `sublime3` & `gedit`.
 
-Contributors: [Artem Babaian](https://github.com/ababaian) \| [Eric Chu](https://github.com/echu113) \| [Anicet Ebou](https://github.com/ebedthan) \|
+Contributors:
 
-[Alyssa Fegen](https://github.com/alyeffy) \| [Jeffrey Kam](https://github.com/lazypanda10117) \| [Gherman Novakovskiy](https://github.com/fransilvion) \| [Jasper Wong](https://github.com/Jwong684)
+[A. Babaian](https://github.com/ababaian) \| [E. Chu](https://github.com/echu113) \| [A. Ebou](https://github.com/ebedthan) \| [A. Fegen](https://github.com/alyeffy) \| [J. Kam](https://github.com/lazypanda10117) \| [G. Novakovskiy](https://github.com/fransilvion) \| [J. Wong](https://github.com/Jwong684)
 
 [A hackseq17 project.](https://www.hackseq.com)
 
@@ -21,7 +20,7 @@ Contributors: [Artem Babaian](https://github.com/ababaian) \| [Eric Chu](https:/
 - **Linux**: `../sublime_text_3/Packages/`
 - **Windows**: `C:/Program Files/Sublime Text 3/Packages/`
 - **Mac**: `/Applications/Sublime Text.app/Contents/MacOS/Packages/`
-3. Download the [bioSyntax sublime package](syntax/bioSyntax_sublime_RELEASE.zip).
+3. Download the [bioSyntax sublime package](https://github.com/ababaian/bioSyntax/blob/master/syntax/bioSyntax_sublime_RELEASE.zip).
 4. Unzip the `*.sublime-syntax` files into the Sublime Text Packages folder:
 - **Linux**: `~/.config/sublime-text-3/Packages/User/`
 - **Windows**: `%APPDATA%/Roaming/Sublime Text 3/Packages/`
