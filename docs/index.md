@@ -1,32 +1,17 @@
-![bioSyntax Logo](dev/img/bioSyntax_logo.png)
-![Fasta Banner](dev/img/FastaBanner.png)
-Syntax highlighting for computational biology file formats in Sublime Text 3, gtksourceview / gedit (in progress) and vim (in progress).
+![bioSyntax Logo](img/bioSyntax_logo.png)
+![Fasta Banner](img/FastaBanner.png)
+Syntax highlighting for computational biology file formats in `vim`, `less`, `sublime3` & `gedit`.
 
-A [hackseq17 (October 20 - 22)](https://www.hackseq.com) project by:
-
-[Artem Babaian](https://github.com/ababaian) | [Eric Chu](https://github.com/echu113) | [Anicet Ebou](https://github.com/ebedthan) | [Alyssa Fegen](https://github.com/alyeffy) | [Jeffrey Kam](https://github.com/lazypanda10117) | [Gherman Novakovskiy](https://github.com/fransilvion) | [Jasper Wong](https://github.com/Jwong684)
+[Artem Babaian](https://github.com/ababaian) \| [Eric Chu](https://github.com/echu113) \| [Anicet Ebou](https://github.com/ebedthan) \| [Alyssa Fegen](https://github.com/alyeffy) \| [Jeffrey Kam](https://github.com/lazypanda10117) \| [Gherman Novakovskiy](https://github.com/fransilvion) \| [Jasper Wong](https://github.com/Jwong684)
+[A hackseq17 project.](https://www.hackseq.com)
 
 ### [Watch the hackseq17 presentation (~5 min)](https://youtu.be/dHYN3E7edhY?t=6m28s)
 
-## Contents
-[**Sublime Text 3**](#sublime-text-3-installation)
-- [Install](#sublime-text-3-installation)
-- [fasta](#fasta-fa-faa-fasta)
-- [fastq](#fastq-fq-fastq)
-- [SAM](#sam-sam)
-- [Wig](#wig-wig)
-- [Bed](#bed-bed)
-- [PDB](#pdb-pdb)
-- [GTF](#gtf-gtf)
-- [VCF](#vcf-vcf)
+![Example .sam in less](img/sam-less.png)
 
-[**Gedit**](#gedit-installation)
-- [Install](#gedit-installation)
-- [fasta](#fasta-fa-fasta)
-- [fastq](#fastq-fq-fastq-alpha)
-- [bed](#bed-bed-alpha)
+## Installation (alphas)
 
-## Sublime Text 3 Installation
+### Sublime Text 3 Installation
 
 1. Download the [bioMonokai Color Scheme](https://github.com/ababaian/bioSyntax/blob/master/dev/theme/sublime/Color%20Scheme%20-%20bioSyntax.sublime-package).
 2. Copy it to your Sublime Text application packages folder:
@@ -44,68 +29,7 @@ A [hackseq17 (October 20 - 22)](https://www.hackseq.com) project by:
 
 You now have pretty formats!
 
-## Fasta (.fa; .faa; .fasta)
-A total of 6 formats available:
-- [fasta.sublime-syntax](syntax/sublime/fasta.sublime-syntax): Context-dependent; able to detect if fasta file contains nucleotides or amino acids (Recommended).
-
-![Fasta Example Sublime](dev/img/fasta_context.png)
-
-- [fasta-nt.sublime-syntax](syntax/sublime/fasta-nt.sublime-syntax): for .fa & .fasta files only, specifically for highlighting RNA bases. High-contrast colour scheme with background highlighting.
-
-![Fasta Example Sublime](dev/img/fasta_nt.png)
-
-- [fasta-clustal.sublime-syntax](syntax/sublime/fasta-clustal.sublime-syntax): High-contrast amino acid highlighting.
-
-![Fasta Example Sublime](dev/img/fasta_clustal.png)
-
-- [fasta-zappo.sublime-syntax](syntax/sublime/fasta-zappo.sublime-syntax): Residues are coloured according to their physico-chemical properties. Details can be found at [Jalview](http://www.jalview.org/version118/documentation.html#zappo).
-
-![Fasta Example Sublime](dev/img/fasta_zappo.png)
-
-- [fasta-taylor.sublime-syntax](syntax/sublime/fasta-taylor.sublime-syntax): Details can be found on [Jalview](http://www.jalview.org/version118/documentation.html#taylor).
-
-![Fasta Example Sublime](dev/img/fasta_taylor.png)
-
-- [fasta-hydro.sublime-syntax](syntax/sublime/fasta-hydro.sublime-syntax): Residue highlighting according to a [hydrophobicity table](http://www.jalview.org/version118/documentation.html#hydrophobicity), ranging between red and blue, where red is the most hydrophobic residue and blue is the most hydrophilic residue.
-
-![Fasta Example Sublime](dev/img/fasta_hydro.png)
-
-## Fastq (.fq; .fastq)
-[fastq.sublime-syntax](syntax/sublime/fastq.sublime-syntax):
-
-![FastQ Example Sublime](dev/img/FastQ_Quality.png)
-
-## SAM (.sam)
-[sam.sublime-syntax](syntax/sublime/sam.sublime-syntax):
-
-![SAM Example Sublime](dev/img/SAM_header.png)
-
-## Wig (.wig)
-[wig.sublime-syntax](syntax/sublime/wig.sublime-syntax):
-
-![Wig Example Sublime](dev/img/Wig_Gradient.png)
-
-## Bed (.bed)
-[bed.sublime-syntax](syntax/sublime/bed.sublime-syntax):
-
-![Bed Example Sublime](dev/img/Bed_readability.png)
-
-## PDB (.pdb)
-[pdb.sublime-syntax](syntax/sublime/pdb.sublime-syntax):
-
-![Pdb Example Sublime](dev/img/PDB_header1.png)
-
-## GTF (.gtf)
-[gtf.sublime-syntax](syntax/sublime/gtf.sublime-syntax)
-
-![Gtf Example Sublime](dev/img/GTF_Alpha.png)
-
-## VCF (.vcf)
-[vcf.sublime-syntax](syntax/sublime/vcf.sublime-syntax):
-
-![Vcf Example Sublime](dev/img/VCF_header.png)
-
-## Gedit Installation (Linux)
+### Gedit Installation (Linux)
 1. Download the respective `*.lang` files you're interested in
 2. Download the `bioKate.xml` style scheme
  
@@ -122,18 +46,3 @@ A total of 6 formats available:
 	`Edit > Preferences > Font & Color > bioKate'`
 7.  You now have pretty formats 
 
-
-## Fasta (.fa; .fasta)
-Highlights nucleotide sequence by base. Colors match IGV representations using the Jalview palette.
-
-![Fasta Example](dev/img/bioSyntax_fasta.png)
-
-## Fastq (.fq; .fastq) [alpha]
-Colors headers and nucleotides. Still abit buggy but can be worked out.
-
-![Fq Example](dev/img/bioSyntax_fq.png)
-
-## Bed (.bed) [alpha]
-View bed files with colors based on columns.
-
-![Bed Example](dev/img/bioSyntax_bed.png)

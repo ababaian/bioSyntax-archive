@@ -1,4 +1,4 @@
-// Fasta Stylesheet
+// VCF Files
 // bioSyntax
 
 // Header ID
@@ -16,13 +16,30 @@ bon darkblue ;
 mal darkred ;
 
 // Class
+version blue b ;
+comment gray i ;
+
 numeric blue ;
 numeric2 yellow ;
-string red ;
-comment gray i ;
-keyword purple ;
 
-// Keywords
+string red ;
+quoteString red i ;
+
+
+keyword purple ;
+keywordi purple i ;
+keydrow purple u ;
+
+keyword2 cyan ;
+keywordi2 cyan i ;
+keydrow2 cyan u ;
+
+keyword3 green ;
+keywordi3 green i ;
+keydrow3 green u ;
+
+
+// Biological Classes
 sample purple ;
 software yellow i ;
 commandline yellow ;

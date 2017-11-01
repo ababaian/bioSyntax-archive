@@ -8,31 +8,102 @@ vardef PHRED = '[!-K]' #PHRED 1.8
 
 # Header Area -------------------------------
 
-state comment start '^##' begin
+state comment start '^#[#]*' begin
   endline = '$' exit
-  
+ 
   # fileformat
-  state comment = 'fileformat=' begin
-    numeric = '\S*' exit
+  state faheader = 'fileformat=' begin
+   version = '\S*' exit
+  end
+
+  # FILTER
+  state keywordi = 'FILTER=' begin
+    drop = '(?=$)' exit
+    quoteString delim '"' '"'
+    string = '(?<==)\S+?(?=[,>])'
+    string = '(?<=,)\S+?(?=[,>])'
+    keywordi = '[<>]'
+    keyword = '[A-Za-z0-9]+(?==)'
+  end
+
+  # FORMAT
+  state keywordi2 = 'FORMAT=' begin
+    drop = '(?=$)' exit
+    quoteString delim '"' '"'
+    string = '(?<=ID=)\S+?(?=[,>])'
+    numeric = '(?<=Number=)\S+?(?=[,>])'
+    numeric = '(?<=Type=)\S+?(?=[,>])'
+    string = '(?<==)\S+?(?=[,>])'
+    keywordi2 = '[<>]'
+    keyword2 = '[A-Za-z0-9]+(?==)'
+  end
+
+  # INFO
+  state keywordi3 = 'INFO=' begin
+    drop = '(?=$)' exit
+    quoteString delim '"' '"'
+    string = '(?<=ID=)\S+?(?=[,>])'
+    numeric = '(?<=Number=)\S+?(?=[,>])'
+    numeric = '(?<=Type=)\S+?(?=[,>])'
+    string = '(?<==)\S+?(?=[,>])'
+    keywordi3 = '[<>]'
   end
 
   # ALT
-  # FILTER
-  # FORMAT
-  # INFO
-  # contig
-  # reference
-  # assembly
+  state keywordi3 = 'ALT=' begin
+    drop = '(?=$)' exit
+    quoteString delim '"' '"'
+    string = '(?<=ID=)\S+?(?=[,>])'
+    numeric = '(?<=Number=)\S+?(?=[,>])'
+    numeric = '(?<=Type=)\S+?(?=[,>])'
+    string = '(?<==)\S+?(?=[,>])'
+    keywordi3 = '[<>]'
+  end
+  
   # SAMPLE
+  state keywordi3 = 'SAMPLE=' begin
+    drop = '(?=$)' exit
+    quoteString delim '"' '"'
+    string = '(?<=ID=)\S+?(?=[,>])'
+    numeric = '(?<=Number=)\S+?(?=[,>])'
+    numeric = '(?<=Type=)\S+?(?=[,>])'
+    string = '(?<==)\S+?(?=[,>])'
+    keywordi3 = '[<>]'
+  end
+  
   # PEDIGREE
+  state keywordi3 = 'PEDIGREE=' begin
+    drop = '(?=$)' exit
+    quoteString delim '"' '"'
+    string = '(?<=ID=)\S+?(?=[,>])'
+    numeric = '(?<=Number=)\S+?(?=[,>])'
+    numeric = '(?<=Type=)\S+?(?=[,>])'
+    string = '(?<==)\S+?(?=[,>])'
+    keywordi3 = '[<>]'
+  end
+  
+  # contig
+  state keywordi3 = 'contig=' begin
+    drop = '(?=$)' exit
+    chr = '(?<=ID)\S+?(?=[,>])'
+    chrStart = '(?<=length)\S+?(?=[,>])'
+  end
 
-  string = '(?<=fileformat=)\S*'
+  # reference
 
-  comment = 'FILTER='
-  grad5 = 'FORMAT='
-  comment = 'INFO='
-  comment = 'contig='
-  comment = '\S*?[=]'
+  # assembly
+  
+  # Other
+  state keywordi3 = '\S+?=' begin
+    drop = '(?=$)' exit
+    quoteString delim '"' '"'
+    string = '(?<=ID=)\S+?(?=[,>])'
+    numeric = '(?<=Number=)\S+?(?=[,>])'
+    numeric = '(?<=Type=)\S+?(?=[,>])'
+    string = '(?<==)\S+?(?=[,>])'
+    keywordi3 = '[<>]'
+  end
+  
+  # contig
 
-  #comment = '##'
 end
