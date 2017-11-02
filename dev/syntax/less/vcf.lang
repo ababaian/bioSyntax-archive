@@ -27,15 +27,23 @@ state comment start '^#[#]*' begin
   end
 
   # FORMAT
-  state keywordi2 = 'FORMAT=' begin
+  state keywordi2 = 'FORMAT=<' begin
     drop = '(?=$)' exit
+    keywordi2 = '>'
+
+    state keyword2 = 'ID=' begin
+      ntA = '\S+?[,>]'
+      drop = ',' exit
+    end
     quoteString delim '"' '"'
     string = '(?<=ID=)\S+?(?=[,>])'
     numeric = '(?<=Number=)\S+?(?=[,>])'
     numeric = '(?<=Type=)\S+?(?=[,>])'
     string = '(?<==)\S+?(?=[,>])'
-    keywordi2 = '[<>]'
     keyword2 = '[A-Za-z0-9]+(?==)'
+    keywordi2 = '>'
+
+    #keyword2 = '[A-Za-z0-9]+(?==)'
   end
 
   # INFO
