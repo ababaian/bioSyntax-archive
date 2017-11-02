@@ -2,14 +2,12 @@ Syntax highlighting for computational biology in `vim`, `less`, `sublime3` & `ge
 
 [A. Babaian](https://github.com/ababaian) \| [E. Chu](https://github.com/echu113) \| [A. Ebou](https://github.com/ebedthan) \| [A. Fegen](https://github.com/alyeffy) \| [J. Kam](https://github.com/lazypanda10117) \| [G. Novakovskiy](https://github.com/fransilvion) \| [J. Wong](https://github.com/Jwong684)
 
-[A hackseq17 project.](https://www.hackseq.com)
-
 ### [Watch the hackseq17 presentation (~5 min)](https://youtu.be/dHYN3E7edhY?t=6m28s)
 
 ![Example less command](assets/images/sam-less_command.png)
 ![Example .sam in less](assets/images/sam-less.png)
 
-## Installation (alphas)
+## Installation
 
 ### Sublime Text 3 Installation
 
