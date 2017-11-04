@@ -6,9 +6,9 @@ faheader black b ;
 
 // Nucleotide Coloring
 ntA darkgreen ;
-ntT darkred ;
+ntC darkred ;
 ntG brown ;
-ntC darkblue ;
+ntT darkblue ;
 ntN gray ;
 
 // Switch (Good / Bad)

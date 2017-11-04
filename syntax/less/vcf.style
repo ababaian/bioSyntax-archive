@@ -6,10 +6,10 @@ faheader black b ;
 
 // Nucleotide Coloring
 ntA darkgreen ;
-ntT darkred ;
+ntC darkred ;
 ntG brown ;
-ntC darkblue ;
-ntN gray ;
+ntT darkblue ;
+ntN teal i ;
 
 // Switch (Good / Bad)
 bon darkblue ;
@@ -25,6 +25,7 @@ numeric2 yellow ;
 string red ;
 quoteString red i ;
 
+url purple ;
 
 keyword purple ;
 keywordi purple i ;
@@ -34,23 +35,26 @@ keyword2 cyan ;
 keywordi2 cyan i ;
 keydrow2 cyan u ;
 
-keyword3 green ;
-keywordi3 green i ;
-keydrow3 green u ;
+keyword3 pink ;
+keywordi3 pink i ;
+keydrow3 pink u ;
 
+keyword4 orange ;
+keywordi4 orange i ;
+keydrow4 orange u ;
+
+keyword5 brightgreen ;
+keywordi5 brightgreen i;
+keydrow5 brightgreen u ;
 
 // Biological Classes
 sample purple ;
+
 software yellow i ;
 commandline yellow ;
+
 chr green b ;
 chrStart green ;
 
-// Gradient
-grad00 teal ;
-grad0 teal b ;
-grad1 pink ;
-grad2 orange ;
-grad3 brightorange ;
 grad4 brightgreen b ;
 grad5 brightgreen i ;

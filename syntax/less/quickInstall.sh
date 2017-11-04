@@ -12,10 +12,15 @@ sudo cp src-hilite-lesspipe_BIO.sh $SRCDIR/src-hilite-lesspipe.sh
 # Copy over language files
 sudo cp fasta.lang $SRCDIR/
 sudo cp sam.lang $SRCDIR/
+sudo cp vcf.lang $SRCDIR/
+
+# Copy over syle files
+sudo cp sam.style $SRCDIR/
+sudo cp vcf.style $SRCDIR/
 
 # Copy over language files
 sudo cp bioSyntax.outlang $SRCDIR/
+sudo cp bioSyntax-vcf.outlang $SRCDIR/
 
-# Copy over syle files
-sudo cp bioSyntax.style $SRCDIR/
+
 
