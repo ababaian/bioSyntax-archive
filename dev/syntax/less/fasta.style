@@ -1,0 +1,12 @@
+// Fasta Stylesheet
+// bioSyntax
+
+// Header ID
+faheader black b ;
+
+// Nucleotide Coloring
+ntA darkgreen ;
+ntC darkred ;
+ntG brown ;
+ntT darkblue ;
+ntN gray ;
