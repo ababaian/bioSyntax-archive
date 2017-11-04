@@ -15,6 +15,7 @@ sudo cp sam.lang $SRCDIR/
 sudo cp vcf.lang $SRCDIR/
 
 # Copy over syle files
+sudo cp fasta.style $SRCDIR/
 sudo cp sam.style $SRCDIR/
 sudo cp vcf.style $SRCDIR/
 
