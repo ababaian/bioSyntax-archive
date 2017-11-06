@@ -27,9 +27,14 @@ contexts:
       scope: header.id.sam
       push: header_entry_co
 
-    - match: "^"
-      scope: string.sam
-      push: alignment_entry
+    # entering sequence alignment section
+    # column 1 of sequence alignment: QNAME
+    - match: '^[\S]*\t'
+      scope: keyword.sam
+      push: flag_column
+
+
+  # header entries
 
   header_entry_hd:
     - meta_scope: string.sam
@@ -138,60 +143,90 @@ contexts:
     - match: '"'
       pop: true
 
-  alignment_entry: 
-    - meta_scope: keyword.sam
-    - match: "\t(?=([A-Z]{2}:.+:.+)\t)"
+
+  # sequence alignment columns
+
+  # column 2: FLAG
+  flag_column:
+    - match: '[\S]*'
+      scope: comment.line.sam
+    - match: \t
+      push: rname_column
+    - match: $
+      pop: true
+
+  # column 3: RNAME: usually a chromosome id
+  rname_column:
+    - match: '[\S]*'
+      scope: coord.Chr.sam
+    - match: \t
+      push: pos_column
+    - match: $
+      pop: true
+
+  # column 4: POS: 1-based leftmost mapping POSition of the first CIGAR operation that “consumes” a reference base
+  pos_column:
+    - match: '[\S]*'
+      scope: coord.Chr.sam
+    - match: \t
+      push: mapq_column
+    - match: $
+      pop: true
+
+  # column 5: MAPQ: MAPping Quality. 
+  mapq_column:
+    - match: '[\S]*'
+      scope: comment.line.sam
+    - match: \t
+      push: cigar_column
+    - match: $
+      pop: true
+
+
+  # column 6: CIGAR: Reference sequence name of the primary alignment of the NEXT read in the template.
+  cigar_column:
+    - match: '[\S]*'
       scope: string.sam
-      push: data_tag_entry
+    - match: \t
+      push: rnext_column
+    - match: $
+      pop: true
 
-    - match: "\t(?=[ACGTN]+\t)"
-      push: nucleotide_sequence
-
-    - match: "\tchr[A-Za-z0-9_\\-]*\t"
-      push: chromosome_coordinate
-
-    - match: "chr[A-Za-z0-9_\\-]*\t"
-      push: rnext
-
-    - match: "\t(?=([0-9]+[MIDNSHPX=])+\t)"
-      push: cigar_str
-    - match: "\t[\\*]\t" # Unavailable data
-      scope: string.sam
-
-    - match: "(?<=\t)[=](?=\t)"
+  # column 7: RNEXT Reference sequence name of the primary alignment of the NEXT read in the template.
+  rnext_column:
+    - match: "="
       scope: nt.A.sam
-    - match: "(?<==)\t[0-9]*"
+    - match: "[0-9]*"
       scope: coord.Start.sam
-
-    - match: "(?<=\t)[\\*](?=\t)"
+    - match: "\\*"
       scope: nt.T.sam
-    - match: "(?<=\\*)\t[0-9]*"
-      scope: keyword.sam
-
-    - match: "(?<=\t)[0-9]+(?=\t)"
-      scope: invalid.sam # Not working
-
-    - match: "\t(?=[!-~]+\t)"
-      push: sequence_quality
-    - match: "$"
-      pop: true
-
-  chromosome_coordinate:
-    - meta_scope: coord.Chr.sam
-    - match: "\t[0-9]*"
-      scope: coord.Start
-    - match: "[0-9]*(?=\t)"
-      pop: true
-
-  rnext:
-    - meta_scope: keyword.sam
-    - match: "\t[0-9]*"
+    - match: '[\S]*'
       scope: keyword.Start
-    - match: "[0-9]*(?=\t)"
+    - match: \t
+      push: pnext_column
+    - match: $
       pop: true
 
-  nucleotide_sequence:
-    - meta_scope: string.sam
+  # column 8: PNEXT: Position of the primary alignment of the NEXT read in the template. 
+  pnext_column:
+    - match: '[\S]*'
+      scope: coord.Chr.sam
+    - match: \t
+      push: tlen_column
+    - match: $
+      pop: true
+
+  # column 9: TLEN:  signed  observed  Template  LENgth.   
+  tlen_column:
+    - match: '[\S]*'
+      scope: comment.line.sam
+    - match: \t
+      push: seq_column
+    - match: $
+      pop: true
+
+  # column 10: SEQ: segment SEQuence.
+  seq_column:
     - match: "A"
       scope: nt.A.sam
     - match: "C"
@@ -202,39 +237,13 @@ contexts:
       scope: nt.T.sam
     - match: "N"
       scope: nt.N.sam
-    - match: "(?=\t)"
+    - match: \t
+      push: qual_column
+    - match: $
       pop: true
 
-  data_tag_entry: 
-    - meta_scope: string.sam
-      # Data Classes: numeric / string / class
-      # A Printable
-      # i signed integer
-      # f floating point
-      # Z string with spaces
-      # H byte array hex
-      # B Integer/Numeric Array
-    - match: "[A-Z]{2}(?=:)"
-      scope: string.sam
-    - match: "(?<=:)[AifZHB]:"
-      scope: comment.line.sam
-
-    - match: "(?<=[ifH]:)(.+?(?=\t)|.+$)"
-      scope: constant.numeric.sam
-    - match: "(?<=[AZB]:)(.+?(?=\t)|.+$)"
-      scope: storage.type.sam
-
-    - match: "$"
-      pop: true
-
-  cigar_str:
-    - meta_scope: string.sam
-    - match: "\t"
-      pop: true
-
-  sequence_quality: 
-    - meta_scope: string.sam
-    # Phred Illumina 1.8+ Scale
+  # column 11: QUAL: ASCII of base QUALity plus 33 (same as the quality string in the Sanger FASTQ format).
+  qual_column:
     - match: "[\\!\\#\\$]"
       scope: grad.bw0
     - match: "[%\\&\\'\\(]"
@@ -265,91 +274,29 @@ contexts:
       scope: grad.bw10
     - match: "[\\{\\|\\}\\~]"
       scope: grad.bw10
-    # - match: "!"
-    #   scope: invalid.sam
-    # - match: "\""
-    #   scope: invalid.sam
-    # - match: "#"
-    #   scope: invalid.sam
-    # - match: "$"
-    #   scope: invalid.sam
-    # - match: "%"
-    #   scope: invalid.sam
-    # - match: "&"
-    #   scope: invalid.sam
-    # - match: "\\'"
-    #   scope: invalid.sam
-    # - match: "\\("
-    #   scope: invalid.sam
-    # - match: "\\)"
-    #   scope: invalid.sam
-    # - match: "\\*"
-    #   scope: invalid.sam
-    # - match: "\\+"
-    #   scope: invalid.sam
-    # - match: ","
-    #   scope: invalid.sam
-    # - match: "-"
-    #   scope: invalid.sam
-    # - match: "\\."
-    #   scope: invalid.sam
-    # - match: "/"
-    #   scope: invalid.sam
-    # - match: "0"
-    #   scope: invalid.sam
-    # - match: "1"
-    #   scope: invalid.sam
-    # - match: "2"
-    #   scope: invalid.sam
-    # - match: "3"
-    #   scope: invalid.sam
-    # - match: "4"
-    #   scope: invalid.sam
-    # - match: "5"
-    #   scope: invalid.sam
-    # - match: "6"
-    #   scope: invalid.sam
-    # - match: "7"
-    #   scope: invalid.sam
-    # - match: "8"
-    #   scope: invalid.sam
-    # - match: "9"
-    #   scope: invalid.sam
-    # - match: ":"
-    #   scope: invalid.sam
-    # - match: ";"
-    #   scope: invalid.sam
-    # - match: "<"
-    #   scope: invalid.sam
-    # - match: "="
-    #   scope: invalid.sam
-    # - match: ">"
-    #   scope: invalid.sam
-    # - match: "\\?"
-    #   scope: invalid.sam
-    # - match: "@"
-    #   scope: invalid.sam
-    # - match: "A"
-    #   scope: invalid.sam
-    # - match: "B"
-    #   scope: invalid.sam
-    # - match: "C"
-    #   scope: invalid.sam
-    # - match: "D"
-    #   scope: invalid.sam
-    # - match: "E"
-    #   scope: invalid.sam
-    # - match: "F"
-    #   scope: invalid.sam
-    # - match: "G"
-    #   scope: invalid.sam
-    # - match: "H"
-    #   scope: invalid.sam
-    # - match: "I"
-    #   scope: invalid.sam
-    # - match: "J"
-    #   scope: invalid.sam
-    # - match: "K"
-    ##   scope: invalid.sam
-    - match: "(?=\t)"
+    - match: \t
+      push: data_tag_entry
+    - match: $
+      pop: true
+
+  data_tag_entry: 
+    - meta_scope: string.sam
+      # Data Classes: numeric / string / class
+      # A Printable
+      # i signed integer
+      # f floating point
+      # Z string with spaces
+      # H byte array hex
+      # B Integer/Numeric Array
+    - match: "[A-Z]{2}(?=:)"
+      scope: string.sam
+    - match: "(?<=:)[AifZHB]:"
+      scope: comment.line.sam
+
+    - match: "(?<=[ifH]:)(.+?(?=\t)|.+$)"
+      scope: constant.numeric.sam
+    - match: "(?<=[AZB]:)(.+?(?=\t)|.+$)"
+      scope: storage.type.sam
+
+    - match: "$"
       pop: true
