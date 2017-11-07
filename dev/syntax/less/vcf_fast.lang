@@ -214,36 +214,8 @@ state data = '(?=^)' begin
 		null = ":"
 
 		# Column 10+: DATA
-		state push10 = '(?=\t?)' begin
-		  drop = '(?=$)' exit
+		state numeric delim '(?=\t?)' '$' begin
 		  
-		  # No data split/data
-		  null = ","
-		  null = ":"
-		  null = "./."
-
-		  # Genotype Field (GT)
-		  # handles upto 5-ploidy
-		  # "0/0 ... 0|1|5"
-		  state GT = '(?<=\t)(?=[0-9](?>\/|\|))' begin
-		    drop = '(?=$)' exit
-		    drop = '(?=:)' exit
-		    drop = '(?=\t)' exit
-
-		    ntN = '0'
-		    ntC = '1'
-		    ntA = '2'
-		    ntG = '3'
-		    ntT = '4'
-		    faheader = '[5-9]'
-
-		    string = "/" # unphased
-		    keyword = "|" # phased
-		  end
-
-		  # Remaining Fields
-		  numeric = '[\d]++'
-
 		end #col10+
 	      end #col9
 	    end #col8
