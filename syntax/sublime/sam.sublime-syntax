@@ -196,21 +196,46 @@ contexts:
   rnext_column:
     - match: "="
       scope: nt.A.sam
-    - match: "[0-9]*"
+      push: pnext_column_gateway
+    - match: "[0-9]*(?=\t)"
       scope: coord.Start.sam
+      push: pnext_column_gateway
     - match: "\\*"
       scope: nt.T.sam
-    - match: '[\S]*'
+      push: pnext_column_gateway
+    - match: '[\S]*(?=\t)'
       scope: keyword.Start
+      push: pnext_alt_seq_column_gateway
+    - match: $
+      pop: true
+
+  # column 8: PNEXT: Position of the primary alignment of the NEXT read in the template. 
+  
+  pnext_column_gateway:
     - match: \t
       push: pnext_column
     - match: $
       pop: true
 
-  # column 8: PNEXT: Position of the primary alignment of the NEXT read in the template. 
   pnext_column:
+    # - meta_scope: invalid.sam
     - match: '[\S]*'
       scope: coord.Chr.sam
+    - match: \t
+      push: tlen_column
+    - match: $
+      pop: true
+
+  pnext_alt_seq_column_gateway:
+    - match: \t
+      push: pnext_alt_seq_column
+    - match: $
+      pop: true
+
+  pnext_alt_seq_column:
+    # - meta_scope: invalid.sam
+    - match: '[\S]*'
+      scope: keyword.Start
     - match: \t
       push: tlen_column
     - match: $
