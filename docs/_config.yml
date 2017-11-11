@@ -2,6 +2,7 @@ theme: jekyll-theme-slate
 title: bioSyntax
 description: Human Readable Biology
 url: http://bioSyntax.org
+
 markdown: kramdown
 gems:
   - jekyll-redirect-from
