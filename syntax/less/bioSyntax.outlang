@@ -15,7 +15,10 @@ colormap
 "darkred" "30;48:5:09"     # C
 "darkblue" "30;48:5:33"    # G
 "brown" "30;48:5:214"      # T
-"gray" "38:5:240;48:5:255" # NX
+#"gray" "38:5:240;48:5:255" # NX
+#"gray" "38:5:255"          # NX
+"gray" "38:5:250"          # NX
+#
 #
 #
 # Text Class

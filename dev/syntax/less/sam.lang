@@ -129,8 +129,28 @@ environment align start '(?=^[^$])' begin
           environment push6 = '\t?' begin
             drop = '(?=$)' exitall
 
-            keyword = '\A\S+'
 
+	    # CIGAR Strings
+	    # M: Alignment match
+	    # I: Insertion
+	    # D: Deletion
+	    # N: Skipped region (intron)
+	    # S: Soft Clip
+	    # H: Hard Clip
+	    # P: Padding
+	    # =: Sequence Match
+	    # X: Sequence Mismatch
+	    # *: String Absent
+
+	    clip      = '\A\d++[NSHP]' # clips
+	    default   = '\A\d++[M=]'  # match
+	    mismatch  = '\A\d++[X]'   # mismatch
+	    insertion =  '\A\d++[I]'  # insertion
+	    deletion  = '\A\d++[D]'   # deletion
+
+	    comment = '\A\S++'      # else
+
+	    
             # Column 7: RNEXT & PNEXT
             environment push7 = '\t?' begin
               drop = '(?=$)' exitall

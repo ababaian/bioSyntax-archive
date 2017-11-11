@@ -15,6 +15,14 @@ ntN gray ;
 bon darkblue ;
 mal darkred ;
 
+// CIGAR String
+// match default ;
+mismatch red ;
+clip gray i ;
+deletion yellow ;
+insertion purple ;
+
+
 // Class
 numeric blue ;
 numeric2 yellow ;

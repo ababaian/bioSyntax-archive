@@ -1,4 +1,4 @@
-# Fasta language definition file for less pipe
+# Sam language definition file for less pipe
 # bioSyntax
 
 # Variables ----------------------------------
@@ -6,10 +6,10 @@ vardef NUCLEOTIDE = '[ATCGNXatcgnxRYSWKM]'
 vardef PHRED = '[!-K]' #PHRED 1.8
 
 # Header-section -----------------------------
-state header start '^(?=@)' begin
+environment header start '^(?=@)' begin
 
   # Standard Headers HD | SQ | PG
-  state header_hd delim '(?=@(HD|SQ|PG))' '$' begin
+  environment header_hd delim '(?=@(HD|SQ|PG))' '$' begin
     faheader = '@[HSPC][DQGO]'
     
     #HD
@@ -45,7 +45,7 @@ state header start '^(?=@)' begin
 
 
   # Readgroup Header
-  state header_co delim '(?=@RG)' '$' begin
+  environment header_co delim '(?=@RG)' '$' begin
     faheader = '@RG'
 
     sample = '(?<=ID:)\S*'
@@ -65,7 +65,7 @@ state header start '^(?=@)' begin
   end
 
   # Comment Header
-  state header_co delim '(?=@CO)' '$' begin
+  environment header_co delim '(?=@CO)' '$' begin
     faheader = '@CO'
     comment = '.*'
 
@@ -73,98 +73,153 @@ state header start '^(?=@)' begin
 
 end #Header
 # -------------------------------------------
-# align-section ------------------------------
-state align start '^' begin
-  string = '$' exit # stops multi-line searching
+# align-section -----------------------------
 
-  # Block 1 (RNAME) (FLAG)
-  state block1 = '^(?=\S+\t[0-9]+\t)' begin
-    string = '(?<=^)\S+'
+environment align start '(?=^[^$])' begin
+  drop = '$' exitall # stops multi-line searching
 
-  # Read Flag
-  # If flag > 512
-  #   read is QC-fail | PCRdup | 2'
+  # Column 1: CHROM
+  string = '^\S+'
 
-    numeric = '\t[0-9]{1,2}(?=\t)' exit
-    numeric = '\t[1-4][0-9]{1,2}(?=\t)' exit
-    numeric = '\t[5][0][0-9](?=\t)' exit
-    numeric = '\t[5][1][01](?=\t)' exit
+  # Column 2: FLAG
+  environment push2 = '\t?' begin
+    drop = '(?=$)' exitall
+    # Read Flag
+    # If flag > 512
+    #   read is QC-fail | PCRdup | 2'
 
-    numeric2 = '\t[5][1][01](?=\t)' exit
+      numeric = '[0-9]{1,2}'
+      numeric = '[1-4][0-9]{1,2}'
+      numeric = '[5][0][0-9]'
+      numeric = '[5][1][01]'
 
-  end
+      # Flag
+      numeric2 = '[5][1][01]'
 
- # Block 2 (RNAME) (POS) (MAPQ)
-  state block2 start '\t(?=\S+\t[0-9]+\t[0-9]+\t)' begin
- 
-    chrStart = '\S+\t[0-9]+\t' exit
-  end
+    # Column 3: RNAME
+    environment push3 = '\t?' begin
+      drop = '(?=$)' exitall
 
- # Block 3 (CIGAR) (RNEXT) (PNEXT) (TLEN)
-  state block3 start '\t(?=\S+\t\S+\t[0-9]+\t[-0-9]+\t)' begin
- 
-    # CIGAR
-    keyword = "*"
-    keyword = '[0-9]+[MIDNSHPX=]+'
-    #state cigar start '(?=[0-9MIDNSHPX=]+)' begin
-    #  numeric = '[0-9]+'
-    #  string = '[MIDNSHP=X]'
-    #  pop = '\t' exit
-    #end 
+      chr = '\A\w+'
 
-    # Next Read
-    chrStart = '(?<=\t)=\t[0-9]+\t(?=[-0-9]+)' exit
-    string = '(?<=\t)'+"*"+'\t[0-9]+\t(?=[-0-9]+)' exit
-    string = '(?<=\t)\S+\t[0-9]+\t(?=[-0-9]+)' exit
+      # Column 4: POSition
+      environment push4 = '\t?' begin
+        drop = '(?=$)' exitall
 
-  end
+        chrStart = '\A\d+'
 
-  # Block 4 Fields 9+ Data Tags
-  state tag = '\t(?=([A-Z]{2}:.+:.+)(\t|$))' begin
-    string = '(?=(\t|$))' exit
-    # AB:i:1337
-      # A Printable
-      # i signed integer
-      # f floating point
-      # Z string with spaces
-      # H byte array hex
-      # B Integer/Numeric Array 
-   string = '[A-Z]{2}:'
-   comment = '(?<=:)[AifZHB]:'
+        # Column 5: MAPQuality
+        environment push5 = '\t?' begin
+          drop = '(?=$)' exitall
 
-   numeric = '(?<=[ifH]:)(\S*)'
-   keyword = '(?<=[AZB]:)(\S*)'
-  end
+          # MAPQ Scale (-log10 P)
+          # Incriment size = 10
 
-  # Block 5 (Nucleotide) (PHRED)
+          grad00 = '\A255(?=\t)' # MAPQ NA
 
-  # Nucleotide-PHRED
-  state nucleotide = '\t(?='+$NUCLEOTIDE+'+\t)' begin
-   ## Nucleotide
-    string = '(?=\t)' exit
-    ntA = '[Aa]+'
-    ntT = '[TtUu]+'
-    ntG = '[Gg]+'
-    ntC = '[Cc]+'
-    ntN = '[NnXx]+'
-    ntN = '[RYSWKM]+' 
-  end
- 
-  ## PHRED
-  # Illumina 1.8 Scale (IMPLEMENTED)
-  # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ...j
-  # |   |   |   |   |   |   |   |   |   |...
-  state phred = '\t(?='+$PHRED+'+(\t|$))' begin
-    string = '(?=\t)' exit
-    grad00 = '[!-%]'
-    grad0 = '[!-(]'
-    grad1 = '[)-0]'
-    grad2 = '[1-8]'
-    grad3 = '[9-@]'
-    grad4 = '[A-D]'
-    grad5 = '[E-j]'
-  end
+          grad00 = '\A[0-9](?=\t)'
+          grad1 = '\A[1][0-9]'
+          grad2 = '\A[2][0-9]'
+          grad3 = '\A[3][0-9]'
+          grad5 = '\A[4-9][0-9]'
+         
+          grad00 = '\A\d+'
 
-end #align
+          # Column 6: CIGAR string
+          environment push6 = '\t?' begin
+            drop = '(?=$)' exitall
 
-  
+
+	    # CIGAR Strings
+	    # M: Alignment match
+	    # I: Insertion
+	    # D: Deletion
+	    # N: Skipped region (intron)
+	    # S: Soft Clip
+	    # H: Hard Clip
+	    # P: Padding
+	    # =: Sequence Match
+	    # X: Sequence Mismatch
+	    # *: String Absent
+
+	    clip      = '\A\d++[NSHP]' # clips
+	    default   = '\A\d++[M=]'  # match
+	    mismatch  = '\A\d++[X]'   # mismatch
+	    insertion =  '\A\d++[I]'  # insertion
+	    deletion  = '\A\d++[D]'   # deletion
+
+	    comment = '\A\S++'      # else
+
+	    
+            # Column 7: RNEXT & PNEXT
+            environment push7 = '\t?' begin
+              drop = '(?=$)' exitall
+
+              # Match Chromosome
+              chrStart = '\A=\t\d+\t'
+
+              # Unmapped Rnext
+              string = '\A\\*\t\d+\t'
+
+              # Different Chromosome Rnext
+              string = '\A\S+\t\d+\t'
+
+              # Column 8: TLEN
+              environment push8 = '(?=\d)' begin
+                drop = '(?=$)' exitall
+
+                numeric = '\d+'
+
+                # Column 9: Sequence Data
+                environment push9 = '\t?' begin
+                  drop = '(?=$)' exitall
+
+                  ntA = '\A[Aa]++'
+                  ntT = '\A[TtUu]++'
+                  ntG = '\A[Gg]++'
+                  ntC = '\A[Cc]++'
+                  ntN = '\A[NnXx]++'
+                  ntN = '\A[RrYySsWwKkMm]++'
+
+                  # Column 10: PHRED
+                  environment push10 = '\t?' begin
+                    drop = '(?=$)' exitall
+
+                    # Illumina 1.8 Scale
+                    # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ...j
+                    # |   |   |   |   |   |   |   |   |   |...
+                    grad00 = '\A[!-%]++'
+                    grad0 = '\A[!-(]++'
+                    grad1 = '\A[)-0]++'
+                    grad2 = '\A[1-8]++'
+                    grad3 = '\A[9-@]++'
+                    grad4 = '\A[A-D]++'
+                    grad5 = '\A[E-j]++'
+
+                    # Column 11+ Tags
+                    environment push11 = '\t' begin
+                      drop = '(?=$)' exitall
+
+                      # AB:i:1337
+                        # A Printable
+                        # i signed integer
+                        # f floating point
+                        # Z string with spaces
+                        # H byte array hex
+                        # B Integer/Numeric Array 
+
+                      string = '[A-Z]{2}:'
+                      (comment,numeric) = `([ifH]:)(\S*)`
+                      (comment,keyword) = `([AZB]:)(\S*)`
+
+                    end #col11+
+                  end #col10
+                end #col9
+              end #col8
+            end #col7
+          end #col6
+        end # col5
+      end # col4
+    end # col3
+  end # col2
+end # align section
