@@ -6,7 +6,8 @@ O   = Syntax Near-complete
 ' ' = We're not there yet 
 na  = No planned development
 
-# Core Syntaxes
+## Core Syntaxes
+
 | File Format | Description                 | sublime | vim | gedit | less  |
 |-------------|-----------------------------|:-------:|:---:|:-----:|:-----:|
 | .fasta      | Generic nt/aa sequence      |    O    |  O  |   O   |   X   |
@@ -18,7 +19,8 @@ na  = No planned development
 | .vcf        | Variant Call Format         |    O    |     |       |   X   |
 | .sam        | NGS Sequence Data           |    O    |     |   O   |   X   |
 
-# Auxillary Syntaxes
+## Auxillary Syntaxes
+
 | File Format | Description                 | sublime | vim | gedit |
 |-------------|-----------------------------|:-------:|:---:|:-----:|
 | .faa        | fasta with alt. aa colors)  |         |     |       |
