@@ -5,4 +5,4 @@ Syntax highlighting for computational biology in `vim`, `less`, `sublime3` & `ge
 ### [Watch our hackseq17 presentation (~5 min)](https://youtu.be/dHYN3E7edhY?t=6m28s)
 
 ![Example less command](assets/images/sam-less_command.gif)
-[![Example less command](sam-less-small.gif)](assets/images/sam-less.png)
+[<img src="http://biosyntax.org/assets/images/sam-less-small.gif">](assets/images/sam-less.png)
