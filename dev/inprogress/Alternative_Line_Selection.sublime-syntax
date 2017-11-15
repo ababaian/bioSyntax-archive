@@ -1,0 +1,36 @@
+%YAML 1.2
+---
+name: clustal
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions: [clustal]
+scope: text.clustal
+
+
+contexts:
+  main:
+    # Main Identifier
+    - match: "^CLUSTAL$"
+      scope: comment.line
+
+    # Sequence Identifier
+
+
+    - match: "^.*(?= )"
+      push: header
+      scope: header.id
+
+    # Sequence Data
+    - match: "(?<= )[AaTtCcGgUuNnXx\\.\\-]"
+      scope: nt.A
+      push: sequence_data
+
+  header:
+    - match: "(?<=/)[0-9]*-[0-9]*"
+      scope: coord.Start
+      pop: true
+
+  sequence_data:
+    - match: .*
+      scope: invalid
+    - match: "$"
+      pop: true

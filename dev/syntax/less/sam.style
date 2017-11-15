@@ -1,0 +1,47 @@
+// Fasta Stylesheet
+// bioSyntax
+
+// Header ID
+faheader black b ;
+
+// Nucleotide Coloring
+ntA darkgreen ;
+ntC darkred ;
+ntG brown ;
+ntT darkblue ;
+ntN gray ;
+
+// Switch (Good / Bad)
+bon darkblue ;
+mal darkred ;
+
+// CIGAR String
+// match default ;
+mismatch red ;
+clip gray i ;
+deletion yellow ;
+insertion purple ;
+
+
+// Class
+numeric blue ;
+numeric2 yellow ;
+string red ;
+comment gray i ;
+keyword purple ;
+
+// Keywords
+sample purple ;
+software yellow i ;
+commandline yellow ;
+chr green b ;
+chrStart green ;
+
+// Gradient
+grad00 teal ;
+grad0 teal b ;
+grad1 pink ;
+grad2 orange ;
+grad3 brightorange ;
+grad4 brightgreen b ;
+grad5 brightgreen i ;

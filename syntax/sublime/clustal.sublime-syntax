@@ -1,0 +1,61 @@
+%YAML 1.2
+---
+name: clustal
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions: [clustal]
+scope: text.clustal
+
+
+contexts:
+  main:
+    # Main Identifier
+    - match: "^CLUSTAL$"
+      scope: comment.line
+
+    # Sequence Identifier
+    - match: "(?<=/)[0-9]*-[0-9]*" #Optional sequence range
+      scope: coord.Start
+
+    - match: "^[\\w\\.\\-\\_ ]*(?=[/ ])"
+      scope: header.id
+
+   # Sequence Data (Nucleotide Only)
+    - match: "(?<= )[Aa]"
+      scope: nt.A
+      push: nt
+    - match: "(?<= )[Gg]"
+      scope: nt.G
+      push: nt
+    - match: "(?<= )[Cc]"
+      scope: nt.C
+      push: nt
+    - match: "(?<= )[TtUu]"
+      scope: nt.T
+      push: nt
+
+    - match: "(?<= )[NnXx\\-\\.]"
+      scope: nt.N
+      push: nt
+
+  nt:
+  # match Adenosine
+    - match: "[Aa]"
+      scope: nt.A
+  # match Cytidine
+    - match: "[Cc]"
+      scope: nt.C
+  # match Guanine
+    - match: "[Gg]"
+      scope: nt.G
+  # match Thymidine/Uridine
+    - match: "[TtUu]"
+      scope: nt.T
+  # aNy or unknown (X)
+    - match: "[NnXx]"
+      scope: variable
+  # indel
+    - match: "-"
+      scope: variable
+  # endline
+    - match: $
+      pop: true
