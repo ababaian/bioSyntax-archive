@@ -108,7 +108,7 @@ contexts:
     - match: \b[^\s;]+(?=\s"[\w|\W|\_|\.]*")
       scope: grad.bw5.attributeName.gtf
     - match: (?="[\w|\d|\.]+";)"[\d|\.]+"
-      scope: variable.number.attributeString.gtf
+      scope: variable.number.attributeNumbers.gtf
     - match: (?="[\w|\d|\.]+";)"[\w|\d|\.]+"
       scope: grad4.attributeString.gtf
     - match: \t
