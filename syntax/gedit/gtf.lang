@@ -44,16 +44,22 @@ Syntax highlighting for GTF Files
   <definitions>
     <context id="gtf">
       <include>
+
+        <!-- Name of Chromosome -->
         <context id="chrom" style-ref="chrom">
           <match extended="true">
             ^\w+
           </match>
         </context>
+
+        <!-- Source -->
         <context id="source" style-ref="source">
           <match extended="true">
             (?&lt;=[\w]\t)[\w]+(?=\t[a-z|A-Z])
           </match>
         </context>
+
+        <!-- Features -->
         <context id="featureExon" style-ref="featureExon">
           <match extended="true">
             \texon\t
@@ -79,11 +85,15 @@ Syntax highlighting for GTF Files
             \tstop_codon\t
           </match>
         </context>
+
+        <!-- Start and End Coordinates -->
         <context id="coords" style-ref="coord">
           <match extended="true">
             (?&lt;=\t)[0-9]+\t[0-9]+(?=\t)
           </match>
         </context>
+
+        <!-- Gradient Coloring for Score -->
         <context id="score0" style-ref="score0">
           <match extended="true">
             (?&lt;=\t)[1-9](?=\t[\+|\-|.])
@@ -144,6 +154,8 @@ Syntax highlighting for GTF Files
             (?&lt;=\t)[1-9][0-9]{3,}(?=\t[\+|\-|.])
           </match>
         </context>
+
+        <!-- Strand -->
         <context id="strandplus" style-ref="strandplus">
           <match extended="true">
             (?&lt;=\t)[+](?=\t)
@@ -159,6 +171,8 @@ Syntax highlighting for GTF Files
             (?&lt;=\d\t)[.](?=\t)
           </match>
         </context>
+
+        <!-- Frame -->
         <context id="framedot" style-ref="framedot">
           <match extended="true">
             (?&lt;=[.|+|-]\t)[.](?=\t)
@@ -169,6 +183,8 @@ Syntax highlighting for GTF Files
             (?&lt;=[.|+|-]\t)[0-2](?=\t)
           </match>
         </context>
+
+        <!-- Attributes -->
         <context id="attributeName" style-ref="attributeName">
           <match extended="true">
             \b[^\s;]+(?=\s"[\w|\W|\_|\.]*")
@@ -184,6 +200,7 @@ Syntax highlighting for GTF Files
            (?="[\w|\d|\.]+";)"[\w|\d|\.]+"
           </match>
         </context>
+
       </include>
     </context>
   </definitions>
