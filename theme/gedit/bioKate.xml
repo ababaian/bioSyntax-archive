@@ -362,7 +362,7 @@
   <style name="gtf:featureCDS"                 foreground="#ff70f4"/>
   <style name="gtf:featureStartCodon"                 foreground="#ff40f0"/>
   <style name="gtf:featureStopCodon"                 foreground="#ff00eb"/>
-  <style name="gtf:score0"                 foreground="#FFFFFF"/>
+  <style name="gtf:score0"                 foreground="#FFE7FD"/>
   <style name="gtf:score1"                 foreground="#FFE7FD"/>
   <style name="gtf:score2"                 foreground="#FFCFFB"/>
   <style name="gtf:score3"                 foreground="#FFB7F9"/>
@@ -382,4 +382,27 @@
   <style name="gtf:attributeName"                 foreground="#9D9E9B"/>
   <style name="gtf:attributeValueString"                 foreground="#FF9FF7"/>
   <style name="gtf:attributeValueNumber"                 foreground="#0099ff"/>
+
+  <!-- WIG styles -->
+  <style name="wig:fixedStep"                  foreground="dark-green" bold="true"/>
+  <style name="wig:variableStep"                 foreground="dark-green"/>
+  <style name="wig:chrom"                  foreground="dark-green" bold="true"/>
+  <style name="wig:start"                 foreground="dark-green"/>
+  <style name="wig:step"                 foreground="#fd971f"/>
+  <style name="wig:span"                 foreground="#ffcffb"/>
+  <style name="wig:variableCStart"                 foreground="#0099ff"/>
+  <style name="wig:fixedColor"                 foreground="#F92672"/>
+  <style name="wig:variableColor"                 foreground="#F92672"/>
+  <style name="wig:color0"                 foreground="#FFE7FD"/>
+  <style name="wig:color1"                 foreground="#FFE7FD"/>
+  <style name="wig:color2"                 foreground="#FFCFFB"/>
+  <style name="wig:color3"                 foreground="#FFB7F9"/>
+  <style name="wig:color4"                 foreground="#FF9FF7"/>
+  <style name="wig:color5"                 foreground="#FF88F6"/>
+  <style name="wig:color6"                 foreground="#FF70F4"/>
+  <style name="wig:color7"                 foreground="#FF58F2"/>
+  <style name="wig:color8"                 foreground="#FF40F0"/>
+  <style name="wig:color9"                 foreground="#FF29EF"/>
+  <style name="wig:color10"                 foreground="#ff00eb"/>
+  <style name="wig:color11"                 foreground="#ff00eb"/>
 </style-scheme>
