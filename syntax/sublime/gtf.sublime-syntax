@@ -3,6 +3,7 @@
 name: gtf
 file_extensions: [gtf]
 scope: source.gtf
+# Specification: http://mblab.wustl.edu/GTF22.html
 
 contexts:
   main:

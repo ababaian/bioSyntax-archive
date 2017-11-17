@@ -7,14 +7,16 @@ scope: source.bed
 
 contexts:
   main:
-    #Handle track line
+    #Handle UCSC track line
     - match: '^track.*'
       scope: comment.bed
     
+    # Column 1: Reference Sequence Name
     - match: '^[\S]*\t'
       scope: coord.Chr.bed
       push: start
   
+  # Column 2: Start coordinate
   start:
     - match: ([0-9|\.]+)\b
       scope: coord.Start.bed
@@ -23,6 +25,7 @@ contexts:
     - match: $
       pop: true
 
+  # Column 3: End Coordinate
   end:
     - match: ([0-9|\.]+)\b
       scope: coord.End.bed
@@ -31,6 +34,7 @@ contexts:
     - match: $
       pop: true
 
+  # Column 4: Description / Name
   name:
     - match: '[\S]*'
       scope: string.bed
@@ -39,10 +43,11 @@ contexts:
     - match: $
       pop: true
 
+  # Column 5: Score (0-1000 scale)
   score:
     - match: \.\b
       scope: comment.line.bed
-    - match: ([1-9])\b
+    - match: ([0-9])\b
       scope: grad1.bed  
     - match: ([1-9][0-9])\b
       scope: grad1.bed
@@ -71,6 +76,7 @@ contexts:
     - match: $
       pop: true
 
+  # Column 6: Feature Strand
   strand:
     - match: \+
       scope: strand.plus.bed
