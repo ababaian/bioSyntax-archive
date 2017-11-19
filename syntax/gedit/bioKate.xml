@@ -347,7 +347,7 @@
   <!-- bed styles -->
   
   <style name="bed:chrom"                  foreground="dark-green" bold="true"/>
-  <style name="bed:coords"                 foreground="dark-green"/>
+  <style name="bed:coords"                 foreground="dark-green" bold="false"/>
   <style name="bed:bedName"                foreground="brown"/>
   <style name="bed:strandplus"             foreground="#F92672" background="white" bold="true"/>
   <style name="bed:strandminus"            foreground="#A6E22E" background="white" bold="true"/>
