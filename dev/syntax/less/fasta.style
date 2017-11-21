@@ -1,8 +1,9 @@
 // Fasta Stylesheet
 // bioSyntax
 
-// Header ID
+// Header
 faheader black b ;
+comment gray i ;
 
 // Nucleotide Coloring
 ntA darkgreen ;
@@ -10,3 +11,12 @@ ntC darkred ;
 ntG brown ;
 ntT darkblue ;
 ntN gray ;
+
+// PHRED Score Gradient
+grad00 teal ;
+grad0 teal b ;
+grad1 pink ;
+grad2 orange ;
+grad3 brightorange ;
+grad4 brightgreen b ;
+grad5 brightgreen i ;
