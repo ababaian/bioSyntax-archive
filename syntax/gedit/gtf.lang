@@ -197,10 +197,19 @@ Syntax highlighting for GTF Files
         </context>
         <context id="attributeValueString" style-ref="attributeValueString">
           <match extended="true">
-           (?="[\w|\d|\.]+";)"[\w|\d|\.]+"
+           (?="[\w|\d|\.|\-|\_|\:]+";)"[\w|\d|\.|\-|\_|\:]+"
           </match>
         </context>
-
+        <context id="attributeNameNoQuote" style-ref="attributeName">
+          <match extended="true">
+            \b[^\s;]+(?=\s[\w|\W|\_|\.])
+          </match>
+        </context>
+        <context id="attributeValueNumberNoQuote" style-ref="attributeValueNumber">
+          <match extended="true">
+            (?=\d+;)\d+
+          </match>
+        </context>
       </include>
     </context>
   </definitions>
