@@ -14,6 +14,8 @@ for source in "$@"; do
 	source-highlight -f esc --lang-def=fastq.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style -i "$source" ;;
 	*.fai|*.faidx)
 	source-highlight -f esc --lang-def=faidx.lang --outlang-def=bioSyntax.outlang --style-file=sam.style -i "$source" ;;
+	*.flagstat)
+	source-highlight -f esc --lang-def=flagstat.lang --outlang-def=bioSyntax.outlang --style-file=sam.style -i "$source" ;;
 	*.clustal)
 	source-highlight -f esc --lang-def=clustal.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style -i "$source" ;;
 	*.bed)

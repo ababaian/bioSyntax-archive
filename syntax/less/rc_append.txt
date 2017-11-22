@@ -23,3 +23,4 @@ alias vcf-less='source-highlight -f esc --lang-def=vcf.lang --outlang-def=bioSyn
 
 # Auxillary syntaxes (uncomment to activate)
 #alias fai-less='source-highlight -f esc --lang-def=faidx.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+#alias flagstat-less='source-highlight -f esc --lang-def=flagstat.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
