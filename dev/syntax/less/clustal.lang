@@ -1,0 +1,15 @@
+# CLUSTAL language definition file for less pipe
+# bioSyntax
+
+# Start of file CLUSTAL Header
+faheader start '^CLUSTAL'
+
+# Data Name
+comment = '\S++(?=\s)'
+
+ntA = '[Aa]+'
+ntT = '[TtUu]+'
+ntG = '[Gg]+'
+ntC = '[Cc]+'
+ntN = '[NnXx]+'
+#ntGap = '[.-]' #no highlight

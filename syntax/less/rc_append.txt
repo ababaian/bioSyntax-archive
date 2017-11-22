@@ -16,6 +16,7 @@ alias more='less'
 #
 alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
 alias fq-less='source-highlight -f esc --lang-def=fastq.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+alias clustal-less='source-highlight -f esc --lang-def=clustal.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
 alias bed-less='source-highlight -f esc --lang-def=bed.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
 alias sam-less='source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
 alias vcf-less='source-highlight -f esc --lang-def=vcf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
