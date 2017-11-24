@@ -69,14 +69,15 @@ contexts:
   #!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 
   # Illumina 1.8 Scale (IMPLEMENTED)
-  # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ
-  # |   |   |   |   |   |   |   |   |   |     ...
+  # 0.2.......................26...31.......41     
+  # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKL
+  # |   |   |   |   |   |   |   |   |   |   | ...
 
   quality:
     # - clear_scopes: true
     #- meta_include_prototype: false
     - meta_scope: comment.line
-    - match: "[\\!\\#\\$]"
+    - match: "[\\!\\#\\$\"]"
       scope: grad.bw0
     - match: "[%\\&\\'\\(]"
       scope: grad.bw1
