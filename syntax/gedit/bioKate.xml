@@ -151,14 +151,29 @@
 
   <!-- Bio specific styles -->
 
-  <!-- Fasta styles -->
+  <!--Nucleotide Coloring -->
+  <style name="fasta:ntA"                       foreground="#000000" background="#47ff19"/>
+  <style name="fasta:ntC"                       foreground="#000000" background="#ff4641"/>
+  <style name="fasta:ntG"                       foreground="#000000" background="#f09000"/>
+  <style name="fasta:ntT"                       foreground="#000000" background="#4192ff"/>
+  <style name="fasta:ntU"                       foreground="#000000" background="#8a89ff"/>
+  <style name="fasta:ntN"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:ntX"                       foreground="#000000" background="#e6e6e6"/>
+  <style name="fasta:ntGap"                     foreground="#000000" />
+  <style name="fasta:ntR"                       foreground="#000000" background="#fffe80"/>
+  <style name="fasta:ntY"                       foreground="#000000" background="#e180ff"/>
+  <style name="fasta:ntS"                       foreground="#000000" background="#ff9b80"/>
+  <style name="fasta:ntW"                       foreground="#000000" background="#80fff2"/>
+  <style name="fasta:ntM"                       foreground="#000000" background="#83831f"/>
+  <style name="fasta:ntK"                       foreground="#000000" background="#8b4915"/>
+  <style name="fasta:ntD"                       foreground="#000000" background="#c7ffb9"/>
+  <style name="fasta:ntB"                       foreground="#000000" background="#f8c1c0"/>
+  <style name="fasta:ntV"                       foreground="#000000" background="#ffe3b9"/>
+  <style name="fasta:ntH"                       foreground="#000000" background="#bfd8f9"/>
 
-  <style name="fasta:ntA"                       foreground="#000000" background="dark-green"/>
-  <style name="fasta:ntT"                       foreground="#000000" background="red"/>
-  <style name="fasta:ntG"                       foreground="#000000" background="brown"/>
-  <style name="fasta:ntC"                       foreground="#000000" background="blue"/>
-  <style name="fasta:ntXN"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="fasta:header"                  foreground="black" background="#FFFFFF"/>
+
+  <!-- Amino Acid Coloring -->  
+  <style name="fasta:header"                    foreground="black" background="#FFFFFF"/>
   <style name="fasta:clA"                       foreground="#000000" background="#80A0F0"/>
   <style name="fasta:clI"                       foreground="#000000" background="#80A0F0"/>
   <style name="fasta:clV"                       foreground="#000000" background="#80A0F0"/>
@@ -182,8 +197,8 @@
   <style name="fasta:clX"                       foreground="#000000" background="#FFFFFF"/>
   <style name="fasta:clZ"                       foreground="#000000" background="#FFFFFF"/>
   <style name="fasta:clB"                       foreground="#000000" background="#FFFFFF"/>
-  <style name="fasta:Stop"                    foreground="#000000" background="#FFFFFF"/>
-  <style name="fasta:Indel"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:Stop"                      foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:Indel"                     foreground="#000000" background="#FFFFFF"/>
   
   <!-- Fasta-Zappo styles -->
   
@@ -334,10 +349,7 @@
   <style name="fastcy:Stop"                    foreground="#000000" background="#FFFFFF"/>
   <style name="fastcy:Indel"                   foreground="#000000" background="#FFFFFF"/>
   
-  
-  
   <!-- Fastq styles -->
-  
   <style name="fq:A"                       foreground="#64f73f"/>
   <style name="fq:T"                       foreground="#eb413c"/>
   <style name="fq:G"                       foreground="#ffb340"/>
@@ -345,7 +357,6 @@
   
   
   <!-- bed styles -->
-  
   <style name="bed:chrom"                  foreground="dark-green" bold="true"/>
   <style name="bed:coords"                 foreground="dark-green" bold="false"/>
   <style name="bed:bedName"                foreground="brown"/>
