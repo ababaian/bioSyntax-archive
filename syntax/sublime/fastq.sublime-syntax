@@ -68,7 +68,7 @@ contexts:
   # Complete Phred Scale
   #!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 
-  # Illumina 1.8 Scale (IMPLEMENTED)
+  # PHRED - Illumina 1.8 Scale
   # 0.2.......................26...31.......41     
   # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKL
   # |   |   |   |   |   |   |   |   |   |   | ...
