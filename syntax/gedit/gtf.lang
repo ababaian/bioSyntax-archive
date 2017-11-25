@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
-lazypanda10117 14-11-2017
-Reference: ababaian and ebedthan
-Syntax highlighting for GTF Files
+gedit Syntax File
+Language: gtf
+Filetypes: .gtf
+Maintainer: bioSyntax
+Version: v0
+
+Color Scheme for multiple sequence alignment
+in GTF format
+
 -->
 
 <language id="gtf" _name="GTF" version="2.0" _section="Scientific">
@@ -12,39 +17,43 @@ Syntax highlighting for GTF Files
     <property name="globs">*.gtf</property>
   </metadata>
   <styles>
-    <style id="chrom"        _name="Chrom" />
-    <style id="source"       _name="Source" />
+    <style id="chrom"             _name="Chrom" />
+    <style id="software"          _name="Software" />
     <style id="featureExon"       _name="FeatureExon" />
-    <style id="featureTranscript"       _name="FeatureTranscript" />
-    <style id="featureCDS"       _name="FeatureCDS" />
-    <style id="featureStartCodon"       _name="FeatureStartCodon" />
-    <style id="featureStopCodon"       _name="FeatureStopCodon" />
-    <style id="coords"       _name="Coord" />
-    <style id="score0"       _name="Score0" />
-    <style id="score1"       _name="Score1" />
-    <style id="score2"       _name="Score2" />
-    <style id="score3"       _name="Score3" />
-    <style id="score4"       _name="Score4" />
-    <style id="score5"       _name="Score5" />
-    <style id="score6"       _name="Score6" />
-    <style id="score7"       _name="Score7" />
-    <style id="score8"       _name="Score8" />
-    <style id="score9"       _name="Score9" />
-    <style id="score10"       _name="Score10" />
-    <style id="score11"       _name="Score11" />
+    <style id="featureTranscript" _name="FeatureTranscript" />
+    <style id="featureCDS"        _name="FeatureCDS" />
+    <style id="featureStartCodon" _name="FeatureStartCodon" />
+    <style id="featureStopCodon"  _name="FeatureStopCodon" />
+    <style id="coords"            _name="Coord" />
+    <style id="score0"            _name="Score0" />
+    <style id="score1"            _name="Score1" />
+    <style id="score2"            _name="Score2" />
+    <style id="score3"            _name="Score3" />
+    <style id="score4"            _name="Score4" />
+    <style id="score5"            _name="Score5" />
+    <style id="score6"            _name="Score6" />
+    <style id="score7"            _name="Score7" />
+    <style id="score8"            _name="Score8" />
+    <style id="score9"            _name="Score9" />
+    <style id="score10"           _name="Score10" />
+    <style id="score11"           _name="Score11" />
     <style id="strandminus"       _name="StrandMinus" />
-    <style id="strandplus"       _name="StrandPlus" />
-    <style id="stranddot"       _name="StrandDot" />
-    <style id="framenum"       _name="FrameNum" />
-    <style id="framedot"       _name="FrameDot" />
-    <style id="attributeName"       _name="AttName" />
-    <style id="attributeValueString"       _name="AttString" />
-    <style id="attributeValueNumber"       _name="AttNum" />
+    <style id="strandplus"        _name="StrandPlus" />
+    <style id="stranddot"         _name="StrandDot" />
+    <style id="framenum"          _name="FrameNum" />
+    <style id="framedot"          _name="FrameDot" />
+    <style id="attributeName"     _name="AttName" />
+    <style id="attributeValueString"  _name="AttString" />
+    <style id="attributeValueNumber"  _name="AttNum" />
   </styles>
   <definitions>
     <context id="gtf">
       <include>
 
+        <!-- Comments Can be included in GTF -->
+        <!-- Lines startingwith # -->
+
+        
         <!-- Name of Chromosome -->
         <context id="chrom" style-ref="chrom">
           <match extended="true">
@@ -53,13 +62,18 @@ Syntax highlighting for GTF Files
         </context>
 
         <!-- Source -->
-        <context id="source" style-ref="source">
+        <context id="source" style-ref="software">
           <match extended="true">
             (?&lt;=[\w]\t)[\w]+(?=\t[a-z|A-Z])
           </match>
         </context>
 
         <!-- Features -->
+        <context id="featureGene" style-ref="featureGene">
+          <match extended="true">
+            \tgene\t
+          </match>
+        </context>
         <context id="featureExon" style-ref="featureExon">
           <match extended="true">
             \texon\t
@@ -83,6 +97,11 @@ Syntax highlighting for GTF Files
         <context id="featureStopCodon" style-ref="featureStopCodon">
           <match extended="true">
             \tstop_codon\t
+          </match>
+        </context>
+        <context id="featureUTR" style-ref="featureUTR">
+          <match extended="true">
+            \t[53]{0,1}UTR\t
           </match>
         </context>
 

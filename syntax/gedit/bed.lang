@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-ababaian - 2017 01 27
-update and test: ebedthan - 2017 10 23
+gedit Syntax File
+Language: bed
+Filetypes: .bed
+Maintainer: bioSyntax
+Version: v0
 
-Syntax highlighting for Bed Files
-Compatible with BED3,4,5,6,12 (.bed)
-
-Built for use with 'bioKate color theme'
+Color Scheme for multiple sequence alignment
+in BED format
 
 -->
 <language id="bed" _name="Bed" version="2.0" _section="Scientific">
@@ -20,7 +21,7 @@ Built for use with 'bioKate color theme'
     <style id="chrom"        _name="Chrom"    />
     <style id="coords"       _name="Chrom"    />
     <style id="strand"       _name="Coords"   />
-    <style id="bedName"       _name="BedName" />
+    <style id="bedName"      _name="BedName" />
 
   </styles>
 
