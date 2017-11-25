@@ -43,8 +43,16 @@ contexts:
       push: header_entry_quote
     - match: '(?<=VN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: constant.numeric.sam
+
+    # Sort Order for sam file
+    # Distinguishes sorted from unsorted files
+    - match: '(?<=SO:)(coordinate|queryname(?=\s+[A-Z]{2}:)|.+$)'
+      scope: nt.C.sam
+    - match: '(?<=SO:)(unsorted|unknown(?=\s+[A-Z]{2}:)|.+$)'
+      scope: nt.T.sam
     - match: '(?<=SO:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
+
     - match: '(?<=GO:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
     - match: '$'
@@ -113,14 +121,14 @@ contexts:
   header_entry_pg:
     - meta_scope: string.sam
     - match: '(?<=[A-Z]{2}:)"'
-      scope: invalid.sam
+      scope: variable.parameter.sam
       push: header_entry_quote
     - match: '(?<=ID:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: variable.parameter.sam
     - match: '(?<=PN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: variable.parameter.sam
     - match: '(?<=CL:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: invalid.sam
+      scope: variable.parameter.sam
     - match: '(?<=PP:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: variable.parameter.sam
     - match: '(?<=DS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
@@ -139,7 +147,7 @@ contexts:
       pop: true
 
   header_entry_quote:
-    - meta_scope: invalid.sam
+    - meta_scope: variable.parameter.sam
     - match: '"'
       pop: true
 
@@ -148,8 +156,23 @@ contexts:
 
   # column 2: FLAG
   flag_column:
-    - match: '[\S]*'
+    # Read Flag
+    # If flag > 512
+    #   read is QC-fail | PCRdup | 2' alignment
+    - match: '[0-9]{1,2}(?=\t)'
       scope: comment.line.sam
+    - match: '[1-4][0-9]{1,2}(?=\t)'
+      scope: comment.line.sam
+    - match: '[5][0][0-9](?=\t)'
+      scope: comment.line.sam
+    - match: '[5][1][01](?=\t)'
+      scope: comment.line.sam
+
+    - match: '[5][1][01]'
+      scope: keyword.sam
+    - match: '[\S]*'
+      scope: keyword.sam
+
     - match: \t
       push: rname_column
     - match: $
@@ -167,7 +190,7 @@ contexts:
   # column 4: POS: 1-based leftmost mapping POSition of the first CIGAR operation that “consumes” a reference base
   pos_column:
     - match: '[\S]*'
-      scope: coord.Chr.sam
+      scope: coord.Start.sam
     - match: \t
       push: mapq_column
     - match: $
@@ -175,18 +198,51 @@ contexts:
 
   # column 5: MAPQ: MAPping Quality. 
   mapq_column:
+    - match: '(255|[0-9])(?=\t)'
+      scope: grad.bw1
+    - match: '1[0-9](?=\t)'
+      scope: grad.bw3
+    - match: '2[0-9](?=\t)'
+      scope: grad.bw5
+    - match: '3[0-9](?=\t)'
+      scope: grad.bw7
+    - match: '4[0-9](?=\t)'
+      scope: grad.bw9
     - match: '[\S]*'
-      scope: comment.line.sam
+      scope: grad.bw9
+
     - match: \t
       push: cigar_column
     - match: $
       pop: true
 
 
-  # column 6: CIGAR: Reference sequence name of the primary alignment of the NEXT read in the template.
+  # column 6: CIGAR: Alignment details
   cigar_column:
+      # CIGAR Strings
+      # M: Alignment match
+      # I: Insertion
+      # D: Deletion
+      # N: Skipped region (intron)
+      # S: Soft Clip
+      # H: Hard Clip
+      # P: Padding
+      # =: Sequence Match
+      # X: Sequence Mismatch
+      # *: String Absent
+
+    - match: '\d+[NSHP]'
+      scope: 'comment.line.sam'
+    - match: '\d+[M=]'
+      scope: 'grad.bw7.sam'
+    - match: '\d+[X]'
+      scope: 'keyword.sam'
+    - match: '\d+[D]'
+      scope: 'variable.parameter.sam'
+    - match: '\d+[I]'
+      scope: support.constant.sam
     - match: '[\S]*'
-      scope: string.sam
+      scope: comment.line.sam
     - match: \t
       push: rnext_column
     - match: $
@@ -195,14 +251,14 @@ contexts:
   # column 7: RNEXT Reference sequence name of the primary alignment of the NEXT read in the template.
   rnext_column:
     - match: "="
-      scope: nt.A.sam
+      scope: coord.Chr.sam
       push: pnext_column_gateway
     - match: "[0-9]*(?=\t)"
       scope: coord.Start.sam
       push: pnext_column_gateway
     - match: "\\*"
-      scope: nt.T.sam
-      push: pnext_column_gateway
+      scope: keyword.sam
+      push: pnext_alt_seq_column_gateway
     - match: '[\S]*(?=\t)'
       scope: keyword.Start
       push: pnext_alt_seq_column_gateway
@@ -220,7 +276,7 @@ contexts:
   pnext_column:
     # - meta_scope: invalid.sam
     - match: '[\S]*'
-      scope: coord.Chr.sam
+      scope: coord.Start.sam
     - match: \t
       push: tlen_column
     - match: $
@@ -267,7 +323,16 @@ contexts:
     - match: $
       pop: true
 
-  # column 11: QUAL: ASCII of base QUALity plus 33 (same as the quality string in the Sanger FASTQ format).
+  # column 11: QUAL: ASCII of base QUALity plus 33 (same as the
+  # quality string in the Sanger FASTQ format).
+  # Complete Phred Scale
+  #!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+  # Illumina 1.8 Scale (IMPLEMENTED)
+  # 0.2.......................26...31.......41     
+  # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKL
+  # |   |   |   |   |   |   |   |   |   |   | ...
+
   qual_column:
     - match: "[\\!\\#\\$]"
       scope: grad.bw0

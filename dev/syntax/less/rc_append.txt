@@ -11,9 +11,17 @@ alias less='less -NSi -# 10'
 
 alias more='less'
 
-# Explicit fasta / sam less for piping
+# Explicit call of  <file format>-less for piping data
 # i.e:  samtools view -h aligned_hits.bam | sam-less
-#
-alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+# Core syntaxes (default)
+alias fa-less='source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+alias fq-less='source-highlight -f esc --lang-def=fastq.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+alias clustal-less='source-highlight -f esc --lang-def=clustal.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style | less'
+alias bed-less='source-highlight -f esc --lang-def=bed.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
 alias sam-less='source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+alias gtf-less='source-highlight -f esc --lang-def=gtf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
 alias vcf-less='source-highlight -f esc --lang-def=vcf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style | less'
+
+# Auxillary syntaxes (uncomment to activate)
+#alias fai-less='source-highlight -f esc --lang-def=faidx.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'
+#alias flagstat-less='source-highlight -f esc --lang-def=flagstat.lang --outlang-def=bioSyntax.outlang --style-file=sam.style | less'

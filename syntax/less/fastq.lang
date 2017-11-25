@@ -1,0 +1,38 @@
+# Fasta language definition file for less pipe
+# bioSyntax
+
+# Row 1: Header
+# Entry header start with @
+environment header = '^(?=@)' begin 
+  faheader = '@.+'
+
+  # Row 2: nt Seq
+  environment ntSeq = '^(?=[ATCG])' begin
+    ntA = '[Aa]+'
+    ntT = '[TtUu]+'
+    ntG = '[Gg]+'
+    ntC = '[Cc]+'
+    ntN = '[NnXx]+'
+
+    # Row 3: Comment Line
+      environment commentLine = '^(?=[+])' begin
+      comment = '^\+.*'
+
+      #Row 4: PHRED score
+      environment phred = '^' begin
+        drop = '(?=$)' exitall
+        # Illumina 1.8 Scale
+        # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ...j
+        # |   |   |   |   |   |   |   |   |   |...
+        grad00 = '\A[!-%]++'
+        grad0 = '\A[!-(]++'
+        grad1 = '\A[)-0]++'
+        grad2 = '\A[1-8]++'
+        grad3 = '\A[9-@]++'
+        grad4 = '\A[A-D]++'
+        grad5 = '\A[E-j]++'
+
+      end
+    end
+  end
+end

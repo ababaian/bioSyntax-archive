@@ -3,6 +3,7 @@
 name: gtf
 file_extensions: [gtf]
 scope: source.gtf
+# Specification: http://mblab.wustl.edu/GTF22.html
 
 contexts:
   main:
@@ -108,9 +109,13 @@ contexts:
     - match: \b[^\s;]+(?=\s"[\w|\W|\_|\.]*")
       scope: grad.bw5.attributeName.gtf
     - match: (?="[\w|\d|\.]+";)"[\d|\.]+"
-      scope: variable.number.attributeString.gtf
-    - match: (?="[\w|\d|\.]+";)"[\w|\d|\.]+"
+      scope: variable.number.attributeNumbers.gtf
+    - match: (?="[\w|\d|\.|\-|\_|\:]+";)"[\w|\d|\.|\-|\_|\:]+"
       scope: grad4.attributeString.gtf
+    - match: \b[^\s;]+(?=\s[\w|\W|\_|\.])
+      scope: grad.bw5.attributeName.gtf
+    - match: (?=\d+;)\d+
+      scope: variable.number.attributeNumbers.gtf
     - match: \t
       push: attribute
     - match: $

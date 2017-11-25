@@ -2,12 +2,12 @@
 
 We're working on an installer to make this easier, but if you can't wait, here's how to get bioSyntax now.
 
-1. [Sublime](#sublime-text)
+1. [sublime](#sublime)
 2. [gedit](#gedit)
 3. [less](#less)
 
 
-## `Sublime Text` 
+## sublime
 (Linux / Mac / Win)
 
 0. Install [Sublime Text](http://www.sublimetext.com/)
@@ -26,8 +26,8 @@ We're working on an installer to make this easier, but if you can't wait, here's
 6. Formats should auto-detect; you can select a specific syntax at the drop-menu at the bottom-right corner of the window (e.g. Plain Text)
 7. You now have pretty formats!
 
-## `gedit`
-(Linux)
+## gedit
+(Linux / Win)
 1. Download the respective `*.lang` files you're interested in
 2. Download the `bioKate.xml` style scheme
  
@@ -44,10 +44,10 @@ We're working on an installer to make this easier, but if you can't wait, here's
 	`Edit > Preferences > Font & Color > bioKate'`
 7.  You now have pretty formats!
 
-## `less`
+## less
 (Linux)
 
-### Installing `source-highlight` (Ubuntu)
+### Install `source-highlight` (Ubuntu)
 
 1) Install `source-highlight` to your system:
 ```

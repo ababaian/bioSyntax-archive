@@ -10,6 +10,18 @@ for source in "$@"; do
         lesspipe "$source" ;;
 	*.fasta|*.fa|*.mfa)
 	source-highlight -f esc --lang-def=fasta.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style -i "$source" ;;
+	*.fastq|*.fq)
+	source-highlight -f esc --lang-def=fastq.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style -i "$source" ;;
+	*.fai|*.faidx)
+	source-highlight -f esc --lang-def=faidx.lang --outlang-def=bioSyntax.outlang --style-file=sam.style -i "$source" ;;
+	*.flagstat)
+	source-highlight -f esc --lang-def=flagstat.lang --outlang-def=bioSyntax.outlang --style-file=sam.style -i "$source" ;;
+	*.clustal)
+	source-highlight -f esc --lang-def=clustal.lang --outlang-def=bioSyntax.outlang --style-file=fasta.style -i "$source" ;;
+	*.bed)
+	source-highlight -f esc --lang-def=bed.lang --outlang-def=bioSyntax.outlang --style-file=sam.style -i "$source" ;;
+	*.gtf)
+	source-highlight -f esc --lang-def=gtf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style -i "$source" ;;
 	*.sam)
 	source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=sam.style -i "$source" ;;
 	*.vcf)

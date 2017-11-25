@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+lazypanda10117 14-11-2017
+Reference: ababaian and ebedthan
+Syntax highlighting for GTF Files
+-->
+
+<language id="gtf" _name="GTF" version="2.0" _section="Scientific">
+  <metadata>
+    <property name="mimetypes">text/gtf</property>
+    <property name="globs">*.gtf</property>
+  </metadata>
+  <styles>
+    <style id="chrom"        _name="Chrom" />
+    <style id="source"       _name="Source" />
+    <style id="featureExon"       _name="FeatureExon" />
+    <style id="featureTranscript"       _name="FeatureTranscript" />
+    <style id="featureCDS"       _name="FeatureCDS" />
+    <style id="featureStartCodon"       _name="FeatureStartCodon" />
+    <style id="featureStopCodon"       _name="FeatureStopCodon" />
+    <style id="coords"       _name="Coord" />
+    <style id="score0"       _name="Score0" />
+    <style id="score1"       _name="Score1" />
+    <style id="score2"       _name="Score2" />
+    <style id="score3"       _name="Score3" />
+    <style id="score4"       _name="Score4" />
+    <style id="score5"       _name="Score5" />
+    <style id="score6"       _name="Score6" />
+    <style id="score7"       _name="Score7" />
+    <style id="score8"       _name="Score8" />
+    <style id="score9"       _name="Score9" />
+    <style id="score10"       _name="Score10" />
+    <style id="score11"       _name="Score11" />
+    <style id="strandminus"       _name="StrandMinus" />
+    <style id="strandplus"       _name="StrandPlus" />
+    <style id="stranddot"       _name="StrandDot" />
+    <style id="framenum"       _name="FrameNum" />
+    <style id="framedot"       _name="FrameDot" />
+    <style id="attributeName"       _name="AttName" />
+    <style id="attributeValueString"       _name="AttString" />
+    <style id="attributeValueNumber"       _name="AttNum" />
+  </styles>
+  <definitions>
+    <context id="gtf">
+      <include>
+
+        <!-- Name of Chromosome -->
+        <context id="chrom" style-ref="chrom">
+          <match extended="true">
+            ^\w+
+          </match>
+        </context>
+
+        <!-- Source -->
+        <context id="source" style-ref="source">
+          <match extended="true">
+            (?&lt;=[\w]\t)[\w]+(?=\t[a-z|A-Z])
+          </match>
+        </context>
+
+        <!-- Features -->
+        <context id="featureExon" style-ref="featureExon">
+          <match extended="true">
+            \texon\t
+          </match>
+        </context>
+        <context id="featureTranscript" style-ref="featureTranscript">
+          <match extended="true">
+            \ttranscript\t
+          </match>
+        </context>
+        <context id="featureCDS" style-ref="featureCDS">
+          <match extended="true">
+            \tCDS\t
+          </match>
+        </context>
+        <context id="featureStartCodon" style-ref="featureStartCodon">
+          <match extended="true">
+            \tstart_codon\t
+          </match>
+        </context>
+        <context id="featureStopCodon" style-ref="featureStopCodon">
+          <match extended="true">
+            \tstop_codon\t
+          </match>
+        </context>
+
+        <!-- Start and End Coordinates -->
+        <context id="coords" style-ref="coord">
+          <match extended="true">
+            (?&lt;=\t)[0-9]+\t[0-9]+(?=\t)
+          </match>
+        </context>
+
+        <!-- Gradient Coloring for Score -->
+        <context id="score0" style-ref="score0">
+          <match extended="true">
+            (?&lt;=\t)[1-9](?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score1" style-ref="score1">
+          <match extended="true">
+            (?&lt;=\t)[1-9][0-9](?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score2" style-ref="score2">
+          <match extended="true">
+            (?&lt;=\t)1[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score3" style-ref="score3">
+          <match extended="true">
+            (?&lt;=\t)2[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score4" style-ref="score4">
+          <match extended="true">
+            (?&lt;=\t)3[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score5" style-ref="score5">
+          <match extended="true">
+            (?&lt;=\t)4[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score6" style-ref="score6">
+          <match extended="true">
+            (?&lt;=\t)5[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score7" style-ref="score7">
+          <match extended="true">
+            (?&lt;=\t)6[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score8" style-ref="score8">
+          <match extended="true">
+            (?&lt;=\t)7[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score9" style-ref="score9">
+          <match extended="true">
+            (?&lt;=\t)8[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score10" style-ref="score10">
+          <match extended="true">
+            (?&lt;=\t)9[0-9]{2}(?=\t[\+|\-|.])
+          </match>
+        </context>
+        <context id="score11" style-ref="score10">
+          <match extended="true">
+            (?&lt;=\t)[1-9][0-9]{3,}(?=\t[\+|\-|.])
+          </match>
+        </context>
+
+        <!-- Strand -->
+        <context id="strandplus" style-ref="strandplus">
+          <match extended="true">
+            (?&lt;=\t)[+](?=\t)
+          </match>
+        </context>
+        <context id="strandminus" style-ref="strandminus">
+          <match extended="true">
+            (?&lt;=\t)[-](?=\t)
+          </match>
+        </context>
+        <context id="stranddot" style-ref="stranddot">
+          <match extended="true">
+            (?&lt;=\d\t)[.](?=\t)
+          </match>
+        </context>
+
+        <!-- Frame -->
+        <context id="framedot" style-ref="framedot">
+          <match extended="true">
+            (?&lt;=[.|+|-]\t)[.](?=\t)
+          </match>
+        </context>
+        <context id="framenum" style-ref="framenum">
+          <match extended="true">
+            (?&lt;=[.|+|-]\t)[0-2](?=\t)
+          </match>
+        </context>
+
+        <!-- Attributes -->
+        <context id="attributeName" style-ref="attributeName">
+          <match extended="true">
+            \b[^\s;]+(?=\s"[\w|\W|\_|\.]*")
+          </match>
+        </context>
+        <context id="attributeValueNumber" style-ref="attributeValueNumber">
+          <match extended="true">
+            (?="[\w|\d|\.]+";)"[\d|\.]+"
+          </match>
+        </context>
+        <context id="attributeValueString" style-ref="attributeValueString">
+          <match extended="true">
+           (?="[\w|\d|\.|\-|\_|\:]+";)"[\w|\d|\.|\-|\_|\:]+"
+          </match>
+        </context>
+        <context id="attributeNameNoQuote" style-ref="attributeName">
+          <match extended="true">
+            \b[^\s;]+(?=\s[\w|\W|\_|\.])
+          </match>
+        </context>
+        <context id="attributeValueNumberNoQuote" style-ref="attributeValueNumber">
+          <match extended="true">
+            (?=\d+;)\d+
+          </match>
+        </context>
+      </include>
+    </context>
+  </definitions>
+</language>
