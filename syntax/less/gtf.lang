@@ -1,7 +1,6 @@
 # GTF language definition file for less pipe
-# bioSyntax
+# bioSyntax v0.1
 # Depends on vcf.style + bioSyntax-vcf.outlang
-# 
 
 # Comment or UCSC Track information
 # is lines beginning with "#""

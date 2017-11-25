@@ -1,7 +1,6 @@
 # Bed language definition file for less pipe
-# bioSyntax
+# bioSyntax v0.1
 # Depends on sam.style + bioSyntax.outlang
-# 
 
 # Comment or UCSC Track information
 # is lines beginning with "#""

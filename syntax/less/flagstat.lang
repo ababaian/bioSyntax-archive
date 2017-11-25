@@ -1,5 +1,5 @@
 # Flagstat (.flagstat) language definition file for less pipe
-# bioSyntax
+# bioSyntax v0.1
 # Depends on sam.style + bioSyntax.outlang
 
 # QC-Passed Reads
