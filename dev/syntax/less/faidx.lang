@@ -1,5 +1,5 @@
 # Fasta Index / Faidx (.fai) language definition file for less pipe
-# bioSyntax
+# bioSyntax v0.1
 # Depends on sam.style + bioSyntax.outlang
 
 # faidx Data

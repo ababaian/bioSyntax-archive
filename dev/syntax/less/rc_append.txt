@@ -7,7 +7,7 @@ export LESS=" -R "
 alias less='less -NSi -# 10'
 # -N: add line numbers
 # -S: don't wrap lines (force to single line)
-# -# 20: Horizontal scroll
+# -# 10: Horizontal scroll distance
 
 alias more='less'
 

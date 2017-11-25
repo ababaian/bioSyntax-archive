@@ -1,5 +1,6 @@
 # CLUSTAL language definition file for less pipe
-# bioSyntax
+# bioSyntax v0.1
+# Depends on fasta.style + bioSyntax.outlang
 
 # Start of file CLUSTAL Header
 faheader start '^CLUSTAL'

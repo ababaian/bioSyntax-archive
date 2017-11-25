@@ -1,5 +1,6 @@
-# Fasta language definition file for less pipe
-# bioSyntax
+# VCF language definition file for less pipe
+# bioSyntax v0.1
+# Depends on vcf.style + bioSyntax-vcf.outlang
 
 # Variables ----------------------------------
 vardef NUCLEOTIDE = '[ATCGNXatcgnxRYSWKMBVDH]'
@@ -10,8 +11,8 @@ vardef QUOTETAG = '(Description=)'
 vardef STRINGTAG = '(\w+=)' # all others
 
 # Header Area -------------------------------
-state comment start '^#[#]{0,1}' begin
-  endline = '(?=$)' exitall
+state comment start '^#[#]*' begin
+  endline = '$' exit
  
   # fileformat
   state faheader = 'fileformat=' begin
@@ -28,13 +29,13 @@ state comment start '^#[#]{0,1}' begin
 
   # header line
   state faheader = 'CHROM' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     faheader = '[\S\t]+'
   end
 
   # FILTER
   state keywordi4 = 'FILTER=' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     quoteString delim '"' '"'
     string = '(?<==)\S+?(?=[,>])'
     string = '(?<=,)\S+?(?=[,>])'
@@ -44,7 +45,7 @@ state comment start '^#[#]{0,1}' begin
 
   # FORMAT
   state keywordi2 = 'FORMAT=<' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     keywordi2 = '>'
 
     state keyword2 = '(Number=|Type=)' begin
@@ -63,7 +64,7 @@ state comment start '^#[#]{0,1}' begin
 
   # INFO
   state keywordi3 = 'INFO=<' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     keywordi2 = '>'
 
     state keyword3 = '(Number=|Type=)' begin
@@ -82,7 +83,7 @@ state comment start '^#[#]{0,1}' begin
 
   # ALT SAMPLE PEDIGREE
   state keywordi = '(ALT|SAMPLE|PEDIGREE)=<' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     keywordi = '>'
 
     state keyword = '(Number=|Type=)' begin
@@ -101,7 +102,7 @@ state comment start '^#[#]{0,1}' begin
 
   # contig
   state keywordi5 = 'contig=<' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     keywordi3 = '>' exit
 
     state keyword5 = '(ID=)' begin
@@ -125,14 +126,14 @@ state comment start '^#[#]{0,1}' begin
 
   # reference
   state null = '(reference=|assembly=)' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     keyword = '\S+'
   end
 
 
   # Other
   state keywordi3 = '[\w\\.]+=<' begin
-    drop = '(?=$)' exitall
+    drop = '(?=$)' exit
     keywordi2 = '>'
 
     # Numeric Descriptors
@@ -154,79 +155,76 @@ end
 
 # Data -------------------------------------
 
-state data = '(?=^)' begin
-  drop = '$' exitall
+state data = '^' begin
+  drop = '$' exit
 
   # Column 1: CHROM
   chr = '^\S+'
 
   # Column 2: POS
-  state push2 = '\t?' begin
-    drop = '(?=$)' exitall
+  state push2 = '\t' begin
+    drop = '(?=$)' exit
     chrStart = '\d+'
 
     # Column 3: ID
-    state push3 = '\t?' begin
-      drop = '(?=$)' exitall
+    state push3 = '\t' begin
+      drop = '(?=$)' exit
       comment = "."
       string = 'rs[0-9]+'
 
       # Column 4,5: REF
       # weird... no tab between 4 and 5 in data
-      state push45 = '\t?' begin
-        drop = '(?=$)' exitall
-	ntA = '[Aa]++'
-	ntT = '[Tt]++'
-	ntG = '[Gg]++'
-	ntC = '[Cc]++'
-	ntN = '[Nn]++'
-        null = ","
+      state push45 = '\t' begin
+        drop = '(?=$)' exit
+	ntA = '[Aa]'
+	ntT = '[Tt]'
+	ntG = '[Gg]'
+	ntC = '[Cc]'
+	ntN = '[Nn]'
 
 	# Column 6: QUAL
-	state push6 = '\t?' begin
-	  drop = '(?=$)' exitall
+	state push6 = '\t' begin
+	  drop = '(?=$)' exit
 	  #Quality below 10
-	  comment = '\.(?=\t)'
+	  comment = ".(?=\t)"
 	  string = '[0-9](?=\t)'
 
 	  #Quality above 10
-	  numeric = '[\d\\.]+'
+	  numeric = '\d+'
 
 	  # Column 7: FILTER
-	  state push7 = '\t?' begin
-	    drop = '(?=$)' exitall
+	  state push7 = '\t' begin
+	    drop = '(?=$)' exit
 	    bon = "PASS"
 	    mal = "FAIL"
 	    comment = "."
 
 	    # Column 8: INFO
-	    state push8 = '\t?' begin
-	      drop = '(?=$)' exitall
+	    state push8 = '\t' begin
+	      drop = '(?=$)' exit
 	      keyword3 = '\w+='
-              numeric = ","
-	      numeric = '[e\d\\.\\-]+(?=(;|\t)?)'
-              null = ";"
+	      numeric = '[\d\\.\\-]+(?=(;|\t))'
 
 	      # Column 9: FORMAT
-	      state push9 = '\t?' begin
-	        drop = '(?=$)' exitall
+	      state push9 = '\t' begin
+	        drop = '(?=$)' exit
 		keyword2 = '[A-Za-z]+'
 		null = ":"
 
 		# Column 10+: DATA
-		state push10 = '(?=\t?)' begin
-		  drop = '(?=$)' exitall
+		state ntA = '(?=\t?)' begin
+		  drop = '(?=$)' exit
 		  
 		  # No data split/data
-		  null = ","
-		  null = ":"
 		  null = "./."
+		  null = ":"
+		  null = ","
 
 		  # Genotype Field (GT)
 		  # handles upto 5-ploidy
-		  # "0/0 ... 0|1|5"
-		  state GT = '(?<=\t)(?=[0-9](?>\/|\|))' begin
-		    drop = '(?=$)' exitall
+		  # " 0/0 ... 0|1|5"
+		  state GT = '(?<=\s)(?=[0-9](\/|\|))' begin
+		    drop = '(?=$)' exit
 		    drop = '(?=:)' exit
 		    drop = '(?=\t)' exit
 
@@ -242,7 +240,7 @@ state data = '(?=^)' begin
 		  end
 
 		  # Remaining Fields
-		  numeric = '[\d]++'
+		  numeric = '[0-9]+'
 
 		end #col10+
 	      end #col9

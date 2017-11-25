@@ -1,8 +1,8 @@
-// VCF Style File -- less
+// PDB Style File -- less
 // bioSyntax v0.1
 
 // Header ID
-faheader black b ;
+header black b ;
 
 // Nucleotide Coloring
 ntA darkgreen ;
@@ -10,6 +10,16 @@ ntC darkred ;
 ntG brown ;
 ntT darkblue ;
 ntN teal i ;
+
+// Amino Acid Coloring (CLUSTALX)
+aaHydro brightorange ; // A I L M F W V
+aaPos red ;  // K R
+aaNeg cyan ; // E D
+aaPol green ; // N Q S T
+aaCys red ; // C (supposed to be pink)
+aaGly orange ; // G
+aaPro pink ; // P
+aaAro purple ; // H Y
 
 // Switch (Good / Bad)
 bon darkblue ;

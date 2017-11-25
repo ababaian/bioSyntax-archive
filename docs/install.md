@@ -1,4 +1,4 @@
-# bioSyntax Installation
+# Installing bioSyntax
 
 We're working on an installer to make this easier, but if you can't wait, here's how to get bioSyntax now.
 

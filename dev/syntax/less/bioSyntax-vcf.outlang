@@ -21,17 +21,15 @@ colormap
 # Text Class
 "gray" "38:5:240;48:5:255" # Comment
 "blue" "38:5:62"           # Numeric, Version
-"yellow" "38:5:208"        # Numeric2, software
-"red" "38:5:160"           # String, quoteString
-"green" "38:5:28"          # chr, chrStart 
-"purple" "38:5:33"         # Keyword, url, library
-"cyan" "38:5:54"           # Keyword2
-"pink" "38:5:136"          # Keyword3
-"orange" "38:5:166"        # Keyword4
-"brightgreen" "38:5:22"    # Keyword5
-#
-# Unused slots
-"brightorange" "38:5:242;48:5:249"  # Gradient 3
+"yellow" "38:5:208"        # Numeric2, Keyword4, software
+"red" "38:5:160"           # Keyword, string, quoteString
+"green" "38:5:28"          # Keyword2, chr, chrStart 
+"purple" "38:5:33"         # Keyword3, url, library
+"cyan" "38:5:54"           # Keyword5
+"pink" "38:5:136"          # Keyword6
+"orange" "38:5:166"        # Keyword7
+"brightgreen" "38:5:22"    # Keyword8
+"brightorange" "38:5:18"   # Keyword9
 default "30;"
 end
 
