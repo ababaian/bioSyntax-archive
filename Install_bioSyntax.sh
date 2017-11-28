@@ -25,7 +25,7 @@ elif [ "$1" == "gedit" ]; then
 	FILE="${2}.lang"
 	THEME="bioKate.xml"
 elif [ "$1" == "vim" ]; then
-	TURL="https://github.com/ababaian/bioSyntax/tree/installer/syntax/vim/ftdetect/${2}.vim"
+	TURL="https://raw.githubusercontent.com/ababaian/bioSyntax/master/syntax/vim/ftdetect/${2}.vim"
 	FILE="${2}.vim"
 	THEME="${2}.vim"
 elif [ "$1" == "less" ]; then
@@ -42,15 +42,17 @@ if  [ "$(uname)" == "Darwin" ]; then
 	if [ "$1" == "sublime" ]; then
 		printf "Downloading latest %s syntax file(s) and bioSyntax Color Scheme for Mac OSX Sublime Text 3.\\n" "$2"
 		FPATH=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/bioSyntax/
-		if [ ! -d "${FPATH}" ]; then mkdir "${FPATH}"; fi
+		if [ ! -d "${FPATH}" ]; then sudo mkdir "${FPATH}"; fi
 		TPATH=/Applications/Sublime\ Text.app/Contents/MacOS/Packages
 	elif [ "$1" == "vim" ]; then
 		printf "Downloading latest %s syntax file(s) and style file(s) for Mac OSX Vim.\\n" "$2"
-		if [ ! grep -Fxq "syntax enable" ~/.vimrc ]; then "syntax enable" > ~./vimrc; fi
-		FPATH=~/.vim/syntax/
-		if [ ! -d "${FPATH}" ]; then mkdir "${FPATH}"; fi
+		if [ ! -e ~/.vimrc ]; then touch ~/.vimrc; fi
+		if ! grep -q ":syntax enable" ~/.vimrc; then echo ":syntax enable\\n" > ~/.vimrc; fi
+		if [ ! -d ~/.vim/ ]; then mkdir ~/.vim/; fi
+		FPATH=~/.vim/syntax
+		if [ ! -d "${FPATH}" ]; then sudo mkdir "${FPATH}"; fi
 		TPATH=~/.vim/ftdetect/
-		if [ ! -d "${TPATH}" ]; then mkdir "${FPATH}"; fi
+		if [ ! -d "${TPATH}" ]; then sudo mkdir "${TPATH}"; fi
 		#echo "au BufRead,BufNewFile *.stc set filetype=${2}" > ~./vim/ftdetect/${FILE}
 	#elif [ "$1" == "gedit" ]; then
 	#	printf "Downloading latest %s lang file(s) and bioKate theme for Mac OSX Gedit.\\n" "$2"
@@ -78,11 +80,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 		TPATH=/usr/share/gtksourceview-3.0/styles/
 	elif [ "$1" == "vim" ]; then
 		printf "Downloading latest %s syntax file(s) and style file(s) for Linux vim.\\n" "$2"
-		if [ ! grep -Fxq "syntax enable" ~/.vimrc ]; then "syntax enable" > ~./vimrc; fi
-		FPATH=~/.vim/syntax/
-		if [ ! -d "${FPATH}" ]; then mkdir "${FPATH}"; fi
+		if [ ! -e ~/.vimrc ]; then touch ~/.vimrc; fi
+		if ! grep -q ":syntax enable" ~/.vimrc; then echo ":syntax enable\\n" > ~/.vimrc; fi
+		if [ ! -d ~/.vim/ ]; then mkdir ~/.vim/; fi
+		FPATH=~/.vim/syntax
+		if [ ! -d "${FPATH}" ]; then sudo mkdir "${FPATH}"; fi
 		TPATH=~/.vim/ftdetect/
-		if [ ! -d "${TPATH}" ]; then mkdir "${FPATH}"; fi
+		if [ ! -d "${TPATH}" ]; then sudo mkdir "${TPATH}"; fi
 		#echo "au BufRead,BufNewFile *.stc set filetype=${2}" > ~./vim/ftdetect/${FILE}
 	elif [ "$1" == "less" ]; then
 		printf "Installing/updating source-highlight for Less and downloading latest %s lang file(s) and style file(s) for Linux Less.\\n" "$2"
@@ -116,7 +120,9 @@ else
 		TPATH=/
 	elif [ "$1" == "vim" ]; then
 		printf "Downloading latest %s syntax file(s) and style file(s) for Windows vim.\\n" "$2"
-		if [ ! grep -Fxq "syntax on" "$HOME/_vimrc" ]; then "syntax on" > $HOME/_vimrc; fi
+		if [ ! -e "$HOME/.vimrc" ]; then touch "$HOME/.vimrc"; fi
+		if ! grep -q ":syntax enable" "$HOME/.vimrc"; then echo ":syntax enable\\n" > $HOME/.vimrc; fi
+		if [ ! -d $HOME/vimfiles/ ]; then mkdir $HOME/vimfiles/; fi
 		FPATH=$HOME/vimfiles/syntax/
 		if [ ! -d "${FPATH}" ]; then mkdir "${FPATH}"; fi
 		TPATH=$HOME/vimfiles/ftdetect/
