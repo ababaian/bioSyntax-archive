@@ -361,6 +361,7 @@
   <style name="gtf:attributeName"          foreground="#9D9E9B"/>
   <style name="gtf:attributeValueString"   foreground="#FF9FF7"/>
   <style name="gtf:attributeValueNumber"   foreground="#0099ff"/>
+  <style name="gtf:attributeSemiColon"     foreground="#9D9E9B"/>
 
   <!-- WIG styles -->
   <style name="wig:fixedStep"              foreground="dark-green" bold="true"/>
