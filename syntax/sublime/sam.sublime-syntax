@@ -323,7 +323,16 @@ contexts:
     - match: $
       pop: true
 
-  # column 11: QUAL: ASCII of base QUALity plus 33 (same as the quality string in the Sanger FASTQ format).
+  # column 11: QUAL: ASCII of base QUALity plus 33 (same as the
+  # quality string in the Sanger FASTQ format).
+  # Complete Phred Scale
+  #!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+  # Illumina 1.8 Scale (IMPLEMENTED)
+  # 0.2.......................26...31.......41     
+  # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKL
+  # |   |   |   |   |   |   |   |   |   |   | ...
+
   qual_column:
     - match: "[\\!\\#\\$]"
       scope: grad.bw0

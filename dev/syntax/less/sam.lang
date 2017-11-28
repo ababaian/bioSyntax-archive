@@ -1,5 +1,6 @@
 # Sam language definition file for less pipe
-# bioSyntax
+# bioSyntax v0.1
+# Depends on sam.style + bioSyntax.outlang
 
 # Variables ----------------------------------
 vardef NUCLEOTIDE = '[ATCGNXatcgnxRYSWKM]'

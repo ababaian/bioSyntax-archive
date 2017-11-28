@@ -1,5 +1,5 @@
-// VCF Files
-// bioSyntax
+// VCF Style File -- less
+// bioSyntax v0.1
 
 // Header ID
 faheader black b ;
@@ -13,7 +13,9 @@ ntN teal i ;
 
 // Switch (Good / Bad)
 bon darkblue ;
+nob darkblue u ;
 mal darkred ;
+lam darkred u ;
 
 // Class
 version blue b ;
@@ -28,6 +30,7 @@ quoteString red i ;
 url purple ;
 
 keyword purple ;
+keywordb purple b ;
 keywordi purple i ;
 keydrow purple u ;
 
@@ -46,6 +49,11 @@ keydrow4 orange u ;
 keyword5 brightgreen ;
 keywordi5 brightgreen i;
 keydrow5 brightgreen u ;
+
+keyword6 blue ;
+keyword6b blue b ;
+keyword6i blue i ;
+keydrow6 blue u ;
 
 // Biological Classes
 sample purple ;

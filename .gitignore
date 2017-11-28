@@ -1,2 +1,8 @@
 local/*
+.Rproj.user
+*.Rproj
+.Rhistory
+.swp
+*.swp
 examples/vcf/test_1000genomes.vcf
+dev/syntax/less/data
