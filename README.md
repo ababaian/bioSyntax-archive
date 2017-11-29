@@ -1,29 +1,19 @@
 ![bioSyntax Logo](dev/img/bioSyntax_logo.png)
 ![Fasta Banner](dev/img/FastaBanner.png)
-Syntax highlighting for computational biology in `vim`, `less`, `sublime3` & `gedit`. Intuitively read your `.sam`, `.vcf`, `.fasta`, `.pdb`, `.gtf` files [& more](http://biosyntax.org/formats).
 
-## [Installing bioSyntax](http://biosyntax.org/install)
+Syntax highlighting for computational biology in **vim**, **less**, **sublime3** & **gedit**. Intuitively read your `.sam`, `.vcf`, `.fasta`, `.pdb`, `.gtf` files [& more](http://biosyntax.org/formats).
+
+
+# [bioSyntax.org](https://biosyntax.org/)
 
 ## Usage
-bioSyntax integrates seamlessly with your text editor, recognizing data-type by the file extension.
+bioSyntax integrates seamlessly with your text editor, recognizing data-type by the file extension or streamed into `less`.
 
-#### Streaming Data
-For large files, data can be piped directly into `less` using the aliases `sam-less` or `vcf-less` respectively.
+To gain the most insight from your data, read our brief [bioSyntax Manual](man).
 
-	`samtools view -h NA12878_wgs.bam | sam-less`
+## [Install](http://bioSyntax.org/install)
 
-## Screenshots
-
-#### SAM
-![Example less command](docs/assets/images/sam-less_command.gif)
-[<img src="http://biosyntax.org/assets/images/sam-less-small.gif">](docs/assets/images/sam-less.png)
-
-#### FASTA
-![Fasta Example Sublime](dev/img/fasta_nt.png)
-
-#### PDB
-![Pdb Example Sublime](dev/img/PDB_header1.png)
-
+## [Screenshots](http://biosyntax.org/screenshots)
 
 *************************************************
 
