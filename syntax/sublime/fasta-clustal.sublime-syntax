@@ -1,9 +1,12 @@
 %YAML 1.2
 ---
+# Fasta-Clustal syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 name: fasta-clustal
 # See http://www.sublimetext.com/docs/3/syntax.html
-file_extensions: [fastaa]
-scope: text.fastaa
+file_extensions: [fastaa,faa]
+scope: text.fasta-clustal
 
 
 contexts:
@@ -17,100 +20,100 @@ contexts:
     # match amino acids
     # Alanine (ALA)
     - match: "[Aa]"
-      scope: aa.clustal.A
+      scope: aaA
 
     # Aspartate/Asparagine (ASX)
     - match: "[Bb]"
-      scope: aa.clustal.B
+      scope: aaB
 
     # Cysteine (CYS)
     - match: "[Cc]"
-      scope: aa.clustal.C
+      scope: aaC
 
     # Aspartate (ASP)
     - match: "[Dd]"
-      scope: aa.clustal.D
+      scope: aaD
 
     # Glutamate (GLU)
     - match: "[Ee]"
-      scope: aa.clustal.E
+      scope: aaE
 
     # Phenylalanine (PHE)
     - match: "[Ff]"
-      scope: aa.clustal.F
+      scope: aaF
 
     # Glycine (GLY)
     - match: "[Gg]"
-      scope: aa.clustal.G
+      scope: aaG
 
     # Histidine (HIS)
     - match: "[Hh]"
-      scope: aa.clustal.H
+      scope: aaH
 
     # Isoleucine (ILE)
     - match: "[Ii]"
-      scope: aa.clustal.I
+      scope: aaI
 
     # Lysine (LYS)
     - match: "[Kk]"
-      scope: aa.clustal.K
+      scope: aaK
 
     # Leucine (LEU)
     - match: "[Ll]"
-      scope: aa.clustal.L
+      scope: aaL
 
     # Methionine (MET)
     - match: "[Mm]"
-      scope: aa.clustal.M
+      scope: aaM
 
     # Asparagine (ASN)
     - match: "[Nn]"
-      scope: aa.clustal.N
+      scope: aaN
 
     # Proline (PRO)
     - match: "[Pp]"
-      scope: aa.clustal.P
+      scope: aaP
 
     # Glutamine (GLN)
     - match: "[Qq]"
-      scope: aa.clustal.Q
+      scope: aaQ
 
     # Arginine (ARG)
     - match: "[Rr]"
-      scope: aa.clustal.R
+      scope: aaR
 
     # Serine (SER)
     - match: "[Ss]"
-      scope: aa.clustal.S
+      scope: aaS
 
     # Threonine (THE)
     - match: "[Tt]"
-      scope: aa.clustal.T
+      scope: aaT
 
     # Valine (VAL)
     - match: "[Vv]"
-      scope: aa.clustal.V
+      scope: aaV
 
     # Tryptophan (TRP)
     - match: "[Ww]"
-      scope: aa.clustal.W
+      scope: aaW
 
     # Tyrosine (TYR)
     - match: "[Yy]"
-      scope: aa.clustal.Y
+      scope: aaY
 
     # Glutamate or Glutamine (GLX)
     - match: "[Zz]"
-      scope: aa.clustal.Z
+      scope: aaZ
 
     # any/unknown (X)
     - match: "[Xx]"
-      scope: aa.zappo.X
+      scope: zappo.X
 
     # translation stop
     - match: "\\*"
-      scope: comment.line
+      scope: comment
 
     # indel
     - match: "[-]"
-      scope: comment.line
+      scope: comment

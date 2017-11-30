@@ -1,5 +1,8 @@
 %YAML 1.2
 ---
+# Flagstat syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 name: flagstat
 # See http://www.sublimetext.com/docs/3/syntax.html
 file_extensions: [flagstat]
@@ -9,18 +12,18 @@ contexts:
   main:
     # Match Keywords
     - match: 'mapQ'
-      scope: keyword
+      scope: string
 
     - match: '[\\+\\>\\=\\%\\:]'
-      scope: storage.type
+      scope: keyword3
 
     # Match numbers
     - match: '-nan'
-      scope: constant.numeric
+      scope: numeric
     - match: '^[0-9]*\b'
-      scope: constant.numeric
+      scope: numeric
     - match: '[0-9]*'
-      scope: constant.numeric
+      scope: numeric
 
     # Match Descriptor
     - match: '\b[A-Za-z]+[12]*\b'
@@ -28,4 +31,4 @@ contexts:
 
     # Match Brackets
     - match: '[()]'
-      scope: variable
+      scope: comment

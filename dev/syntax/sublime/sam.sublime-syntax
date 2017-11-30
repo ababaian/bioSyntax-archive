@@ -1,5 +1,8 @@
 %YAML 1.2
 ---
+# SAM syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 # See http://www.sublimetext.com/docs/3/syntax.html
 name: sam
 file_extensions:
@@ -8,23 +11,23 @@ scope: source.sam
 contexts:
   main:
     - match: '^@HD'
-      scope: header.id.sam
+      scope: header.sam
       push: header_entry_hd
 
     - match: '^@SQ'
-      scope: header.id.sam
+      scope: header.sam
       push: header_entry_sq
 
     - match: '^@RG'
-      scope: header.id.sam
+      scope: header.sam
       push: header_entry_rg
 
     - match: '^@PG'
-      scope: header.id.sam
+      scope: header.sam
       push: header_entry_pg
 
     - match: '^@CO'
-      scope: header.id.sam
+      scope: header.sam
       push: header_entry_co
 
     # entering sequence alignment section
@@ -42,14 +45,14 @@ contexts:
       scope: invalid.sam
       push: header_entry_quote
     - match: '(?<=VN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: constant.numeric.sam
+      scope: numeric.sam
 
     # Sort Order for sam file
     # Distinguishes sorted from unsorted files
     - match: '(?<=SO:)(coordinate|queryname(?=\s+[A-Z]{2}:)|.+$)'
-      scope: nt.C.sam
+      scope: bon.sam
     - match: '(?<=SO:)(unsorted|unknown(?=\s+[A-Z]{2}:)|.+$)'
-      scope: nt.T.sam
+      scope: mal.sam
     - match: '(?<=SO:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
 
@@ -64,9 +67,9 @@ contexts:
       scope: invalid.sam
       push: header_entry_quote
     - match: '(?<=SN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: coord.Chr.sam
+      scope: chr.sam
     - match: '(?<=LN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: coord.Start.sam
+      scope: chrStart.sam
     - match: '(?<=AH:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
     - match: '(?<=AN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
@@ -88,9 +91,9 @@ contexts:
       scope: invalid.sam
       push: header_entry_quote
     - match: '(?<=ID:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: support.constant.sam
+      scope: library.sam
     - match: '(?<=LB:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: support.constant.sam
+      scope: library.sam
     - match: '(?<=CN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
     - match: '(?<=DS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
@@ -101,20 +104,18 @@ contexts:
       scope: keyword.sam
     - match: '(?<=KS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
-    - match: '(?<=LB:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: keyword.sam
     - match: '(?<=PG:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: variable.parameter.sam
+      scope: platform.sam
     - match: '(?<=PI:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
     - match: '(?<=PL:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: keyword.sam
+      scope: platform.sam
     - match: '(?<=PM:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: keyword.sam
     - match: '(?<=PU:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: keyword.sam
+      scope: platform.sam
     - match: '(?<=SM:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: support.constant.sam
+      scope: library.sam
     - match: $
       pop: true
 
@@ -124,24 +125,24 @@ contexts:
       scope: variable.parameter.sam
       push: header_entry_quote
     - match: '(?<=ID:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: variable.parameter.sam
+      scope: software.sam
     - match: '(?<=PN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: variable.parameter.sam
+      scope: software.sam
     - match: '(?<=CL:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: variable.parameter.sam
+      scope: command.sam
     - match: '(?<=PP:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: variable.parameter.sam
+      scope: software.sam
     - match: '(?<=DS:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
       scope: string.sam
     - match: '(?<=VN:)(.+?(?=\s+[A-Z]{2}:)|.+$)'
-      scope: constant.numeric.sam
+      scope: numeric.sam
     - match: $
       pop: true
 
   header_entry_co:
     - meta_scope: string.sam
     - match: '(?<=[A-Z]{2}:)"'
-      scope: comment.line.sam
+      scope: comment.am
       push: header_entry_quote
     - match: $
       pop: true
@@ -160,18 +161,18 @@ contexts:
     # If flag > 512
     #   read is QC-fail | PCRdup | 2' alignment
     - match: '[0-9]{1,2}(?=\t)'
-      scope: comment.line.sam
+      scope: numeric.sam
     - match: '[1-4][0-9]{1,2}(?=\t)'
-      scope: comment.line.sam
+      scope: numeric.sam
     - match: '[5][0][0-9](?=\t)'
-      scope: comment.line.sam
+      scope: numeric.sam
     - match: '[5][1][01](?=\t)'
-      scope: comment.line.sam
+      scope: numeric.sam
 
     - match: '[5][1][01]'
-      scope: keyword.sam
+      scope: ntC.sam
     - match: '[\S]*'
-      scope: keyword.sam
+      scope: ntC.sam
 
     - match: \t
       push: rname_column
@@ -181,7 +182,7 @@ contexts:
   # column 3: RNAME: usually a chromosome id
   rname_column:
     - match: '[\S]*'
-      scope: coord.Chr.sam
+      scope: chr.sam
     - match: \t
       push: pos_column
     - match: $
@@ -190,7 +191,7 @@ contexts:
   # column 4: POS: 1-based leftmost mapping POSition of the first CIGAR operation that “consumes” a reference base
   pos_column:
     - match: '[\S]*'
-      scope: coord.Start.sam
+      scope: chrStart.sam
     - match: \t
       push: mapq_column
     - match: $
@@ -199,17 +200,17 @@ contexts:
   # column 5: MAPQ: MAPping Quality. 
   mapq_column:
     - match: '(255|[0-9])(?=\t)'
-      scope: grad.bw1
+      scope: gradbw1
     - match: '1[0-9](?=\t)'
-      scope: grad.bw3
+      scope: gradbw3
     - match: '2[0-9](?=\t)'
-      scope: grad.bw5
+      scope: gradbw5
     - match: '3[0-9](?=\t)'
-      scope: grad.bw7
+      scope: gradbw7
     - match: '4[0-9](?=\t)'
-      scope: grad.bw9
+      scope: gradbw9
     - match: '[\S]*'
-      scope: grad.bw9
+      scope: gradbw9
 
     - match: \t
       push: cigar_column
@@ -232,17 +233,17 @@ contexts:
       # *: String Absent
 
     - match: '\d+[NSHP]'
-      scope: 'comment.line.sam'
+      scope: cigClip.sam
     - match: '\d+[M=]'
-      scope: 'grad.bw7.sam'
+      scope: cigMat.sam
     - match: '\d+[X]'
-      scope: 'keyword.sam'
+      scope: cigMis.sam
     - match: '\d+[D]'
-      scope: 'variable.parameter.sam'
+      scope: cigDel.sam
     - match: '\d+[I]'
-      scope: support.constant.sam
+      scope: cigIns.sam
     - match: '[\S]*'
-      scope: comment.line.sam
+      scope: comment.sam
     - match: \t
       push: rnext_column
     - match: $
@@ -251,10 +252,10 @@ contexts:
   # column 7: RNEXT Reference sequence name of the primary alignment of the NEXT read in the template.
   rnext_column:
     - match: "="
-      scope: coord.Chr.sam
+      scope: chr.sam
       push: pnext_column_gateway
     - match: "[0-9]*(?=\t)"
-      scope: coord.Start.sam
+      scope: chrStart.sam
       push: pnext_column_gateway
     - match: "\\*"
       scope: keyword.sam
@@ -276,7 +277,7 @@ contexts:
   pnext_column:
     # - meta_scope: invalid.sam
     - match: '[\S]*'
-      scope: coord.Start.sam
+      scope: chrStart.sam
     - match: \t
       push: tlen_column
     - match: $
@@ -300,7 +301,7 @@ contexts:
   # column 9: TLEN:  signed  observed  Template  LENgth.   
   tlen_column:
     - match: '[\S]*'
-      scope: comment.line.sam
+      scope: comment.sam
     - match: \t
       push: seq_column
     - match: $
@@ -309,52 +310,61 @@ contexts:
   # column 10: SEQ: segment SEQuence.
   seq_column:
     - match: "A"
-      scope: nt.A.sam
+      scope: ntA.sam
     - match: "C"
-      scope: nt.C.sam
+      scope: ntC.sam
     - match: "G"
-      scope: nt.G.sam
+      scope: ntG.sam
     - match: "T"
-      scope: nt.T.sam
+      scope: ntT.sam
     - match: "N"
-      scope: nt.N.sam
+      scope: ntN.sam
     - match: \t
       push: qual_column
     - match: $
       pop: true
 
-  # column 11: QUAL: ASCII of base QUALity plus 33 (same as the quality string in the Sanger FASTQ format).
+  # column 11: QUAL: ASCII of base QUALity plus 33 (same as the
+  # quality string in the Sanger FASTQ format).
+  # Complete Phred Scale
+  #!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+  # Illumina 1.8 Scale (IMPLEMENTED)
+  # 0.2.......................26...31.......41     
+  # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKL
+  # |   |   |   |   |   |   |   |   |   |   | ...
+
   qual_column:
     - match: "[\\!\\#\\$]"
-      scope: grad.bw0
+      scope: gradbw0
     - match: "[%\\&\\'\\(]"
-      scope: grad.bw1
+      scope: gradbw1
     - match: "[\\)\\*\\+\\,]"
-      scope: grad.bw2
+      scope: gradbw2
     - match: "[\\-\\.\\/0]"
-      scope: grad.bw3
+      scope: gradbw3
     - match: "[1-4]"
-      scope: grad.bw4
+      scope: gradbw4
     - match: "[5-8]"
-      scope: grad.bw5
+      scope: gradbw5
     - match: "[9\\:\\;\\<]"
-      scope: grad.bw6
+      scope: gradbw6
     - match: "[\\=\\>\\?\\@]"
-      scope: grad.bw7
+      scope: gradbw7
     - match: "[ABCD]"
-      scope: grad.bw8
+      scope: gradbw8
     - match: "[EFGHIJ]"
-      scope: grad.bw9
+      scope: gradbw9
     - match: "[K-Z\\[\\\\]"
-      scope: grad.bw10
+      scope: gradbw10
     - match: "[\\]\\^\\_\\`a-f]"
-      scope: grad.bw10
+      scope: gradbw10
     - match: "[g-p]"
-      scope: grad.bw10
+      scope: gradbw10
     - match: "[q-z]"
-      scope: grad.bw10
+      scope: gradbw10
     - match: "[\\{\\|\\}\\~]"
-      scope: grad.bw10
+      scope: gradbw10
     - match: \t
       push: data_tag_entry
     - match: $
@@ -372,12 +382,12 @@ contexts:
     - match: "[A-Z]{2}(?=:)"
       scope: string.sam
     - match: "(?<=:)[AifZHB]:"
-      scope: comment.line.sam
+      scope: comment.sam
 
     - match: "(?<=[ifH]:)(.+?(?=\t)|.+$)"
-      scope: constant.numeric.sam
+      scope: numeric.sam
     - match: "(?<=[AZB]:)(.+?(?=\t)|.+$)"
-      scope: storage.type.sam
+      scope: numeric2.sam
 
     - match: "$"
       pop: true

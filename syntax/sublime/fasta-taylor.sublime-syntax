@@ -1,9 +1,12 @@
 %YAML 1.2
 ---
+# Fasta-Taylor syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 name: fasta-taylor
 # See http://www.sublimetext.com/docs/3/syntax.html
 file_extensions: [fastaylor]
-scope: text.fastaylor
+scope: text.fasta-taylor
 
 
 contexts:
@@ -17,100 +20,100 @@ contexts:
     # match amino acids
     # Alanine (ALA)
     - match: "[Aa]"
-      scope: aa.taylor.A
+      scope: taylorA
 
     # Aspartate/Asparagine (ASX)
     - match: "[Bb]"
-      scope: aa.taylor.B
+      scope: taylorB
 
     # Cysteine (CYS)
     - match: "[Cc]"
-      scope: aa.taylor.C
+      scope: taylorC
 
     # Aspartate (ASP)
     - match: "[Dd]"
-      scope: aa.taylor.D
+      scope: taylorD
 
     # Glutamate (GLU)
     - match: "[Ee]"
-      scope: aa.taylor.E
+      scope: taylorE
 
     # Phenylalanine (PHE)
     - match: "[Ff]"
-      scope: aa.taylor.F
+      scope: taylorF
 
     # Glycine (GLY)
     - match: "[Gg]"
-      scope: aa.taylor.G
+      scope: taylorG
 
     # Histidine (HIS)
     - match: "[Hh]"
-      scope: aa.taylor.H
+      scope: taylorH
 
     # Isoleucine (ILE)
     - match: "[Ii]"
-      scope: aa.taylor.I
+      scope: taylorI
 
     # Lysine (LYS)
     - match: "[Kk]"
-      scope: aa.taylor.K
+      scope: taylorK
 
     # Leucine (LEU)
     - match: "[Ll]"
-      scope: aa.taylor.L
+      scope: taylorL
 
     # Methionine (MET)
     - match: "[Mm]"
-      scope: aa.taylor.M
+      scope: taylorM
 
     # Asparagine (ASN)
     - match: "[Nn]"
-      scope: aa.taylor.N
+      scope: taylorN
 
     # Proline (PRO)
     - match: "[Pp]"
-      scope: aa.taylor.P
+      scope: taylorP
 
     # Glutamine (GLN)
     - match: "[Qq]"
-      scope: aa.taylor.Q
+      scope: taylorQ
 
     # Arginine (ARG)
     - match: "[Rr]"
-      scope: aa.taylor.R
+      scope: taylorR
 
     # Serine (SER)
     - match: "[Ss]"
-      scope: aa.taylor.S
+      scope: taylorS
 
     # Threonine (THE)
     - match: "[Tt]"
-      scope: aa.taylor.T
+      scope: taylorT
 
     # Valine (VAL)
     - match: "[Vv]"
-      scope: aa.taylor.V
+      scope: taylorV
 
     # Tryptophan (TRP)
     - match: "[Ww]"
-      scope: aa.taylor.W
+      scope: taylorW
 
     # Tyrosine (TYR)
     - match: "[Yy]"
-      scope: aa.taylor.Y
+      scope: taylorY
 
     # Glutamate or Glutamine (GLX)
     - match: "[Zz]"
-      scope: aa.taylor.Z
+      scope: taylorZ
 
     # any/unknown (X)
     - match: "[Xx]"
-      scope: aa.taylor.X
+      scope: taylorX
 
     # translation stop
     - match: "\\*"
-      scope: comment.line
+      scope: comment
 
     # indel
     - match: "[-]"
-      scope: comment.line
+      scope: comment

@@ -3,19 +3,19 @@
 # autoSyntax.sh
 #
 # Take a tab-seperated file containing
-# <NAME> <SCOPE> <FOREGROUND>
+# <ClassName> <VariableName (SCOPE)> <FONTSTYLE> <BACKGROUND> <FONTST
 # for defining color scheme
 # convert to XML format for .sublime-syntax
 #
 
 # Input TSV File
-INPUT='input_day2_1515.tsv'
+INPUT='input_bioSyntax_v0.1.tsv'
 
 # Template XML File to modify
 TEMPLATE='template2.syntax'
 
 # Output XML File
-OUTPUT='autoSyntax_output.xml'
+OUTPUT='autoSyntax_bioSynatx_v0.1_171130.xml'
 touch $OUTPUT
 
 # Iterate through each line of the input TSV
@@ -26,13 +26,13 @@ while read LINE
 do
 	NAME=$(echo $LINE | cut -f1 -d' ' -)
 
-	SCOPE=$(echo $LINE | cut -f2 -d' ' -)
+	SCOPE=$(echo $LINE | cut -f1 -d' ' -)
 
-	FONTSTYLE=$(echo $LINE | cut -f3 -d' ' -)
+	FONTSTYLE=$(echo $LINE | cut -f2 -d' ' -)
 
-	BACKGROUND=$(echo $LINE | cut -f4 -d' ' -)
+	BACKGROUND=$(echo $LINE | cut -f3 -d' ' -)
 
-	FOREGROUND=$(echo $LINE | cut -f5 -d' ' -)
+	FOREGROUND=$(echo $LINE | cut -f4 -d' ' -)
 
 	#echo $LINE
 	#echo $NAME

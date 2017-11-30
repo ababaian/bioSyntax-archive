@@ -1,9 +1,12 @@
 %YAML 1.2
 ---
+# Bed syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 name: bed
-# YAML for bed files
 file_extensions: [bed]
 scope: source.bed
+
 
 contexts:
   main:
@@ -13,13 +16,13 @@ contexts:
     
     # Column 1: Reference Sequence Name
     - match: '^[\S]*\t'
-      scope: coord.Chr.bed
+      scope: chr.bed
       push: start
   
   # Column 2: Start coordinate
   start:
     - match: ([0-9|\.]+)\b
-      scope: coord.Start.bed
+      scope: chrStart.bed
     - match: \t
       push: end
     - match: $
@@ -28,7 +31,7 @@ contexts:
   # Column 3: End Coordinate
   end:
     - match: ([0-9|\.]+)\b
-      scope: coord.End.bed
+      scope: chrEnd.bed
     - match: \t
       push: name
     - match: $
@@ -46,7 +49,7 @@ contexts:
   # Column 5: Score (0-1000 scale)
   score:
     - match: \.\b
-      scope: comment.line.bed
+      scope: comment.bed
     - match: ([0-9])\b
       scope: grad1.bed  
     - match: ([1-9][0-9])\b
@@ -79,10 +82,10 @@ contexts:
   # Column 6: Feature Strand
   strand:
     - match: \+
-      scope: strand.plus.bed
+      scope: strandPlus.bed
     - match: \-
-      scope: strand.minus.bed
+      scope: strandMinus.bed
     - match: \.
-      scope: strand.none.bed
+      scope: strandNone.bed
     - match: $
       pop: true

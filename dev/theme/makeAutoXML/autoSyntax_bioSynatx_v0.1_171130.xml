@@ -1,77 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>name</key>
-	<string>Monokai</string>
-	<key>settings</key>
-	<array>
-		<dict>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string>#272822</string>
-				<key>caret</key>
-				<string>#F8F8F0</string>
-				<key>foreground</key>
-				<string>#F8F8F2</string>
-				<key>invisibles</key>
-				<string>#3B3A32</string>
-				<key>lineHighlight</key>
-				<string>#3E3D32</string>
-				<key>selection</key>
-				<string>#49483E</string>
-				<key>findHighlight</key>
-				<string>#FFE792</string>
-				<key>findHighlightForeground</key>
-				<string>#000000</string>
-				<key>selectionBorder</key>
-				<string>#222218</string>
-				<key>activeGuide</key>
-				<string>#9D550FB0</string>
-				<key>misspelling</key>
-				<string>#F92672</string>
-				<key>bracketsForeground</key>
-				<string>#F8F8F2A5</string>
-				<key>bracketsOptions</key>
-				<string>underline</string>
-				<key>bracketContentsForeground</key>
-				<string>#F8F8F2A5</string>
-				<key>bracketContentsOptions</key>
-				<string>underline</string>
-				<key>tagsOptions</key>
-				<string>stippled_underline</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>name</key>
-			<string>Comment</string>
-			<key>scope</key>
-			<string>comment</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#75715E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>String</string>
+			<string>string</string>
 			<key>scope</key>
 			<string>string</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
-				<string>#E6DB74</string>
+				<string>#FF4641</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
-			<string>Number</string>
+			<string>quoteString</string>
 			<key>scope</key>
-			<string>constant.numeric</string>
+			<string>quoteString</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FF4641</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>numeric</string>
+			<key>scope</key>
+			<string>numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#0087af</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>numeric2</string>
+			<key>scope</key>
+			<string>numeric2</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
 				<string>#AE81FF</string>
 			</dict>
@@ -79,535 +64,153 @@
 
 		<dict>
 			<key>name</key>
-			<string>Built-in constant</string>
+			<string>comment</string>
 			<key>scope</key>
-			<string>constant.language</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#AE81FF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>User-defined constant</string>
-			<key>scope</key>
-			<string>constant.character, constant.other</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#AE81FF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Variable</string>
-			<key>scope</key>
-			<string>variable</string>
+			<string>comment</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string></string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Keyword</string>
-			<key>scope</key>
-			<string>keyword - (source.c keyword.operator | source.c++ keyword.operator | source.objc keyword.operator | source.objc++ keyword.operator), keyword.operator.word</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F92672</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Annotation Punctuation</string>
-			<key>scope</key>
-			<string>punctuation.definition.annotation</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F92672</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>JavaScript Dollar</string>
-			<key>scope</key>
-			<string>variable.other.dollar.only.js</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F92672</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Storage</string>
-			<key>scope</key>
-			<string>storage</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F92672</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Storage type</string>
-			<key>scope</key>
-			<string>storage.type</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
-				<key>foreground</key>
-				<string>#66D9EF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Entity name</string>
-			<key>scope</key>
-			<string>entity.name - (entity.name.filename | entity.name.section | entity.name.tag | entity.name.label)</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#A6E22E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Inherited class</string>
-			<key>scope</key>
-			<string>entity.other.inherited-class</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic underline</string>
-				<key>foreground</key>
-				<string>#A6E22E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Function argument</string>
-			<key>scope</key>
-			<string>variable.parameter - (source.c | source.c++ | source.objc | source.objc++)</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
-				<key>foreground</key>
-				<string>#FD971F</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Language variable</string>
-			<key>scope</key>
-			<string>variable.language</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
-				<key>foreground</key>
-				<string>#FD971F</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tag name</string>
-			<key>scope</key>
-			<string>entity.name.tag</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F92672</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Tag attribute</string>
-			<key>scope</key>
-			<string>entity.other.attribute-name</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#A6E22E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Function call</string>
-			<key>scope</key>
-			<string>variable.function, variable.annotation</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#66D9EF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Library function</string>
-			<key>scope</key>
-			<string>support.function, support.macro</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#66D9EF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Library constant</string>
-			<key>scope</key>
-			<string>support.constant</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#66D9EF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Library class/type</string>
-			<key>scope</key>
-			<string>support.type, support.class</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
-				<key>foreground</key>
-				<string>#66D9EF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Library variable</string>
-			<key>scope</key>
-			<string>support.other.variable</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Invalid</string>
-			<key>scope</key>
-			<string>invalid</string>
-			<key>settings</key>
-			<dict>
+				<string>Italic</string>
 				<key>background</key>
-				<string>#F92672</string>
-				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#F8F8F0</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Invalid deprecated</string>
-			<key>scope</key>
-			<string>invalid.deprecated</string>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string>#AE81FF</string>
-				<key>foreground</key>
-				<string>#F8F8F0</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>JSON String</string>
-			<key>scope</key>
-			<string>meta.structure.dictionary.json string.quoted.double.json</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#CFCFC2</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>YAML String</string>
-			<key>scope</key>
-			<string>string.unquoted.yaml</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F8F8F2</string>
+				<string>#B1B1AF</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>diff.header</string>
+			<string>comment</string>
 			<key>scope</key>
-			<string>meta.diff, meta.diff.header</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#75715E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup headings</string>
-			<key>scope</key>
-			<string>markup.heading</string>
+			<string>comment</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string>bold</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup headings</string>
-			<key>scope</key>
-			<string>markup.heading punctuation.definition.heading</string>
-			<key>settings</key>
-			<dict>
+				<string>Italic</string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
-				<string>#FD971F</string>
+				<string>#B1B1AF</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
-			<string>markup h1</string>
+			<string>url</string>
 			<key>scope</key>
-			<string>markup.heading.1 punctuation.definition.heading</string>
+			<string>url</string>
 			<key>settings</key>
 			<dict>
-				<key>foreground</key>
-				<string>#F92672</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup links</string>
-			<key>scope</key>
-			<string>markup.underline.link</string>
-			<key>settings</key>
-			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
 				<string>#66D9EF</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
-			<string>markup bold</string>
+			<string>keyword</string>
 			<key>scope</key>
-			<string>markup.bold</string>
+			<string>keyword</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string>bold</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup italic</string>
-			<key>scope</key>
-			<string>markup.italic</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup bold/italic</string>
-			<key>scope</key>
-			<string>markup.italic markup.bold | markup.bold markup.italic</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold italic</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup hr</string>
-			<key>scope</key>
-			<string>punctuation.definition.thematic-break</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#75715E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup blockquote</string>
-			<key>scope</key>
-			<string>markup.quote punctuation.definition.blockquote</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#75715E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup bullets</string>
-			<key>scope</key>
-			<string>markup.list.numbered.bullet</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#AE81FF</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup bullets</string>
-			<key>scope</key>
-			<string>markup.list.unnumbered.bullet | (markup.list.numbered punctuation.definition)</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F8F8F8AA</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup code</string>
-			<key>scope</key>
-			<string>markup.raw</string>
-			<key>settings</key>
-			<dict>
+				<string></string>
 				<key>background</key>
-				<string>#F8F8F818</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup punctuation</string>
-			<key>scope</key>
-			<string>markup.raw punctuation.definition.raw</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F8F8F8AA</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>markup punctuation</string>
-			<key>scope</key>
-			<string>text &amp; (punctuation.definition.italic | punctuation.definition.bold | punctuation.definition.raw | punctuation.definition.link | punctuation.definition.metadata | punctuation.definition.image | punctuation.separator.table-cell | punctuation.section.table-header | punctuation.definition.constant)</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F8F8F8AA</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>diff.deleted</string>
-			<key>scope</key>
-			<string>markup.deleted</string>
-			<key>settings</key>
-			<dict>
+				<string></string>
 				<key>foreground</key>
 				<string>#F92672</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
-			<string>diff.inserted</string>
+			<string>keyword2</string>
 			<key>scope</key>
-			<string>markup.inserted</string>
+			<string>keyword2</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
-			<string>diff.changed</string>
+			<string>keyword3</string>
 			<key>scope</key>
-			<string>markup.changed</string>
+			<string>keyword3</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
-				<string>#E6DB74</string>
+				<string>#66D9EF</string>
 			</dict>
 		</dict>
+
 		<dict>
+			<key>name</key>
+			<string>keyword4</string>
 			<key>scope</key>
-			<string>constant.numeric.line-number.find-in-files - match</string>
+			<string>keyword4</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
-				<string>#AE81FFA0</string>
+				<string>#FD971F</string>
 			</dict>
 		</dict>
+
 		<dict>
+			<key>name</key>
+			<string>keyword5</string>
 			<key>scope</key>
-			<string>entity.name.filename</string>
+			<string>keyword5</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AE81FF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>keyword6</string>
+			<key>scope</key>
+			<string>keyword6</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
 				<key>foreground</key>
 				<string>#E6DB74</string>
 			</dict>
 		</dict>
 
 		<dict>
-			<key>scope</key>
-			<string>message.error</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#F83333</string>
-			</dict>
-		</dict>
-		<dict>
 			<key>name</key>
-			<string>Number</string>
+			<string>header</string>
 			<key>scope</key>
-			<string>variable.number</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#0099ff</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Header</string>
-			<key>scope</key>
-			<string>header.id</string>
+			<string>header</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -621,137 +224,25 @@
 
 		<dict>
 			<key>name</key>
-			<string>Name</string>
+			<string>headerbw</string>
 			<key>scope</key>
-			<string>name.id</string>
+			<string>headerbw</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#47453E</string>
 				<key>foreground</key>
-				<string>#ff0000</string>
+				<string>#BDB691</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Nucleotide</string>
+			<string>genome</string>
 			<key>scope</key>
-			<string>nt.A</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string>#64f73f</string>
-				<key>foreground</key>
-				<string>#000000</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.T</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string>#eb413c</string>
-				<key>foreground</key>
-				<string>#000000</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.G</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string>#ffb340</string>
-				<key>foreground</key>
-				<string>#000000</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.C</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string>#3c88ee</string>
-				<key>foreground</key>
-				<string>#000000</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.N</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F8F8F0</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.X</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F8F8F0</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Nucleotide</string>
-			<key>scope</key>
-			<string>nt.INDEL</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#75715E</string>
-			</dict>
-		</dict>
-
-		<dict>
-			<key>name</key>
-			<string>Coordinate</string>
-			<key>scope</key>
-			<string>coord.Chr</string>
+			<string>genome</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -759,15 +250,31 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#1e8449</string>
+				<string>#1E8449</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Coordinate</string>
+			<string>chr</string>
 			<key>scope</key>
-			<string>coord.Start</string>
+			<string>chr</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#1E8449</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>chrStart</string>
+			<key>scope</key>
+			<string>chrStart</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -775,15 +282,15 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#1e8449</string>
+				<string>#1E8449</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Coordinate</string>
+			<string>chrEnd</string>
 			<key>scope</key>
-			<string>coord.End</string>
+			<string>chrEnd</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -791,15 +298,47 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#1e8449</string>
+				<string>#1E8449</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Strand</string>
+			<string>strandPlus</string>
 			<key>scope</key>
-			<string>strand.plus</string>
+			<string>strandPlus</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#4192FF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>strandMinus</string>
+			<key>scope</key>
+			<string>strandMinus</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#F09000</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>strandNone</string>
+			<key>scope</key>
+			<string>strandNone</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -807,21 +346,85 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#F92672</string>
+				<string>#B1B1AF</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Strand</string>
+			<string>geneSymbol</string>
 			<key>scope</key>
-			<string>strand.minus</string>
+			<string>geneSymbol</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>Italic</string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#1E8449</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>geneLevel</string>
+			<key>scope</key>
+			<string>geneLevel</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#1E8449</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>transcriptLevel</string>
+			<key>scope</key>
+			<string>transcriptLevel</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
 				<string></string>
+				<key>foreground</key>
+				<string>#4192FF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>exonLevel</string>
+			<key>scope</key>
+			<string>exonLevel</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AE81FF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>cds</string>
+			<key>scope</key>
+			<string>cds</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#000000</string>
 				<key>foreground</key>
 				<string>#A6E22E</string>
 			</dict>
@@ -829,9 +432,105 @@
 
 		<dict>
 			<key>name</key>
-			<string>Strand</string>
+			<string>start_codon</string>
 			<key>scope</key>
-			<string>strand.none</string>
+			<string>start_codon</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#4192FF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>stop_codon</string>
+			<key>scope</key>
+			<string>stop_codon</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#FF4641</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>utr</string>
+			<key>scope</key>
+			<string>utr</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#FFFFFF</string>
+				<key>foreground</key>
+				<string>#B1B1AF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>software</string>
+			<key>scope</key>
+			<string>software</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>Italic</string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FD971F</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>version</string>
+			<key>scope</key>
+			<string>version</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AE81FF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>command</string>
+			<key>scope</key>
+			<string>command</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FD971F</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>library</string>
+			<key>scope</key>
+			<string>library</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -845,7 +544,151 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient0</string>
+			<string>platform</string>
+			<key>scope</key>
+			<string>platform</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F92672</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>bon</string>
+			<key>scope</key>
+			<string>bon</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#4192FF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>mal</string>
+			<key>scope</key>
+			<string>mal</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string>#FF4641</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>cigMat</string>
+			<key>scope</key>
+			<string>cigMat</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#D8D8D7</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>cigMis</string>
+			<key>scope</key>
+			<string>cigMis</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FF4641</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>cigIns</string>
+			<key>scope</key>
+			<string>cigIns</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#4192FF</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>cigDel</string>
+			<key>scope</key>
+			<string>cigDel</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F09000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>cigN</string>
+			<key>scope</key>
+			<string>cigN</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>Italic</string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#4F504B</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>cigClip</string>
+			<key>scope</key>
+			<string>cigClip</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>Italic</string>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#4F504B</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>grad0</string>
 			<key>scope</key>
 			<string>grad0</string>
 			<key>settings</key>
@@ -861,7 +704,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient1</string>
+			<string>grad1</string>
 			<key>scope</key>
 			<string>grad1</string>
 			<key>settings</key>
@@ -877,7 +720,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient2</string>
+			<string>grad2</string>
 			<key>scope</key>
 			<string>grad2</string>
 			<key>settings</key>
@@ -893,7 +736,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient3</string>
+			<string>grad3</string>
 			<key>scope</key>
 			<string>grad3</string>
 			<key>settings</key>
@@ -909,7 +752,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient4</string>
+			<string>grad4</string>
 			<key>scope</key>
 			<string>grad4</string>
 			<key>settings</key>
@@ -925,7 +768,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient5</string>
+			<string>grad5</string>
 			<key>scope</key>
 			<string>grad5</string>
 			<key>settings</key>
@@ -941,7 +784,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient6</string>
+			<string>grad6</string>
 			<key>scope</key>
 			<string>grad6</string>
 			<key>settings</key>
@@ -957,7 +800,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient7</string>
+			<string>grad7</string>
 			<key>scope</key>
 			<string>grad7</string>
 			<key>settings</key>
@@ -973,7 +816,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient8</string>
+			<string>grad8</string>
 			<key>scope</key>
 			<string>grad8</string>
 			<key>settings</key>
@@ -989,7 +832,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient9</string>
+			<string>grad9</string>
 			<key>scope</key>
 			<string>grad9</string>
 			<key>settings</key>
@@ -1005,7 +848,7 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient10</string>
+			<string>grad10</string>
 			<key>scope</key>
 			<string>grad10</string>
 			<key>settings</key>
@@ -1015,15 +858,15 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#ff00eb</string>
+				<string>#FF00EB</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw0</string>
+			<string>gradbw0</string>
 			<key>scope</key>
-			<string>grad.bw0</string>
+			<string>gradbw0</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1031,15 +874,15 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#3c3d38</string>
+				<string>#3C3D38</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw1</string>
+			<string>gradbw1</string>
 			<key>scope</key>
-			<string>grad.bw1</string>
+			<string>gradbw1</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1047,15 +890,15 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#4f504b</string>
+				<string>#4F504B</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw2</string>
+			<string>gradbw2</string>
 			<key>scope</key>
-			<string>grad.bw2</string>
+			<string>gradbw2</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1069,9 +912,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw3</string>
+			<string>gradbw3</string>
 			<key>scope</key>
-			<string>grad.bw3</string>
+			<string>gradbw3</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1085,9 +928,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw4</string>
+			<string>gradbw4</string>
 			<key>scope</key>
-			<string>grad.bw4</string>
+			<string>gradbw4</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1101,9 +944,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw5</string>
+			<string>gradbw5</string>
 			<key>scope</key>
-			<string>grad.bw5</string>
+			<string>gradbw5</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1117,9 +960,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw6</string>
+			<string>gradbw6</string>
 			<key>scope</key>
-			<string>grad.bw6</string>
+			<string>gradbw6</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1133,9 +976,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw7</string>
+			<string>gradbw7</string>
 			<key>scope</key>
-			<string>grad.bw7</string>
+			<string>gradbw7</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1149,9 +992,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw8</string>
+			<string>gradbw8</string>
 			<key>scope</key>
-			<string>grad.bw8</string>
+			<string>gradbw8</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1165,9 +1008,9 @@
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw9</string>
+			<string>gradbw9</string>
 			<key>scope</key>
-			<string>grad.bw9</string>
+			<string>gradbw9</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1175,15 +1018,15 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#EbEbEb</string>
+				<string>#EBEBEB</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>gradient.bw10</string>
+			<string>gradbw10</string>
 			<key>scope</key>
-			<string>grad.bw10</string>
+			<string>gradbw10</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1197,297 +1040,297 @@
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>gradbbw9</string>
 			<key>scope</key>
-			<string>aa.clustal.A</string>
+			<string>gradbbw9</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string></string>
+				<string>bold</string>
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#80a0f0</string>
+				<string>#EBEBEB</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>gradbbw10</string>
 			<key>scope</key>
-			<string>aa.clustal.R</string>
+			<string>gradbbw10</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string></string>
+				<string>bold</string>
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#f01505</string>
+				<string>#FFFFFF</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntA</string>
 			<key>scope</key>
-			<string>aa.clustal.N</string>
+			<string>ntA</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#47FF19</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntT</string>
 			<key>scope</key>
-			<string>aa.clustal.D</string>
+			<string>ntT</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#4192FF</string>
 				<key>foreground</key>
-				<string>#c048c0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntG</string>
 			<key>scope</key>
-			<string>aa.clustal.C</string>
+			<string>ntG</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#F09000</string>
 				<key>foreground</key>
-				<string>#f08080</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntC</string>
 			<key>scope</key>
-			<string>aa.clustal.Q</string>
+			<string>ntC</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF4641</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntU</string>
 			<key>scope</key>
-			<string>aa.clustal.E</string>
+			<string>ntU</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#8A89FF</string>
 				<key>foreground</key>
-				<string>#c048c0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntR</string>
 			<key>scope</key>
-			<string>aa.clustal.G</string>
+			<string>ntR</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFE80</string>
 				<key>foreground</key>
-				<string>#f09048</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntY</string>
 			<key>scope</key>
-			<string>aa.clustal.H</string>
+			<string>ntY</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#E180FF</string>
 				<key>foreground</key>
-				<string>#15a4a4</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntS</string>
 			<key>scope</key>
-			<string>aa.clustal.I</string>
+			<string>ntS</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF9B80</string>
 				<key>foreground</key>
-				<string>#80a0f0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntW</string>
 			<key>scope</key>
-			<string>aa.clustal.L</string>
+			<string>ntW</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80FFF2</string>
 				<key>foreground</key>
-				<string>#80a0f0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntM</string>
 			<key>scope</key>
-			<string>aa.clustal.K</string>
+			<string>ntM</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#CE8834</string>
 				<key>foreground</key>
-				<string>#f01505</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntK</string>
 			<key>scope</key>
-			<string>aa.clustal.M</string>
+			<string>ntK</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#90B82C</string>
 				<key>foreground</key>
-				<string>#80a0f0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntD</string>
 			<key>scope</key>
-			<string>aa.clustal.F</string>
+			<string>ntD</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#C7FFB9</string>
 				<key>foreground</key>
-				<string>#80a0f0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntB</string>
 			<key>scope</key>
-			<string>aa.clustal.P</string>
+			<string>ntB</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#F8C1C0</string>
 				<key>foreground</key>
-				<string>#ffff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntV</string>
 			<key>scope</key>
-			<string>aa.clustal.S</string>
+			<string>ntV</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFE3B9</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntH</string>
 			<key>scope</key>
-			<string>aa.clustal.T</string>
+			<string>ntH</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#BFD8F9</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntN</string>
 			<key>scope</key>
-			<string>aa.clustal.W</string>
+			<string>ntN</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#80a0f0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntX</string>
 			<key>scope</key>
-			<string>aa.clustal.Y</string>
+			<string>ntX</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1495,15 +1338,15 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#15a4a4</string>
+				<string>#E6E6E6</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>ntGap</string>
 			<key>scope</key>
-			<string>aa.clustal.V</string>
+			<string>ntGap</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1511,1159 +1354,1479 @@
 				<key>background</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#80a0f0</string>
+				<string>#E6E6E6</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaA</string>
 			<key>scope</key>
-			<string>aa.clustal.B</string>
+			<string>aaA</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80A0F0</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaR</string>
 			<key>scope</key>
-			<string>aa.clustal.X</string>
+			<string>aaR</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#F01505</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaN</string>
 			<key>scope</key>
-			<string>aa.clustal.Z</string>
+			<string>aaN</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaD</string>
 			<key>scope</key>
-			<string>aa.zappo.A</string>
+			<string>aaD</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#C048C0</string>
 				<key>foreground</key>
-				<string>#ffafaf</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaC</string>
 			<key>scope</key>
-			<string>aa.zappo.R</string>
+			<string>aaC</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#F08080</string>
 				<key>foreground</key>
-				<string>#6464ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaQ</string>
 			<key>scope</key>
-			<string>aa.zappo.N</string>
+			<string>aaQ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaE</string>
 			<key>scope</key>
-			<string>aa.zappo.D</string>
+			<string>aaE</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#C048C0</string>
 				<key>foreground</key>
-				<string>#ff0000</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaG</string>
 			<key>scope</key>
-			<string>aa.zappo.C</string>
+			<string>aaG</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#F09048</string>
 				<key>foreground</key>
-				<string>#ffff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaH</string>
 			<key>scope</key>
-			<string>aa.zappo.Q</string>
+			<string>aaH</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#15A4A4</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaI</string>
 			<key>scope</key>
-			<string>aa.zappo.E</string>
+			<string>aaI</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80A0F0</string>
 				<key>foreground</key>
-				<string>#ff0000</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaL</string>
 			<key>scope</key>
-			<string>aa.zappo.G</string>
+			<string>aaL</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80A0F0</string>
 				<key>foreground</key>
-				<string>#ff00ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaK</string>
 			<key>scope</key>
-			<string>aa.zappo.H</string>
+			<string>aaK</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#F01505</string>
 				<key>foreground</key>
-				<string>#6464ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaM</string>
 			<key>scope</key>
-			<string>aa.zappo.I</string>
+			<string>aaM</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80A0F0</string>
 				<key>foreground</key>
-				<string>#ffafaf</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaF</string>
 			<key>scope</key>
-			<string>aa.zappo.L</string>
+			<string>aaF</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80A0F0</string>
 				<key>foreground</key>
-				<string>#ffafaf</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaP</string>
 			<key>scope</key>
-			<string>aa.zappo.K</string>
+			<string>aaP</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFF00</string>
 				<key>foreground</key>
-				<string>#6464ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaS</string>
 			<key>scope</key>
-			<string>aa.zappo.M</string>
+			<string>aaS</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#ffafaf</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaT</string>
 			<key>scope</key>
-			<string>aa.zappo.F</string>
+			<string>aaT</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#ffc800</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaW</string>
 			<key>scope</key>
-			<string>aa.zappo.P</string>
+			<string>aaW</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80A0F0</string>
 				<key>foreground</key>
-				<string>#ff00ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaY</string>
 			<key>scope</key>
-			<string>aa.zappo.S</string>
+			<string>aaY</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#15A4A4</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaV</string>
 			<key>scope</key>
-			<string>aa.zappo.T</string>
+			<string>aaV</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#80A0F0</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaB</string>
 			<key>scope</key>
-			<string>aa.zappo.W</string>
+			<string>aaB</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#ffc800</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaX</string>
 			<key>scope</key>
-			<string>aa.zappo.Y</string>
+			<string>aaX</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#ffc800</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>aaZ</string>
 			<key>scope</key>
-			<string>aa.zappo.V</string>
+			<string>aaZ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#ffafaf</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoA</string>
 			<key>scope</key>
-			<string>aa.zappo.B</string>
+			<string>zappoA</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFAFAF</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoR</string>
 			<key>scope</key>
-			<string>aa.zaapo.X</string>
+			<string>zappoR</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#6464FF</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoN</string>
 			<key>scope</key>
-			<string>aa.zappo.Z</string>
+			<string>zappoN</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoD</string>
 			<key>scope</key>
-			<string>aa.taylor.A</string>
+			<string>zappoD</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF0000</string>
 				<key>foreground</key>
-				<string>#ccff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoC</string>
 			<key>scope</key>
-			<string>aa.taylor.R</string>
+			<string>zappoC</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFF00</string>
 				<key>foreground</key>
-				<string>#0000ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoQ</string>
 			<key>scope</key>
-			<string>aa.taylor.N</string>
+			<string>zappoQ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#cc00ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoE</string>
 			<key>scope</key>
-			<string>aa.taylor.D</string>
+			<string>zappoE</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF0000</string>
 				<key>foreground</key>
-				<string>#ff0000</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoG</string>
 			<key>scope</key>
-			<string>aa.taylor.C</string>
+			<string>zappoG</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF00FF</string>
 				<key>foreground</key>
-				<string>#ffff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoH</string>
 			<key>scope</key>
-			<string>aa.taylor.Q</string>
+			<string>zappoH</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#6464FF</string>
 				<key>foreground</key>
-				<string>#ff00cc</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoI</string>
 			<key>scope</key>
-			<string>aa.taylor.E</string>
+			<string>zappoI</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFAFAF</string>
 				<key>foreground</key>
-				<string>#ff0066</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoL</string>
 			<key>scope</key>
-			<string>aa.taylor.G</string>
+			<string>zappoL</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFAFAF</string>
 				<key>foreground</key>
-				<string>#ff9900</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoK</string>
 			<key>scope</key>
-			<string>aa.taylor.H</string>
+			<string>zappoK</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#6464FF</string>
 				<key>foreground</key>
-				<string>#0066ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoM</string>
 			<key>scope</key>
-			<string>aa.taylor.I</string>
+			<string>zappoM</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFAFAF</string>
 				<key>foreground</key>
-				<string>#66ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoF</string>
 			<key>scope</key>
-			<string>aa.taylor.L</string>
+			<string>zappoF</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFC800</string>
 				<key>foreground</key>
-				<string>#33ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoP</string>
 			<key>scope</key>
-			<string>aa.taylor.K</string>
+			<string>zappoP</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF00FF</string>
 				<key>foreground</key>
-				<string>#6600ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoS</string>
 			<key>scope</key>
-			<string>aa.taylor.M</string>
+			<string>zappoS</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#00ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoT</string>
 			<key>scope</key>
-			<string>aa.taylor.F</string>
+			<string>zappoT</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#00FF00</string>
 				<key>foreground</key>
-				<string>#00ff66</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoW</string>
 			<key>scope</key>
-			<string>aa.taylor.P</string>
+			<string>zappoW</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFC800</string>
 				<key>foreground</key>
-				<string>#ffcc00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoY</string>
 			<key>scope</key>
-			<string>aa.taylor.S</string>
+			<string>zappoY</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFC800</string>
 				<key>foreground</key>
-				<string>#ff3300</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoV</string>
 			<key>scope</key>
-			<string>aa.taylor.T</string>
+			<string>zappoV</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFAFAF</string>
 				<key>foreground</key>
-				<string>#ff6600</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoB</string>
 			<key>scope</key>
-			<string>aa.taylor.W</string>
+			<string>zappoB</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#00ccff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoX</string>
 			<key>scope</key>
-			<string>aa.taylor.Y</string>
+			<string>zappoX</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#00ffcc</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>zappoZ</string>
 			<key>scope</key>
-			<string>aa.taylor.V</string>
+			<string>zappoZ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#99ff00</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorA</string>
 			<key>scope</key>
-			<string>aa.taylor.B</string>
+			<string>taylorA</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#CCFF00</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorR</string>
 			<key>scope</key>
-			<string>aa.taylor.X</string>
+			<string>taylorR</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#0000FF</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorN</string>
 			<key>scope</key>
-			<string>aa.taylor.Z</string>
+			<string>taylorN</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#CC00FF</string>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorD</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.A</string>
+			<string>taylorD</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF0000</string>
 				<key>foreground</key>
-				<string>#ad0052</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorC</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.R</string>
+			<string>taylorC</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FFFF00</string>
 				<key>foreground</key>
-				<string>#0000ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorQ</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.N</string>
+			<string>taylorQ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#FF00CC</string>
 				<key>foreground</key>
-				<string>#0c00f3</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorE</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.D</string>
+			<string>taylorE</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#FF0066</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorG</string>
+			<key>scope</key>
+			<string>taylorG</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#FF9900</string>
 				<key>foreground</key>
-				<string>#0c00f3</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorH</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.C</string>
+			<string>taylorH</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#0066FF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorI</string>
+			<key>scope</key>
+			<string>taylorI</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#66FF00</string>
 				<key>foreground</key>
-				<string>#c2003d</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorL</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.Q</string>
+			<string>taylorL</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#33FF00</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorK</string>
+			<key>scope</key>
+			<string>taylorK</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#6600FF</string>
 				<key>foreground</key>
-				<string>#0c00f3</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorM</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.E</string>
+			<string>taylorM</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#00FF00</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorF</string>
+			<key>scope</key>
+			<string>taylorF</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#00FF66</string>
 				<key>foreground</key>
-				<string>#0c00f3</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorP</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.G</string>
+			<string>taylorP</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#FFCC00</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorS</string>
+			<key>scope</key>
+			<string>taylorS</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#FF3300</string>
 				<key>foreground</key>
-				<string>#6a0095</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorT</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.H</string>
+			<string>taylorT</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#FF6600</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorW</string>
+			<key>scope</key>
+			<string>taylorW</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#00CCFF</string>
 				<key>foreground</key>
-				<string>#1500ea</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorY</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.I</string>
+			<string>taylorY</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#00FFCC</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorV</string>
+			<key>scope</key>
+			<string>taylorV</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#99FF00</string>
 				<key>foreground</key>
-				<string>#ff0000</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorB</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.L</string>
+			<string>taylorB</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#FFFFFF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>taylorX</string>
+			<key>scope</key>
+			<string>taylorX</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#FFFFFF</string>
 				<key>foreground</key>
-				<string>#ea0015</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>taylorZ</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.K</string>
+			<string>taylorZ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#FFFFFF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroA</string>
+			<key>scope</key>
+			<string>hydroA</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#AD0052</string>
 				<key>foreground</key>
-				<string>#0000ff</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroR</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.M</string>
+			<string>hydroR</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#0000FF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroN</string>
+			<key>scope</key>
+			<string>hydroN</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#0C00F3</string>
 				<key>foreground</key>
-				<string>#b0004f</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroD</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.F</string>
+			<string>hydroD</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#0C00F3</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroC</string>
+			<key>scope</key>
+			<string>hydroC</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#C2003D</string>
 				<key>foreground</key>
-				<string>#cb0034</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroQ</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.P</string>
+			<string>hydroQ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#0C00F3</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroE</string>
+			<key>scope</key>
+			<string>hydroE</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#0C00F3</string>
 				<key>foreground</key>
-				<string>#4600b9</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroG</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.S</string>
+			<string>hydroG</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#6A0095</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroH</string>
+			<key>scope</key>
+			<string>hydroH</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#1500EA</string>
 				<key>foreground</key>
-				<string>#5e00a1</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroI</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.T</string>
+			<string>hydroI</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#FF0000</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroL</string>
+			<key>scope</key>
+			<string>hydroL</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#EA0015</string>
 				<key>foreground</key>
-				<string>#61009e</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroK</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.W</string>
+			<string>hydroK</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#0000FF</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroM</string>
+			<key>scope</key>
+			<string>hydroM</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#B0004F</string>
 				<key>foreground</key>
-				<string>#5b00a4</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroF</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.Y</string>
+			<string>hydroF</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#CB0034</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroP</string>
+			<key>scope</key>
+			<string>hydroP</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#4600B9</string>
 				<key>foreground</key>
-				<string>#4f00b0</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroS</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.V</string>
+			<string>hydroS</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#5E00A1</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroT</string>
+			<key>scope</key>
+			<string>hydroT</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#61009E</string>
 				<key>foreground</key>
-				<string>#f60009</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroW</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.B</string>
+			<string>hydroW</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#5B00A4</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroY</string>
+			<key>scope</key>
+			<string>hydroY</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#4F00B0</string>
 				<key>foreground</key>
-				<string>#0c00f3</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroV</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.X</string>
+			<string>hydroV</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
+				<string>#F60009</string>
+				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroB</string>
+			<key>scope</key>
+			<string>hydroB</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
 				<string></string>
+				<key>background</key>
+				<string>#0C00F3</string>
 				<key>foreground</key>
+				<string>#000000</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key>
+			<string>hydroX</string>
+			<key>scope</key>
+			<string>hydroX</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>background</key>
 				<string>#680097</string>
+				<key>foreground</key>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
 		<dict>
 			<key>name</key>
-			<string>Aminoacid</string>
+			<string>hydroZ</string>
 			<key>scope</key>
-			<string>aa.hydrophobicity.Z</string>
+			<string>hydroZ</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>background</key>
-				<string></string>
+				<string>#0C00F3</string>
 				<key>foreground</key>
-				<string>#0c00f3</string>
+				<string>#000000</string>
 			</dict>
 		</dict>
 
@@ -2683,6 +2846,3 @@
 			</dict>
 		</dict>
 
-	</array>
-</dict>
-</plist>

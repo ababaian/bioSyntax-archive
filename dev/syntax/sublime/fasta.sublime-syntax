@@ -1,5 +1,8 @@
 %YAML 1.2
 ---
+# Fasta syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 name: fasta
 # See http://www.sublimetext.com/docs/3/syntax.html
 file_extensions: [fasta, fa, mfa, fas]
@@ -10,84 +13,84 @@ contexts:
   main:
     # match identifiers
     - match: "^>.*$"
-      scope: header.id
+      scope: header
       push: id
 
     # match amino acids (have equivalents in nucleotides so need to differentiate them)
     - match: "^[Aa](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))"
-      scope: aa.clustal.A
+      scope: aaA
       push: aa
     - match: "^[Gg](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))"
-      scope: aa.clustal.G
+      scope: aaG
       push: aa
     - match: "^[Cc](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))"
-      scope: aa.clustal.C
+      scope: aaC
       push: aa
     - match: "^[Tt](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))"
-      scope: aa.clustal.T
+      scope: aaT
       push: aa
     - match: "^[Nn](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))"
-      scope: aa.clustal.N
+      scope: aaN
       push: aa
     - match: "^[Xx](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))"
-      scope: aa.clustal.X
+      scope: aaX
       push: aa
     - match: "^[Bb]"
-      scope: aa.clustal.B
+      scope: aaB
       push: aa
     - match: "^[Dd]"
-      scope: aa.clustal.D
+      scope: aaD
       push: aa
     - match: "^[Ee]"
-      scope: aa.clustal.E
+      scope: aaE
       push: aa
     - match: "^[Ff]"
-      scope: aa.clustal.F
+      scope: aaF
       push: aa
     - match: "^[Hh]"
-      scope: aa.clustal.H
+      scope: aaH
       push: aa
     - match: "^[Ii]"
-      scope: aa.clustal.I
+      scope: aaI
       push: aa
     - match: "^[Kk]"
-      scope: aa.clustal.K
+      scope: aaK
       push: aa
     - match: "^[Ll]"
-      scope: aa.clustal.L
+      scope: aaL
       push: aa
     - match: "^[Mm]"
-      scope: aa.clustal.M
+      scope: aaM
       push: aa
     - match: "^[Pp]"
-      scope: aa.clustal.P
+      scope: aaP
       push: aa
     - match: "^[Qq]"
-      scope: aa.clustal.Q
+      scope: aaQ
       push: aa
     - match: "^[Rr]"
-      scope: aa.clustal.R
+      scope: aaR
       push: aa
     - match: "^[Ss]"
-      scope: aa.clustal.S
+      scope: aaS
       push: aa
     - match: "^[Vv]"
-      scope: aa.clustal.V
+      scope: aaV
       push: aa
     - match: "^[Ww]"
-      scope: aa.clustal.W
+      scope: aaW
       push: aa
     - match: "^[Yy]"
-      scope: aa.clustal.Y
+      scope: aaY
       push: aa
     - match: "^[Zz]"
-      scope: aa.clustal.Z
+      scope: aaZ
       push: aa
     - match: "^\\*"
-      scope: comment.line
+      scope: comment
       push: aa
     - match: "-"
-      scope: comment.line
+      scope: comment
       push: aa
     # pushes any lines with only amino acids to aa
     - match: "^[^>\\s][^AaGgCcTtUuNnXx-].*$"
@@ -96,25 +99,25 @@ contexts:
 
     # match nucleotides (have equivalents in amino acids so need to differentiate them)
     - match: "^[Aa](?=[AaGgCcTtUuNnXx-])"
-      scope: nt.A
+      scope: ntA
       push: nt
     - match: "^[Gg](?=[AaGgCcTtUuNnXx-])"
-      scope: nt.G
+      scope: ntG
       push: nt
     - match: "^[Cc](?=[AaGgCcTtUuNnXx-])"
-      scope: nt.C
+      scope: ntC
       push: nt
     - match: "^[TtUu](?=[AaGgCcTtUuNnXx-])"
-      scope: nt.T
+      scope: ntT
       push: nt
     - match: "^[Gg](?=[AaGgCcTtUuNnXx-])"
-      scope: nt.G
+      scope: ntG
       push: nt
     - match: "^[NnXx](?=[AaGgCcTtUuNnXx-])"
-      scope: constant
+      scope: ntN
       push: nt
     - match: "-(?=[AaGgCcTtUuNnXx-])"
-      scope: comment.line
+      scope: comment
       push: nt
     # pushes any lines with only nucleotides to nt
     - match: "^[AaGgTtCcUuNnXx-]$"
@@ -133,22 +136,22 @@ contexts:
   nt:
   # match Adenosine
     - match: "[Aa]"
-      scope: nt.A
+      scope: ntA
   # match Cytidine
     - match: "[Cc]"
-      scope: nt.C
+      scope: ntC
   # match Guanine
     - match: "[Gg]"
-      scope: nt.G
+      scope: ntG
   # match Thymidine/Uridine
     - match: "[TtUu]"
-      scope: nt.T
+      scope: ntT
   # aNy or unknown (X)
     - match: "[NnXx]"
-      scope: variable
+      scope: ntN
   # indel
     - match: "-"
-      scope: variable
+      scope: ntGap
   # endline
     - match: $
       scope: constant.character.escape
@@ -157,79 +160,79 @@ contexts:
   aa:
   # Alanine (ALA)
     - match: "[Aa]"
-      scope: aa.clustal.A
+      scope: aaA
   # Aspartate/Asparagine (ASX)
     - match: "[Bb]"
-      scope: aa.clustal.B
+      scope: aaB
   # Cysteine (CYS)
     - match: "[Cc]"
-      scope: aa.clustal.C
+      scope: aaC
   # Aspartate (ASP)
     - match: "[Dd]"
-      scope: aa.clustal.D
+      scope: aaD
   # Glutamate (GLU)
     - match: "[Ee]"
-      scope: aa.clustal.E
+      scope: aaE
   # Phenylalanine (PHE)
     - match: "[Ff]"
-      scope: aa.clustal.F
+      scope: aaF
    # Glycine (GLY)
     - match: "[Gg]"
-      scope: aa.clustal.G
+      scope: aaG
   # Histidine (HIS)
     - match: "[Hh]"
-      scope: aa.clustal.H
+      scope: aaH
   # Isoleucine (ILE)
     - match: "[Ii]"
-      scope: aa.clustal.I
+      scope: aaI
   # Lysine (LYS)
     - match: "[Kk]"
-      scope: aa.clustal.K
+      scope: aaK
   # Leucine (LEU)
     - match: "[Ll]"
-      scope: aa.clustal.L
+      scope: aaL
   # Methionine (MET)
     - match: "[Mm]"
-      scope: aa.clustal.M
+      scope: aaM
   # Asparagine (ASN)
     - match: "[Nn]"
-      scope: aa.clustal.N
+      scope: aaN
   # Proline (PRO)
     - match: "[Pp]"
-      scope: aa.clustal.P
+      scope: aaP
   # Glutamine (GLN)
     - match: "[Qq]"
-      scope: aa.clustal.Q
+      scope: aaQ
   # Arginine (ARG)
     - match: "[Rr]"
-      scope: aa.clustal.R
+      scope: aaR
   # Serine (SER)
     - match: "[Ss]"
-      scope: aa.clustal.S
+      scope: aaS
   # Threonine (THE)
     - match: "[Tt]"
-      scope: aa.clustal.T
+      scope: aaT
   # Valine (VAL)
     - match: "[Vv]"
-      scope: aa.clustal.V
+      scope: aaV
   # Tryptophan (TRP)
     - match: "[Ww]"
-      scope: aa.clustal.W
+      scope: aaW
   # Tyrosine (TYR)
     - match: "[Yy]"
-      scope: aa.clustal.Y
+      scope: aaY
   # Any amino acid
     - match: "[Xx]"
-      scope: aa.clustal.X
+      scope: aaX
   # Glutamate or Glutamine (GLX)
     - match: "[Zz]"
-      scope: aa.clustal.Z
+      scope: aaZ
   # translation stop
     - match: "\\*"
-      scope: comment.line
+      scope: comment
   # gap of indeterminate length
     - match: "-"
-      scope: comment.line
+      scope: comment
   # endline
     - match: $
       scope: constant.character.escape

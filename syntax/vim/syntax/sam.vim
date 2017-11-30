@@ -159,13 +159,13 @@ highlight link flag numeric2
 highlight link rname chr
 highlight link pos chrStart
 
-highlight link mapq00 grad00
-highlight link mapq0 grad0
-highlight link mapq1 grad2
-highlight link mapq2 grad4
-highlight link mapq3 grad6
-highlight link mapq4 grad9
-highlight link mapq5 grad10
+highlight link mapq00 gradbw00
+highlight link mapq0 gradbw0
+highlight link mapq1 gradbw2
+highlight link mapq2 gradbw4
+highlight link mapq3 gradbw6
+highlight link mapq4 gradbw9
+highlight link mapq5 gradbw10
 
 highlight link cigClpE comment2
 highlight link cigClpS comment2
@@ -179,18 +179,18 @@ highlight link rmis   string
 
 highlight link tlen   comment2
 
-highlight link phred00 grad00
-highlight link phred0  grad0
-highlight link phred1  grad1
-highlight link phred2  grad2
-highlight link phred3  grad3
-highlight link phred4  grad4
-highlight link phred5  grad5
-highlight link phred6  grad6
-highlight link phred7  grad7
-highlight link phred8  grad8
-highlight link phred9  grad9
-highlight link phred10 grad10
+highlight link phred00 gradbw00
+highlight link phred0  gradbw0
+highlight link phred1  gradbw1
+highlight link phred2  gradbw2
+highlight link phred3  gradbw3
+highlight link phred4  gradbw4
+highlight link phred5  gradbw5
+highlight link phred6  gradbw6
+highlight link phred7  gradbw7
+highlight link phred8  gradbw8
+highlight link phred9  gradbw9
+highlight link phred10 gradbw10
 
 highlight link endtag string
 highlight link numtag comment2
@@ -224,7 +224,6 @@ highlight link unsorted ntC
 highlight link library numeric
 highlight link platform string
 
-highlight link software keyword1
 
 " Highlighting / Global Theme Control
 " =========================================================
@@ -243,6 +242,8 @@ highlight keyword2 ctermfg=89  " Purple Dark
 highlight keyword3 ctermfg=172 " Yellow
 highlight keyword4 ctermfg=33  " L.blue
 
+highlight software ctermfg=166
+
 highlight chr      ctermfg=28 cterm=bold
 highlight chrStart ctermfg=28
 
@@ -253,15 +254,15 @@ highlight ntT ctermfg=Black ctermbg=33  guibg=#FD0A0A
 highlight ntN ctermfg=Black ctermbg=255 guibg=#FD0A0A
 highlight nt_ ctermfg=Black ctermbg=255 guibg=#000000
 
-highlight grad00 ctermfg=243 ctermbg=0
-highlight grad0  ctermfg=0 ctermbg=245
-highlight grad1  ctermfg=0 ctermbg=246
-highlight grad2  ctermfg=0 ctermbg=247
-highlight grad3  ctermfg=0 ctermbg=248
-highlight grad4  ctermfg=235 ctermbg=249
-highlight grad5  ctermfg=235 ctermbg=250
-highlight grad6  ctermfg=241 ctermbg=251
-highlight grad7  ctermfg=241 ctermbg=252
-highlight grad8  ctermfg=241 ctermbg=253
-highlight grad9  ctermfg=250 ctermbg=255
-highlight grad10 ctermfg=250 ctermbg=15
+highlight gradbw00 ctermfg=243 ctermbg=0
+highlight gradbw0  ctermfg=245 ctermbg=0
+highlight gradbw1  ctermfg=0 ctermbg=246
+highlight gradbw2  ctermfg=0 ctermbg=247
+highlight gradbw3  ctermfg=0 ctermbg=248
+highlight gradbw4  ctermfg=235 ctermbg=249
+highlight gradbw5  ctermfg=235 ctermbg=250
+highlight gradbw6  ctermfg=241 ctermbg=251
+highlight gradbw7  ctermfg=241 ctermbg=252
+highlight gradbw8  ctermfg=241 ctermbg=253
+highlight gradbw9  ctermfg=250 ctermbg=255
+highlight gradbw10 ctermfg=250 ctermbg=15

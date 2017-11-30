@@ -1,9 +1,12 @@
 %YAML 1.2
 ---
+# Fasta-Hydrophobicity syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 name: fasta-hydro
 # See http://www.sublimetext.com/docs/3/syntax.html
 file_extensions: [fastahydro]
-scope: text.fastahydro
+scope: text.fasta-hydro
 
 
 contexts:
@@ -17,100 +20,100 @@ contexts:
     # match amino acids
     # Alanine (ALA)
     - match: "[Aa]"
-      scope: aa.hydrophobicity.A
+      scope: hydroA
 
     # Aspartate/Asparagine (ASX)
     - match: "[Bb]"
-      scope: aa.hydrophobicity.B
+      scope: hydroB
 
     # Cysteine (CYS)
     - match: "[Cc]"
-      scope: aa.hydrophobicity.C
+      scope: hydroC
 
     # Aspartate (ASP)
     - match: "[Dd]"
-      scope: aa.hydrophobicity.D
+      scope: hydroD
 
     # Glutamate (GLU)
     - match: "[Ee]"
-      scope: aa.hydrophobicity.E
+      scope: hydroE
 
     # Phenylalanine (PHE)
     - match: "[Ff]"
-      scope: aa.hydrophobicity.F
+      scope: hydroF
 
     # Glycine (GLY)
     - match: "[Gg]"
-      scope: aa.hydrophobicity.G
+      scope: hydroG
 
     # Histidine (HIS)
     - match: "[Hh]"
-      scope: aa.hydrophobicity.H
+      scope: hydroH
 
     # Isoleucine (ILE)
     - match: "[Ii]"
-      scope: aa.hydrophobicity.I
+      scope: hydroI
 
     # Lysine (LYS)
     - match: "[Kk]"
-      scope: aa.hydrophobicity.K
+      scope: hydroK
 
     # Leucine (LEU)
     - match: "[Ll]"
-      scope: aa.hydrophobicity.L
+      scope: hydroL
 
     # Methionine (MET)
     - match: "[Mm]"
-      scope: aa.hydrophobicity.M
+      scope: hydroM
 
     # Asparagine (ASN)
     - match: "[Nn]"
-      scope: aa.hydrophobicity.N
+      scope: hydroN
 
     # Proline (PRO)
     - match: "[Pp]"
-      scope: aa.hydrophobicity.P
+      scope: hydroP
 
     # Glutamine (GLN)
     - match: "[Qq]"
-      scope: aa.hydrophobicity.Q
+      scope: hydroQ
 
     # Arginine (ARG)
     - match: "[Rr]"
-      scope: aa.hydrophobicity.R
+      scope: hydroR
 
     # Serine (SER)
     - match: "[Ss]"
-      scope: aa.hydrophobicity.S
+      scope: hydroS
 
     # Threonine (THE)
     - match: "[Tt]"
-      scope: aa.hydrophobicity.T
+      scope: hydroT
 
     # Valine (VAL)
     - match: "[Vv]"
-      scope: aa.hydrophobicity.V
+      scope: hydroV
 
     # Tryptophan (TRP)
     - match: "[Ww]"
-      scope: aa.hydrophobicity.W
+      scope: hydroW
 
     # Tyrosine (TYR)
     - match: "[Yy]"
-      scope: aa.hydrophobicity.Y
+      scope: hydroY
 
     # Glutamate or Glutamine (GLX)
     - match: "[Zz]"
-      scope: aa.hydrophobicity.Z
+      scope: hydroZ
 
     # any/unknown (X)
     - match: "[Xx]"
-      scope: aa.hydrophobicity.X
+      scope: hydroX
 
     # translation stop
     - match: "\\*"
-      scope: comment.line
+      scope: comment
 
     # indel
     - match: "[-]"
-      scope: comment.line
+      scope: comment

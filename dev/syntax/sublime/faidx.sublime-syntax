@@ -1,8 +1,11 @@
 %YAML 1.2
 ---
+# Fasta Index (faidx) syntax highlighting file
+# Maintainer: bioSyntax.org
+# Version: v0.1
 name: faidx
 # See http://www.sublimetext.com/docs/3/syntax.html
-file_extensions: [fa.fai,fasta.fai]
+file_extensions: [fai,fai]
 scope: source.faidx
 
 # Fasta Index Filetype Description
@@ -16,28 +19,28 @@ contexts:
   main:
     # COLUMN 1
     - match: '^[\S]*\t'
-      scope: coord.Chr.faidx
+      scope: chr.faidx
       push: contig.length
 
     # COLUMN 3
     - match: '(?<=\t)[\S]*\t'
-      scope: constant.numeric.faidx
+      scope: numeric.faidx
       push: genomic.offset
 
     # COLUMN 5
     - match: '[\S]*$'
-      scope: comment.line.faidx
+      scope: comment.faidx
 
   contig.length:
     # COLUMN 2
     - match: '[\S]*'
-      scope: coord.Start.faidx
+      scope: chrStart.faidx
     - match: \t
       pop: true
 
   genomic.offset:
     # COLUMN 4
     - match: '[\S]*'
-      scope: comment.line.faidx
+      scope: comment.faidx
     - match: \t
       pop: true
