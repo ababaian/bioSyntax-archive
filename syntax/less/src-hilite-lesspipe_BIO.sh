@@ -26,6 +26,8 @@ for source in "$@"; do
 	source-highlight -f esc --lang-def=sam.lang --outlang-def=bioSyntax.outlang --style-file=sam.style -i "$source" ;;
 	*.vcf)
 	source-highlight -f esc --lang-def=vcf.lang --outlang-def=bioSyntax-vcf.outlang --style-file=vcf.style -i "$source" ;;
+	*.pdb)
+	source-highlight -f esc --lang-def=pdb.lang --outlang-def=bioSyntax-vcf.outlang --style-file=pdb.style -i "$source" ;;
         *)
 	source-highlight --failsafe --infer-lang -f esc --style-file=esc.style -i "$source" ;;
     esac
