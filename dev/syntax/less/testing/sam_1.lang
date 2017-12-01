@@ -1,0 +1,170 @@
+# Fasta language definition file for less pipe
+# bioSyntax
+
+# Variables ----------------------------------
+vardef NUCLEOTIDE = '[ATCGNXatcgnxRYSWKM]'
+vardef PHRED = '[!-K]' #PHRED 1.8
+
+# Header-section -----------------------------
+state header start '^(?=@)' begin
+
+  # Standard Headers HD | SQ | PG
+  state header_hd delim '(?=@(HD|SQ|PG))' '$' begin
+    faheader = '@[HSPC][DQGO]'
+    
+    #HD
+    numeric = '(?<=VN:)\S*'
+    mal = '(?<=SO:)(unsorted|unknown)'
+    bon = '(?<=SO:)(coordinate|queryname)'
+    mal = '(?<=SO:)\S*'
+
+    mal = '(?<=GO:)(none|)'
+    bon = '(?<=GO:)(query|reference)'
+    mal = '(?<=GO:)\S*'
+
+    #SQ
+    chr = '(?<=SN:)\S*'
+    chrStart = '(?<=LN:)\S*'
+    chr = '(?<=AH:)\S*'
+    chr = '(?<=AN:)\S*'
+    chr = '(?<=AS:)\S*'
+    string = '(?<=M5:)\S*'
+    chr = '(?<=SP:)\S*'
+    numeric = '(?<=UR:)\S*'
+
+    #PG
+    software = '(?<=ID:)\S*'
+    software = '(?<=PN:)\S*'
+    commandline = '(?<=CL:)[\S ]*'
+
+    software = '(?<=PP:)\S*'
+    string = '(?<=DS:)\S*'
+    #numeric = '(?<=VN:)\S*'
+
+  end
+
+
+  # Readgroup Header
+  state header_co delim '(?=@RG)' '$' begin
+    faheader = '@RG'
+
+    sample = '(?<=ID:)\S*'
+    string = '(?<=CN:)\S*'
+    string = '(?<=DS:)\S*'
+    numeric = '(?<=DT:)\S*'
+    string = '(?<=FO:)\S*'
+    string = '(?<=KS:)\S*'
+    sample = '(?<=LB:)\S*'
+    software = '(?<=PG:)\S*'
+    numeric = '(?<=PI:)\S*'
+    string = '(?<=PL:)\S*'
+    string = '(?<=PM:)\S*'
+    string = '(?<=PU:)\S*'
+    sample = '(?<=SM:)\S*'
+
+  end
+
+  # Comment Header
+  state header_co delim '(?=@CO)' '$' begin
+    faheader = '@CO'
+    comment = '.*'
+
+  end
+
+end #Header
+# -------------------------------------------
+# align-section ------------------------------
+state align start '^' begin
+  string = '$' exit # stops multi-line searching
+
+  # Block 1 (RNAME) (FLAG)
+  state block1 = '^(?=\S+\t[0-9]+\t)' begin
+    string = '(?<=^)\S+'
+
+  # Read Flag
+  # If flag > 512
+  #   read is QC-fail | PCRdup | 2'
+
+    numeric = '\t[0-9]{1,2}(?=\t)' exit
+    numeric = '\t[1-4][0-9]{1,2}(?=\t)' exit
+    numeric = '\t[5][0][0-9](?=\t)' exit
+    numeric = '\t[5][1][01](?=\t)' exit
+
+    numeric2 = '\t[5][1][01](?=\t)' exit
+
+  end
+
+ # Block 2 (RNAME) (POS) (MAPQ)
+  state block2 start '\t(?=\S+\t[0-9]+\t[0-9]+\t)' begin
+ 
+    chrStart = '\S+\t[0-9]+\t' exit
+  end
+
+ # Block 3 (CIGAR) (RNEXT) (PNEXT) (TLEN)
+  state block3 start '\t(?=\S+\t\S+\t[0-9]+\t[-0-9]+\t)' begin
+ 
+    # CIGAR
+    keyword = "*"
+    keyword = '[0-9]+[MIDNSHPX=]+'
+    #state cigar start '(?=[0-9MIDNSHPX=]+)' begin
+    #  numeric = '[0-9]+'
+    #  string = '[MIDNSHP=X]'
+    #  pop = '\t' exit
+    #end 
+
+    # Next Read
+    chrStart = '(?<=\t)=\t[0-9]+\t(?=[-0-9]+)' exit
+    string = '(?<=\t)'+"*"+'\t[0-9]+\t(?=[-0-9]+)' exit
+    string = '(?<=\t)\S+\t[0-9]+\t(?=[-0-9]+)' exit
+
+  end
+
+  # Block 4 Fields 9+ Data Tags
+  state tag = '\t(?=([A-Z]{2}:.+:.+)(\t|$))' begin
+    string = '(?=(\t|$))' exit
+    # AB:i:1337
+      # A Printable
+      # i signed integer
+      # f floating point
+      # Z string with spaces
+      # H byte array hex
+      # B Integer/Numeric Array 
+   string = '[A-Z]{2}:'
+   comment = '(?<=:)[AifZHB]:'
+
+   numeric = '(?<=[ifH]:)(\S*)'
+   keyword = '(?<=[AZB]:)(\S*)'
+  end
+
+  # Block 5 (Nucleotide) (PHRED)
+
+  # Nucleotide-PHRED
+  state nucleotide = '\t(?='+$NUCLEOTIDE+'+\t)' begin
+   ## Nucleotide
+    string = '(?=\t)' exit
+    ntA = '[Aa]+'
+    ntT = '[TtUu]+'
+    ntG = '[Gg]+'
+    ntC = '[Cc]+'
+    ntN = '[NnXx]+'
+    ntN = '[RYSWKM]+' 
+  end
+ 
+  ## PHRED
+  # Illumina 1.8 Scale (IMPLEMENTED)
+  # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ...j
+  # |   |   |   |   |   |   |   |   |   |...
+  state phred = '\t(?='+$PHRED+'+(\t|$))' begin
+    string = '(?=\t)' exit
+    grad00 = '[!-%]'
+    grad0 = '[!-(]'
+    grad1 = '[)-0]'
+    grad2 = '[1-8]'
+    grad3 = '[9-@]'
+    grad4 = '[A-D]'
+    grad5 = '[E-j]'
+  end
+
+end #align
+
+  
