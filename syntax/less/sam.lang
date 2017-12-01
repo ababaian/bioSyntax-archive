@@ -11,7 +11,7 @@ environment header start '^(?=@)' begin
 
   # Standard Headers HD | SQ | PG
   environment header_hd delim '(?=@(HD|SQ|PG))' '$' begin
-    faheader = '@[HSPC][DQGO]'
+    header = '@[HSPC][DQGO]'
     
     #HD
     numeric = '(?<=VN:)\S*'
@@ -47,7 +47,7 @@ environment header start '^(?=@)' begin
 
   # Readgroup Header
   environment header_co delim '(?=@RG)' '$' begin
-    faheader = '@RG'
+    header = '@RG'
 
     sample = '(?<=ID:)\S*'
     string = '(?<=CN:)\S*'
@@ -67,7 +67,7 @@ environment header start '^(?=@)' begin
 
   # Comment Header
   environment header_co delim '(?=@CO)' '$' begin
-    faheader = '@CO'
+    header = '@CO'
     comment = '.*'
 
   end
@@ -116,15 +116,15 @@ environment align start '(?=^[^$])' begin
           # MAPQ Scale (-log10 P)
           # Incriment size = 10
 
-          grad00 = '\A255(?=\t)' # MAPQ NA
+          gradbw1 = '\A255(?=\t)' # MAPQ NA
 
-          grad00 = '\A[0-9](?=\t)'
-          grad1 = '\A[1][0-9]'
-          grad2 = '\A[2][0-9]'
-          grad3 = '\A[3][0-9]'
-          grad5 = '\A[4-9][0-9]'
+          gradbw1 = '\A[0-9](?=\t)'
+          grasbw6 = '\A[1][0-9]'
+          gradbw8 = '\A[2][0-9]'
+          gradbw10 = '\A[3][0-9]'
+          gradbw10i = '\A[4-9][0-9]'
          
-          grad00 = '\A\d+'
+          gradbw1 = '\A\d+'
 
           # Column 6: CIGAR string
           environment push6 = '\t?' begin
@@ -189,13 +189,13 @@ environment align start '(?=^[^$])' begin
                     # Illumina 1.8 Scale
                     # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ...j
                     # |   |   |   |   |   |   |   |   |   |...
-                    grad00 = '\A[!-%]++'
-                    grad0 = '\A[!-(]++'
-                    grad1 = '\A[)-0]++'
-                    grad2 = '\A[1-8]++'
-                    grad3 = '\A[9-@]++'
-                    grad4 = '\A[A-D]++'
-                    grad5 = '\A[E-j]++'
+                    gradbw1 = '\A[!-%]++'
+                    gradbw3 = '\A[!-(]++'
+                    grasbw6 = '\A[)-0]++'
+                    gradbw8 = '\A[1-8]++'
+                    gradbw10 = '\A[9-@]++'
+                    gradbw10b = '\A[A-D]++'
+                    gradbw10i = '\A[E-j]++'
 
                     # Column 11+ Tags
                     environment push11 = '\t' begin

@@ -15,8 +15,8 @@ state comment start '^#[#]*' begin
   endline = '$' exit
  
   # fileformat
-  state faheader = 'fileformat=' begin
-   faheader = '\S*' exit
+  state header = 'fileformat=' begin
+   header = '\S*' exit
   end
 
   state null = 'fileDate=' begin
@@ -28,9 +28,9 @@ state comment start '^#[#]*' begin
   end
 
   # header line
-  state faheader = 'CHROM' begin
+  state header = 'CHROM' begin
     drop = '(?=$)' exit
-    faheader = '[\S\t]+'
+    header = '[\S\t]+'
   end
 
   # FILTER
@@ -44,17 +44,17 @@ state comment start '^#[#]*' begin
   end
 
   # FORMAT
-  state keywordi2 = 'FORMAT=<' begin
+  state keywordi5 = 'FORMAT=<' begin
     drop = '(?=$)' exit
-    keywordi2 = '>'
+    keywordi5 = '>'
 
-    state keyword2 = '(Number=|Type=)' begin
+    state keyword5 = '(Number=|Type=)' begin
       numeric = '\w+'
       drop = ',' exit
       drop = '(?=>)' exit
     end
 
-    state keyword2 = '\w+=' begin
+    state keyword5 = '\w+=' begin
       string = '\w+'
       quoteString delim '"' '"'
       drop = ',' exit
@@ -63,9 +63,28 @@ state comment start '^#[#]*' begin
   end
 
   # INFO
-  state keywordi3 = 'INFO=<' begin
+  state keywordi6 = 'INFO=<' begin
     drop = '(?=$)' exit
-    keywordi2 = '>'
+    keywordi5 = '>'
+
+    state keyword6= '(Number=|Type=)' begin
+      numeric = '\w+'
+      drop = ',' exit
+      drop = '(?=>)' exit
+    end
+
+    state keyword6= '\w+=' begin
+      string = '\w+'
+      quoteString delim '"' '"'
+      drop = ',' exit
+      drop = '(?=>)' exit
+    end
+  end
+
+  # ALT SAMPLE PEDIGREE
+  state keyword3i = '(ALT|SAMPLE|PEDIGREE)=<' begin
+    drop = '(?=$)' exit
+    keyword3i = '>'
 
     state keyword3 = '(Number=|Type=)' begin
       numeric = '\w+'
@@ -81,31 +100,12 @@ state comment start '^#[#]*' begin
     end
   end
 
-  # ALT SAMPLE PEDIGREE
-  state keywordi = '(ALT|SAMPLE|PEDIGREE)=<' begin
-    drop = '(?=$)' exit
-    keywordi = '>'
-
-    state keyword = '(Number=|Type=)' begin
-      numeric = '\w+'
-      drop = ',' exit
-      drop = '(?=>)' exit
-    end
-
-    state keyword = '\w+=' begin
-      string = '\w+'
-      quoteString delim '"' '"'
-      drop = ',' exit
-      drop = '(?=>)' exit
-    end
-  end
-
   # contig
   state keywordi5 = 'contig=<' begin
     drop = '(?=$)' exit
-    keywordi3 = '>' exit
+    keywordi6 = '>' exit
 
-    state keyword5 = '(ID=)' begin
+    state chr = '(ID=)' begin
       chr = '\w+'
       drop = ',' exit
       drop = '(?=>)' exit
@@ -117,7 +117,7 @@ state comment start '^#[#]*' begin
       drop = '(?=>)' exit
     end
 
-    state keyword5 = '\w+=' begin
+    state chrStart = '\w+=' begin
       chrStart = '\w+'
       drop = ',' exit
       drop = '(?=>)' exit
@@ -127,24 +127,24 @@ state comment start '^#[#]*' begin
   # reference
   state null = '(reference=|assembly=)' begin
     drop = '(?=$)' exit
-    keyword = '\S+'
+    keyword3 = '\S+'
   end
 
 
   # Other
-  state keywordi3 = '[\w\\.]+=<' begin
+  state keywordi6 = '[\w\\.]+=<' begin
     drop = '(?=$)' exit
-    keywordi2 = '>'
+    keywordi5 = '>'
 
     # Numeric Descriptors
-    state keyword3 = '(Number=|Type=|Date=|Version=)' begin
+    state keyword6= '(Number=|Type=|Date=|Version=)' begin
       numeric = '\w+'
       drop = ',' exit
       drop = '(?=>)' exit
     end
 
     # String Descriptors
-    state keyword3 = '\w+=' begin
+    state keyword6= '\w+=' begin
       string = '\w+'
       quoteString delim '"' '"'
       drop = ',' exit
@@ -202,13 +202,13 @@ state data = '^' begin
 	    # Column 8: INFO
 	    state push8 = '\t' begin
 	      drop = '(?=$)' exit
-	      keyword3 = '\w+='
+	      keyword6= '\w+='
 	      numeric = '[\d\\.\\-]+(?=(;|\t))'
 
 	      # Column 9: FORMAT
 	      state push9 = '\t' begin
 	        drop = '(?=$)' exit
-		keyword2 = '[A-Za-z]+'
+		keyword5 = '[A-Za-z]+'
 		null = ":"
 
 		# Column 10+: DATA
@@ -233,10 +233,10 @@ state data = '^' begin
 		    ntA = '2'
 		    ntG = '3'
 		    ntT = '4'
-		    faheader = '[5-9]'
+		    header = '[5-9]'
 
 		    string = "/" # unphased
-		    keyword = "|" # phased
+		    keyword3 = "|" # phased
 		  end
 
 		  # Remaining Fields

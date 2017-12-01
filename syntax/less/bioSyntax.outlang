@@ -1,5 +1,5 @@
 extension "bioSyntax"
-
+# Version 0.1
 styletemplate "\x1b[$stylem$text\x1b[m"
 styleseparator ";"
 
@@ -15,34 +15,29 @@ colormap
 "darkred" "30;48:5:09"     # C
 "darkblue" "30;48:5:33"    # G
 "brown" "30;48:5:214"      # T
-#"gray" "38:5:240;48:5:255" # NX
-#"gray" "38:5:255"          # NX
 "gray" "38:5:250"          # NX, clip
-#
-#
-#
+
 # Text Class
-"blue" "38:5:62"          # Numeric
+"blue" "38:5:62"           # Numeric
 "red" "38:5:160"           # Keyword, string, mismatch
-"green" "38:5:28"      # Keyword2, chr
-"purple" "38:5:39"        # Keyword3, library, insertion
-"yellow" "38:5:208"        # Keyword4, software, deletion
-"cyan" "38:5:28"          # Keyword5, 
-#
-#
-# Gradient coloring
-"teal" "38:5:243;48:5:0"          # Gradient 0
-"pink" "38:5:243;48:5:237"          # Gradient 1
-"orange" "38:5:237;48:5:243"        # Gradient 2
-"brightorange" "38:5:242;48:5:249"  # Gradient 3
-"brightgreen" "38:5:250;48:5:255"   # Gradient 4
+"green" "38:5:28"          # Keyword2, chr
+"purple" "38:5:39"         # Keyword3, library, insertion
+"yellow" "38:5:166"        # Keyword4, software, deletion
+"cyan" "38:5:54"           # Keyword5, 
+
+# BW Gradient coloring 5 step
+"teal" "38:5:243;48:5:0"            # Gradient bw1
+"pink" "38:5:243;48:5:237"          # Gradient bw3
+"orange" "38:5:237;48:5:243"        # Gradient bw6
+"brightorange" "38:5:242;48:5:249"  # Gradient bw8
+"brightgreen" "38:5:250;48:5:255"   # Gradient bw10 +
 default "30;"
 end
 
 ####################
 # Code color help
 #####################
-
+#
 # 256 code color control template:
 # Code            : \033[AA;FF;BBm
 # AA (attributes) : 00|01|03|04|05|07|22|23|24|25|27
@@ -51,11 +46,11 @@ end
 # color           : 000-255
 # see: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 #
-
+#
 # True-color (24 bit) - bioSyntax should be using 256-colors
 # FF (foreground) : 38:2:r:g:b
 # BB (background) : 48:2:r:g:b
-
+#
 # Attributes meaning
 # 00  Reset
 # 01  Bold
@@ -68,10 +63,10 @@ end
 # 24  No Underline
 # 25  No Blink
 # 27  No Reverse
-
+#
 # Any of AA,FF,BB may be omited.
 # Reset code (default color/attribute): \033[m
-
+#
 # Examples:
 # -> Hello world in color 226 (=> yellow):
 #    echo -e "\033[38;05;226mHello, World"

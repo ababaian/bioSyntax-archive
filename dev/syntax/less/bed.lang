@@ -35,14 +35,14 @@ environment push1 start '^(?=[A-Za-z])' begin
         # TODO make full range; currently 0-100 by ~200s
         environment push5 = '\t?' begin
           drop = '(?=$)' exitall
-          grad00 = '\A0(?=\t)'
-          grad0 = '\A[1-9](?=\t)'
-          grad0 = '\A[1-9][0-9](?=\t)'
-          grad1 = '\A[12][0-9][0-9](?=\t)'
-          grad2 = '\A[34][0-9][0-9](?=\t)'
-          grad3 = '\A[56][0-9][0-9](?=\t)'
-          grad4 = '\A[78][0-9][0-9](?=\t)'
-          grad5 = '\A\d+(?=\t)'
+          gradbw1 = '\A0(?=\t)'
+          gradbw3 = '\A[1-9](?=\t)'
+          gradbw3 = '\A[1-9][0-9](?=\t)'
+          gradbw6 = '\A[12][0-9][0-9](?=\t)'
+          gradbw8 = '\A[34][0-9][0-9](?=\t)'
+          grad3bw10 = '\A[56][0-9][0-9](?=\t)'
+          gradbw10b = '\A[78][0-9][0-9](?=\t)'
+          gradbw10i = '\A\d+(?=\t)'
 
           # Column 6: Feature Strand
           environment push6 = '\t?' begin

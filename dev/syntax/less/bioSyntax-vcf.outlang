@@ -1,5 +1,5 @@
 extension "bioSyntax"
-
+version 0.1
 styletemplate "\x1b[$stylem$text\x1b[m"
 styleseparator ";"
 
@@ -22,9 +22,12 @@ colormap
 "gray" "38:5:240;48:5:255" # Comment
 "blue" "38:5:62"           # Numeric, Version
 "yellow" "38:5:208"        # Numeric2, Keyword4, software
+#
+#
+# Keyword
 "red" "38:5:160"           # Keyword, string, quoteString
 "green" "38:5:28"          # Keyword2, chr, chrStart 
-"purple" "38:5:33"         # Keyword3, url, library
+"purple" "38:5:39"         # Keyword3, url, library
 "cyan" "38:5:54"           # Keyword5
 "pink" "38:5:136"          # Keyword6
 "orange" "38:5:166"        # Keyword7

@@ -39,31 +39,36 @@ quoteString red i ;
 
 url purple ;
 
-keyword purple ;
-keywordb purple b ;
-keywordi purple i ;
-keydrow purple u ;
+// Was keyword6
+keyword red ;
+keywordb red b ;
+keywordi red i ;
+keydrow red u ;
 
-keyword2 cyan ;
-keywordi2 cyan i ;
-keydrow2 cyan u ;
+// keyword2
+keyword2 brightgreen ;
+keywordb2 brightgreen b ;
+keywordi2 brightgreen i;
+keydrow2 brightgreen u ;
 
-keyword3 pink ;
-keywordi3 pink i ;
-keydrow3 pink u ;
+// Was keyword 
+keyword3 purple ;
+keywordb3 purple b ;
+keywordi3 purple i ;
+keydrow3 purple u ;
 
 keyword4 orange ;
 keywordi4 orange i ;
 keydrow4 orange u ;
 
-keyword5 brightgreen ;
-keywordi5 brightgreen i;
-keydrow5 brightgreen u ;
+// Was Keyword2
+keyword5 cyan ;
+keywordi5 cyan i ;
+keydrow5 cyan u ;
 
-keyword6 blue ;
-keyword6b blue b ;
-keyword6i blue i ;
-keydrow6 blue u ;
+keyword6 pink ;
+keywordi6 pink i ;
+keydrow6 pink u ;
 
 // Biological Classes
 sample purple ;

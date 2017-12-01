@@ -1,4 +1,5 @@
 #! /bin/bash
+# modified for bioSyntax v0.1
 
 for source in "$@"; do
     case $source in

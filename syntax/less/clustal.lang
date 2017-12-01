@@ -9,8 +9,10 @@ faheader start '^CLUSTAL'
 comment = '\S++(?=\s)'
 
 ntA = '[Aa]+'
-ntT = '[TtUu]+'
+ntT = '[Tt]+'
 ntG = '[Gg]+'
 ntC = '[Cc]+'
 ntN = '[NnXx]+'
-#ntGap = '[.-]' #no highlight
+ntT = '[Uu]+'
+
+#ntGap = '[.-]+' #no highlight

@@ -22,15 +22,15 @@ colormap
 "red" "38:5:160"           # Keyword, string, mismatch
 "green" "38:5:28"          # Keyword2, chr
 "purple" "38:5:39"         # Keyword3, library, insertion
-"yellow" "38:5:208"        # Keyword4, software, deletion
-"cyan" "38:5:28"           # Keyword5, 
+"yellow" "38:5:166"        # Keyword4, software, deletion
+"cyan" "38:5:54"           # Keyword5, 
 
 # BW Gradient coloring 5 step
-"teal" "38:5:243;48:5:0"            # Gradient 0
-"pink" "38:5:243;48:5:237"          # Gradient 1
-"orange" "38:5:237;48:5:243"        # Gradient 2
-"brightorange" "38:5:242;48:5:249"  # Gradient 3
-"brightgreen" "38:5:250;48:5:255"   # Gradient 4
+"teal" "38:5:243;48:5:0"            # Gradient bw1
+"pink" "38:5:243;48:5:237"          # Gradient bw3
+"orange" "38:5:237;48:5:243"        # Gradient bw6
+"brightorange" "38:5:242;48:5:249"  # Gradient bw8
+"brightgreen" "38:5:250;48:5:255"   # Gradient bw10 +
 default "30;"
 end
 

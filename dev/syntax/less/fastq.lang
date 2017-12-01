@@ -10,9 +10,11 @@ environment header = '^(?=@)' begin
   # Row 2: nt Seq
   environment ntSeq = '^(?=[ATCG])' begin
     ntA = '[Aa]+'
-    ntT = '[TtUu]+'
+    ntT = '[Tt]+'
     ntG = '[Gg]+'
     ntC = '[Cc]+'
+    ntT = '[Uu]+'
+
     ntN = '[NnXx]+'
 
     # Row 3: Comment Line
@@ -25,13 +27,13 @@ environment header = '^(?=@)' begin
         # Illumina 1.8 Scale
         # !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ...j
         # |   |   |   |   |   |   |   |   |   |...
-        grad00 = '\A[!-%]++'
-        grad0 = '\A[!-(]++'
-        grad1 = '\A[)-0]++'
-        grad2 = '\A[1-8]++'
-        grad3 = '\A[9-@]++'
-        grad4 = '\A[A-D]++'
-        grad5 = '\A[E-j]++'
+        gradbw1 = '\A[!-%]++'
+        gradbw3 = '\A[!-(]++'
+        gradbw6 = '\A[)-0]++'
+        gradbw8 = '\A[1-8]++'
+        gradbw10 = '\A[9-@]++'
+        gradbw10b = '\A[A-D]++'
+        gradbw10i = '\A[E-j]++'
 
       end
     end

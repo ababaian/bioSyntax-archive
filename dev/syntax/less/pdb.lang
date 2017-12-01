@@ -16,16 +16,16 @@ vardef STRINGTAG = '(\w+=)' # all others
 header start '^HEADER'
 
 # Title
-keyword2 start '^TITLE'
+keyword5 start '^TITLE'
 
 # Compoud
 string start '^COMPND'
 
 # Source
-keyword2 start '^SOURCE'
+keyword5 start '^SOURCE'
 
 # Keywords
-keyword5 start '^KEYWDS'
+keyword start '^KEYWDS'
 
 # Experiment Type
 keyword start '^EXPDTA'
@@ -37,17 +37,17 @@ keyword start '^AUTHOR'
 keyword start '^REVDAT'
 
 # Publication
-state keyword3 start '^JRNL' begin
+state keyword6 start '^JRNL' begin
   endline = '$' exit
   # Authors
   keyword4 start '\bTITL'
   # Else
-  keyword3 start '\b\S'
+  keyword6 start '\b\S'
 
 end
 
 # Remarks
-state keyword2 start '^REMARK' begin
+state keyword5 start '^REMARK' begin
   endline = '$' exit
 
   # Null in variable
@@ -67,35 +67,35 @@ state keyword2 start '^REMARK' begin
 
   end
   # Remark Variables
-  keyword3 = 'RESOLUTION'
+  keyword6 = 'RESOLUTION'
 
   # Other Remark text
-  keyword2 = '[^:;]'
+  keyword5 = '[^:;]'
 end
 
 # Chain AA-Sequence Data
-state keyword2 start '^SEQRES' begin
+state keyword5 start '^SEQRES' begin
   endline = '$' exit
 
   keyword start '[\s\t]+[0-9]+[\s\t]+[AGMSY]'
-  keyword3 start '[\s\t]+[0-9]+[\s\t]+[BHNTZ]'
-  keyword4 start '[\s\t]+[0-9]+[\s\t]+[CIOU]'
-  keyword5 start '[\s\t]+[0-9]+[\s\t]+[DJPV]'
-  keyword6 start '[\s\t]+[0-9]+[\s\t]+[EKQW]'
-  keyword2 start '[\s\t]+[0-9]+[\s\t]+[FLRX]'
+  keyword2 start '[\s\t]+[0-9]+[\s\t]+[BHNTZ]'
+  keyword3 start '[\s\t]+[0-9]+[\s\t]+[CIOU]'
+  keyword4 start '[\s\t]+[0-9]+[\s\t]+[DJPV]'
+  keyword5 start '[\s\t]+[0-9]+[\s\t]+[EKQW]'
+  keyword6 start '[\s\t]+[0-9]+[\s\t]+[FLRX]'
 
 end
 
 # Secondary Structure
-keyword5 start '^HELIX'
+keyword start '^HELIX'
 string start '^SHEET'
-keyword5 start '^SITE'
+keyword start '^SITE'
 
 # Atomic Data
-state keyword2 start '^(ATOM|ANISOU)' begin
+state keyword5 start '^(ATOM|ANISOU)' begin
   endline = '$' exit
 
-  keyword2 = '\A[\s]+[0-9]++[\s]++[\S]{0,3}\s'
+  keyword5 = '\A[\s]+[0-9]++[\s]++[\S]{0,3}\s'
 
   # Amino Acid Coloring CLUSTAL hardcode
   aaHydro = '\s+(ALA|ILE|LEU|MET|PHE|TRP|VAL)'
@@ -108,16 +108,16 @@ state keyword2 start '^(ATOM|ANISOU)' begin
 
   # Apply inverse coloring of Chain colors above
   keydrow = '(?<=\s)[AGMSY](?=\s)'
-  keydrow3 = '(?<=\s)[BHNTZ](?=\s)'
-  keydrow4 = '(?<=\s)[CIOU](?=\s)'
-  keydrow5 = '(?<=\s)[DJPV](?=\s)'
-  keydrow6 = '(?<=\s)[EKQW](?=\s)'
-  keydrow2 = '(?<=\s)[FLRX](?=\s)'
+  keydrow2 = '(?<=\s)[BHNTZ](?=\s)'
+  keydrow3 = '(?<=\s)[CIOU](?=\s)'
+  keydrow4 = '(?<=\s)[DJPV](?=\s)'
+  keydrow5 = '(?<=\s)[EKQW](?=\s)'
+  keydrow6 = '(?<=\s)[FLRX](?=\s)'
 
   state keyword ='\d+\s' begin
     endline = '$' exit
 
-    keyword2 start '.'
+    keyword5 start '.'
 
   end
  end
