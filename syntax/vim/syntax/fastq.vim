@@ -3,27 +3,35 @@ if exists("syntax_on")
 endif
 
 
-syntax match qual0 "[/\!-/\/]" contains=quality
-syntax match qual1 "[0-9]" contains=quality
-syntax match qual2 "[/\:/\;/\</\=/\>/\?/\@]" contains=quality
-syntax match qual3 "[A-J]" contains=quality
+syntax match qual0 "[/\!-/\/]" contained
+syntax match qual1 "[0-9]" contained
+syntax match qual2 "[/\:/\;/\</\=/\>/\?/\@]" contained
+syntax match qual3 "[A-J]" contained
 
-syntax match header "^@\{1,2}.*$"
-syntax region quality start="\(+\_s\+\)\@<=.*" end=".*$" contains=qual0,qual1,qual2,qual3
-"syntax region bases start="/{[ACGT]}[/]<CR>" end="$" contained
+"syntax match header "^@\{1,2}.*$"
+"syntax region com start="^\+" end="\n\@=" contains=quality
+"syntax region quality start="\(+\_s\+\)\@<=.*" end="\n\@=" contains=qual0,qual1,qual2,qual3
+"syntax region bases start="[ACGT]\ze+" end=".*$" contains=ntA,ntG,ntC,ntT
+"syntax region bases start="/{[ACGT]}[/]<CR>" end=".*$" contains=ntA,ntG,ntC,ntT
+"syntax region bases start="^[ACGT]\{10,}" end=".*$" contains=ntA,ntG,ntC,ntT
 
-syntax match ntA "A" "contains=bases
-syntax match ntG "G" "contains=bases
-syntax match ntC "C" "contains=bases
-syntax match ntT "T" "contains=bases
+syntax region header start="^@\{1,2}.*$" end="\n\@="
+syntax region bases start="^[ACGT]\{10,}" end=".*$" contains=ntA,ntG,ntC,ntT
+"syntax region com start="^[+]\{1,2}" end="\n\@=" contains=quality
+syntax region com start="\([ACGT]\{10,}\)\@<=" end="\n\@=" 
+syntax region quality start="\(+*$\n\@=\)\@<=.*" end="\n\@=" contains=qual0,qual1,qual2,qual3
 
-syntax match qual3 "^[ACG]" contains=quality
+syntax match ntA "A" contained
+syntax match ntG "G" contained
+syntax match ntC "C" contained
+syntax match ntT "T" contained
 
-hi def link header Identifier
+highlight header ctermfg=100
+highlight com ctermfg=20
 highlight qual0 ctermfg=DarkGrey
 highlight qual1 ctermfg=Grey
-highlight qual2 ctermfg=LightRed
-highlight qual3 ctermfg=Red
+highlight qual2 ctermfg=Red
+highlight qual3 ctermfg=DarkRed
 
 highlight ntA ctermfg=Black ctermbg=Green guibg=#272822
 highlight ntG ctermfg=Black ctermbg=Yellow guibg=#FF8C00
