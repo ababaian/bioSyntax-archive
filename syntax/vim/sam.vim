@@ -234,7 +234,7 @@ highlight header   ctermfg=08 ctermbg=250 cterm=bold
 highlight numeric     ctermfg=31
 highlight numeric2    ctermfg=61
 highlight string      ctermfg=160
-highlight stringQuote ctermfg=160 cterm=italic
+highlight stringQuote ctermfg=160
 highlight comment2    ctermfg=245 cterm=italic
 
 highlight keyword1 ctermfg=130 " Orange
