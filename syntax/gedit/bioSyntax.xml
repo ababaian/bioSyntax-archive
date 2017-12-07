@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<style-scheme id="bioSyntax" _name="bioSyntax" parent-scheme="kate" version="1.0">
+  <author>bioSyntax</author>
+  <_description>
+    bioSyntax: Computational biology syntax highlighting.
+    email: info@bioSyntax.org
+
+    Based upon the "Kate" color scheme. To change use the 'parent-scheme'
+    setting above.
+  </_description>
+
+
+  <!-- Bio specific styles {DEPRECATED - DONT USE} -->
+  <!-- ====================================================== -->
+
+  <!--Nucleotide Coloring -->
+  <style name="fasta:ntA"                       foreground="#000000" background="#47ff19"/>
+  <style name="fasta:ntC"                       foreground="#000000" background="#ff4641"/>
+  <style name="fasta:ntG"                       foreground="#000000" background="#f09000"/>
+  <style name="fasta:ntT"                       foreground="#000000" background="#4192ff"/>
+  <style name="fasta:ntU"                       foreground="#000000" background="#8a89ff"/>
+  <style name="fasta:ntN"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:ntX"                       foreground="#000000" background="#e6e6e6"/>
+  <style name="fasta:ntGap"                     foreground="#000000" />
+  <style name="fasta:ntR"                       foreground="#000000" background="#fffe80"/>
+  <style name="fasta:ntY"                       foreground="#000000" background="#e180ff"/>
+  <style name="fasta:ntS"                       foreground="#000000" background="#ff9b80"/>
+  <style name="fasta:ntW"                       foreground="#000000" background="#80fff2"/>
+  <style name="fasta:ntM"                       foreground="#000000" background="#83831f"/>
+  <style name="fasta:ntK"                       foreground="#000000" background="#8b4915"/>
+  <style name="fasta:ntD"                       foreground="#000000" background="#c7ffb9"/>
+  <style name="fasta:ntB"                       foreground="#000000" background="#f8c1c0"/>
+  <style name="fasta:ntV"                       foreground="#000000" background="#ffe3b9"/>
+  <style name="fasta:ntH"                       foreground="#000000" background="#bfd8f9"/>
+
+
+  <!-- Amino Acid Coloring -->  
+  <style name="fasta:header"                    foreground="black" background="#FFFFFF"/>
+  <style name="fasta:clA"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clI"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clV"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clL"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clM"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clF"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clW"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fasta:clY"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fasta:clK"                       foreground="#000000" background="#F01505"/>
+  <style name="fasta:clR"                       foreground="#000000" background="#F01505"/>
+  <style name="fasta:clH"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fasta:clD"                       foreground="#000000" background="#C048C0"/>
+  <style name="fasta:clE"                       foreground="#000000" background="#C048C0"/>
+  <style name="fasta:clS"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clT"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clN"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clQ"                       foreground="#000000" background="#15C015"/>
+  <style name="fasta:clP"                       foreground="#000000" background="#C0C000"/>
+  <style name="fasta:clG"                       foreground="#000000" background="#F09048"/>
+  <style name="fasta:clC"                       foreground="#000000" background="#F08080"/>
+  <style name="fasta:clX"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:clZ"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:clB"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:Stop"                      foreground="#000000" background="#FFFFFF"/>
+  <style name="fasta:Indel"                     foreground="#000000" background="#FFFFFF"/>
+  
+  <!-- fasta-Zappo styles -->
+  <style name="fastza:header"                  foreground="black" background="#FFFFFF"/>
+  <style name="fastza:A"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:I"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:V"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:L"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:M"                       foreground="#000000" background="#FFAFAF"/>
+  <style name="fastza:F"                       foreground="#000000" background="#FFC800"/>
+  <style name="fastza:W"                       foreground="#000000" background="#FFC800"/>
+  <style name="fastza:Y"                       foreground="#000000" background="#FFC800"/>
+  <style name="fastza:K"                       foreground="#000000" background="#6464FF"/>
+  <style name="fastza:R"                       foreground="#000000" background="#6464FF"/>
+  <style name="fastza:H"                       foreground="#000000" background="#6464FF"/>
+  <style name="fastza:D"                       foreground="#000000" background="#FF0000"/>
+  <style name="fastza:E"                       foreground="#000000" background="#FF0000"/>
+  <style name="fastza:S"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:T"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:N"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:Q"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastza:P"                       foreground="#000000" background="#FF00FF"/>
+  <style name="fastza:G"                       foreground="#000000" background="#FF00FF"/>
+  <style name="fastza:C"                       foreground="#000000" background="#FFFF00"/>
+  <style name="fastza:X"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:Z"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:B"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:Stop"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fastza:Indel"                   foreground="#000000" background="#FFFFFF"/>
+  
+  
+  <!-- fasta-Clustal styles -->
+  <style name="fast:header"                    foreground="black" background="#FFFFFF"/>
+  <style name="fast:clA"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clI"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clV"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clL"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clM"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clF"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clW"                       foreground="#000000" background="#80A0F0"/>
+  <style name="fast:clY"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fast:clK"                       foreground="#000000" background="#F01505"/>
+  <style name="fast:clR"                       foreground="#000000" background="#F01505"/>
+  <style name="fast:clH"                       foreground="#000000" background="#15A4A4"/>
+  <style name="fast:clD"                       foreground="#000000" background="#C048C0"/>
+  <style name="fast:clE"                       foreground="#000000" background="#C048C0"/>
+  <style name="fast:clS"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clT"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clN"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clQ"                       foreground="#000000" background="#15C015"/>
+  <style name="fast:clP"                       foreground="#000000" background="#C0C000"/>
+  <style name="fast:clG"                       foreground="#000000" background="#F09048"/>
+  <style name="fast:clC"                       foreground="#000000" background="#F08080"/>
+  <style name="fast:clX"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:clZ"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:clB"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:Stop"                      foreground="#000000" background="#FFFFFF"/>
+  <style name="fast:Indel"                     foreground="#000000" background="#FFFFFF"/>
+ 
+ 
+  <!-- fasta-Taylor styles -->
+  <style name="fastay:header"                  foreground="black"  background="#FFFFFF"/>
+  <style name="fastay:A"                       foreground="#000000" background="#CCFF00"/>
+  <style name="fastay:I"                       foreground="#000000" background="#66FF00"/>
+  <style name="fastay:V"                       foreground="#000000" background="#99FF00"/>
+  <style name="fastay:L"                       foreground="#000000" background="#33FF00"/>
+  <style name="fastay:M"                       foreground="#000000" background="#00FF00"/>
+  <style name="fastay:F"                       foreground="#000000" background="#00FF66"/>
+  <style name="fastay:W"                       foreground="#000000" background="#00CCFF"/>
+  <style name="fastay:Y"                       foreground="#000000" background="#00FFCC"/>
+  <style name="fastay:K"                       foreground="#000000" background="#6600FF"/>
+  <style name="fastay:R"                       foreground="#000000" background="#0000FF"/>
+  <style name="fastay:H"                       foreground="#000000" background="#0066FF"/>
+  <style name="fastay:D"                       foreground="#000000" background="#FF0000"/>
+  <style name="fastay:E"                       foreground="#000000" background="#FF0066"/>
+  <style name="fastay:S"                       foreground="#000000" background="#FF3300"/>
+  <style name="fastay:T"                       foreground="#000000" background="#FF6600"/>
+  <style name="fastay:N"                       foreground="#000000" background="#CC00FF"/>
+  <style name="fastay:Q"                       foreground="#000000" background="#FF00CC"/>
+  <style name="fastay:P"                       foreground="#000000" background="#FFCC00"/>
+  <style name="fastay:G"                       foreground="#000000" background="#FF9900"/>
+  <style name="fastay:C"                       foreground="#000000" background="#FFFF00"/>
+  <style name="fastay:X"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastay:Z"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastay:B"                       foreground="#000000" background="#FFFFFF"/>
+  <style name="fastay:Stop"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fastay:Indel"                   foreground="#000000" background="#FFFFFF"/>
+  
+  
+  <!-- fasta-hydrophocity styles -->
+  <style name="fasthy:header"                  foreground="black"   background="#FFFFFF"/>
+  <style name="fasthy:A"                       foreground="#000000" background="#AD0052"/>
+  <style name="fasthy:I"                       foreground="#000000" background="#FF0000"/>
+  <style name="fasthy:V"                       foreground="#000000" background="#F60009"/>
+  <style name="fasthy:L"                       foreground="#000000" background="#EA0015"/>
+  <style name="fasthy:M"                       foreground="#000000" background="#B0004F"/>
+  <style name="fasthy:F"                       foreground="#000000" background="#CB0034"/>
+  <style name="fasthy:W"                       foreground="#000000" background="#5B00A4"/>
+  <style name="fasthy:Y"                       foreground="#000000" background="#4F00B0"/>
+  <style name="fasthy:K"                       foreground="#000000" background="#0000FF"/>
+  <style name="fasthy:R"                       foreground="#000000" background="#0000FF"/>
+  <style name="fasthy:H"                       foreground="#000000" background="#1500EA"/>
+  <style name="fasthy:D"                       foreground="#000000" background="#0C00F3"/>
+  <style name="fasthy:E"                       foreground="#000000" background="#0C00F3"/>
+  <style name="fasthy:S"                       foreground="#000000" background="#5E00A1"/>
+  <style name="fasthy:T"                       foreground="#000000" background="#61009E"/>
+  <style name="fasthy:N"                       foreground="#000000" background="#0C00F3"/>
+  <style name="fasthy:Q"                       foreground="#000000" background="#0C00F3"/>
+  <style name="fasthy:P"                       foreground="#000000" background="#4600B9"/>
+  <style name="fasthy:G"                       foreground="#000000" background="#6A0095"/>
+  <style name="fasthy:C"                       foreground="#000000" background="#C2003D"/>
+  <style name="fasthy:X"                       foreground="#000000" background="#680097"/>
+  <style name="fasthy:Z"                       foreground="#000000" background="#0C00F3"/>
+  <style name="fasthy:B"                       foreground="#000000" background="#0C00F3"/>
+  <style name="fasthy:Stop"                    foreground="#000000" background="#FFFFFF"/>
+  <style name="fasthy:Indel"                   foreground="#000000" background="#FFFFFF"/>
+  
+  <!-- Fastq styles -->
+  <style name="fq:A"                       foreground="#64f73f"/>
+  <style name="fq:T"                       foreground="#eb413c"/>
+  <style name="fq:G"                       foreground="#ffb340"/>
+  <style name="fq:C"                       foreground="#3c88ee"/>
+  
+  <!-- bed styles -->
+  <style name="bed:chrom"                  foreground="dark-green" bold="true"/>
+  <style name="bed:coords"                 foreground="dark-green"/>
+  <style name="bed:bedName"                foreground="brown"/>
+  <style name="bed:strandplus"             foreground="#F92672" background="white" bold="true"/>
+  <style name="bed:strandminus"            foreground="#A6E22E" background="white" bold="true"/>
+  <style name="bed:strandnone"             foreground="#66D9EF" background="white" bold="true"/>
+  
+  <!-- gtf styles -->
+  <style name="gtf:chrom"                  foreground="dark-green" bold="true"/>
+  <style name="gtf:coord"                  foreground="dark-green"/>
+  <style name="gtf:software"               foreground="#fd971f"/>
+  <style name="gtf:featureGene"            foreground="dark-green" bold="true"/>
+  <style name="gtf:featureTranscript"      foreground="#4192ff"/>
+  <style name="gtf:featureExon"            foreground="#8a89ff"/>
+  <style name="gtf:featureCDS"             foreground="#47ff19" background="black"/>
+  <style name="gtf:featureStartCodon"      foreground="black"   background="#4192ff"/>
+  <style name="gtf:featureStopCodon"       foreground="black"   background="#ff4641"/>
+  <style name="gtf:featureUTR"             foreground="#e6e6e6" />
+  <style name="gtf:score0"                 foreground="#FFE7FD"/>
+  <style name="gtf:score1"                 foreground="#FFE7FD"/>
+  <style name="gtf:score2"                 foreground="#FFCFFB"/>
+  <style name="gtf:score3"                 foreground="#FFB7F9"/>
+  <style name="gtf:score4"                 foreground="#FF9FF7"/>
+  <style name="gtf:score5"                 foreground="#FF88F6"/>
+  <style name="gtf:score6"                 foreground="#FF70F4"/>
+  <style name="gtf:score7"                 foreground="#FF58F2"/>
+  <style name="gtf:score8"                 foreground="#FF40F0"/>
+  <style name="gtf:score9"                 foreground="#FF29EF"/>
+  <style name="gtf:score10"                foreground="#ff00eb"/>
+  <style name="gtf:score11"                foreground="#ff00eb"/>
+  <style name="gtf:strandminus"            foreground="#A6E22E"/>
+  <style name="gtf:strandplus"             foreground="#F92672"/>
+  <style name="gtf:stranddot"              foreground="#66D9EF"/>
+  <style name="gtf:framedot"               foreground="#75715E"/>
+  <style name="gtf:framenum"               foreground="#0099ff"/>
+  <style name="gtf:attributeName"          foreground="#9D9E9B"/>
+  <style name="gtf:attributeValueString"   foreground="#FF9FF7"/>
+  <style name="gtf:attributeValueNumber"   foreground="#0099ff"/>
+
+  <!-- WIG styles -->
+  <style name="wig:fixedStep"              foreground="dark-green" bold="true"/>
+  <style name="wig:variableStep"           foreground="dark-green"/>
+  <style name="wig:chrom"                  foreground="dark-green" bold="true"/>
+  <style name="wig:start"                  foreground="dark-green"/>
+  <style name="wig:step"                   foreground="#fd971f"/>
+  <style name="wig:span"                   foreground="#ffcffb"/>
+  <style name="wig:variableCStart"         foreground="#0099ff"/>
+  <style name="wig:fixedColor"             foreground="#F92672"/>
+  <style name="wig:variableColor"          foreground="#F92672"/>
+  <style name="wig:color0"                 foreground="#FFE7FD"/>
+  <style name="wig:color1"                 foreground="#FFE7FD"/>
+  <style name="wig:color2"                 foreground="#FFCFFB"/>
+  <style name="wig:color3"                 foreground="#FFB7F9"/>
+  <style name="wig:color4"                 foreground="#FF9FF7"/>
+  <style name="wig:color5"                 foreground="#FF88F6"/>
+  <style name="wig:color6"                 foreground="#FF70F4"/>
+  <style name="wig:color7"                 foreground="#FF58F2"/>
+  <style name="wig:color8"                 foreground="#FF40F0"/>
+  <style name="wig:color9"                 foreground="#FF29EF"/>
+  <style name="wig:color10"                foreground="#ff00eb"/>
+  <style name="wig:color11"                foreground="#ff00eb"/>
+
+  <!-- bioSyntax.org     =================================================-->
+  <!-- USE CLASSES BELOW -->
+
+  <!-- bioSyntax Core Classes-->
+  <style name="biosyntax:string"        foreground="#FF4641" />
+  <style name="biosyntax:quoteString"   foreground="#FF4641" italic="true" />
+  <style name="biosyntax:numeric"       foreground="#0087af" />
+  <style name="biosyntax:numeric2"      foreground="#AE81FF" />
+  <style name="biosyntax:comment"       foreground="#B1B1AF" italic="true" />
+  <style name="biosyntax:comment"       foreground="#B1B1AF" italic="true" />
+  <style name="biosyntax:url"           foreground="#66D9EF" />
+  <style name="biosyntax:keyword"       foreground="#F92672" />
+  <style name="biosyntax:keyword2"      foreground="#A6E22E" />
+  <style name="biosyntax:keyword3"      foreground="#66D9EF" />
+  <style name="biosyntax:keyword4"      foreground="#FD971F" />
+  <style name="biosyntax:keyword5"      foreground="#AE81FF" />
+  <style name="biosyntax:keyword6"      foreground="#E6DB74" />
+  <style name="biosyntax:header"        foreground="#E6DB74" background="#3E3D32" bold="true" />
+  <style name="biosyntax:headerbw"      foreground="#BDB691" background="#47453E" />
+  <style name="biosyntax:genome"        foreground="#1E8449" bold="true" />
+  <style name="biosyntax:chr"           foreground="#1E8449" bold="true" />
+  <style name="biosyntax:chrStart"      foreground="#1E8449" />
+  <style name="biosyntax:chrEnd"        foreground="#1E8449" />
+  <style name="biosyntax:strandPlus"    foreground="#000000" background="#4192FF" />
+  <style name="biosyntax:strandMinus"   foreground="#000000" background="#F09000" />
+  <style name="biosyntax:strandNone"    foreground="#B1B1AF" />
+  <style name="biosyntax:geneSymbol"    foreground="#1E8449" italic="true" />
+  <style name="biosyntax:geneLevel"     foreground="#1E8449" bold="true" />
+  <style name="biosyntax:transcriptLevel"   foreground="#4192FF" />
+  <style name="biosyntax:exonLevel"     foreground="#AE81FF" />
+  <style name="biosyntax:cds"           foreground="#A6E22E" background="#000000" />
+  <style name="biosyntax:start_codon"   foreground="#000000" background="#4192FF" />
+  <style name="biosyntax:stop_codon"    foreground="#000000" background="#FF4641" />
+  <style name="biosyntax:utr"           foreground="#B1B1AF" background="#FFFFFF" />
+  <style name="biosyntax:software"      foreground="#FD971F" italic="true" />
+  <style name="biosyntax:version"       foreground="#AE81FF" />
+  <style name="biosyntax:command"       foreground="#FD971F" />
+  <style name="biosyntax:library"       foreground="#66D9EF" />
+  <style name="biosyntax:platform"      foreground="#F92672" />
+  <style name="biosyntax:bon"           foreground="#000000" background="#4192FF" />
+  <style name="biosyntax:mal"           foreground="#000000" background="#FF4641" />
+
+  <!--CIGAR Strings-->
+  <style name="biosyntax:cigMat"        foreground="#D8D8D7" />
+  <style name="biosyntax:cigMis"        foreground="#FF4641" />
+  <style name="biosyntax:cigIns"        foreground="#4192FF" />
+  <style name="biosyntax:cigDel"        foreground="#F09000" />
+  <style name="biosyntax:cigN"          foreground="#4F504B" italic="true" />
+  <style name="biosyntax:cigClip"       foreground="#4F504B" italic="true" />
+
+  <!--Color Gradient 1-->
+  <style name="biosyntax:grad0"         foreground="#FFFFFF" />
+  <style name="biosyntax:grad1"         foreground="#FFE7FD" />
+  <style name="biosyntax:grad2"         foreground="#FFCFFB" />
+  <style name="biosyntax:grad3"         foreground="#FFB7F9" />
+  <style name="biosyntax:grad4"         foreground="#FF9FF7" />
+  <style name="biosyntax:grad5"         foreground="#FF88F6" />
+  <style name="biosyntax:grad6"         foreground="#FF70F4" />
+  <style name="biosyntax:grad7"         foreground="#FF58F2" />
+  <style name="biosyntax:grad8"         foreground="#FF40F0" />
+  <style name="biosyntax:grad9"         foreground="#FF29EF" />
+  <style name="biosyntax:grad10"        foreground="#FF00EB" />
+
+  <!--BW Gradient 1-->
+  <style name="biosyntax:gradbw0"       foreground="#3C3D38" />
+  <style name="biosyntax:gradbw1"       foreground="#4F504B" />
+  <style name="biosyntax:gradbw2"       foreground="#63635F" />
+  <style name="biosyntax:gradbw3"       foreground="#767773" />
+  <style name="biosyntax:gradbw4"       foreground="#8A8A87" />
+  <style name="biosyntax:gradbw5"       foreground="#9D9E9B" />
+  <style name="biosyntax:gradbw6"       foreground="#B1B1AF" />
+  <style name="biosyntax:gradbw7"       foreground="#C4C4C3" />
+  <style name="biosyntax:gradbw8"       foreground="#D8D8D7" />
+  <style name="biosyntax:gradbw9"       foreground="#EBEBEB" />
+  <style name="biosyntax:gradbw10"      foreground="#FFFFFF" />
+  <style name="biosyntax:gradbbw9"      foreground="#EBEBEB" bold="true" />
+  <style name="biosyntax:gradbbw10"     foreground="#FFFFFF" bold="true" />
+
+  <!--IUPAC Nucleotide Colors-->
+  <style name="biosyntax:ntA"           foreground="#000000" background="#47FF19" />
+  <style name="biosyntax:ntT"           foreground="#000000" background="#4192FF" />
+  <style name="biosyntax:ntG"           foreground="#000000" background="#F09000" />
+  <style name="biosyntax:ntC"           foreground="#000000" background="#FF4641" />
+  <style name="biosyntax:ntU"           foreground="#000000" background="#8A89FF" />
+  <style name="biosyntax:ntR"           foreground="#000000" background="#FFFE80" />
+  <style name="biosyntax:ntY"           foreground="#000000" background="#E180FF" />
+  <style name="biosyntax:ntS"           foreground="#000000" background="#FF9B80" />
+  <style name="biosyntax:ntW"           foreground="#000000" background="#80FFF2" />
+  <style name="biosyntax:ntM"           foreground="#000000" background="#CE8834" />
+  <style name="biosyntax:ntK"           foreground="#000000" background="#90B82C" />
+  <style name="biosyntax:ntD"           foreground="#000000" background="#C7FFB9" />
+  <style name="biosyntax:ntB"           foreground="#000000" background="#F8C1C0" />
+  <style name="biosyntax:ntV"           foreground="#000000" background="#FFE3B9" />
+  <style name="biosyntax:ntH"           foreground="#000000" background="#BFD8F9" />
+  <style name="biosyntax:ntN"           foreground="#000000" background="#FFFFFF" />
+  <style name="biosyntax:ntX"           foreground="#E6E6E6" />
+  <style name="biosyntax:ntGap"         foreground="#E6E6E6" />
+
+  <!--Amino Acid Clustal Colors (Default)-->
+  <style name="biosyntax:aaA"           foreground="#000000" background="#80A0F0" />
+  <style name="biosyntax:aaR"           foreground="#000000" background="#F01505" />
+  <style name="biosyntax:aaN"           foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:aaD"           foreground="#000000" background="#C048C0" />
+  <style name="biosyntax:aaC"           foreground="#000000" background="#F08080" />
+  <style name="biosyntax:aaQ"           foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:aaE"           foreground="#000000" background="#C048C0" />
+  <style name="biosyntax:aaG"           foreground="#000000" background="#F09048" />
+  <style name="biosyntax:aaH"           foreground="#000000" background="#15A4A4" />
+  <style name="biosyntax:aaI"           foreground="#000000" background="#80A0F0" />
+  <style name="biosyntax:aaL"           foreground="#000000" background="#80A0F0" />
+  <style name="biosyntax:aaK"           foreground="#000000" background="#F01505" />
+  <style name="biosyntax:aaM"           foreground="#000000" background="#80A0F0" />
+  <style name="biosyntax:aaF"           foreground="#000000" background="#80A0F0" />
+  <style name="biosyntax:aaP"           foreground="#000000" background="#FFFF00" />
+  <style name="biosyntax:aaS"           foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:aaT"           foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:aaW"           foreground="#000000" background="#80A0F0" />
+  <style name="biosyntax:aaY"           foreground="#000000" background="#15A4A4" />
+  <style name="biosyntax:aaV"           foreground="#000000" background="#80A0F0" />
+  <style name="biosyntax:aaB"           foreground="#000000" background="#FFFFFF" />
+  <style name="biosyntax:aaX"           foreground="#000000" background="#FFFFFF" />
+  <style name="biosyntax:aaZ"           foreground="#000000" background="#FFFFFF" />
+
+  <!--Amino Acid Zappo Colors-->
+  <style name="biosyntax:zappoA"        foreground="#000000" background="#FFAFAF" />
+  <style name="biosyntax:zappoR"        foreground="#000000" background="#6464FF" />
+  <style name="biosyntax:zappoN"        foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:zappoD"        foreground="#000000" background="#FF0000" />
+  <style name="biosyntax:zappoC"        foreground="#000000" background="#FFFF00" />
+  <style name="biosyntax:zappoQ"        foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:zappoE"        foreground="#000000" background="#FF0000" />
+  <style name="biosyntax:zappoG"        foreground="#000000" background="#FF00FF" />
+  <style name="biosyntax:zappoH"        foreground="#000000" background="#6464FF" />
+  <style name="biosyntax:zappoI"        foreground="#000000" background="#FFAFAF" />
+  <style name="biosyntax:zappoL"        foreground="#000000" background="#FFAFAF" />
+  <style name="biosyntax:zappoK"        foreground="#000000" background="#6464FF" />
+  <style name="biosyntax:zappoM"        foreground="#000000" background="#FFAFAF" />
+  <style name="biosyntax:zappoF"        foreground="#000000" background="#FFC800" />
+  <style name="biosyntax:zappoP"        foreground="#000000" background="#FF00FF" />
+  <style name="biosyntax:zappoS"        foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:zappoT"        foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:zappoW"        foreground="#000000" background="#FFC800" />
+  <style name="biosyntax:zappoY"        foreground="#000000" background="#FFC800" />
+  <style name="biosyntax:zappoV"        foreground="#000000" background="#FFAFAF" />
+  <style name="biosyntax:zappoB"        foreground="#000000" background="#FFFFFF" />
+  <style name="biosyntax:zappoX"        foreground="#000000" background="#FFFFFF" />
+  <style name="biosyntax:zappoZ"        foreground="#000000" background="#FFFFFF" />
+
+  <!--Amino Acid Taylor Colors-->
+  <style name="biosyntax:taylorA"       foreground="#000000" background="#CCFF00" />
+  <style name="biosyntax:taylorR"       foreground="#000000" background="#0000FF" />
+  <style name="biosyntax:taylorN"       foreground="#000000" background="#CC00FF" />
+  <style name="biosyntax:taylorD"       foreground="#000000" background="#FF0000" />
+  <style name="biosyntax:taylorC"       foreground="#000000" background="#FFFF00" />
+  <style name="biosyntax:taylorQ"       foreground="#000000" background="#FF00CC" />
+  <style name="biosyntax:taylorE"       foreground="#000000" background="#FF0066" />
+  <style name="biosyntax:taylorG"       foreground="#000000" background="#FF9900" />
+  <style name="biosyntax:taylorH"       foreground="#000000" background="#0066FF" />
+  <style name="biosyntax:taylorI"       foreground="#000000" background="#66FF00" />
+  <style name="biosyntax:taylorL"       foreground="#000000" background="#33FF00" />
+  <style name="biosyntax:taylorK"       foreground="#000000" background="#6600FF" />
+  <style name="biosyntax:taylorM"       foreground="#000000" background="#00FF00" />
+  <style name="biosyntax:taylorF"       foreground="#000000" background="#00FF66" />
+  <style name="biosyntax:taylorP"       foreground="#000000" background="#FFCC00" />
+  <style name="biosyntax:taylorS"       foreground="#000000" background="#FF3300" />
+  <style name="biosyntax:taylorT"       foreground="#000000" background="#FF6600" />
+  <style name="biosyntax:taylorW"       foreground="#000000" background="#00CCFF" />
+  <style name="biosyntax:taylorY"       foreground="#000000" background="#00FFCC" />
+  <style name="biosyntax:taylorV"       foreground="#000000" background="#99FF00" />
+  <style name="biosyntax:taylorB"       foreground="#000000" background="#FFFFFF" />
+  <style name="biosyntax:taylorX"       foreground="#000000" background="#FFFFFF" />
+  <style name="biosyntax:taylorZ"       foreground="#000000" background="#FFFFFF" />
+
+  <!--Amino Acid Hydrophobicity Colors-->
+  <style name="biosyntax:hydroA"        foreground="#000000" background="#AD0052" />
+  <style name="biosyntax:hydroR"        foreground="#000000" background="#0000FF" />
+  <style name="biosyntax:hydroN"        foreground="#000000" background="#0C00F3" />
+  <style name="biosyntax:hydroD"        foreground="#000000" background="#0C00F3" />
+  <style name="biosyntax:hydroC"        foreground="#000000" background="#C2003D" />
+  <style name="biosyntax:hydroQ"        foreground="#000000" background="#0C00F3" />
+  <style name="biosyntax:hydroE"        foreground="#000000" background="#0C00F3" />
+  <style name="biosyntax:hydroG"        foreground="#000000" background="#6A0095" />
+  <style name="biosyntax:hydroH"        foreground="#000000" background="#1500EA" />
+  <style name="biosyntax:hydroI"        foreground="#000000" background="#FF0000" />
+  <style name="biosyntax:hydroL"        foreground="#000000" background="#EA0015" />
+  <style name="biosyntax:hydroK"        foreground="#000000" background="#0000FF" />
+  <style name="biosyntax:hydroM"        foreground="#000000" background="#B0004F" />
+  <style name="biosyntax:hydroF"        foreground="#000000" background="#CB0034" />
+  <style name="biosyntax:hydroP"        foreground="#000000" background="#4600B9" />
+  <style name="biosyntax:hydroS"        foreground="#000000" background="#5E00A1" />
+  <style name="biosyntax:hydroT"        foreground="#000000" background="#61009E" />
+  <style name="biosyntax:hydroW"        foreground="#000000" background="#5B00A4" />
+  <style name="biosyntax:hydroY"        foreground="#000000" background="#4F00B0" />
+  <style name="biosyntax:hydroV"        foreground="#000000" background="#F60009" />
+  <style name="biosyntax:hydroB"        foreground="#000000" background="#0C00F3" />
+  <style name="biosyntax:hydroX"        foreground="#000000" background="#680097" />
+  <style name="biosyntax:hydroZ"        foreground="#000000" background="#0C00F3" />
+
+</style-scheme>
