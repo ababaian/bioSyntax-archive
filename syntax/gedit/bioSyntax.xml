@@ -268,7 +268,7 @@
   <style name="biosyntax:headerbw"      foreground="#BDB691" background="#47453E" />
   <style name="biosyntax:genome"        foreground="#1E8449" bold="true" />
   <style name="biosyntax:chr"           foreground="#1E8449" bold="true" />
-  <style name="biosyntax:chrStart"      foreground="#1E8449" />
+  <style name="biosyntax:chrStart"      foreground="#1E8449" bold="false" />
   <style name="biosyntax:chrEnd"        foreground="#1E8449" />
   <style name="biosyntax:strandPlus"    foreground="#000000" background="#4192FF" />
   <style name="biosyntax:strandMinus"   foreground="#000000" background="#F09000" />

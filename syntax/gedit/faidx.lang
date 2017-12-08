@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-bioSyntax - 2017 11 19
+gedit Syntax File
+Language: Fasta Index
+Filetypes: .faidx, .fa.fai
+Maintainer: bioSyntax.org
+Version: v0.1
 
-Syntax highlighting for Fasta Index (faidx or .fai)
-files. Samtools generated index of fasta reference.
-Based on 'Kate color theme'
-
+Color Scheme for htslib faidx format 
+(fasta index).
 -->
 <language id="faidx" _name="Faidx" version="2.0" _section="Scientific">
   <metadata>
@@ -14,10 +16,10 @@ Based on 'Kate color theme'
   </metadata>
 
   <styles>
-    <style id="chr"       _name="RefName"  map-to="bed:chrom"      />
-    <style id="chrStart"  _name="Coords"   map-to="bed:coords"   />
-    <style id="numeric"   _name="Numeric"  map-to="def:constant"    />
-    <style id="comment"   _name="Comment"  map-to="def:comment"    />
+    <style id="chr"       _name="RefName"  map-to="biosyntax:chr"      />
+    <style id="chrStart"  _name="Coords"   map-to="biosyntax:chrStart"   />
+    <style id="numeric"   _name="Numeric"  map-to="biosyntax:numeric"    />
+    <style id="comment"   _name="Comment"  map-to="biosyntax:comment"    />
   </styles>
 
   <definitions>
@@ -52,19 +54,6 @@ Based on 'Kate color theme'
         </include>
 
       </context>
-       <!-- 
-        <context id="a" style-ref="clA">
-         <match>^[Aa](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
-       </context>
-       
-       <context id="b" style-ref="clB">
-         <match>[Bb]*</match>
-       </context>
-       
-       <context id="c" style-ref="clC">
-         <match>^[Cc](?=([AaGgCcTtNnXx-]*[^>\\sAaGgCcTtNnXx-]+))</match>
-       </context>
-       -->
       </include>
     </context>
   </definitions>
