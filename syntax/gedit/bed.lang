@@ -24,7 +24,6 @@ in BED format
     <style id="strandPlus"   _name="StrandPlus"  map-to="biosyntax:strandPlus"    />
     <style id="strandMinus"  _name="StrandMinus" map-to="biosyntax:strandMinus"   />
     <style id="strandNone"   _name="StrandNone"  map-to="biosyntax:strandNone"    />
-
   </styles>
 
   <definitions>
