@@ -31,7 +31,7 @@
   <style name="biosyntax:headerbw"      foreground="#BDB691" background="#47453E" />
   <style name="biosyntax:genome"        foreground="#1E8449" bold="false" />
   <style name="biosyntax:chr"           foreground="#1E8449" bold="true" />
-  <style name="biosyntax:chrStart"      foreground="#1E8449" italic="false" bold="false" />
+  <style name="biosyntax:chrStart"      foreground="#1E8449" italic="true" bold="false" />
   <style name="biosyntax:chrEnd"        foreground="#1E8449" />
   <style name="biosyntax:strandPlus"    foreground="#000000" background="#4192FF" />
   <style name="biosyntax:strandMinus"   foreground="#000000" background="#F09000" />
@@ -61,7 +61,7 @@
   <style name="biosyntax:cigClip"       foreground="#4F504B" italic="true" />
 
   <!--Color Gradient 1-->
-  <style name="biosyntax:grad0"         foreground="#FFFFFF" />
+  <style name="biosyntax:grad0"         foreground="#B1B1AF" />
   <style name="biosyntax:grad1"         foreground="#FFE7FD" />
   <style name="biosyntax:grad2"         foreground="#FFCFFB" />
   <style name="biosyntax:grad3"         foreground="#FFB7F9" />

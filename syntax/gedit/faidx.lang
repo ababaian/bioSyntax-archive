@@ -16,7 +16,7 @@ Color Scheme for htslib faidx format
   </metadata>
 
   <styles>
-    <style id="chr"       _name="RefName"  map-to="biosyntax:chr"      />
+    <style id="chr"       _name="RefName"  map-to="biosyntax:chr"        />
     <style id="chrStart"  _name="Coords"   map-to="biosyntax:chrStart"   />
     <style id="numeric"   _name="Numeric"  map-to="biosyntax:numeric"    />
     <style id="comment"   _name="Comment"  map-to="biosyntax:comment"    />
