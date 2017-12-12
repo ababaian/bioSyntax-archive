@@ -12,7 +12,7 @@ Version: v0.1
   <metadata>
     <property name="mimetypes">text/vcf</property>
     <property name="globs">*.vcf</property>
-  </metadata
+  </metadata>
 
   <styles>
     <style id="comment" _name="Comment"        map-to="biosyntax:comment" />
@@ -226,6 +226,7 @@ Version: v0.1
                                         <context id="value3" style-ref="numeric">
                                           <match>[\w\d\\.\\-]+(?=(;|\t|,))</match>
                                         </context>
+
                                         <context id="Column9Format">
                                           <start>\t</start>
                                           <end>(?=$)</end>
@@ -248,35 +249,34 @@ Version: v0.1
                                                 </context>
                                                 <context id="fnum" style-ref="numeric">
                                                   <match>[0-9]+</match>
-                                                </context>  
-                                              </include>
-                                            </context>
-                                          </include>
-                                        </context>       
-                                      </include>
-                                    </context>    
-                                  </include>
-                                </context>  
-                              </include>
-                            </context> 
-                          </include>  
-                        </context>
-                           
-                      </include>  
-                    </context>
-                  </include>
-                </context>
-              </include>
-            </context>
-          </include>
-        </context>
+                                                  </context>
+                                                </include>
+                                              </context>
+                                            </include>
+                                          </context>
+                                        </include>
+                                      </context>
+                                    </include>
+                                  </context>
+                                </include>
+                              </context>
+                            </include>
+                          </context>
+                        </include>
+                      </context>
+                    </include>
+                  </context>
+                </include>
+              </context>
+            </include>
+          </context>
 
         <context id="chrom_line" style-ref="headers">
           <start>#CHROM</start>
           <end>$</end>
         </context>
 
-      </include> <!-- end global VCF -->
+      </include>  <!-- end global VCF -->
     </context>
   </definitions>
 </language>
