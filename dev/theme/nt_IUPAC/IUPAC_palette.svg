@@ -431,18 +431,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0000001"
-     inkscape:cx="382.99622"
-     inkscape:cy="296.26832"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="1035.5635"
+     inkscape:cy="113.88382"
      inkscape:document-units="px"
-     inkscape:current-layer="g4484-7-1"
+     inkscape:current-layer="g6162-9-7"
      showgrid="false"
      units="in"
-     inkscape:window-width="2560"
-     inkscape:window-height="1416"
-     inkscape:window-x="0"
+     inkscape:window-width="1280"
+     inkscape:window-height="1388"
+     inkscape:window-x="1280"
      inkscape:window-y="24"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true">
     <sodipodi:guide
@@ -474,7 +474,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -515,7 +515,7 @@
       <path
          id="path4428-9-1"
          d="M 117.61993,720.47069 10.209782,827.88085 117.61993,935.29101 l 0,-214.82032 z"
-         style="fill:#f09000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.86874241px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="fill:#ffaf00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.86874241px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          inkscape:connector-curvature="0" />
       <path
          id="path4426-2-5"
@@ -3830,7 +3830,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:75px;font-family:'Courier New';-inkscape-font-specification:'Courier New'">U</flowPara></flowRoot>    </g>
     <g
        id="g6845-5"
-       transform="translate(1111.744,-579.88832)">
+       transform="translate(811.74402,24.111649)">
       <g
          id="g5851-6"
          transform="translate(6.363961,7.0710678)">
@@ -3852,76 +3852,76 @@
     </g>
     <path
        id="path4428-9-1-2"
-       d="m 1236.8299,118.54074 -107.4102,107.41016 107.4102,107.41016 0,-214.82032 z"
+       d="m 936.82992,722.54071 -107.4102,107.41016 107.4102,107.41016 0,-214.82032 z"
        style="fill:#ff3200;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.86874241px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
        id="path4426-2-5-7"
-       d="m 1452.0135,118.54074 0,214.82032 107.4101,-107.41016 -107.4101,-107.41016 z"
+       d="m 1152.0135,722.54071 0,214.82032 107.4101,-107.41016 -107.4101,-107.41016 z"
        style="fill:#0019ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.86874241px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
        id="rect4153-2-0-5-0"
-       d="m 1237.0037,333.53487 107.418,107.41792 107.418,-107.41792 -214.836,0 z"
+       d="m 937.00372,937.53484 107.41798,107.41796 107.418,-107.41796 -214.83598,0 z"
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.86874241px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <circle
        r="52.275394"
-       cy="225.95094"
-       cx="1344.4216"
+       cy="829.95093"
+       cx="1044.4216"
        id="path4217-2-3-4-9"
        style="opacity:0.95999995;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkscape:connector-curvature="0"
        id="path4502-2-6-3"
-       d="m 1236.8299,118.36692 0,107.0879 107.0879,-107.0879 -107.0879,0 z"
+       d="m 936.82992,722.36689 0,107.0879 107.08788,-107.0879 -107.08788,0 z"
        style="fill:#f49ace;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.61222708px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        inkscape:connector-curvature="0"
        id="path4500-8-5-6"
-       d="m 1344.9568,118.36692 107.0567,107.05672 0,-107.05672 -107.0567,0 z"
+       d="m 1044.9568,722.36689 107.0567,107.05672 0,-107.05672 -107.0567,0 z"
        style="fill:#7dc8ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.61222708px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        inkscape:connector-curvature="0"
        id="path4498-9-6-0"
-       d="m 1452.0135,226.44703 -107.088,107.08789 107.088,0 0,-107.08789 z"
+       d="m 1152.0135,830.447 -107.088,107.08789 107.088,0 0,-107.08789 z"
        style="fill:#00007d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.61222708px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        inkscape:connector-curvature="0"
        id="rect4153-6-9-6-5-7-9-6"
-       d="m 1236.8299,226.47821 0,107.05671 107.0566,0 -107.0566,-107.05671 z"
+       d="m 936.82992,830.47818 0,107.05671 107.05658,0 -107.05658,-107.05671 z"
        style="fill:#7d0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.61222708px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        inkscape:connector-curvature="0"
        id="rect4153-6-7-1-3-1-9-6-7-2"
-       d="m 1344.2833,117.92816 -54.0771,54.0771 17.1031,17.10313 a 52.275395,52.275391 0 0 1 36.9575,-15.35191 52.275395,52.275391 0 0 1 36.9407,15.33534 l 17.1198,-17.1197 -54.044,-54.04396 z"
-       style="fill:#c9f18e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.4311119px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       d="m 1044.2833,721.92813 -54.07708,54.0771 17.10308,17.10313 a 52.275395,52.275391 0 0 1 36.9575,-15.35191 52.275395,52.275391 0 0 1 36.9407,15.33534 l 17.1198,-17.1197 -54.044,-54.04396 z"
+       style="fill:#eeb88e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.4311119px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
        id="rect4153-6-7-1-3-1-9-5-1-4-6"
-       d="m 1344.56,333.97353 54.0771,-54.07707 -17.1032,-17.10315 a 52.275395,52.275391 0 0 1 -36.9573,15.352 52.275395,52.275391 0 0 1 -36.9409,-15.33543 l -17.1197,17.11972 54.044,54.04393 z"
+       d="m 1044.56,937.9735 54.0771,-54.07707 -17.1032,-17.10315 a 52.275395,52.275391 0 0 1 -36.9573,15.352 52.275395,52.275391 0 0 1 -36.9409,-15.33543 l -17.11968,17.11972 54.04398,54.04393 z"
        style="fill:#8b4915;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.4311119px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
        id="rect4153-6-7-1-3-1-9-0-0-5-1"
-       d="m 1236.399,225.8125 54.0771,54.07716 17.1031,-17.10315 a 52.275395,52.275391 0 0 1 -15.3519,-36.95739 52.275395,52.275391 0 0 1 15.3354,-36.9408 l -17.1198,-17.11976 -54.0439,54.04394 z"
+       d="m 936.39902,829.81247 54.0771,54.07716 17.10308,-17.10315 a 52.275395,52.275391 0 0 1 -15.35188,-36.95739 52.275395,52.275391 0 0 1 15.33538,-36.9408 l -17.11978,-17.11976 -54.0439,54.04394 z"
        style="fill:#ff6432;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.4311119px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <path
        id="rect4153-6-7-1-3-1-9-3-6-2-8"
-       d="m 1452.4443,226.08922 -54.077,-54.07709 -17.1032,17.10315 a 52.275395,52.275391 0 0 1 15.3519,36.95732 52.275395,52.275391 0 0 1 -15.3353,36.94087 l 17.1197,17.11968 54.0439,-54.04393 z"
+       d="m 1152.4443,830.08919 -54.077,-54.07709 -17.1032,17.10315 a 52.275395,52.275391 0 0 1 15.3519,36.95732 52.275395,52.275391 0 0 1 -15.3353,36.94087 l 17.1197,17.11968 54.0439,-54.04393 z"
        style="fill:#bfd8f9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.4311119px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <circle
        r="52.275394"
-       cy="225.95094"
-       cx="1344.4218"
+       cy="829.95093"
+       cx="1044.4218"
        id="path4217-2-32-5-7"
        style="opacity:1;fill:#d2d2d2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <flowRoot
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-7-92"
        xml:space="preserve"
-       transform="translate(1106.2685,-626.95501)"><flowRegion
+       transform="translate(806.26852,-22.955041)"><flowRegion
          id="flowRegion4818-2-28"><rect
            style="font-size:52.5px;fill:#ffffff;fill-opacity:1"
            y="967.34442"
@@ -3934,7 +3934,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.50000381px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-7-2-3"
        xml:space="preserve"
-       transform="translate(1106.2685,-24.592857)"><flowRegion
+       transform="translate(806.26852,579.40711)"><flowRegion
          id="flowRegion4818-2-6-6"><rect
            style="font-size:52.50000381px"
            y="219.3797"
@@ -3944,20 +3944,20 @@
            id="rect4820-7-1-1" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.50000381px;font-family:Courier;-inkscape-font-specification:Courier"
          id="flowPara4822-2-0-2">G</flowPara></flowRoot>    <flowRoot
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.50000381px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.50000381px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        id="flowRoot4816-7-6-93"
        xml:space="preserve"
-       transform="translate(1106.2685,-626.95501)"><flowRegion
+       transform="translate(806.26852,-22.955041)"><flowRegion
          id="flowRegion4818-2-1-1"><rect
-           style="font-size:52.50000381px"
+           style="font-size:52.50000381px;fill:#ffffff;"
            y="821.74188"
            x="372.24649"
            height="98.544014"
            width="116.36581"
            id="rect4820-7-5-9" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.50000381px;font-family:Courier;-inkscape-font-specification:Courier"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.50000381px;font-family:Courier;-inkscape-font-specification:Courier;fill:#ffffff;"
          id="flowPara4822-2-9-4">T</flowPara></flowRoot>    <flowRoot
-       transform="translate(1330.5308,210.30442)"
+       transform="translate(1030.5308,814.30439)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#838383;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-7-2-1-7"
        xml:space="preserve"><flowRegion
@@ -3970,7 +3970,7 @@
            id="rect4820-7-1-7-4" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.5px;font-family:Courier;-inkscape-font-specification:Courier;fill:#838383;fill-opacity:1"
          id="flowPara4822-2-0-1-5">N</flowPara></flowRoot>    <flowRoot
-       transform="translate(1257.7405,140.45448)"
+       transform="translate(957.74052,744.45445)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-1-0"
        xml:space="preserve"><flowRegion
@@ -3983,7 +3983,7 @@
            id="rect4820-9-6" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier"
          id="flowPara4822-7-1">R</flowPara></flowRoot>    <flowRoot
-       transform="translate(1404.8263,140.45448)"
+       transform="translate(1104.8263,744.45445)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-76-06"
        xml:space="preserve"><flowRegion
@@ -3996,33 +3996,33 @@
            id="rect4820-3-06" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier"
          id="flowPara4822-6-15">W</flowPara></flowRoot>    <flowRoot
-       transform="translate(1257.9655,288.0692)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(957.96552,892.06917)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        id="flowRoot4816-5-5"
        xml:space="preserve"><flowRegion
          id="flowRegion4818-6-4"><rect
-           style="font-size:45px"
+           style="font-size:45px;fill:#ffffff;"
            y="-16.408714"
            x="-0.52417028"
            height="98.544014"
            width="116.3658"
            id="rect4820-39-7" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier;fill:#ffffff;"
          id="flowPara4822-4-6">S</flowPara></flowRoot>    <flowRoot
-       transform="translate(1404.8263,288.1367)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(1104.8263,892.13667)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        id="flowRoot4816-8-56"
        xml:space="preserve"><flowRegion
          id="flowRegion4818-1-9"><rect
-           style="font-size:45px"
+           style="font-size:45px;fill:#ffffff;"
            y="-16.408714"
            x="-0.52417028"
            height="98.544014"
            width="116.3658"
            id="rect4820-2-3" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier;fill:#ffffff;"
          id="flowPara4822-9-74">Y</flowPara></flowRoot>    <flowRoot
-       transform="translate(1333.8906,153.00284)"
+       transform="translate(1033.8906,757.00281)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-76-0-5"
        xml:space="preserve"><flowRegion
@@ -4035,7 +4035,7 @@
            id="rect4820-3-0-5" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;font-family:Courier;-inkscape-font-specification:Courier"
          id="flowPara4822-6-4-4">D</flowPara></flowRoot>    <flowRoot
-       transform="translate(1266.2436,219.68686)"
+       transform="translate(966.24362,823.68683)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-76-4-7"
        xml:space="preserve"><flowRegion
@@ -4048,20 +4048,20 @@
            id="rect4820-3-4-43" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;font-family:Courier;-inkscape-font-specification:Courier"
          id="flowPara4822-6-7-0">V</flowPara></flowRoot>    <flowRoot
-       transform="translate(1333.6843,287.68675)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(1033.6843,891.68672)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        id="flowRoot4816-76-6-7"
        xml:space="preserve"><flowRegion
          id="flowRegion4818-7-31-86"><rect
-           style="font-size:37.5px"
+           style="font-size:37.5px;fill:#ffffff;"
            y="-16.408714"
            x="-0.52417028"
            height="98.544014"
            width="116.3658"
            id="rect4820-3-7-8" /></flowRegion><flowPara
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;font-family:Courier;-inkscape-font-specification:Courier"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;font-family:Courier;-inkscape-font-specification:Courier;fill:#ffffff;"
          id="flowPara4822-6-5-8">B</flowPara></flowRoot>    <flowRoot
-       transform="translate(1400.5399,219.68686)"
+       transform="translate(1100.5399,823.68683)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-76-9-43"
        xml:space="preserve"><flowRegion
@@ -4074,7 +4074,7 @@
            id="rect4820-3-2-4" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;font-family:Courier;-inkscape-font-specification:Courier"
          id="flowPara4822-6-1-9">H</flowPara></flowRoot>    <g
-       transform="translate(1114.9673,-601.57632)"
+       transform="translate(814.96732,2.4236488)"
        id="g6162-2">
       <path
          style="fill:#fffe80;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.61222708px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -4115,7 +4115,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier">K</flowPara></flowRoot>    </g>
     <g
        id="g6174-4"
-       transform="translate(1747.9066,29.428803)"
+       transform="translate(1447.9066,633.42877)"
        style="fill:#0019ff;fill-opacity:1">
       <path
          inkscape:connector-curvature="0"
@@ -4125,7 +4125,7 @@
       <flowRoot
          xml:space="preserve"
          id="flowRoot4816-8-9-2-7"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          transform="translate(-233.78472,112.97706)"><flowRegion
            id="flowRegion4818-1-7-2-1"><rect
              id="rect4820-2-5-4-7"
@@ -4133,11 +4133,11 @@
              height="98.544014"
              x="-0.52417028"
              y="-16.408714"
-             style="font-size:45px;fill:#000000;fill-opacity:1" /></flowRegion><flowPara
+             style="font-size:45px;fill:#ffffff;fill-opacity:1;" /></flowRegion><flowPara
            id="flowPara4822-9-3-7-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier;fill:#000000;fill-opacity:1">U</flowPara></flowRoot>    </g>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier;fill:#ffffff;fill-opacity:1;">U</flowPara></flowRoot>    </g>
     <g
-       transform="translate(784.74548,-932.62352)"
+       transform="translate(484.7455,-328.62355)"
        id="g6162-9-7">
       <path
          style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4152,7 +4152,7 @@
       <flowRoot
          xml:space="preserve"
          id="flowRoot4816-1-4-4-6"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#adadad;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
          transform="translate(361.81885,960.3657)"><flowRegion
            id="flowRegion4818-5-1-8-1"><rect
              id="rect4820-9-8-7-0"
@@ -4160,9 +4160,9 @@
              height="98.544014"
              x="-0.52417028"
              y="-16.408714"
-             style="font-size:45px" /></flowRegion><flowPara
+             style="font-size:45px;fill:#adadad;fill-opacity:1;" /></flowRegion><flowPara
            id="flowPara4822-7-5-1-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier">-</flowPara></flowRoot>      <flowRoot
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;font-family:Courier;-inkscape-font-specification:Courier;fill:#adadad;fill-opacity:1;">-</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
          id="flowRoot4816-8-9-7-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#adadad;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -4180,7 +4180,7 @@
        xml:space="preserve"
        id="flowRoot4397-9"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(1187.3348,-47.420607)"><flowRegion
+       transform="translate(887.33482,556.57936)"><flowRegion
          id="flowRegion4399-0"><rect
            id="rect4401-9"
            width="223.44574"
@@ -4189,14 +4189,14 @@
            y="18.664875" /></flowRegion><flowPara
          id="flowPara4403-1">TrueColor</flowPara></flowRoot>    <path
        id="path4430-7-6-1"
-       d="m 1344.4217,10.948953 -107.418,107.417967 214.836,0 -107.418,-107.417967 z"
+       d="m 1044.4217,614.94892 -107.41798,107.41797 214.83598,0 -107.418,-107.41797 z"
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:connector-curvature="0" />
     <flowRoot
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.5px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4816-9"
        xml:space="preserve"
-       transform="translate(1106.2685,-24.592857)"><flowRegion
+       transform="translate(806.26852,579.40711)"><flowRegion
          id="flowRegion4818-202"><rect
            style="font-size:52.5px"
            y="64.34758"
