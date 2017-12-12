@@ -14,6 +14,7 @@
   <!-- USE CLASSES BELOW -->
 
   <!-- bioSyntax Core Classes-->
+  <style name="biosyntax:default"       foreground="#000000" background="#FFFFFF" italic="false" bold="false" /> 
   <style name="biosyntax:string"        foreground="#FF4641" />
   <style name="biosyntax:quoteString"   foreground="#FF4641" italic="true" />
   <style name="biosyntax:numeric"       foreground="#0087af" />
@@ -27,7 +28,7 @@
   <style name="biosyntax:keyword4"      foreground="#FD971F" />
   <style name="biosyntax:keyword5"      foreground="#AE81FF" />
   <style name="biosyntax:keyword6"      foreground="#af8700" />
-  <style name="biosyntax:header"        foreground="#E6DB74" background="#3E3D32" bold="true" />
+  <style name="biosyntax:header"        foreground="#E6DB74" background="#3E3D32" bold="false" />
   <style name="biosyntax:headerbw"      foreground="#BDB691" background="#47453E" />
   <style name="biosyntax:genome"        foreground="#1E8449" bold="false" />
   <style name="biosyntax:chr"           foreground="#1E8449" bold="true" />
@@ -91,7 +92,7 @@
   <!--IUPAC Nucleotide Colors-->
   <style name="biosyntax:ntA"           foreground="#000000" background="#47FF19" />
   <style name="biosyntax:ntT"           foreground="#000000" background="#4192FF" />
-  <style name="biosyntax:ntG"           foreground="#000000" background="#F09000" />
+  <style name="biosyntax:ntG"           foreground="#000000" background="#FFAF00" />
   <style name="biosyntax:ntC"           foreground="#000000" background="#FF4641" />
   <style name="biosyntax:ntU"           foreground="#000000" background="#8A89FF" />
   <style name="biosyntax:ntR"           foreground="#000000" background="#FFFE80" />
@@ -107,6 +108,26 @@
   <style name="biosyntax:ntN"           foreground="#000000" background="#FFFFFF" />
   <style name="biosyntax:ntX"           foreground="#E6E6E6" />
   <style name="biosyntax:ntGap"         foreground="#E6E6E6" />
+
+  <!--High Contrast Theme -->
+  <style name="biosyntax:hcA"           foreground="#000000" background="#D2D2D2" />
+  <style name="biosyntax:hcT"           foreground="#FFFFFF" background="#4192FF" />
+  <style name="biosyntax:hcG"           foreground="#000000" background="#FF3200" />
+  <style name="biosyntax:hcC"           foreground="#FFFFFF" background="#000000" />
+  <style name="biosyntax:hcU"           foreground="#FFFFFF" background="#4A5CFF" />
+  <style name="biosyntax:hcR"           foreground="#000000" background="#F49ACE" />
+  <style name="biosyntax:hcY"           foreground="#FFFFFF" background="#00007D" />
+  <style name="biosyntax:hcS"           foreground="#FFFFFF" background="#7D0000" />
+  <style name="biosyntax:hcW"           foreground="#000000" background="#7DC8FF" />
+  <style name="biosyntax:hcM"           foreground="#000000" background="#FFFE80" />
+  <style name="biosyntax:hcK"           foreground="#000000" background="#9309A1" />
+  <style name="biosyntax:hcD"           foreground="#000000" background="#EEB88E" />
+  <style name="biosyntax:hcB"           foreground="#FFFFFF" background="#EB4915" />
+  <style name="biosyntax:hcV"           foreground="#000000" background="#FF6432" />
+  <style name="biosyntax:hcH"           foreground="#000000" background="#BFD8F9" />
+  <style name="biosyntax:hcN"           foreground="#838383" background="#FFFFFF" />
+  <style name="biosyntax:hcX"           foreground="#838383" background="#FFFFFF" />
+  <style name="biosyntax:hcGap"         foreground="#838383" />
 
   <!--Amino Acid Clustal Colors (Default)-->
   <style name="biosyntax:aaA"           foreground="#000000" background="#80A0F0" />
