@@ -251,6 +251,7 @@
   <!-- USE CLASSES BELOW -->
 
   <!-- bioSyntax Core Classes-->
+  <style name="biosyntax:default"       foreground="#000000" background="#FFFFFF" italic="false" bold="false" />
   <style name="biosyntax:string"        foreground="#FF4641" />
   <style name="biosyntax:quoteString"   foreground="#FF4641" italic="true" />
   <style name="biosyntax:numeric"       foreground="#0087af" />
