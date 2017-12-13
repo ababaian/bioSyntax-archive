@@ -7,10 +7,10 @@
 #	- Windows: sublime, gedit, vim
 #	- MacOSX: sublime, vim, less
 # SYNTAX FILES FORMATS:
-#	- Sublime Text 3: fasta, fastq, clustal, bed, gtf, pdb, vcf, sam
-#	- Gedit: fasta, fastq, clustal, bed, gtf, pdb
-#	- Vim: fasta, fastq, clustal, bed, gtf, vcf, sam
-#	- Less: fasta, fastq, clustal, bed, gtf, pdb, vcf, sam
+#	- Sublime Text 3: bed, clustal, faidx, fasta, fasta-clustal, fasta-hydro, fasta-nt, fasta-taylor, fasta-zappo, fastq, flagstat, gtf, pdb, sam, vcf, wig
+#	- Gedit: bed, clustal, faidx, fasta, fasta-clustal, fasta-hydro, fasta-nt, fasta-taylor, fasta-zappo, fastq, gtf, pdb, sam, wig
+#	- Vim: bed, clustal, faidx, clustal, fasta, fastq, gtf, pdb, sam, vcf
+#	- Less: bed, clustal, faidx, clustal, fasta, fastq, flagstat, gtf, pdb, sam, vcf
 printf "bioSyntax is a syntax highlighting tool for computational biology. For more information, visit biosyntax.org.\\n"
 #cd -- "$(dirname "$BASH_SOURCE")"
 
@@ -60,7 +60,7 @@ if  [ "$(uname)" == "Darwin" ]; then
 		sudo curl -O "https://raw.githubusercontent.com/bioSyntax/bioSyntax/master/less/bioSyntax-vcf.outlang"
 		sudo mv "bioSyntax-vcf.outlang" "${TPATH}"
 	else
-		printf "ERROR: %s is not a valid/supported editor for MacOS. Currently, bioSyntax is available for sublime and vim for MacOS.\\n" "$1"
+		printf "ERROR: %s is not a valid/supported editor for MacOS. Currently, bioSyntax is available for sublime, less, and vim for MacOS.\\n" "$1"
 		exit 1
 	fi
 
@@ -163,7 +163,6 @@ elif [ "$1" == "vim" ]; then
 	THEME=".vim"
 	FILE=".vim"
 	FILES=("bed" "clustal" "faidx" "clustal" "fasta" "fastq" "gtf" "pdb" "sam" "vcf")
-	printf "${#FILES[@]}\\n"
 	if [ -z "$2" ]; then
 		for ((f=0; f<${#FILES[@]}; f++)); do
 			sudo curl -O "${TURL}/${FILES[${f}]}${THEME}"
