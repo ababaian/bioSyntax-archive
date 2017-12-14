@@ -38,7 +38,6 @@ if  [ "$(uname)" == "Darwin" ]; then
 		printf "Installing/updating brew and source-highlight for Less and downloading latest %s lang file(s) and style file(s) for Mac OSX Less.\\n" "$2"
 		which -s brew
 		if [[ $? != 0 ]] ; then
-   		#Install Homebrew
     		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 		else
     		brew update
