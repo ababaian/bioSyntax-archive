@@ -1,0 +1,15 @@
+# .gitattributes file
+# 
+# Folders and files listed here are EXCLUDED from deployment
+# when using `git archive`
+#
+# Git Files
+.gitattributes export-ignore
+.gitignore export-ignore
+#
+# Development Folder
+dev/* export-ignore
+#
+# Powerpoint
+bioSyntax_talk.pptm
+
