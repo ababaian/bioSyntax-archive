@@ -108,16 +108,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 else
 	if [ "$1" == "sublime" ]; then
 		printf "Downloading latest %s syntax file(s) and bioSyntax Color Scheme for Windows Sublime Text 3.\\n" "$2"
-		FPATH=%APPDATA%/Roaming/Sublime Text 3/Packages/User/bioSyntax/
+		FPATH=%APPDATA%/Roaming/Sublime\ Text\ 3/Packages/User/bioSyntax/
 		if [ ! -d "${FPATH}" ]; then mkdir "${FPATH}"; fi
-		TPATH=C:/Program Files/Sublime Text 3/Packages/
+		TPATH=C:/Program Files/Sublime\ Text\ 3/Packages
 	elif [ "$1" == "gedit" ]; then
 		printf "Downloading latest %s lang file(s) and bioKate theme for Windows Gedit.\\n" "$2"
-		# !!! GET THE WINDOWS PATHS FOR THE SYNTAX FILES AND THEME
-		#C:\Program Files\gedit\share\gtksourceview-2.0\language-specs\
-		#C:\Program Files\gedit\share\gtksourceview-2.0\styles\
-		FPATH=/
-		TPATH=/
+		FPATH=C:/Program Files/gedit/share/gtksourceview-2.0/language-specs/
+		TPATH=C:/Program Files/gedit/share/gtksourceview-2.0/styles/
 	elif [ "$1" == "vim" ]; then
 		printf "Downloading latest %s syntax file(s) and style file(s) for Windows vim.\\n" "$2"
 		if [ ! -e "$HOME/.vimrc" ]; then touch "$HOME/.vimrc"; fi
@@ -129,8 +126,8 @@ else
 		if [ ! -d "${TPATH}" ]; then mkdir "${FPATH}"; fi
 	#elif [ "$1" == "less" ]; then
 	#printf "Installing/updating source-highlight for Less and downloading latest %s lang file(s) and style file(s) for Windows Less.\\n" "$2"
-	#	FPATH=/
-	#	TPATH=/
+	#	FPATH=\
+	#	TPATH=\
 	else
 		printf "ERROR: %s is not a valid/supported editor for Windows. Currently, bioSyntax is available for sublime, gedit, and vim for Windows.\\n" "$1"
 		exit 1
