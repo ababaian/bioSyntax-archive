@@ -1,5 +1,7 @@
 ![bioSyntax Logo](dev/img/bioSyntax_logo.png)
-![Fasta Banner](dev/img/FastaBanner.png)
+
+# ARCHIVED REPOSITORY
+# SEE: [bioSyntax Repository](https://github.com/bioSyntax/bioSyntax) FOR NEW VERSIONS
 
 Syntax highlighting for computational biology in **vim**, **less**, **sublime3** & **gedit** to intuitively read your `.sam`, `.vcf`, `.fasta`, `.pdb`, `.gtf` files [& more](http://biosyntax.org/formats).
 
